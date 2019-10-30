@@ -393,3 +393,6 @@ GLOBAL_LIST_INIT(pipe_paint_colors, list(
 
 #define MIASMA_CORPSE_MOLES 0.02
 #define MIASMA_GIBS_MOLES 0.005
+
+//PLANET
+#define PLANET_DEFAULT_ATMOS "o2=15;n2=22;TEMP=271"
