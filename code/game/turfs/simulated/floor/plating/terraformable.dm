@@ -9,6 +9,10 @@
 
 /turf/open/floor/plating/asteroid/terraformable/Initialize()
 	GLOB.terraformable_turfs += src
+
+	if(requires_activation)
+		SSair.add_to_active(src)
+
 	..()
 
 /turf/open/floor/plating/asteroid/terraformable/Destroy()
