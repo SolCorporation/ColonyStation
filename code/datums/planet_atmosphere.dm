@@ -24,6 +24,15 @@
 	else
 		return FALSE
 
+
+/datum/planet_atmosphere/proc/getAtmos()
+	return atmosphere
+
+/datum/planet_atmosphere/proc/getSpecificAtmos(atmos)
+	for(var/gas in atmosphere)
+		if(gas == atmos)
+			return atmosphere[gas]
+      
 /datum/planet_atmosphere/proc/changeComposition(list/newComp, updateTileAtmos, absolute = FALSE)
 	for(var/gas in newComp)
 		if(!absolute)
