@@ -9,14 +9,27 @@ SUBSYSTEM_DEF(terraforming)
 	var/datum/terraform_state/currentState = new /datum/terraform_state/base()
 	var/datum/terraform_state/lastState
 	var/datum/planet_atmosphere/atmos
+	var/possibleStates = list()
 
 /datum/controller/subsystem/terraforming/Initialize(start_timeofday)
+	for(var/S in subtypesof(/datum/terraform_state))
+		possibleStates += new S()
 	lastState = currentState
 	if(!atmos)
 		atmos = new /datum/planet_atmosphere()
 	return ..()
 
 /datum/controller/subsystem/terraforming/fire()
+	for(var/datum/terraform_state/state in possibleStates)
+		var/pass = TRUE
+		for(var/gas in state.requiredAtmos)
+			var/atmosGas = atmos.getSpecificAtmos(gas)
+			if(atmosGas < state.requiredAtmos[gas])
+				pass = FALSE
+		if(pass && !state.reached)
+			currentState = state
+			state.reached = TRUE
+
 	if(!lastState)
 		updateTiles()
 		return

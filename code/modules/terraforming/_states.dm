@@ -4,6 +4,8 @@
 	var/probability = 100
 	var/possibleSpawns = list(/obj/structure/flora/bush, /obj/structure/flora/ausbushes/genericbush, /obj/structure/flora/ausbushes/reedbush,
 	/obj/structure/flora/ausbushes/fullgrass)
+	var/requiredAtmos = list()
+	var/reached = FALSE
 
 /datum/terraform_state/proc/updateState(turf/T)
 	return
@@ -20,6 +22,7 @@
 	id = "first_plants"
 	icon_state = "asteroid"
 	probability = 7
+	requiredAtmos = list("o2" = 15, "co2" = 2, "TEMP" = 274.15)
 
 /datum/terraform_state/first_plants/updateState(turf/T)
 	if(prob(probability))
@@ -32,6 +35,7 @@
 	id = "first_green"
 	icon_state = "grass"
 	probability = 20
+	requiredAtmos = list("o2" = 18, "co2" = 3, "TEMP" = 278.15)
 
 /datum/terraform_state/first_green/updateState(turf/T)
 	if(prob(probability))
@@ -43,6 +47,7 @@
 	id = "fully_done"
 	icon_state = "grass"
 	probability = 14
+	requiredAtmos = list("o2" = 21, "co2" = 5, "TEMP" = 293.15)
 
 /datum/terraform_state/fully_terraformed/updateState(turf/T)
 	T.icon_state = icon_state
