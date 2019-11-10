@@ -138,7 +138,8 @@
 	if(preHeating)
 		currentTemp += preheatingSpeed
 		if(currentTemp >= maxPreheat)
-			currentTemp = maxPreheat
+			if(currentTemp <= maxPreheat * 1.25)
+				currentTemp = maxPreheat
 
 	//If we are below min temp, reset the temperature
 	if(currentTemp < minTemp)

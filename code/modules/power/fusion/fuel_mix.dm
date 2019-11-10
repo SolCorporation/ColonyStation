@@ -22,5 +22,3 @@
 
 /datum/fuel_additive/proc/onRemove()
 	return
-
-/datum/fuel_additive/test
