@@ -464,6 +464,7 @@ ROUNDSTART_RACES moth
 ROUNDSTART_RACES plasmaman
 #ROUNDSTART_RACES shadow
 ROUNDSTART_RACES preternis
+ROUNDSTART_RACES android
 #ROUNDSTART_RACES snail
 
 ## Races that are better than humans in some ways, but worse in others
