@@ -35,9 +35,13 @@
 /obj/machinery/power/fuel_mixer/ui_data()
 	var/list/data = list()
 
-	data["mix"] = mix
-	data["deu"] = mix.deuteriumMix
-	data["tri"] = mix.tritiumMix
+	if(mix)
+		data["mix"] = mix
+		data["deu"] = mix.deuteriumMix
+		data["tri"] = mix.tritiumMix
+	else
+		data["deu"] = 50
+		data["tri"] = 50
 
 	data["possibleAdditives"] = list()
 

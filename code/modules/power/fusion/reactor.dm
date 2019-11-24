@@ -79,7 +79,7 @@
 
 	//REACTION VARIABLES
 	var/minimumReactionTemp = 7000
-	var/fuelUse = 1
+	var/fuelUse = 1.2
 
 	//PREHEATING
 	var/maxPreheat = 7500
@@ -411,10 +411,6 @@
 		qdel(main)
 	return ..()
 
-#undef STOPPED
-#undef STARTING
-#undef STARTED
-#undef STOPPING
 #undef TRITIUM_TEMP_REDUCTION
 #undef TRITIUM_FUEL_USAGE
 #undef TRITIUM_BASE_OUTPUT

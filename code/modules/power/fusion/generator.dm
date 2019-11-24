@@ -25,7 +25,7 @@
 
 	var/warmUp = 0
 	var/warmUpMax = 100
-	var/warmUpAmount = 0.5
+	var/warmUpAmount = 0.75
 
 	var/condition = 100
 	var/degradation = 0.1

@@ -101,6 +101,62 @@
 /obj/item/disk/fuel_mix/default,
 /turf/open/floor/plating/asteroid/terraformable,
 /area/outside)
+"u" = (
+/obj/machinery/exploration/machines/analyzer,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"v" = (
+/obj/machinery/exploration/machines/electrifier,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"w" = (
+/obj/item/artifact/easy,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"x" = (
+/obj/item/artifact/medium,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"y" = (
+/obj/item/artifact/hard,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"z" = (
+/obj/item/artifact/impossible,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"A" = (
+/obj/machinery/computer/mining_bot_control,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"B" = (
+/obj/machinery/mining/bot,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"C" = (
+/obj/item/mining_upgrade/adv_sensor,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"D" = (
+/obj/item/mining_upgrade/cargo1,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"E" = (
+/obj/item/neutron_upgrade/lens,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"F" = (
+/obj/machinery/terraformer,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"G" = (
+/obj/machinery/exploration/machines/crusher,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
+"H" = (
+/obj/machinery/exploration/machines/acid_bath,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/outside)
 
 (1,1,1) = {"
 b
@@ -60485,10 +60541,10 @@ d
 d
 d
 d
+E
 d
 d
-d
-d
+E
 d
 d
 d
@@ -61006,9 +61062,9 @@ d
 d
 d
 d
-d
-d
-d
+B
+C
+D
 c
 "}
 (238,1,1) = {"
@@ -61263,9 +61319,9 @@ s
 d
 d
 d
-d
-d
-d
+B
+C
+D
 c
 "}
 (239,1,1) = {"
@@ -61777,7 +61833,7 @@ h
 d
 t
 d
-d
+A
 d
 d
 c
@@ -62031,8 +62087,8 @@ f
 g
 d
 j
-d
-d
+e
+w
 d
 d
 d
@@ -62287,11 +62343,11 @@ f
 f
 f
 d
+u
 d
+x
 d
-d
-d
-d
+F
 d
 d
 c
@@ -62544,9 +62600,9 @@ d
 d
 d
 d
+v
 d
-d
-d
+y
 d
 d
 d
@@ -62801,9 +62857,9 @@ n
 o
 m
 d
+G
 d
-d
-d
+z
 d
 d
 d
@@ -63058,7 +63114,7 @@ l
 r
 l
 d
-d
+H
 d
 d
 d
@@ -65377,7 +65433,7 @@ d
 d
 d
 d
-e
+d
 c
 "}
 (255,1,1) = {"

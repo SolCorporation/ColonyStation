@@ -22,6 +22,9 @@
 
 /obj/machinery/computer/reactor_control/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/disk/fuel_mix))
+		if(mix)
+			mix.forceMove(get_turf(src))
+			mix = null
 		mix = W
 		W.forceMove(src)
 
@@ -110,7 +113,7 @@
 			reactor.flush()
 			. = TRUE
 		if("ejectMix")
-			if(!mix)
+			if(!mix || reactor.status != "stopped")
 				return
 			mix.forceMove(get_turf(src))
 			mix = null
