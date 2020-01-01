@@ -18,3 +18,6 @@
 /turf/open/floor/plating/asteroid/terraformable/Destroy()
 	GLOB.terraformable_turfs -= src
 	..()
+
+/turf/open/floor/plating/planet_atmos
+	initial_gas_mix = PLANET_DEFAULT_ATMOS
