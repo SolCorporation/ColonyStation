@@ -1,5 +1,5 @@
 /obj/machinery/terraformer
-	name = "Atmospheric Terraformer"
+	name = "atmospheric terraformer"
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pdapainter"
 	desc = "A large, power hungry machine that slowly changes the atmosphere of the terrestrial body it is on."

@@ -76,6 +76,8 @@
 			status = GENERATOR_OFF
 			update_icon()
 		warmUp -= warmUpAmount
+		if(warmUp < 0)
+			warmUp = 0
 
 	if(status == GENERATOR_STARTING)
 		if(warmUp >= heatGenerationCutoff * warmUpMax)

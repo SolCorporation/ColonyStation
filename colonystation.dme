@@ -2908,6 +2908,7 @@
 #include "code\modules\terraforming\_states.dm"
 #include "code\modules\terraforming\flora_generators.dm"
 #include "code\modules\terraforming\machinery.dm"
+#include "code\modules\terraforming\upgrades.dm"
 #include "code\modules\tgs\includes.dm"
 #include "code\modules\tgui\external.dm"
 #include "code\modules\tgui\states.dm"

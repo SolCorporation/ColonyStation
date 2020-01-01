@@ -50,8 +50,9 @@
 
 	data["additives"] = list()
 
-	for(var/datum/fuel_additive/A in mix.additives)
-		data["additives"] += list(list("aName" = A.name, "aDesc" = A.desc))
+	if(mix)
+		for(var/datum/fuel_additive/A in mix.additives)
+			data["additives"] += list(list("aName" = A.name, "aDesc" = A.desc))
 
 	return data
 
