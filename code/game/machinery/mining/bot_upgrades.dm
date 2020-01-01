@@ -15,8 +15,14 @@
 /obj/item/mining_upgrade/adv_sensor
 	upgrade = new /datum/mine_bot_upgrade/adv_sensor()
 
-/obj/item/mining_upgrade/adv_sensor
+/obj/item/mining_upgrade/regen_drilling
 	upgrade = new /datum/mine_bot_upgrade/regenerative_drilling()
+
+/obj/item/mining_upgrade/ceramic_drill
+	upgrade = new /datum/mine_bot_upgrade/ceramic_drill()
+
+/obj/item/mining_upgrade/lightweight_alloy
+	upgrade = new /datum/mine_bot_upgrade/lightweight_alloy()
 
 /obj/item/mining_upgrade/Initialize()
 	name = "[upgrade.name] - AED Upgrade"
