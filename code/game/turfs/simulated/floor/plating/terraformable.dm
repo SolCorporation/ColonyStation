@@ -4,14 +4,18 @@
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "asteroid"
 	icon_plating = "asteroid"
-	planetary_atmos = TRUE
+	planetary_atmos = FALSE
 	initial_gas_mix = PLANET_DEFAULT_ATMOS
+
+	light_power = 0.25
 
 /turf/open/floor/plating/asteroid/terraformable/Initialize()
 	GLOB.terraformable_turfs += src
 
 	if(requires_activation)
 		SSair.add_to_active(src)
+
+	set_light(1)
 
 	..()
 

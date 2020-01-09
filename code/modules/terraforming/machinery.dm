@@ -1,7 +1,7 @@
 /obj/machinery/terraformer
 	name = "atmospheric terraformer"
-	icon = 'icons/obj/pda.dmi'
-	icon_state = "pdapainter"
+	icon = 'icons/obj/96x96.dmi'
+	icon_state = "terraformer_off"
 	desc = "A large, power hungry machine that slowly changes the atmosphere of the terrestrial body it is on."
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 500
@@ -23,16 +23,16 @@
 	var/molesPerProcess = 0.15
 	var/baseMoles = 0.15
 
+	bound_width = 96
+	bound_height = 96
 
 
 /obj/machinery/terraformer/Initialize()
 	for(var/D in subtypesof(/datum/terraforming_gas))
 		possibleGasses += new D()
-	START_PROCESSING(SSobj, src)
 	..()
 
 /obj/machinery/terraformer/Destroy()
-	STOP_PROCESSING(SSobj, src)
 	..()
 
 /obj/machinery/terraformer/process()
@@ -40,6 +40,7 @@
 		use_power = ACTIVE_POWER_USE
 		if(!powered())
 			on = FALSE
+			update_icon()
 			use_power = IDLE_POWER_USE
 	else
 		use_power = IDLE_POWER_USE
@@ -77,6 +78,11 @@
 
 	SSterraforming.updateAtmosphere(updatedAtmos)
 
+/obj/machinery/terraformer/update_icon()
+	if(on)
+		icon_state = "terraformer"
+	else
+		icon_state = "terraformer_off"
 
 /obj/machinery/terraformer/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
 									datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
@@ -124,6 +130,7 @@
 			if(on)
 				cooldownTimer = world.time + cooldown
 				recalculateProperties()
+			update_icon()
 			. = TRUE
 		if("toggleGas")
 			for(var/datum/terraforming_gas/Ogas in possibleGasses)

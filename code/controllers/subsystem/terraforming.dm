@@ -9,6 +9,7 @@ SUBSYSTEM_DEF(terraforming)
 	var/datum/terraform_state/currentState = new /datum/terraform_state/base()
 	var/datum/terraform_state/lastState
 	var/datum/planet_atmosphere/atmos
+	var/datum/gas_mixture/immutable/planet/mix
 	var/possibleStates = list()
 
 /datum/controller/subsystem/terraforming/Initialize(start_timeofday)
@@ -17,6 +18,8 @@ SUBSYSTEM_DEF(terraforming)
 	lastState = currentState
 	if(!atmos)
 		atmos = new /datum/planet_atmosphere()
+		mix = atmos.makeMix()
+		updateTiles()
 	return ..()
 
 /datum/controller/subsystem/terraforming/fire()
@@ -39,23 +42,21 @@ SUBSYSTEM_DEF(terraforming)
 		return
 
 /datum/controller/subsystem/terraforming/proc/updateTiles()
-	if(!atmos.getAtmosString())
-		CRASH("Invalid atmosphere in terraforming subsystem!")
-	for(var/turf/T in GLOB.terraformable_turfs)
+	mix = atmos.makeMix()
+	for(var/turf/open/T in GLOB.terraformable_turfs)
 		currentState.updateState(T)
-		T.initial_gas_mix = atmos.getAtmosString()
+		T.air = mix
 
-	SSair.active_turfs += GLOB.terraformable_turfs
+	//SSair.active_turfs += GLOB.terraformable_turfs
 	lastState = currentState
 	return
 
 /datum/controller/subsystem/terraforming/proc/updateTilesAir()
-	if(!atmos.getAtmosString())
-		CRASH("Invalid atmosphere in terraforming subsystem!")
-	for(var/turf/T in GLOB.terraformable_turfs)
-		T.initial_gas_mix = atmos.getAtmosString()
+	mix = atmos.makeMix()
+	for(var/turf/open/T in GLOB.terraformable_turfs)
+		T.air = mix
 
-	SSair.active_turfs += GLOB.terraformable_turfs
+	//SSair.active_turfs += GLOB.terraformable_turfs
 	return
 
 /datum/controller/subsystem/terraforming/proc/setState(state)

@@ -220,7 +220,7 @@
 	//If we are reacting, add the temperature difference to the core.
 	if(reacting)
 		currentTemp += totalTempAdd
-		possibleLoad = getMaxOutput()
+		possibleLoad = getMaxOutput(TRUE)
 	else
 		possibleLoad = 0
 

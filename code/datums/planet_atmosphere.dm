@@ -14,7 +14,7 @@
 	"co2" = 7,
 	"plasma" = 20)
 
-
+/* Obsolete
 /datum/planet_atmosphere/proc/getAtmosString()
 	var/string
 	var/valid = FALSE
@@ -30,8 +30,34 @@
 		return string
 	else
 		return FALSE
+*/
 
+/datum/planet_atmosphere/proc/makeMix()
+	var/datum/gas_mixture/immutable/planet/mix = new(getTemp())
+	mix.gases = list()
+	for(var/gas in atmosphere)
 
+		//This code hurts to write
+		switch(gas)
+			if("o2")
+				mix.add_gas(/datum/gas/oxygen)
+				mix.gases[/datum/gas/oxygen][MOLES] = atmosphere[gas]
+			if("n2")
+				mix.add_gas(/datum/gas/nitrogen)
+				mix.gases[/datum/gas/nitrogen][MOLES] = atmosphere[gas]
+			if("co2")
+				mix.add_gas(/datum/gas/carbon_dioxide)
+				mix.gases[/datum/gas/carbon_dioxide][MOLES] = atmosphere[gas]
+			if("n2o")
+				mix.add_gas(/datum/gas/nitrous_oxide)
+				mix.gases[/datum/gas/nitrous_oxide][MOLES] = atmosphere[gas]
+			if("plasma")
+				mix.add_gas(/datum/gas/plasma)
+				mix.gases[/datum/gas/plasma][MOLES] = atmosphere[gas]
+			if("TEMP")
+				continue
+	message_admins(mix.gases)
+	return mix
 
 /datum/planet_atmosphere/proc/setTemp(temp)
 	for(var/gas in atmosphere)
