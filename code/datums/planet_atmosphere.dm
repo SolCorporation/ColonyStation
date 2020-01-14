@@ -33,7 +33,8 @@
 */
 
 /datum/planet_atmosphere/proc/makeMix()
-	var/datum/gas_mixture/immutable/planet/mix = new(getTemp())
+	var/datum/gas_mixture/immutable/planet/mix = new()
+	mix.initial_temperature = getTemp()
 	mix.gases = list()
 	for(var/gas in atmosphere)
 
@@ -56,7 +57,6 @@
 				mix.gases[/datum/gas/plasma][MOLES] = atmosphere[gas]
 			if("TEMP")
 				continue
-	message_admins(mix.gases)
 	return mix
 
 /datum/planet_atmosphere/proc/setTemp(temp)
@@ -118,4 +118,4 @@
 
 	recalculateTemp()
 	if(updateTileAtmos)
-		SSterraforming.updateTilesAir()
+		SSterraforming.updateTiles()

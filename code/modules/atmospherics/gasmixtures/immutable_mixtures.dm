@@ -37,11 +37,23 @@
 
 /datum/gas_mixture/immutable/planet
 	initial_temperature = 259.15
+	volume = CELL_VOLUME
 
-/datum/gas_mixture/immutable/planet/New(temp)
-	initial_temperature = temp
+/datum/gas_mixture/immutable/planet/garbage_collect()
+	if(!SSterraforming)
+		return
+	if(!SSterraforming.atmos)
+		return
+	initial_temperature = SSterraforming.atmos.getTemp()
 	..()
 
-/datum/gas_mixture/immutable/cloner/garbage_collect()
-	temperature = initial_temperature
-	temperature_archived = initial_temperature
+	add_gases(/datum/gas/oxygen, /datum/gas/nitrogen, /datum/gas/carbon_dioxide, /datum/gas/nitrous_oxide, /datum/gas/plasma)
+	gases[/datum/gas/oxygen][MOLES] = SSterraforming.atmos.getSpecificAtmos("o2")
+	gases[/datum/gas/nitrogen][MOLES] = SSterraforming.atmos.getSpecificAtmos("n2")
+	gases[/datum/gas/carbon_dioxide][MOLES] = SSterraforming.atmos.getSpecificAtmos("co2")
+	gases[/datum/gas/nitrous_oxide][MOLES] = SSterraforming.atmos.getSpecificAtmos("n2o")
+	gases[/datum/gas/plasma][MOLES] = SSterraforming.atmos.getSpecificAtmos("plasma")
+
+/datum/gas_mixture/immutable/planet/share(datum/gas_mixture/sharer, atmos_adjacent_turfs = 4)
+	. = ..(src, 0)
+	garbage_collect()

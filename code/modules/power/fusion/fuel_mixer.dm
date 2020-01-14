@@ -62,34 +62,15 @@
 	if(!mix)
 		return
 	switch(action)
-		if("deu1")
-			mix.deuteriumMix++
-			mix.tritiumMix--
-			if(mix.deuteriumMix > 100)
-				mix.deuteriumMix = 100
-				mix.tritiumMix = 0
-
+		if("deu_change")
+			var/value = text2num(params["added"])
+			mix.deuteriumMix = value
+			mix.tritiumMix = 100 - value
 			. = TRUE
-		if("deu10")
-			mix.deuteriumMix += 10
-			mix.tritiumMix -= 10
-			if(mix.deuteriumMix > 100)
-				mix.deuteriumMix = 100
-				mix.tritiumMix = 0
-			. = TRUE
-		if("tri1")
-			mix.deuteriumMix -= 1
-			mix.tritiumMix += 1
-			if(mix.tritiumMix > 100)
-				mix.deuteriumMix = 0
-				mix.tritiumMix = 100
-			. = TRUE
-		if("tri10")
-			mix.deuteriumMix -= 10
-			mix.tritiumMix += 10
-			if(mix.tritiumMix > 100)
-				mix.deuteriumMix = 0
-				mix.tritiumMix = 100
+		if("trit_change")
+			var/value = text2num(params["added"])
+			mix.deuteriumMix = 100 -value
+			mix.tritiumMix = value
 			. = TRUE
 		if("eject")
 			mix.forceMove(get_turf(src))
@@ -99,7 +80,9 @@
 			for(var/datum/fuel_additive/A in mix.additives)
 				if(A.name == params["additive"])
 					mix.additives -= A
+			. = TRUE
 		if("add")
 			for(var/datum/fuel_additive/A in possibleAdditives)
 				if(A.name == params["additive"])
 					mix.additives += A
+			. = TRUE

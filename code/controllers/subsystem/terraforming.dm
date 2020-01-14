@@ -5,11 +5,11 @@ SUBSYSTEM_DEF(terraforming)
 	name = "Terraforming"
 	flags = SS_BACKGROUND
 	wait = 10
-	runlevels = RUNLEVEL_GAME
+	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME | RUNLEVEL_LOBBY
 	var/datum/terraform_state/currentState = new /datum/terraform_state/base()
 	var/datum/terraform_state/lastState
 	var/datum/planet_atmosphere/atmos
-	var/datum/gas_mixture/immutable/planet/mix
+	var/datum/gas_mixture/immutable/planet/mix = new /datum/gas_mixture/immutable/planet
 	var/possibleStates = list()
 
 /datum/controller/subsystem/terraforming/Initialize(start_timeofday)
@@ -18,8 +18,8 @@ SUBSYSTEM_DEF(terraforming)
 	lastState = currentState
 	if(!atmos)
 		atmos = new /datum/planet_atmosphere()
-		mix = atmos.makeMix()
 		updateTiles()
+
 	return ..()
 
 /datum/controller/subsystem/terraforming/fire()
@@ -42,22 +42,15 @@ SUBSYSTEM_DEF(terraforming)
 		return
 
 /datum/controller/subsystem/terraforming/proc/updateTiles()
-	mix = atmos.makeMix()
+	SSterraforming.mix.garbage_collect()
+
 	for(var/turf/open/T in GLOB.terraformable_turfs)
 		currentState.updateState(T)
 		T.air = mix
 
-	//SSair.active_turfs += GLOB.terraformable_turfs
 	lastState = currentState
 	return
 
-/datum/controller/subsystem/terraforming/proc/updateTilesAir()
-	mix = atmos.makeMix()
-	for(var/turf/open/T in GLOB.terraformable_turfs)
-		T.air = mix
-
-	//SSair.active_turfs += GLOB.terraformable_turfs
-	return
 
 /datum/controller/subsystem/terraforming/proc/setState(state)
 	currentState = new state()
