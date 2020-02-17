@@ -22,12 +22,9 @@
 #define DARKSPAWN_LIGHT_BURN 7 //how much damage the darkspawn receives per tick in lit areas
 
 // Android defines go here. Based of Preternis (as in literally mirrored for now)
-#define ANDROID_LEVEL_FULL 550
-#define ANDROID_LEVEL_WELL_FED 450
-#define ANDROID_LEVEL_FED 350
-#define ANDROID_LEVEL_HUNGRY 250
-#define ANDROID_LEVEL_STARVING 150
+#define ANDROID_LEVEL_FULL 750
+#define ANDROID_LEVEL_WELL_FED 700
+#define ANDROID_LEVEL_FED 500
+#define ANDROID_LEVEL_HUNGRY 300
+#define ANDROID_LEVEL_STARVING 200
 #define ANDROID_LEVEL_NONE 0
-
-#define ANDROID_NV_OFF 2 //numbers of tile they can see
-#define ANDROID_NV_ON 8

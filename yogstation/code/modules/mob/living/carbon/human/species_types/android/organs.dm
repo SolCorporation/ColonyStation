@@ -1,11 +1,10 @@
 /obj/item/organ/eyes/android
-	name = "android eyes"
-	desc = "An experimental upgraded version of eyes that can see in the dark.They are designed to fit android"
-	see_in_dark = ANDROID_NV_ON
-	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
-	actions_types = list(/datum/action/item_action/organ_action/use)
-	var/night_vision = TRUE
+	name = "android photon sensors"
+	desc = "A pair of experimental photon sensors. They function identically to human eyes."
+	//lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
+	//actions_types = list(/datum/action/item_action/organ_action/use)
 
+/*
 /obj/item/organ/eyes/android/ui_action_click()
 	var/datum/species/android/S = owner.dna.species
 	if(S.charge < ANDROID_LEVEL_FED)
@@ -22,41 +21,42 @@
 			lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
 			sight_flags &= ~SEE_BLACKNESS
 	owner.update_sight()
+*/
 
 /obj/item/organ/eyes/android/on_life()
 	. = ..()
 	if(!isandroid(owner))
 		qdel(src) //these eyes depend on being inside a android
 		return
-	var/datum/species/android/S = owner.dna.species
-	if(S.charge >= ANDROID_LEVEL_FED)
-		if(see_in_dark == ANDROID_NV_OFF)
-			see_in_dark = ANDROID_NV_ON
-			owner.update_sight()
-	else
-		if(see_in_dark == ANDROID_NV_ON)
-			see_in_dark = ANDROID_NV_OFF
-			owner.update_sight()
-		if(lighting_alpha < LIGHTING_PLANE_ALPHA_VISIBLE)
-			lighting_alpha = LIGHTING_PLANE_ALPHA_VISIBLE
-			sight_flags &= ~SEE_BLACKNESS
-			owner.update_sight()
 
 /obj/item/organ/lungs/android
-	name = "android lungs"
-	desc = "An experimental set of lungs.Due to the cybernetic nature of these lungs,they are less resistant to heat and cold but are more efficent at filtering oxygen."
+	name = "android respirator"
+	desc = "An advanced respirator. While androids do not need oxygen, this filters out harmful gasses from the androids interior."
 	icon_state = "lungs-c"
-	safe_oxygen_min = 12
-	safe_toxins_max = 10
-	gas_stimulation_min = 0.1 //fucking filters removing my stimulants
 
-	cold_level_1_threshold = 280
-	cold_level_1_damage = 1.5
-	cold_level_2_threshold = 260
-	cold_level_2_damage = 3
-	cold_level_3_threshold = 200
-	cold_level_3_damage = 4.5
+	safe_oxygen_min = 0
+	safe_toxins_max = 15
+	gas_stimulation_min = INFINITY //fucking filters removing my stimulants
 
-	heat_level_1_threshold = 320
-	heat_level_2_threshold = 400
-	heat_level_3_threshold = 600 //HALP MY LUNGS ARE ON FIRE
+	//Cold!
+	cold_level_1_threshold = 0
+	cold_level_1_damage = 0
+	cold_level_2_threshold = 0
+	cold_level_2_damage = 0
+	cold_level_3_threshold = 0
+	cold_level_3_damage = 0
+	//Hot!
+	heat_level_1_threshold = INFINITY
+	heat_level_2_threshold = INFINITY
+	heat_level_3_threshold = INFINITY
+
+/obj/item/organ/tongue/android
+	name = "vocal oscillator "
+	desc = "A mechanical contraption that creates sound waves mimicing voice."
+	icon_state = "tonguerobot"
+	say_mod = "intones"
+	taste_sensitivity = 0
+	modifies_speech = TRUE
+
+/obj/item/organ/tongue/android/handle_speech(datum/source, list/speech_args)
+	speech_args[SPEECH_SPANS] |= SPAN_ROBOT

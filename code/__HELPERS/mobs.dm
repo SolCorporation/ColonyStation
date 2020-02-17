@@ -361,6 +361,16 @@ GLOBAL_LIST_EMPTY(species_list)
 		if(H.dna && istype(H.dna.species, species_datum))
 			. = TRUE
 
+/proc/get_species(A, match_species)
+	if(ishuman(A))
+		var/mob/living/carbon/human/H = A
+		if(H.dna && H.dna.species)
+			if(match_species)
+				if(!istype(H.dna.species, match_species))
+					return FALSE
+			return H.dna.species
+	return FALSE
+
 /proc/spawn_atom_to_turf(spawn_type, target, amount, admin_spawn=FALSE, list/extra_args)
 	var/turf/T = get_turf(target)
 	if(!T)

@@ -1,6 +1,6 @@
 /obj/screen/alert/high/android
 	name = "Optic sensor failure"
-	desc = "Main unit optic sensors damage detected.Vision processor compromised"
+	desc = "Main unit optic sensors damage detected. Vision processor compromised"
 
 /obj/screen/alert/android_charge
 	name = "Low power"
