@@ -19,6 +19,9 @@
 
 	changed_maps = list("OmegaStation", "EclipseStation")
 
+/datum/job/paramedic/config_check()
+	return FALSE
+
 /datum/job/paramedic/proc/OmegaStationChanges()
 	total_positions = 1
 	spawn_positions = 1

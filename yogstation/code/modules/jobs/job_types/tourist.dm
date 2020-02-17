@@ -15,6 +15,9 @@
 	paycheck_department = ACCOUNT_CIV
 	display_order = JOB_DISPLAY_ORDER_TOURIST
 
+/datum/job/tourist/config_check()
+	return FALSE
+
 /datum/outfit/job/tourist
 	name = "Tourist"
 	jobtype = /datum/job/tourist

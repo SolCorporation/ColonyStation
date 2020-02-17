@@ -25,6 +25,9 @@
 
 	changed_maps = list("YogsPubby", "OmegaStation")
 
+/datum/job/warden/config_check()
+	return FALSE
+
 /datum/job/warden/proc/YogsPubbyChanges()
 	access += ACCESS_CREMATORIUM
 	minimal_access += ACCESS_CREMATORIUM

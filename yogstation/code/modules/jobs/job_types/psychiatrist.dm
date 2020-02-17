@@ -19,6 +19,9 @@
 
 	changed_maps = list("OmegaStation")
 
+/datum/job/psych/config_check()
+	return FALSE
+
 /datum/job/psych/proc/OmegaStationChanges()
 	return TRUE
 
