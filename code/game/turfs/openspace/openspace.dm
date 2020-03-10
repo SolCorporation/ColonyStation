@@ -20,6 +20,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	//mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	var/can_cover_up = TRUE
 	var/can_build_on = TRUE
+	intact = 0
 
 /turf/open/openspace/debug/update_multiz()
 	..()
@@ -40,6 +41,11 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 /turf/open/openspace/Destroy()
 	vis_contents.len = 0
 	return ..()
+	
+	/turf/open/openspace/can_have_cabling()
+	if(locate(/obj/structure/lattice/catwalk, src))
+		return TRUE
+	return FALSE
 
 /turf/open/openspace/update_multiz(prune_on_fail = FALSE, init = FALSE)
 	. = ..()
