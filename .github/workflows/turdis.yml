@@ -82,7 +82,7 @@ jobs:
       - name: Compile All Maps
         run: |
           tools/travis/template_dm_generator.py
-          tools/travis/dm.sh -DTRAVISBUILDING -DTRAVISTESTING -DALL_MAPS yogstation.dme  
+          tools/travis/dm.sh -DTRAVISBUILDING -DTRAVISTESTING -DALL_MAPS colonystation.dme  
   test:
     name: Compile and Run Tests
     runs-on: ubuntu-18.04
