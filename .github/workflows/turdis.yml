@@ -41,7 +41,7 @@ jobs:
 
       - name: Misc Checks
         run: |
-          tools/travis/check_filedirs.sh yogstation.dme
+          tools/travis/check_filedirs.sh colonystation.dme
           tools/travis/check_changelogs.sh
           find . -name "*.json" -not -path "./tgui/node_modules/*" -print0 | xargs -0 python3 ./tools/json_verifier.py
           tools/travis/build_tgui.sh
@@ -57,7 +57,7 @@ jobs:
         
       - name: Install Dependencies
         run: |
-          curl https://raw.githubusercontent.com/yogstation13/Yogstation/master/.github/sources.list | sudo tee /etc/apt/sources.list
+          curl https://raw.githubusercontent.com/SolCorporation/ColonyStation/master/.github/sources.list | sudo tee /etc/apt/sources.list
           sudo dpkg --add-architecture i386
           sudo apt-get update
           sudo apt install libstdc++6:i386
@@ -82,7 +82,7 @@ jobs:
       - name: Compile All Maps
         run: |
           tools/travis/template_dm_generator.py
-          tools/travis/dm.sh -DTRAVISBUILDING -DTRAVISTESTING -DALL_MAPS yogstation.dme  
+          tools/travis/dm.sh -DTRAVISBUILDING -DTRAVISTESTING -DALL_MAPS colonystation.dme  
   test:
     name: Compile and Run Tests
     runs-on: ubuntu-18.04
@@ -99,7 +99,7 @@ jobs:
         
       - name: Install Dependencies
         run: |
-          curl https://raw.githubusercontent.com/yogstation13/Yogstation/master/.github/sources.list | sudo tee /etc/apt/sources.list
+          curl https://raw.githubusercontent.com/SolCorporation/ColonyStation/master/.github/sources.list | sudo tee /etc/apt/sources.list
           sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
           sudo dpkg --add-architecture i386
           sudo apt-get update
@@ -128,13 +128,13 @@ jobs:
           
       - name: Compile
         run: |
-          tools/travis/dm.sh -DTRAVISBUILDING yogstation.dme || travis_terminate 1
+          tools/travis/dm.sh -DTRAVISBUILDING colonystation.dme || travis_terminate 1
           
       - name: Prepare Artifacts
         run: |
           mkdir artifacts
-          cp yogstation.dmb artifacts
-          cp yogstation.rsc artifacts
+          cp colonystation.dmb artifacts
+          cp colonystation.rsc artifacts
       
       - name: Upload Artifacts
         uses: actions/upload-artifact@v1
