@@ -42,7 +42,6 @@ SUBSYSTEM_DEF(terraforming)
 		return
 
 /datum/controller/subsystem/terraforming/proc/updateTiles()
-	SSterraforming.mix.garbage_collect()
 
 	for(var/turf/open/T in GLOB.terraformable_turfs)
 		currentState.updateState(T)
