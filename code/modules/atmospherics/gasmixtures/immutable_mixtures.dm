@@ -32,13 +32,15 @@
 	initial_temperature = 259.15
 	initial_volume  = CELL_VOLUME
 
+/datum/gas_mixture/immutable/planet/New()
+	initial_temperature = SSterraforming.atmos.getTemp()
+	..()
+
 /datum/gas_mixture/immutable/planet/populate()
 	if(!SSterraforming)
 		return
 	if(!SSterraforming.atmos)
 		return
-	initial_temperature = SSterraforming.atmos.getTemp()
-	set_temperature(SSterraforming.atmos.getTemp())
 
 	set_moles(/datum/gas/oxygen, SSterraforming.atmos.getSpecificAtmos("o2"))
 	set_moles(/datum/gas/oxygen, SSterraforming.atmos.getSpecificAtmos("n2"))
