@@ -16,13 +16,21 @@ export const GeneratorController = (props, context) => {
               <Box inline><b>Generator Heat:</b></Box>
               <br />
               <ProgressBar
-                color={value.heat >= value.cutoff * 1.5 ? ("good") : value.heat >= value.cutoff ? ("average") : ("bad")}
-                maxValue={value.maxHeat} value={value.heat} content={Math.round(value.heat) + "%"} />
+                color={value.heat >= value.cutoff * 1.5 
+                  ? ("good") 
+                  : value.heat >= value.cutoff ? ("average") : ("bad")}
+                maxValue={value.maxHeat} 
+                value={value.heat} 
+                content={Math.round(value.heat) + "%"} />
               <br /><br />
               <Box inline><b>Generator Condition:</b></Box>
               <br />
-              <ProgressBar color={value.condition >= 70 ? ("good") : value.condition >= 40 ?("average") : ("bad")}
-                maxValue={100} value={value.condition} content={Math.round(value.condition) + "%"} />
+              <ProgressBar 
+                color={value.condition >= 70 
+                  ? ("good") 
+                  : value.condition >= 40 ?("average") : ("bad")}
+                maxValue={100} value={value.condition} 
+                content={Math.round(value.condition) + "%"} />
               <br /><br />
               <b>Installed upgrades:</b>
               <br />

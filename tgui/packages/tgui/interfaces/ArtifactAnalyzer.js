@@ -17,7 +17,8 @@ export const ArtifactAnalyzer = (props, context) => {
 
               {!!data.running && (
                 <Fragment>Analyzer Progress<br />
-                  <ProgressBar maxValue={data.max} value={data.ticksRemaining} content={data.timeRemaining + " second(s)"} />
+                  <ProgressBar maxValue={data.max} 
+                    value={data.ticksRemaining} content={data.timeRemaining + " second(s)"} />
                   <br /><br />
                   <Button icon="stop" disabled={!data.running}
                     content="Abort" onClick={() => act('abort')} />

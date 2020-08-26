@@ -17,7 +17,8 @@ export const ArtifactMachine = (props, context) => {
 
               {!!data.running && (
                 <Fragment>Experiment Progress<br />
-                  <ProgressBar maxValue={data.max} value={data.ticksRemaining} content={data.timeRemaining + " second(s)"} />
+                  <ProgressBar maxValue={data.max} 
+                    value={data.ticksRemaining} content={data.timeRemaining + " second(s)"} />
                   <br /><br />
                   <Button icon="stop" disabled={!data.running}
                     content="Abort" onClick={() => act('abort')} />
@@ -40,7 +41,8 @@ export const ArtifactMachine = (props, context) => {
           <br />
           {map((value, key) => (
             <Button icon="cog" selected={data.curSpecific === value.ourSpecific}
-              content={value.specificName} onClick={() => act('specific', { newSpecific: value.ourSpecific })} />
+              content={value.specificName} 
+              onClick={() => act('specific', { newSpecific: value.ourSpecific })} />
 
           ))(data.specifics)}
         </Section>
