@@ -40,8 +40,7 @@ GLOBAL_LIST_EMPTY(donators)
 	var/s = ""
 	var/server_name = CONFIG_GET(string/servername)
 	if (server_name)
-
-	s += "<b>[server_name]</b> | Contains TERRAFORMING &#8212; "
+		s += "<b>[server_name]</b> | Contains TERRAFORMING &#8212; "
 
 	s += "<b>[station_name()]</b>]<br>"; // The station & server name line
 	s += "(<a href=\"https://discord.gg/uasTHer\">Discord</a>)<br>" // The Forum & Discord links line
