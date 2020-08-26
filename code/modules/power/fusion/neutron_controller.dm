@@ -28,7 +28,7 @@
 			if(INJ.reactor)
 				injectors += INJ
 	if(!ui)
-		ui = new(user, src, ui_key, "neutron_controller", name, 475, 800, master_ui, state)
+		ui = new(user, src, ui_key, "NeutronController", name, 475, 800, master_ui, state)
 		ui.open()
 
 /obj/machinery/power/neutron_control/ui_data()
