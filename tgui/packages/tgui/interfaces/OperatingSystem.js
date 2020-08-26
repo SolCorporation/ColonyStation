@@ -3,10 +3,11 @@ import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
 import { map } from 'common/collections';
 import { Button, ColorBox, Section, Table, NoticeBox } from '../components';
+import { Window } from '../layouts';
 
 
-export const OperatingSystem = props => {
-  const { act, data } = useBackend(props);
+export const OperatingSystem = (props, context) => {
+  const { act, data } = useBackend(context);
   let available_programs_filtered = [];
 
   // Dirty filtering. Done to avoid spamming the UI with all the available programs all the time
@@ -40,7 +41,8 @@ export const OperatingSystem = props => {
 
 
   return (
-    <Fragment>
+    <Window theme={'ntos'}>
+    <Window.Content scrollable>
       <Section title="Dashboard">
         {!!data.emagged && (
           <NoticeBox>Malicious Foreign Code Detected</NoticeBox>
@@ -168,6 +170,7 @@ export const OperatingSystem = props => {
           </Section>
         ))(available_programs_filtered)}
       </Section>
-    </Fragment>
+    </Window.Content>
+    </Window>
   );
 };
