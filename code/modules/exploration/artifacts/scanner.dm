@@ -17,7 +17,7 @@
 
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
-		ui = new(user, src, ui_key, "artifact_analyzer", name, 475, 800, master_ui, state)
+		ui = new(user, src, ui_key, "ArtifactAnalyzer", name, 475, 800, master_ui, state)
 		ui.open()
 
 /obj/machinery/exploration/machines/analyzer/ui_data()
