@@ -29,7 +29,7 @@
 			if(G.reactor)
 				generators += G
 	if(!ui)
-		ui = new(user, src, ui_key, "generator_controller", name, 475, 800, master_ui, state)
+		ui = new(user, src, ui_key, "GeneratorController", name, 475, 800, master_ui, state)
 		ui.open()
 
 /obj/machinery/power/generator_control/ui_data()
