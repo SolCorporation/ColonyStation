@@ -5,11 +5,11 @@ SUBSYSTEM_DEF(terraforming)
 	name = "Terraforming"
 	flags = SS_BACKGROUND
 	wait = 10
-	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME | RUNLEVEL_LOBBY
+	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 	var/datum/terraform_state/currentState = new /datum/terraform_state/base()
 	var/datum/terraform_state/lastState
 	var/datum/planet_atmosphere/atmos
-	var/datum/gas_mixture/immutable/planet/mix = new /datum/gas_mixture/immutable/planet
+	var/datum/gas_mixture/immutable/planet/mix
 	var/possibleStates = list()
 
 /datum/controller/subsystem/terraforming/Initialize(start_timeofday)
@@ -42,7 +42,7 @@ SUBSYSTEM_DEF(terraforming)
 		return
 
 /datum/controller/subsystem/terraforming/proc/updateTiles()
-
+	mix = new /datum/gas_mixture/immutable/planet
 	for(var/turf/open/T in GLOB.terraformable_turfs)
 		currentState.updateState(T)
 		T.air = mix

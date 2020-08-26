@@ -15,10 +15,10 @@
 	width = 12
 	},
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "ad" = (
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "ae" = (
 /obj/structure/closet/crate/coffin,
 /turf/open/floor/plasteel{
@@ -416,7 +416,7 @@
 "bm" = (
 /obj/structure/grille,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "bn" = (
 /obj/effect/turf_decal/tile/purple{
 	dir = 1
@@ -1530,7 +1530,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "dS" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -1541,7 +1541,7 @@
 "dU" = (
 /obj/machinery/light,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "dV" = (
 /obj/machinery/light,
 /turf/open/floor/plasteel{
@@ -1552,14 +1552,14 @@
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "dX" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "dY" = (
 /turf/closed/wall,
 /area/maintenance/disposal)
@@ -1569,30 +1569,30 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "ea" = (
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "eb" = (
 /obj/structure/lattice/catwalk,
 /obj/item/stack/cable_coil,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "ec" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "ed" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "ee" = (
 /obj/machinery/conveyor{
 	dir = 5;
@@ -1620,7 +1620,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "ei" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -3907,7 +3907,7 @@
 "kG" = (
 /obj/structure/flora/ash/stem_shroom,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "kH" = (
 /obj/machinery/portable_atmospherics/scrubber,
 /obj/effect/turf_decal/delivery/white,
@@ -3934,7 +3934,7 @@
 	name = "Starboard Solar Array"
 	},
 /turf/open/floor/plating,
-/area/outside)
+/area/planet/outside)
 "kL" = (
 /obj/effect/turf_decal/stripes{
 	icon_state = "warningline";
@@ -3990,11 +3990,11 @@
 "kS" = (
 /obj/structure/flora/rock,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "kT" = (
 /obj/structure/flora/ash,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "kU" = (
 /obj/structure/cable,
 /obj/machinery/power/solar{
@@ -4002,15 +4002,15 @@
 	name = "Starboard Solar Array"
 	},
 /turf/open/floor/plating,
-/area/outside)
+/area/planet/outside)
 "kV" = (
 /obj/structure/flora/ash/tall_shroom,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "kW" = (
 /obj/structure/flora/rock/pile,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "kX" = (
 /obj/structure/tank_dispenser,
 /obj/machinery/light{
@@ -4022,7 +4022,7 @@
 /obj/structure/cable,
 /obj/machinery/power/tracker,
 /turf/open/floor/plating,
-/area/outside)
+/area/planet/outside)
 "kZ" = (
 /obj/effect/landmark/start/ai/secondary,
 /obj/item/radio/intercom{
@@ -5284,7 +5284,7 @@
 	name = "Port Solar Array"
 	},
 /turf/open/floor/plating,
-/area/outside)
+/area/planet/outside)
 "ow" = (
 /obj/effect/landmark/start/station_engineer,
 /turf/open/floor/plasteel,
@@ -5387,7 +5387,7 @@
 	name = "Starboard Solar Array"
 	},
 /turf/open/floor/plating,
-/area/outside)
+/area/planet/outside)
 "oJ" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable,
@@ -5635,7 +5635,7 @@
 "po" = (
 /obj/structure/flora/ash/cacti,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "pp" = (
 /obj/structure/rack,
 /obj/item/circuitboard/computer/crew{
@@ -6107,7 +6107,7 @@
 	name = "Port Solar Array"
 	},
 /turf/open/floor/plating,
-/area/outside)
+/area/planet/outside)
 "qB" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -7131,7 +7131,7 @@
 	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
-/area/outside)
+/area/planet/outside)
 "sO" = (
 /turf/open/floor/mech_bay_recharge_floor,
 /area/science/robotics/lab)
@@ -10833,7 +10833,7 @@
 "Ag" = (
 /obj/structure/flora/ash/cap_shroom,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "Ah" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/freezer{
 	dir = 1
@@ -11196,16 +11196,16 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "AV" = (
 /obj/structure/grille/broken,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "AW" = (
 /obj/structure/cable,
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "AX" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -12344,7 +12344,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "Dx" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -12357,7 +12357,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "Dy" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -12390,7 +12390,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "DD" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -13608,7 +13608,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "Gq" = (
 /obj/machinery/light{
 	dir = 8;
@@ -13836,7 +13836,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "GS" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -13885,7 +13885,7 @@
 	},
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/asteroid/terraformable,
-/area/outside)
+/area/planet/outside)
 "GZ" = (
 /obj/machinery/libraryscanner,
 /obj/machinery/light{

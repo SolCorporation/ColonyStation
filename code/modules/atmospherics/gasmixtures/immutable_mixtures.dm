@@ -38,12 +38,14 @@
 
 /datum/gas_mixture/immutable/planet/populate()
 	if(!SSterraforming)
+		message_admins("no SS")
 		return
 	if(!SSterraforming.atmos)
+		message_admins("no atmos")
 		return
-
+	message_admins(SSterraforming.atmos.getSpecificAtmos("o2"))
 	set_moles(/datum/gas/oxygen, SSterraforming.atmos.getSpecificAtmos("o2"))
-	set_moles(/datum/gas/oxygen, SSterraforming.atmos.getSpecificAtmos("n2"))
-	set_moles(/datum/gas/oxygen, SSterraforming.atmos.getSpecificAtmos("co2"))
-	set_moles(/datum/gas/oxygen, SSterraforming.atmos.getSpecificAtmos("n2o"))
-	set_moles(/datum/gas/oxygen, SSterraforming.atmos.getSpecificAtmos("plasma"))
+	set_moles(/datum/gas/nitrogen, SSterraforming.atmos.getSpecificAtmos("n2"))
+	set_moles(/datum/gas/carbon_dioxide, SSterraforming.atmos.getSpecificAtmos("co2"))
+	set_moles(/datum/gas/nitrous_oxide, SSterraforming.atmos.getSpecificAtmos("n2o"))
+	set_moles(/datum/gas/plasma, SSterraforming.atmos.getSpecificAtmos("plasma"))
