@@ -117,9 +117,9 @@
 	if((reactor.possibleLoad - reactor.load) > possibleOutput)
 		lastOutput = possibleOutput
 		reactor.load += possibleOutput
-		return CLAMP(possibleOutput, 0, maxOutput)
+		return clamp(possibleOutput, 0, maxOutput)
 	else if((reactor.possibleLoad - reactor.load) > 0)
-		var/correctedOutput = CLAMP(possibleOutput, 0, (reactor.possibleLoad - reactor.load))
+		var/correctedOutput = clamp(possibleOutput, 0, (reactor.possibleLoad - reactor.load))
 		lastOutput = correctedOutput
 		reactor.load += correctedOutput
 		return correctedOutput

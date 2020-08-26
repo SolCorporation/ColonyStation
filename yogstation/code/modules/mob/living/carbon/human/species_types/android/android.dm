@@ -146,7 +146,7 @@ adjust_charge - take a positive or negative value to adjust the charge level
 		var/datum/reagent/consumable/food = chem
 		if (food.nutriment_factor)
 			var/nutrition = food.nutriment_factor * 0.2
-			charge = CLAMP(charge + nutrition,ANDROID_LEVEL_NONE,ANDROID_LEVEL_FULL)
+			charge = clamp(charge + nutrition,ANDROID_LEVEL_NONE,ANDROID_LEVEL_FULL)
 			if (!eating_msg_cooldown)
 				eating_msg_cooldown = TRUE
 				addtimer(VARSET_CALLBACK(src, eating_msg_cooldown, FALSE), 2 MINUTES)
@@ -177,7 +177,7 @@ adjust_charge - take a positive or negative value to adjust the charge level
 
 
 /datum/species/android/proc/handle_charge(mob/living/carbon/human/H)
-	charge = CLAMP(charge - get_power_usage(), ANDROID_LEVEL_NONE, ANDROID_LEVEL_FULL)
+	charge = clamp(charge - get_power_usage(), ANDROID_LEVEL_NONE, ANDROID_LEVEL_FULL)
 	if(charge == ANDROID_LEVEL_NONE)
 		to_chat(H,"<span class='danger'>Warning! System power criti-$#@$</span>")
 		H.death()

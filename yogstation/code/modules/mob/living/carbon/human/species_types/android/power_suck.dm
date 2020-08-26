@@ -57,7 +57,7 @@
 		var/nutritionIncrease = drain * electricity_to_nutriment
 
 		if(charge + nutritionIncrease > max_charge)
-			nutritionIncrease = CLAMP(max_charge - charge, ANDROID_LEVEL_NONE, max_charge) //if their nutrition goes up from some other source, this could be negative, which would cause bad things to happen.
+			nutritionIncrease = clamp(max_charge - charge, ANDROID_LEVEL_NONE, max_charge) //if their nutrition goes up from some other source, this could be negative, which would cause bad things to happen.
 			drain = nutritionIncrease / electricity_to_nutriment
 
 		if (do_after(H,5, target = A))
@@ -74,7 +74,7 @@
 				if(drained < drain)
 					to_chat(H,"<span class='info'>[A]'s power has been depleted, CONSUME protocol halted.</span>")
 					done = TRUE
-				charge = CLAMP(charge + (drained * electricity_to_nutriment), ANDROID_LEVEL_NONE, max_charge)
+				charge = clamp(charge + (drained * electricity_to_nutriment), ANDROID_LEVEL_NONE, max_charge)
 
 				if(!done)
 					if(charge > (max_charge - 25))

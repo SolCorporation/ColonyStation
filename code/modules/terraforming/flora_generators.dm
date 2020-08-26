@@ -8,6 +8,7 @@
 
 /obj/structure/flora_spawner/Initialize()
 	addtimer(CALLBACK(src, .proc/Create), 100)
+	..()
 
 /obj/structure/flora_spawner/proc/Create()
 
