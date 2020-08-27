@@ -1,10 +1,10 @@
 GLOBAL_LIST_INIT(command_positions, list(
-	"Captain",
+	"Governor",
 	"Head of Personnel",
-	"Head of Security",
+	"Chief Peacekeeper",
 	"Chief Engineer",
 	"Research Director",
-	"Chief Medical Officer"))
+	"Medical Director"))
 
 
 GLOBAL_LIST_INIT(engineering_positions, list(

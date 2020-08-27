@@ -18,6 +18,9 @@
 
 	display_order = JOB_DISPLAY_ORDER_CURATOR
 
+/datum/job/curator/config_check()
+	return FALSE
+
 /datum/outfit/job/curator
 	name = "Curator"
 	jobtype = /datum/job/curator

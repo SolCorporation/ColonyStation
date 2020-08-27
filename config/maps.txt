@@ -17,6 +17,10 @@ map yogstation
 	votable
 endmap
 
+map colonystation
+	default
+endmap
+
 map omegastation
 	maxplayers 35
 	votable

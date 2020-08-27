@@ -22,6 +22,9 @@
 
 	changed_maps = list("OmegaStation")
 
+/datum/job/virologist/config_check()
+	return FALSE
+
 /datum/job/virologist/proc/OmegaStationChanges()
 	return TRUE
 

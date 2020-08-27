@@ -22,6 +22,9 @@
 
 	changed_maps = list("OmegaStation")
 
+/datum/job/lawyer/config_check()
+	return FALSE
+
 /datum/job/lawyer/proc/OmegaStationChanges()
 	return TRUE
 

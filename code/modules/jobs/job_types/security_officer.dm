@@ -1,8 +1,8 @@
 /datum/job/officer
-	title = "Security Officer"
+	title = "Peacekeeper"
 	flag = OFFICER
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
-	department_head = list("Head of Security")
+	department_head = list("Chief Peacekeeper")
 	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = 5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()

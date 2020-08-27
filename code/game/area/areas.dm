@@ -252,6 +252,13 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 				else
 					a.triggerAlarm("Power", src, cameras, source)
 
+			for (var/item in GLOB.android_alerts)
+				var/datum/action/android_program/standard/station_alert/P = item
+				if(state == 1)
+					P.cancelAlarm("Power", src, source)
+				else
+					P.triggerAlarm("Power", src, cameras, source)
+
 			for (var/item in GLOB.drones_list)
 				var/mob/living/simple_animal/drone/D = item
 				if(state == 1)
@@ -280,6 +287,9 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 			for (var/item in GLOB.alert_consoles)
 				var/obj/machinery/computer/station_alert/a = item
 				a.triggerAlarm("Atmosphere", src, cameras, source)
+			for (var/item in GLOB.android_alerts)
+				var/datum/action/android_program/standard/station_alert/P = item
+				P.triggerAlarm("Atmosphere", src, cameras, source)
 			for (var/item in GLOB.drones_list)
 				var/mob/living/simple_animal/drone/D = item
 				D.triggerAlarm("Atmosphere", src, cameras, source)
@@ -294,6 +304,9 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 			for (var/item in GLOB.alert_consoles)
 				var/obj/machinery/computer/station_alert/a = item
 				a.cancelAlarm("Atmosphere", src, source)
+			for (var/item in GLOB.android_alerts)
+				var/datum/action/android_program/standard/station_alert/P = item
+				P.cancelAlarm("Atmosphere", src, cameras, source)
 			for (var/item in GLOB.drones_list)
 				var/mob/living/simple_animal/drone/D = item
 				D.cancelAlarm("Atmosphere", src, source)
@@ -353,6 +366,9 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	for (var/item in GLOB.drones_list)
 		var/mob/living/simple_animal/drone/D = item
 		D.triggerAlarm("Fire", src, cameras, source)
+	for (var/item in GLOB.android_alerts)
+		var/datum/action/android_program/standard/station_alert/P = item
+		P.triggerAlarm("Fire", src, cameras, source)
 	for(var/item in GLOB.alarmdisplay)
 		var/datum/computer_file/program/alarm_monitor/p = item
 		p.triggerAlarm("Fire", src, cameras, source)
@@ -384,6 +400,9 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	for (var/item in GLOB.drones_list)
 		var/mob/living/simple_animal/drone/D = item
 		D.cancelAlarm("Fire", src, source)
+	for (var/item in GLOB.android_alerts)
+		var/datum/action/android_program/standard/station_alert/P = item
+		P.cancelAlarm("Fire", src, source)
 	for(var/item in GLOB.alarmdisplay)
 		var/datum/computer_file/program/alarm_monitor/p = item
 		p.cancelAlarm("Fire", src, source)

@@ -1,0 +1,2 @@
+/obj/item/paper/crumpled/bloody/ruins/planet/escape_pod
+	info = "I've crashlanded here, it feels like ages... If you ever find this... Bring this device back home. Be careful, there are.. Creatures outside. I'm not sure how much longer I can las----"
