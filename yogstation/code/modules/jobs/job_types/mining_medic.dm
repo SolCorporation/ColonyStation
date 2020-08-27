@@ -23,6 +23,9 @@
 	total_positions = 2
 	spawn_positions = 1
 
+/datum/job/miningmedic/config_check()
+	return FALSE
+
 /datum/outfit/job/miningmedic
 	name = "Mining Medic"
 	jobtype = /datum/job/miningmedic

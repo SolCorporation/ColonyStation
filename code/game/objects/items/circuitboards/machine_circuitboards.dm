@@ -1192,3 +1192,16 @@
 		/obj/item/stock_parts/manipulator = /obj/item/stock_parts/manipulator/femto,
 		/obj/item/stock_parts/micro_laser = /obj/item/stock_parts/micro_laser/quadultra,
 		/obj/item/stock_parts/scanning_module = /obj/item/stock_parts/scanning_module/triphasic)
+
+		
+//terraforming
+
+/obj/item/circuitboard/machine/terraformer
+	name = "Terraformer (Machine Board)"
+	icon_state = "engineering"
+	build_path = /obj/machinery/terraformer
+	req_components = list(
+		/obj/item/stock_parts/matter_bin = 10,
+		/obj/item/stock_parts/manipulator = 5,
+		/obj/item/stock_parts/micro_laser = 5,
+		/obj/item/stock_parts/scanning_module = 5)

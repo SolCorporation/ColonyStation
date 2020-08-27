@@ -392,6 +392,9 @@
 	alarm_on = TRUE
 	for(var/mob/living/silicon/S in GLOB.silicon_mobs)
 		S.triggerAlarm("Camera", get_area(src), list(src), src)
+	for (var/item in GLOB.android_alerts)
+		var/datum/action/android_program/standard/station_alert/P = item
+		P.triggerAlarm("Camera", get_area(src), list(src), src)
 
 /obj/machinery/camera/proc/cancelCameraAlarm()
 	alarm_on = FALSE

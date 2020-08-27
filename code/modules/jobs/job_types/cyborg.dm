@@ -16,6 +16,9 @@
 
 	changed_maps = list("EclipseStation")
 
+/datum/job/cyborg/config_check()
+	return FALSE
+
 /datum/job/cyborg/proc/EclipseStationChanges()
 	spawn_positions = 2
 

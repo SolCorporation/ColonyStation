@@ -75,6 +75,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Cargo Technician"
 	icon_state = "Cargo Technician"
 
+
 /obj/effect/landmark/start/bartender
 	name = "Bartender"
 	icon_state = "Bartender"
@@ -185,6 +186,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/cyborg
 	name = "Cyborg"
+	icon_state = "Cyborg"
+
+/obj/effect/landmark/start/android
+	name = "Android"
 	icon_state = "Cyborg"
 
 /obj/effect/landmark/start/ai

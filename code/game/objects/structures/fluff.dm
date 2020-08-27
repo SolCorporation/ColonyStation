@@ -177,3 +177,12 @@
 	anchored = TRUE
 	density = TRUE
 	deconstructible = FALSE
+
+
+/obj/structure/fluff/ancient_turret
+	name = "ancient turret"
+	icon = 'icons/obj/turrets.dmi'
+	icon_state = "standard_broken"
+	layer = OBJ_LAYER
+	density = TRUE
+	desc = "A covered turret that shoots at its enemies. This one looks old."

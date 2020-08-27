@@ -22,6 +22,9 @@
 
 	changed_maps = list("OmegaStation", "EclipseStation")
 
+/datum/job/atmos/config_check()
+	return FALSE
+
 /datum/job/atmos/proc/OmegaStationChanges()
 	total_positions = 3
 	supervisors = "the captain and the head of personnel"
@@ -54,3 +57,4 @@
 	suit = /obj/item/clothing/suit/space/hardsuit/engine/atmos
 	suit_store = /obj/item/tank/internals/oxygen
 	internals_slot = SLOT_S_STORE
+

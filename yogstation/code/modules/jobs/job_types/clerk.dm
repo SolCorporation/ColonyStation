@@ -18,6 +18,10 @@
 
 	changed_maps = list("EclipseStation", "OmegaStation")
 
+
+/datum/job/clerk/config_check()
+	return FALSE
+
 /datum/job/clerk/proc/EclipseStationChanges()
 	total_positions = 2
 	spawn_positions = 1

@@ -9,3 +9,5 @@
 #define isspacepod(A) (istype(A, /obj/spacepod))
 
 #define ispreternis(A) (is_species(A, /datum/species/preternis))
+
+#define isandroid(A) (is_species(A, /datum/species/android))
