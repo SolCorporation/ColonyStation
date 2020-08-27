@@ -1,0 +1,149 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/open/floor/plating/asteroid/terraformable,
+/area/ruin/unpowered)
+"b" = (
+/turf/closed/wall/mineral/sandstone,
+/area/ruin/unpowered)
+"c" = (
+/obj/structure/fluff/divine/conduit/shrine_ruin,
+/turf/open/floor/plating/planet_atmos,
+/area/ruin/unpowered)
+"d" = (
+/turf/open/floor/plating/planet_atmos,
+/area/ruin/unpowered)
+"e" = (
+/obj/structure/fluff/divine/shrine/shrine_ruin,
+/turf/open/floor/plating/planet_atmos,
+/area/ruin/unpowered)
+"f" = (
+/obj/structure/table/wood/fancy/black,
+/obj/effect/spawner/lootdrop/maintenance,
+/turf/open/floor/plating/planet_atmos,
+/area/ruin/unpowered)
+"g" = (
+/obj/structure/table/wood/fancy/cyan,
+/obj/item/shard{
+	pixel_x = 2;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/planet_atmos,
+/area/ruin/unpowered)
+"h" = (
+/obj/structure/table/wood/fancy/exoticblue,
+/obj/item/storage/firstaid/ancient,
+/turf/open/floor/plating/planet_atmos,
+/area/ruin/unpowered)
+"i" = (
+/obj/structure/table/wood/fancy/red,
+/obj/item/melee/chainofcommand/tailwhip,
+/turf/open/floor/plating/planet_atmos,
+/area/ruin/unpowered)
+"j" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/planet_atmos,
+/area/ruin/unpowered)
+"k" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/ruin/unpowered)
+
+(1,1,1) = {"
+a
+b
+b
+a
+a
+a
+b
+b
+a
+"}
+(2,1,1) = {"
+b
+c
+d
+b
+a
+b
+h
+c
+b
+"}
+(3,1,1) = {"
+b
+f
+a
+a
+a
+a
+a
+d
+b
+"}
+(4,1,1) = {"
+a
+b
+a
+j
+d
+d
+a
+b
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+d
+e
+d
+a
+a
+a
+"}
+(6,1,1) = {"
+a
+b
+a
+d
+d
+d
+a
+b
+a
+"}
+(7,1,1) = {"
+b
+d
+a
+a
+a
+k
+a
+i
+b
+"}
+(8,1,1) = {"
+b
+c
+g
+b
+a
+b
+d
+c
+b
+"}
+(9,1,1) = {"
+a
+b
+b
+a
+a
+a
+b
+b
+a
+"}

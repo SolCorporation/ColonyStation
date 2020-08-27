@@ -26,3 +26,26 @@
 
 /datum/gas_mixture/immutable/cloner/populate()
 	set_moles(/datum/gas/nitrogen, MOLES_O2STANDARD + MOLES_N2STANDARD)
+
+
+/datum/gas_mixture/immutable/planet
+	initial_temperature = 259.15
+	initial_volume  = CELL_VOLUME
+
+/datum/gas_mixture/immutable/planet/New()
+	initial_temperature = SSterraforming.atmos.getTemp()
+	..()
+
+/datum/gas_mixture/immutable/planet/populate()
+	if(!SSterraforming)
+		message_admins("no SS")
+		return
+	if(!SSterraforming.atmos)
+		message_admins("no atmos")
+		return
+	message_admins(SSterraforming.atmos.getSpecificAtmos("o2"))
+	set_moles(/datum/gas/oxygen, SSterraforming.atmos.getSpecificAtmos("o2"))
+	set_moles(/datum/gas/nitrogen, SSterraforming.atmos.getSpecificAtmos("n2"))
+	set_moles(/datum/gas/carbon_dioxide, SSterraforming.atmos.getSpecificAtmos("co2"))
+	set_moles(/datum/gas/nitrous_oxide, SSterraforming.atmos.getSpecificAtmos("n2o"))
+	set_moles(/datum/gas/plasma, SSterraforming.atmos.getSpecificAtmos("plasma"))

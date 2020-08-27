@@ -20,6 +20,9 @@
 
 	changed_maps = list("EclipseStation", "OmegaStation")
 
+/datum/job/mining/config_check()
+	return FALSE
+
 /datum/job/mining/proc/OmegaStationChanges()
 	total_positions = 2
 	spawn_positions = 2

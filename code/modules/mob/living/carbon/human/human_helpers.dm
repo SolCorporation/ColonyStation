@@ -137,6 +137,13 @@
 /mob/living/carbon/human/can_use_guns(obj/item/G)
 	. = ..()
 
+	if(isandroid(src))
+		var/datum/species/android/A = get_species(src, /datum/species/android)
+		if(A)
+			if(!A.can_use_guns)
+				to_chat(src, "<span class='warning'>HARM PREVENTION TRIGGERED - FIRING ATTEMPT ABORTED</span>")
+				return FALSE
+
 	if(G.trigger_guard == TRIGGER_GUARD_NORMAL)
 		if(src.dna.check_mutation(HULK))
 			to_chat(src, "<span class='warning'>Your meaty finger is much too large for the trigger guard!</span>")

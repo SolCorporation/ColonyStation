@@ -1,0 +1,12 @@
+{
+    "map_name": "ColonyStation",
+    "map_path": "map_files/ColonyStation",
+    "map_file": "ColonyStation.dmm",
+    "shuttles": {
+	    "cargo": "cargo_box",
+	    "ferry": "ferry_fancy",
+	    "whiteship": "whiteship_meta",
+	    "emergency": "emergency_box"
+    },
+    "minetype": "none"
+}

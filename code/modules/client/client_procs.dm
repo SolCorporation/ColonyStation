@@ -59,6 +59,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 		if(keydown)
 			keyDown(keydown)
 		return
+
 	if(href_list["__keyup"])
 		var/keyup = js_keycode_to_byond(href_list["__keyup"])
 

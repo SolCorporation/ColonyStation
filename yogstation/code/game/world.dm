@@ -41,9 +41,25 @@ GLOBAL_LIST_EMPTY(donators)
 	s += "<img src=\"https://i.imgur.com/gNgarRJ.gif\">" //Banner image
 	var/server_name = CONFIG_GET(string/servername)
 	if (server_name)
-		s += "<br><b>[server_name]</b> &#8212; "
-	s += "<br>(<a href=\"https://forums.yogstation.net/index.php\">Forums</a>|<a href=\"https://discord.gg/0keg6hQH05Ha8OfO\">Discord</a>)<br>" // The Forum & Discord links line
-	s += "<br><i>[pick(world.file2list("yogstation/strings/taglines.txt"))]</i><br>"
+		s += "<b>[server_name]</b> | Contains TERRAFORMING &#8212; "
+
+	s += "<b>[station_name()]</b>]<br>"; // The station & server name line
+	s += "(<a href=\"https://discord.gg/uasTHer\">Discord</a>)<br>" // The Forum & Discord links line
+
+	//TAGLINE
+	//s += "<br><i>[pick(world.file2list("yogstation/strings/taglines.txt"))]</i><br>"
+
+	//MAP AND GAMEMODE
+	//s += "Mode: <b>[GLOB.master_mode]</b><br>" // The Gamemode line
+	s += "Map: <b>[SSmapping.config?.map_name || "Loading..."]</b><br>" // The map line
+
+	//FEATURES
+	var/list/features = list()
+	if(!CONFIG_GET(flag/norespawn))
+		features += "<b>Respawn Enabled</b>" // Bold it since it will be an amazing(ly questionable) event
+
+	if(features.len)
+		s += "[jointext(features,", ")]<br>" // The features line
 
 
 	//PLAYER COUNT
