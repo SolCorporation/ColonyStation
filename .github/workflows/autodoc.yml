@@ -29,6 +29,6 @@ jobs:
         keep_history: true
         build_dir: dmdoc
         jekyll: false
-        fqdn: codedocs.yogstation.net
+        fqdn: codedocs.colonystation.net
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
