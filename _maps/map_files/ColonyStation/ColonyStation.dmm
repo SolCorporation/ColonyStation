@@ -1015,12 +1015,6 @@
 /obj/machinery/power/neutron_inj,
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
-"cG" = (
-/obj/structure/cable{
-	icon_state = "2-4"
-	},
-/turf/open/floor/plasteel/dark,
-/area/engine/engineering)
 "cH" = (
 /obj/machinery/power/fusion_gen,
 /obj/structure/cable{
@@ -1347,12 +1341,8 @@
 /area/engine/engineering)
 "dt" = (
 /obj/structure/table/reinforced,
-/obj/item/disk/fuel_mix/default{
-	
-	},
-/obj/item/disk/fuel_mix/default{
-	
-	},
+/obj/item/disk/fuel_mix/default,
+/obj/item/disk/fuel_mix/default,
 /turf/open/floor/plasteel,
 /area/engine/engineering)
 "du" = (
@@ -1385,9 +1375,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/lounge)
 "dy" = (
-/obj/structure/sink/kitchen{
-	
-	},
+/obj/structure/sink/kitchen,
 /turf/open/floor/wood,
 /area/crew_quarters/lounge)
 "dz" = (
@@ -14687,9 +14675,7 @@
 /turf/open/floor/wood,
 /area/crew_quarters/bar)
 "IZ" = (
-/obj/item/instrument/eguitar{
-	
-	},
+/obj/item/instrument/eguitar,
 /obj/item/instrument/guitar,
 /obj/structure/table/wood,
 /obj/machinery/light,
@@ -15153,6 +15139,52 @@
 /obj/item/disk/fuel_mix/default,
 /turf/open/floor/plasteel,
 /area/storage/tech)
+"OY" = (
+/obj/machinery/power/battery_bank_section/right,
+/turf/open/floor/plasteel/dark,
+/area/engine/engineering)
+"Rl" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/open/floor/plating,
+/area/maintenance/port)
+"Ro" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/closed/wall/r_wall,
+/area/engine/engineering)
+"Rp" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/open/floor/plasteel/dark,
+/area/engine/engineering)
+"Tk" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/dark,
+/area/engine/engineering)
+"ZQ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/power/battery_bank,
+/obj/structure/cable,
+/turf/open/floor/plasteel/dark,
+/area/engine/engineering)
+"ZV" = (
+/obj/machinery/power/battery_bank_section/left,
+/turf/open/floor/plasteel/dark,
+/area/engine/engineering)
 
 (1,1,1) = {"
 ad
@@ -36355,7 +36387,7 @@ ax
 aH
 vy
 cD
-cE
+ZV
 cE
 cE
 cE
@@ -36610,10 +36642,10 @@ ad
 ad
 ax
 aH
-vy
-cD
-Fd
-cE
+Rl
+Ro
+ZQ
+Rp
 cE
 cE
 cE
@@ -36869,8 +36901,8 @@ ax
 aH
 vy
 cD
-cE
-cE
+OY
+Tk
 cE
 cE
 cE
@@ -37127,7 +37159,7 @@ aH
 vy
 cD
 cE
-cE
+Tk
 cE
 cE
 cE
@@ -37384,8 +37416,8 @@ aH
 vy
 cD
 cE
-cE
-cG
+cP
+cL
 cJ
 cL
 cJ

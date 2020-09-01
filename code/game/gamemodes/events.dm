@@ -8,6 +8,14 @@
 		S.output_attempt = FALSE
 		S.update_icon()
 		S.power_change()
+	for(var/obj/machinery/power/battery_bank/S in GLOB.machines)
+		if(istype(get_area(S), /area/ai_monitored/turret_protected) || !is_station_level(S.z))
+			continue
+		S.output_level = 0
+		S.output_on = FALSE
+		S.update_icon()
+		S.power_change()
+	
 
 	for(var/area/A in GLOB.the_station_areas)
 		if(!A.requires_power || A.always_unpowered )

@@ -46,6 +46,11 @@
 	if(panel_open)
 		. = TRUE
 
+/obj/machinery/power/battery_bank/can_terminal_dismantle()
+	. = FALSE
+	if(panel_open)
+		. = TRUE
+
 
 /obj/machinery/power/terminal/proc/dismantle(mob/living/user, obj/item/I)
 	if(isturf(loc))
