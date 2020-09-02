@@ -53,7 +53,7 @@
 	minbodytemp = 0
 	speed = 1
 	spacewalk = TRUE
-	
+
 /mob/living/simple_animal/hostile/pirate/ranged
 	name = "Pirate Gunner"
 	icon_state = "pirateranged"
