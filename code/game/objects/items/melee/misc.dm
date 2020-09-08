@@ -59,6 +59,7 @@
 	hitsound = 'sound/weapons/rapierhit.ogg'
 	materials = list(/datum/material/iron = 1000)
 
+
 /obj/item/melee/cutlass
 	name = "cutlass"
 	desc = "A true pirates weapon, seems somewhat dull though"
