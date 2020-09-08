@@ -67,6 +67,7 @@
 	hitsound = 'sound/weapons/rapierhit.ogg'
 	materials = list(MAT_METAL = 1000)
 
+
 /obj/item/melee/cutlass
 	name = "cutlass"
 	desc = "A true pirates weapon, seems kinda dull though"
