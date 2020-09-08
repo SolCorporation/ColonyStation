@@ -376,7 +376,12 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	if(M.mind?.assigned_role == "Assistant")
 		M.heal_bodypart_damage(1,1)
 		. = 1
+<<<<<<< HEAD
 	return ..() || .
+=======
+	M.radiation = max(M.radiation-2, 0)
+	return ..()  || . 
+>>>>>>> ded1a532a0... Update alcohol_reagents.dm (#9656)
 
 /datum/reagent/consumable/ethanol/ale
 	name = "Ale"
