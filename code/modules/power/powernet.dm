@@ -85,6 +85,8 @@
 	if(netexcess > 100 && nodes && nodes.len)		// if there was excess power last cycle
 		for(var/obj/machinery/power/smes/S in nodes)	// find the SMESes in the network
 			S.restore()				// and restore some of the power that was used
+		for(var/obj/machinery/power/battery_bank/B in nodes)	// find the SMESes in the network
+			B.restore()				// and restore some of the power that was used
 
 	// update power consoles
 	viewavail = round(0.8 * viewavail + 0.2 * avail)
