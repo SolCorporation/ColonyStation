@@ -1,12 +1,14 @@
 GLOBAL_LIST_EMPTY(mining_bots)
 
 /obj/machinery/mining/bot
-	name = "Automated Extraction Drone"
-	desc = "An automated drone, that extracts minerals based on a set pattern"
+	name = "Automated Extraction Drill"
+	desc = "An automated drill, that extracts minerals based on a set pattern"
 
-	icon = 'icons/mob/aibots.dmi'
-	icon_state = "mulebot0"
+	icon = 'icons/obj/mining_drill.dmi'
+	icon_state = "drill-off"
 	density = TRUE
+
+	circuit = /obj/item/circuitboard/machine/mining_bot
 
 
 	var/list/cargo = list()
@@ -117,7 +119,7 @@ GLOBAL_LIST_EMPTY(mining_bots)
 		return
 	message = "Initiating Mining Operation."
 	radio.talk_into(src, message, radio_channel)
-	invisibility = 100
+	icon_state = "drill-on"
 	density = FALSE
 	mining = TRUE
 	miningTimer = world.time + miningCooldown
@@ -126,7 +128,8 @@ GLOBAL_LIST_EMPTY(mining_bots)
 /obj/machinery/mining/bot/proc/stopMining()
 	var/message = "Stopping Mining Operation."
 	radio.talk_into(src, message, radio_channel)
-	invisibility = 0
+	flick("drill-retract", src)
+	icon_state = "drill-off"
 	density = TRUE
 	mining = FALSE
 	STOP_PROCESSING(SSobj, src)
@@ -143,3 +146,14 @@ GLOBAL_LIST_EMPTY(mining_bots)
 	for(var/obj/item/mining_upgrade/upgradeItem in appliedUpgrades)
 		. += "<span>[upgradeItem.upgrade.name] installed</span>"
 	. += "<span>([appliedUpgrades.len]/[maxUpgrades])</span>"
+
+/obj/item/circuitboard/machine/mining_bot
+	name = "Automated Extraction Drone (Machine Board)"
+	icon_state = "engineering"
+	build_path = /obj/machinery/mining/bot
+	req_components = list(
+		/obj/item/stock_parts/matter_bin = 2,
+		/obj/item/stock_parts/micro_laser = 1,
+		/obj/item/stack/cable_coil = 2,
+		/obj/item/stock_parts/capacitor = 1,
+		/obj/item/stock_parts/manipulator = 2)
