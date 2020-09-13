@@ -602,3 +602,11 @@
 	build_path = /obj/item/circuitboard/machine/stasis
 	category = list("Medical Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
+
+/datum/design/board/mining_bot
+	name = "Machine Design (Mining Drill)"
+	desc = "The circuit board for a mining drill."
+	id = "mining_bot"
+	build_path = /obj/item/circuitboard/machine/mining_bot
+	category = list ("Engineering Machinery")
+	departmental_flags = DEPARTMENTAL_FLAG_CARGO
