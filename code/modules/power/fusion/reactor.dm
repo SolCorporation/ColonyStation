@@ -61,6 +61,8 @@
 
 	use_power = NO_POWER_USE
 
+	var/flipped = FALSE
+
 	//FUEL INPUTS
 	var/deuterium = 0
 	var/tritium = 0
@@ -350,7 +352,12 @@
 /obj/machinery/power/fusion/core/proc/setup_parts()
 	var/turf/our_turf = get_turf(src)
 	// 9x9 block obtained from the bottom middle of the block
-	var/list/spawn_turfs = block(locate(our_turf.x - 1, our_turf.y - 2, our_turf.z), locate(our_turf.x + 1, our_turf.y, our_turf.z))
+	var/list/spawn_turfs
+	if(flipped)
+		spawn_turfs = block(locate(our_turf.x - 1, our_turf.y + 2, our_turf.z), locate(our_turf.x + 1, our_turf.y, our_turf.z))
+	else
+		spawn_turfs = block(locate(our_turf.x - 1, our_turf.y - 2, our_turf.z), locate(our_turf.x + 1, our_turf.y, our_turf.z))
+	
 	var/count = 10
 	for(var/turf/T in spawn_turfs)
 		count--
