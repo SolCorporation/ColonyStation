@@ -8,10 +8,6 @@
 	},
 /turf/open/floor/plating/airless,
 /area/science/test_area)
-"c" = (
-/obj/structure/lattice,
-/turf/open/space,
-/area/space/nearstation)
 "d" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -60,7 +56,7 @@
 /turf/open/floor/plating/airless,
 /area/science/test_area)
 "j" = (
-/turf/open/space/basic,
+/turf/open/floor/plating/asteroid/terraformable,
 /area/space)
 "l" = (
 /obj/effect/turf_decal/stripes/line{
@@ -90,6 +86,10 @@
 "t" = (
 /turf/closed/wall,
 /area/science/test_area)
+"u" = (
+/obj/structure/lattice,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/space/nearstation)
 "w" = (
 /obj/item/beacon,
 /turf/open/floor/plating/airless,
@@ -183,9 +183,9 @@ j
 j
 j
 j
-c
+u
 j
-c
+u
 j
 j
 j
@@ -199,11 +199,11 @@ j
 j
 j
 j
-c
-c
+u
+u
 j
-c
-c
+u
+u
 j
 j
 j
@@ -215,13 +215,13 @@ j
 j
 j
 j
-c
-c
+u
+u
 S
 h
 S
-c
-c
+u
+u
 j
 j
 j
@@ -231,15 +231,15 @@ j
 j
 j
 j
-c
-c
+u
+u
 e
 S
 f
 S
 e
-c
-c
+u
+u
 j
 j
 j
@@ -247,8 +247,8 @@ j
 (5,1,1) = {"
 j
 j
-c
-c
+u
+u
 S
 S
 l
@@ -256,15 +256,15 @@ h
 O
 S
 S
-c
-c
+u
+u
 j
 j
 "}
 (6,1,1) = {"
 j
 j
-c
+u
 t
 t
 y
@@ -274,14 +274,14 @@ W
 C
 t
 t
-c
+u
 j
 j
 "}
 (7,1,1) = {"
-c
-c
-c
+u
+u
+u
 S
 G
 d
@@ -291,14 +291,14 @@ B
 K
 R
 S
-c
-c
-c
+u
+u
+u
 "}
 (8,1,1) = {"
 j
 j
-c
+u
 t
 t
 A
@@ -308,15 +308,15 @@ i
 n
 t
 t
-c
+u
 j
 j
 "}
 (9,1,1) = {"
 j
 j
-c
-c
+u
+u
 S
 S
 b
@@ -324,8 +324,8 @@ g
 J
 S
 S
-c
-c
+u
+u
 j
 j
 "}
@@ -333,15 +333,15 @@ j
 j
 j
 j
-c
-c
+u
+u
 e
 S
 m
 S
 e
-c
-c
+u
+u
 j
 j
 j
@@ -351,13 +351,13 @@ j
 j
 j
 j
-c
-c
+u
+u
 S
 t
 S
-c
-c
+u
+u
 j
 j
 j
@@ -369,11 +369,11 @@ j
 j
 j
 j
-c
-c
-c
-c
-c
+u
+u
+u
+u
+u
 j
 j
 j
@@ -387,9 +387,9 @@ j
 j
 j
 j
-c
-c
-c
+u
+u
+u
 j
 j
 j
@@ -405,7 +405,7 @@ j
 j
 j
 j
-c
+u
 j
 j
 j
@@ -422,7 +422,7 @@ j
 j
 j
 j
-c
+u
 j
 j
 j
