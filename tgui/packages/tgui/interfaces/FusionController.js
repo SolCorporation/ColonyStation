@@ -14,9 +14,9 @@ export const FusionController = (props, context) => {
           <NoticeBox><h2>No Fuel Mix inserted</h2></NoticeBox>
         )}
         <Section title="Reactor Controls">
-          {!!data.meltDown 
+          {!!data.meltDown
             && (<NoticeBox><h2>CORE MELTDOWN - REWELD CONTAINMENT CHAMBER</h2></NoticeBox>)}
-          {!!data.overheating 
+          {!!data.overheating
             && (<NoticeBox><h2>CORE OVERHEATING</h2></NoticeBox>)}
           <br />
           <b>Current Reactor Status:</b> {data.status}
@@ -28,6 +28,12 @@ export const FusionController = (props, context) => {
           <b>Reactor Tritium Status:</b>
           <ProgressBar color={data.tritium >= 50 ? ("good") : ("average")}
             maxValue={100} value={data.tritium} content={Math.round(data.tritium) + "%"} />
+          <br /><br />
+          <b>Reactor Temperature:</b>
+          <ProgressBar color={data.temp >= 50 ? ("good") : ("average")}
+            maxValue={data.maxTemp} minValue={data.minTemp} value={data.temp}>
+            {data.temp + "K"}
+          </ProgressBar>
           <br /><br /><br /><br />
           <Button inline icon={!!data.injecting && ("stop") || ("play")}
             content={!!data.injecting && ("Stop Fuel Injection") || ("Begin Fuel Injection")}
@@ -76,12 +82,12 @@ export const FusionController = (props, context) => {
               <br /><br />
               <b>Deuterium</b>
               <ProgressBar
-                maxValue={100} value={data.deuteriumFuel} 
+                maxValue={100} value={data.deuteriumFuel}
                 content={Math.round(data.deuteriumFuel) + "%"} />
               <br /><br />
               <b>Tritium</b>
               <ProgressBar
-                maxValue={100} value={data.tritiumFuel} 
+                maxValue={100} value={data.tritiumFuel}
                 content={Math.round(data.tritiumFuel) + "%"} />
               <br /><br />
               <b>Fuel Additives</b>

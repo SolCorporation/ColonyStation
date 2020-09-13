@@ -14,8 +14,8 @@
 	density = TRUE
 	use_power = NO_POWER_USE
 
-	ui_x = 340
-	ui_y = 350
+	ui_x = 830
+	ui_y = 475
 
 	var/input_on = TRUE // TRUE = attempting to charge, FALSE = not attempting to charge
 	var/getting_input = TRUE // TRUE = actually getting_input, FALSE = not getting_input
@@ -36,6 +36,8 @@
 
 	///Is the charge evenly being added to the cells?
 	var/balanced_charging = FALSE
+	///Can we charge balanced?
+	var/balanced_charging_capable = FALSE
 
 
 /obj/machinery/power/battery_bank/Initialize()
@@ -230,7 +232,7 @@
 	var/total_charge = 0
 
 	for(var/obj/item/battery_bank_cell/cell in all_cells)
-		total_charge += cell.maxcharge
+		total_charge += cell.get_actual_max()
 	return total_charge
 
 /obj/machinery/power/battery_bank/proc/add_charge(amount)
@@ -410,7 +412,135 @@
 		ui = new(user, src, ui_key, "BatteryBank", name, ui_x, ui_y, master_ui, state)
 		ui.open()
 
+/obj/machinery/power/battery_bank/ui_data()
+	var/list/data = list()
 
+	data["capacity"] = get_max_charge()
+
+	var/percent = 0
+	if(get_max_charge() > 0)
+		percent = round(get_current_charge() / get_max_charge() * 100, 0.1)
+	data["capacityPercent"] = percent
+
+	data["charge"] = get_current_charge()
+
+	data["input"] = input_on
+	data["inputting"] = getting_input
+
+	data["inputLevel"] = input_level
+	data["inputLevelMax"] = input_level_max
+	data["inputLevelText"] = DisplayPower(input_level)
+
+	data["inputAvailable"] = input_available
+
+	data["output"] = output_on
+	data["outputting"] = outputting
+
+	data["outputLevel"] = output_level
+	data["outputLevelText"] = DisplayPower(output_level)
+	data["outputLevelMax"] = output_level_max
+
+	data["output_used"] = output_used
+
+
+
+	data["balanced_charging"] = balanced_charging
+	data["balanced_charging_possible"] = balanced_charging_capable
+	
+	var/conditions = 0
+	var/average_condition = 0
+	var/list/cells = get_cells()
+	for(var/obj/item/battery_bank_cell/cell in cells)
+		conditions += cell.condition
+	if(cells.len > 0)
+		average_condition = conditions / cells.len
+	data["average_condition"] = average_condition
+
+	data["cells_left"] = list()
+	data["cells_right"] = list()
+	for(var/obj/item/battery_bank_cell/cell in L.cells)
+		data["cells_left"] += list(
+			list("condition" = round(cell.condition * 100, 0.1),
+			"percent" = cell.percent())
+		)
+
+	for(var/obj/item/battery_bank_cell/cell in R.cells)
+		data["cells_right"] += list(
+			list("condition" = round(cell.condition * 100, 0.1),
+			"percent" = cell.percent())
+		)
+	
+
+	return data
+
+/obj/machinery/power/battery_bank/ui_act(action, params)
+	if(..())
+		return
+	switch(action)
+		if("tryinput")
+			input_on = !input_on
+			log_status(usr)
+			update_icon()
+			. = TRUE
+		if("tryoutput")
+			output_on = !output_on
+			log_status(usr)
+			update_icon()
+			. = TRUE
+		if("input")
+			var/target = params["target"]
+			var/adjust = text2num(params["adjust"])
+			if(target == "input")
+				target = input("New input target (0-[input_level_max]):", name, input_level) as num|null
+				if(!isnull(target) && !..())
+					. = TRUE
+			else if(target == "min")
+				target = 0
+				. = TRUE
+			else if(target == "max")
+				target = input_level_max
+				. = TRUE
+			else if(adjust)
+				target = input_level + adjust
+				. = TRUE
+			else if(text2num(target) != null)
+				target = text2num(target)
+				. = TRUE
+			if(.)
+				input_level = clamp(target, 0, input_level_max)
+				log_status(usr)
+		if("output")
+			var/target = params["target"]
+			var/adjust = text2num(params["adjust"])
+			if(target == "input")
+				target = input("New output target (0-[output_level_max]):", name, output_level) as num|null
+				if(!isnull(target) && !..())
+					. = TRUE
+			else if(target == "min")
+				target = 0
+				. = TRUE
+			else if(target == "max")
+				target = output_level_max
+				. = TRUE
+			else if(adjust)
+				target = output_level + adjust
+				. = TRUE
+			else if(text2num(target) != null)
+				target = text2num(target)
+				. = TRUE
+			if(.)
+				output_level = clamp(target, 0, output_level_max)
+				log_status(usr)
+		if("remove_cell")
+			var/side = params["side"]
+			if(side == "left") 
+				L.eject_cell()
+			else
+				R.eject_cell()
+		if("toggle_balanced_charging")
+			if(!balanced_charging_capable)
+				return
+			balanced_charging = !balanced_charging
 /*
 
 	SECTIONS
@@ -455,6 +585,12 @@
 		else
 			add_overlay("[icon_state]-[i + 1]-empty")
 
+/obj/machinery/power/battery_bank_section/proc/eject_cell()
+	if(cells.len < 1)
+		return
+	var/obj/item/battery_bank_cell/cell = pop(cells)
+	cell.forceMove(get_turf(src))
+	update_icon()
 
 /obj/machinery/power/battery_bank_section/left
 	icon_state = "left"
