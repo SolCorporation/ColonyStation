@@ -17,15 +17,6 @@
 "c" = (
 /turf/closed/wall,
 /area/maintenance/starboard/aft)
-"d" = (
-/obj/structure/lattice,
-/turf/open/space,
-/area/space/nearstation)
-"e" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/lattice/catwalk,
-/turf/open/space/basic,
-/area/space/nearstation)
 "f" = (
 /turf/open/floor/plating,
 /area/maintenance/aft)
@@ -49,10 +40,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
-"k" = (
-/obj/structure/lattice,
-/turf/open/space/basic,
-/area/space/nearstation)
 "l" = (
 /obj/structure/grille,
 /turf/open/floor/plating/airless,
@@ -72,6 +59,11 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
+"n" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/lattice/catwalk,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/space/nearstation)
 "o" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -171,10 +163,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/aft)
-"u" = (
-/obj/structure/lattice/catwalk,
-/turf/open/space,
-/area/space/nearstation)
 "v" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -236,10 +224,6 @@
 	},
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
-"y" = (
-/obj/structure/lattice/catwalk,
-/turf/open/space/basic,
-/area/space/nearstation)
 "z" = (
 /obj/structure/disposalpipe/junction/flip{
 	dir = 4
@@ -255,10 +239,18 @@
 	},
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
+"E" = (
+/obj/structure/lattice,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/space/nearstation)
 "N" = (
 /obj/effect/spawner/structure/window/reinforced/shutter,
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
+"W" = (
+/obj/structure/lattice/catwalk,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/space/nearstation)
 
 (1,1,1) = {"
 b
@@ -269,8 +261,8 @@ c
 f
 f
 t
-u
-y
+W
+W
 "}
 (2,1,1) = {"
 c
@@ -281,15 +273,15 @@ c
 s
 s
 s
-u
-y
+W
+W
 "}
 (3,1,1) = {"
 a
-y
+W
 h
 x
-y
+W
 a
 a
 a
@@ -298,10 +290,10 @@ a
 "}
 (4,1,1) = {"
 a
-y
+W
 h
 x
-y
+W
 a
 a
 a
@@ -310,10 +302,10 @@ a
 "}
 (5,1,1) = {"
 a
-y
+W
 h
 x
-y
+W
 a
 l
 a
@@ -322,11 +314,11 @@ a
 "}
 (6,1,1) = {"
 a
-y
+W
 h
 x
-y
-k
+W
+E
 l
 a
 a
@@ -334,10 +326,10 @@ a
 "}
 (7,1,1) = {"
 a
-y
+W
 h
 x
-y
+W
 a
 l
 a
@@ -345,11 +337,11 @@ a
 a
 "}
 (8,1,1) = {"
-d
-y
+E
+W
 h
 x
-y
+W
 a
 l
 a
@@ -357,11 +349,11 @@ a
 a
 "}
 (9,1,1) = {"
-e
-e
+n
+n
 i
 z
-y
+W
 a
 l
 a
@@ -369,12 +361,12 @@ a
 a
 "}
 (10,1,1) = {"
-d
-y
+E
+W
 h
 x
-y
-k
+W
+E
 l
 a
 a
@@ -382,10 +374,10 @@ a
 "}
 (11,1,1) = {"
 a
-y
+W
 h
 x
-y
+W
 a
 l
 a
@@ -394,10 +386,10 @@ a
 "}
 (12,1,1) = {"
 a
-y
+W
 h
 x
-y
+W
 a
 l
 a
@@ -406,10 +398,10 @@ a
 "}
 (13,1,1) = {"
 a
-y
+W
 h
 x
-y
+W
 a
 a
 a
@@ -422,11 +414,11 @@ N
 N
 w
 N
-d
-d
-d
-d
-d
+E
+E
+E
+E
+E
 "}
 (15,1,1) = {"
 a
@@ -437,8 +429,8 @@ N
 a
 a
 a
-d
-d
+E
+E
 "}
 (16,1,1) = {"
 c
