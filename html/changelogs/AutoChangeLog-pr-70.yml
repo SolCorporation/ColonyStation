@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Bombs triggered on lavaland and other mining worlds can be as large as they used to be."
