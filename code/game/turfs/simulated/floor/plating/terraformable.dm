@@ -13,8 +13,7 @@
 	GLOB.terraformable_turfs += src
 
 	air = SSterraforming.mix
-
-	set_light(1)
+	update_light()
 
 	..()
 
