@@ -69,7 +69,7 @@ require only minor tweaks.
 
 // default trait definitions, used by SSmapping
 #define ZTRAITS_CENTCOM list(ZTRAIT_CENTCOM = TRUE)
-#define ZTRAITS_STATION list(ZTRAIT_LINKAGE = UNAFFECTED, ZTRAIT_STATION = TRUE, ZTRAIT_GRAVITY)
+#define ZTRAITS_STATION list(ZTRAIT_LINKAGE = UNAFFECTED, ZTRAIT_STATION = TRUE, ZTRAIT_GRAVITY, ZTRAIT_BASETURF = /turf/open/floor/plating/asteroid/terraformable )
 #define ZTRAITS_SPACE list(ZTRAIT_LINKAGE = CROSSLINKED, ZTRAIT_SPACE_RUINS = TRUE)
 #define ZTRAITS_LAVALAND list(\
     ZTRAIT_MINING = TRUE, \

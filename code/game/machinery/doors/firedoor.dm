@@ -244,7 +244,7 @@
 	turfs[start_point] = 1
 	for(var/i = 1; (i <= turfs.len && i <= 11); i++) // check up to 11 turfs.
 		var/turf/open/T = turfs[i]
-		if(istype(T, /turf/open/space))
+		if(istype(T, /turf/open/space) || istype(T, /turf/open/floor/plating/asteroid/terraformable ))
 			return -1
 		for(var/T2 in T.atmos_adjacent_turfs)
 			if(turfs[T2])
@@ -361,7 +361,7 @@
 	turfs[start_point] = 1
 	for(var/i = 1; (i <= turfs.len && i <= 11); i++) // check up to 11 turfs.
 		var/turf/open/T = turfs[i]
-		if(istype(T, /turf/open/space))
+		if(istype(T, /turf/open/space) || istype(T, /turf/open/floor/plating/asteroid/terraformable))
 			return -1
 		for(var/T2 in T.atmos_adjacent_turfs)
 			turfs[T2] = 1

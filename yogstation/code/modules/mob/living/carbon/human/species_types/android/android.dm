@@ -83,6 +83,9 @@ adjust_charge - take a positive or negative value to adjust the charge level
 
 	screamsound = 'goon/sound/robot_scream.ogg'
 
+/datum/species/android/check_roundstart_eligible()
+	return FALSE
+
 /datum/species/android/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
 	. = ..()
 	for (var/V in C.bodyparts)

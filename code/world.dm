@@ -12,8 +12,8 @@
   */
 /world
 	mob = /mob/dead/new_player
-	turf = /turf/open/space/basic
-	area = /area/space
+	turf = /turf/open/floor/plating/asteroid/terraformable
+	area = /area/planet/outside
 	view = "15x15"
 	hub = "Exadv1.spacestation13"
 	hub_password = "kMZy3U5jJHSiBQjr"
