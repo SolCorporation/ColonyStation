@@ -17,4 +17,4 @@ if exist "%_dmexec%" (
 "%_dmexec%" yogstation.dme
 
 :end
-pause
+paus
