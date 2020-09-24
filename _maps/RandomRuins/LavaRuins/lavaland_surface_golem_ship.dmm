@@ -37,11 +37,75 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/plating,
 /area/ruin/powered/golem_ship)
+<<<<<<< HEAD
 "f" = (
 /turf/open/floor/plating,
 /area/ruin/powered/golem_ship)
 "g" = (
 /obj/structure/reagent_dispensers/watertank,
+=======
+"iK" = (
+/turf/template_noop,
+/area/template_noop)
+"iU" = (
+/obj/effect/spawner/structure/window/hollow/survival_pod/directional{
+	dir = 6
+	},
+/turf/open/floor/plating,
+/area/ruin/powered/golem_ship)
+"jX" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/rack,
+/obj/effect/decal/cleanable/glass,
+/obj/item/storage/pill_bottle/charcoal,
+/turf/open/floor/pod/dark,
+/area/ruin/powered/golem_ship)
+"kD" = (
+/obj/machinery/door/airlock/survival_pod/glass,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/shreds,
+/turf/open/floor/pod/dark,
+/area/ruin/powered/golem_ship)
+"lK" = (
+/turf/open/floor/plating/lavaland_baseturf,
+/area/ruin/powered/golem_ship)
+"mL" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/template_noop,
+/area/ruin/powered/golem_ship)
+"mY" = (
+/obj/effect/decal/cleanable/oil,
+/turf/open/floor/pod,
+/area/ruin/powered/golem_ship)
+"na" = (
+/obj/machinery/light/built,
+/obj/structure/frame/machine,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plating,
+/area/ruin/powered/golem_ship)
+"nO" = (
+/obj/structure/fans/tiny,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/airlock/survival_pod/glass,
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/turf/open/floor/pod/dark,
+/area/ruin/powered/golem_ship)
+"oz" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -24
+	},
+/turf/open/floor/pod,
+/area/ruin/powered/golem_ship)
+"pc" = (
+/obj/machinery/mineral/ore_redemption,
+>>>>>>> 996dbc25c1... Unfucks exterior free golem areas (#9787)
 /turf/open/floor/plating,
 /area/ruin/powered/golem_ship)
 "h" = (
@@ -267,6 +331,7 @@
 /area/ruin/powered/golem_ship)
 
 (1,1,1) = {"
+<<<<<<< HEAD
 a
 a
 a
@@ -517,6 +582,300 @@ j
 f
 e
 b
+=======
+iK
+Ht
+Ht
+Ht
+Ht
+Ht
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+Ht
+Ht
+Ht
+Ht
+Ht
+iK
+"}
+(2,1,1) = {"
+iK
+Ht
+UY
+YP
+Ff
+Ht
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+Ht
+uc
+Kp
+zV
+Ht
+iK
+"}
+(3,1,1) = {"
+iK
+si
+Ph
+xc
+YP
+Ht
+Xc
+UU
+xl
+xl
+xl
+KW
+CI
+Ht
+MV
+Hp
+AY
+si
+iK
+"}
+(4,1,1) = {"
+iK
+si
+GD
+xc
+YP
+Ht
+Ht
+iU
+LX
+HQ
+bT
+Xr
+Ht
+Ht
+YL
+Hp
+UB
+si
+iK
+"}
+(5,1,1) = {"
+iK
+si
+MR
+MV
+Ff
+Ht
+Ox
+Hp
+Ls
+Pr
+Ls
+xc
+zE
+Ht
+Dw
+da
+tx
+si
+iK
+"}
+(6,1,1) = {"
+iK
+CE
+Ht
+kD
+Ht
+Ht
+Iu
+FL
+Ls
+fy
+Ls
+Pt
+vO
+Ht
+Ht
+PN
+Ht
+CE
+iK
+"}
+(7,1,1) = {"
+iK
+si
+FM
+da
+hD
+Ht
+Ht
+Ht
+Ht
+Qu
+Ht
+Ht
+Ht
+Ht
+zO
+YP
+da
+si
+iK
+"}
+(8,1,1) = {"
+iK
+si
+hD
+xc
+hD
+Ht
+hk
+Ol
+YP
+Hp
+LU
+Ol
+Dq
+Ht
+Ci
+hB
+da
+si
+iK
+"}
+(9,1,1) = {"
+iK
+si
+hD
+xc
+hD
+Ht
+wZ
+OL
+da
+xc
+YP
+Qd
+Dq
+Ht
+jX
+Hp
+YP
+si
+iK
+"}
+(10,1,1) = {"
+iK
+Ht
+hV
+YP
+hD
+Ht
+Ht
+Ht
+Ht
+Fe
+Ht
+Ht
+Ht
+Ht
+pO
+YP
+AH
+Ht
+iK
+"}
+(11,1,1) = {"
+iK
+Ht
+Ht
+yu
+Ht
+Ht
+XR
+Do
+YP
+YP
+YP
+gU
+OZ
+Ht
+Ht
+yu
+Ht
+Ht
+iK
+"}
+(12,1,1) = {"
+iK
+SR
+PC
+mY
+uB
+Hv
+da
+xc
+ER
+xc
+pT
+yp
+da
+Ud
+oz
+rh
+Oj
+uw
+iK
+"}
+(13,1,1) = {"
+iK
+mL
+Ud
+Hp
+Jj
+Hv
+YP
+xc
+Hp
+xc
+xc
+Hp
+YP
+MQ
+xz
+xc
+Hv
+Ku
+iK
+"}
+(14,1,1) = {"
+iK
+Ht
+Ht
+yu
+Ht
+Ht
+Pu
+xc
+LB
+xc
+ty
+Hp
+OZ
+Ht
+Ht
+yu
+Ht
+Ht
+iK
+>>>>>>> 996dbc25c1... Unfucks exterior free golem areas (#9787)
 "}
 (15,1,1) = {"
 b
@@ -609,6 +968,7 @@ h
 b
 "}
 (20,1,1) = {"
+<<<<<<< HEAD
 b
 i
 i
@@ -625,4 +985,109 @@ b
 i
 i
 b
+=======
+Ht
+sJ
+OZ
+LB
+Vd
+Ht
+CE
+Ht
+MH
+hQ
+da
+Ht
+CE
+Ht
+Lh
+YA
+XR
+AU
+Ht
+"}
+(21,1,1) = {"
+Ht
+Ht
+po
+po
+po
+Ht
+Pz
+Ht
+nO
+Ht
+RO
+Ht
+Bg
+Ht
+po
+po
+po
+Ht
+Ht
+"}
+(22,1,1) = {"
+iK
+Ht
+lK
+lK
+FC
+Ht
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+Ht
+lK
+lK
+FC
+Ht
+iK
+"}
+(23,1,1) = {"
+iK
+iK
+lK
+lK
+lK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+lK
+lK
+lK
+iK
+iK
+"}
+(24,1,1) = {"
+iK
+iK
+sm
+sm
+sm
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+iK
+sm
+sm
+sm
+iK
+iK
+>>>>>>> 996dbc25c1... Unfucks exterior free golem areas (#9787)
 "}
