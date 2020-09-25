@@ -17,12 +17,17 @@
 /code/ @yogstation13/code
 /config/ @yogstation13/head-coders
 /goon/ @yogstation13/art
+<<<<<<< HEAD
 /html/ @yogstation13/code
 /icons/ @yogstation/art
 /interface/ @yogstation13/code
 /sound/ @yogstation/art
 /tgui/ @yogstation13/code
 /tools/ @yogstation13/code
+=======
+/icons/ @yogstation13/art
+/sound/ @yogstation13/art
+>>>>>>> dc786973ef... Idiot (#9785)
 /yogstation/SQL/ @yogstation13/head-coders
 /yogstation/code/ @yogstation13/code
 /yogstation/icons/ @yogstation13/art
