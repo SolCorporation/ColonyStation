@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Constructed bombs on Lavaland Z-levels are not as capable of being large explosions."
