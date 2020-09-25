@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "you no longer smash light tubes on light fixtures if not fully crafted"
