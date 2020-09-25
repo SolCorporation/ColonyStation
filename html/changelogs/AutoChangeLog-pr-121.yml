@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "goldgrubs and minebots on lavaland will now actually search for ores"
