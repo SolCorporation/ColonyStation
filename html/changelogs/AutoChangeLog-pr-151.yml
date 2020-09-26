@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "Various Fixes for Omegastation"
