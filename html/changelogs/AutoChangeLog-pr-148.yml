@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Added urns to the ChapDrobe, for storing cremated remains"
