@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "You can now disassemble wooden barricades with a crowbar"
