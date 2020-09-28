@@ -1,0 +1,8 @@
+author: "Tex & Partheo"
+delete-after: True
+changes: 
+  - imageadd: "canisters have received a visual update
+imadeadd: canisters now glow white instead of green when above volume pump pressure threshold
+imadeadd: canisters now show when they are open to the air"
+  - tweak: "canisters made from metal now create a generic gray canister"
+  - bugfix: "fixed canister icon update runtime"
