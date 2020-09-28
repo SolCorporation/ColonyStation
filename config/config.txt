@@ -201,7 +201,6 @@ CHECK_RANDOMIZER
 ## Set to prevent anyone but those ckeys listed in config/whitelist.txt and config/admins.txt from joining your server
 #USEWHITELIST
 
-<<<<<<< HEAD
 ## set a server location for world reboot. Don't include the byond://, just give the address and port.
 ## Don't set this to the same server, BYOND will automatically restart players to the server when it has restarted.
 # SERVER ss13.example.com:2506
@@ -234,8 +233,6 @@ GITHUBREPOID 120966336
 ## The default value assumes youtube-dl is in your system PATH
 INVOKE_YOUTUBEDL youtube-dl
 
-=======
->>>>>>> 0f6d12eca3... Syncs server configs and changes the layout of the config directory (#9810)
 ## In-game features
 ##Toggle for having jobs load up from the .txt
 # LOAD_JOBS_FROM_TXT
