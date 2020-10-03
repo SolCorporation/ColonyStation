@@ -41,6 +41,7 @@
 	else
 		setting = TRITUM_SETTING
 
+/*
 /obj/machinery/power/neutron_inj/process()
 	if(reactor.injectingFuel && running)
 		switch(setting)
@@ -52,6 +53,7 @@
 				reactor.deuterium += fuelPerProcess
 				if(reactor.deuterium > 100)
 					reactor.deuterium = 100
+*/
 
 /obj/machinery/power/neutron_inj/proc/toggleOn()
 	running = !running

@@ -6,8 +6,11 @@ SUBSYSTEM_DEF(machines)
 	var/list/currentrun = list()
 	var/list/powernets = list()
 
+	var/list/waternets = list()
+
 /datum/controller/subsystem/machines/Initialize()
 	makepowernets()
+	makewaternets()
 	fire()
 	return ..()
 
@@ -22,8 +25,19 @@ SUBSYSTEM_DEF(machines)
 			NewPN.add_cable(PC)
 			propagate_network(PC,PC.powernet)
 
+/datum/controller/subsystem/machines/proc/makewaternets()
+	for(var/datum/powernet/PN in powernets)
+		qdel(PN)
+	powernets.Cut()
+
+	for(var/obj/structure/cable/PC in GLOB.cable_list)
+		if(!PC.powernet)
+			var/datum/powernet/NewPN = new(PC.loc.z)
+			NewPN.add_cable(PC)
+			propagate_water_network(PC,PC.powernet)
+
 /datum/controller/subsystem/machines/stat_entry()
-	return ..("M:[processing.len]|PN:[powernets.len]")
+	return ..("M:[processing.len]|PN:[powernets.len]|WN:[waternets.len]")
 
 
 /datum/controller/subsystem/machines/fire(resumed = 0)

@@ -195,6 +195,14 @@ GLOBAL_LIST_EMPTY(station_turfs)
 				return
 		coil.place_turf(src, user)
 		return TRUE
+	if(can_lay_cable(TRUE) && istype(C, /obj/item/stack/water_pipes))
+		var/obj/item/stack/water_pipes/pipes = C
+		for(var/obj/structure/water_pipe/LC in src)
+			if(!LC.d1 || !LC.d2)
+				LC.attackby(C,user)
+				return
+		pipes.place_turf(src, user)
+		return TRUE
 
 	else if(istype(C, /obj/item/twohanded/rcl))
 		handleRCL(C, user)
@@ -397,8 +405,8 @@ GLOBAL_LIST_EMPTY(station_turfs)
 /turf/proc/can_have_cabling()
 	return TRUE
 
-/turf/proc/can_lay_cable()
-	return can_have_cabling() & !intact
+/turf/proc/can_lay_cable(ignore_intact = FALSE)
+	return can_have_cabling() & (!intact && !ignore_intact)
 
 /turf/proc/visibilityChanged()
 	GLOB.cameranet.updateVisibility(src)
