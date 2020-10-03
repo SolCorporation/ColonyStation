@@ -38,7 +38,7 @@
 	if(!ui)
 		ui = new(user, src, ui_key, "FusionController", name, 475, 800, master_ui, state)
 		ui.open()
-
+/*
 /obj/machinery/computer/reactor_control/ui_data()
 	var/list/data = list()
 
@@ -124,6 +124,7 @@
 		if("togglePreheat")
 			reactor.togglePreheating()
 			. = TRUE
+*/
 
 /obj/item/circuitboard/computer/reactor_control
 	name = "Fusion Reactor Controller (Computer Board)"

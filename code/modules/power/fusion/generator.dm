@@ -3,176 +3,191 @@
 #define GENERATOR_STARTED 2
 #define GENERATOR_STOPPING 3
 
-/obj/machinery/power/fusion_gen
-	name = "thermo generator"
-	desc = "This little uses the heat from a fusion reactor, to create power!"
-	icon = 'goon/icons/obj/fusion_machines.dmi'
-	icon_state = "engineoff"
+/obj/machinery/power/water/fusion_gen/center
+	name = "turbine"
+	desc = "This machine uses the thermal energy of steam to create mechanical motion, which is then converted to electricity." 
+	icon = 'icons/obj/fusion_machines.dmi'
+	icon_state = "gen_center"
 
 	density = TRUE
+	///How much steam did we have last tick?
+	var/last_tick_usage = 0
 
-	use_power = IDLE_POWER_USE
+	///How much steam/water can we process at max?
+	var/max_throughput = 100
 
-	idle_power_usage = 10
-	active_power_usage = 5000
+	///At what temp and above do we get 100% power output?
+	var/optimal_temp = 600
 
-	var/maxOutput = 400000
-	var/outputBonus = 1
-	var/heatGenerationCutoff = 0.5
-	var/lastOutput = 0
+	///How much of the heat can we turn into power?
+	var/efficiency = 0.5
 
-	var/status = GENERATOR_OFF
+	///1 heat unit (After efficiency applied, efficiency*max_throughput*this), 1000 = 1kW per heat = 500W per heat at 50% efficiency
+	var/conversion_rate = 1000
 
-	var/warmUp = 0
-	var/warmUpMax = 100
-	var/warmUpAmount = 0.75
+	var/obj/machinery/power/fusion_gen/left/electric_part
 
-	var/condition = 100
-	var/degradation = 0.1
+	var/obj/machinery/power/water/fusion_gen/right/steam_part
 
-	var/list/upgrades = list()
 
-	var/obj/machinery/power/fusion/core/reactor
-
-/obj/machinery/power/fusion_gen/Initialize()
-	name += " ([num2hex(rand(1,65535), -1)])"
-	for(var/obj/machinery/power/fusion/core/R in orange(15, src))
-		reactor = R
-	START_PROCESSING(SSobj, src)
-	connect_to_network()
+/obj/machinery/power/water/fusion_gen/center/Initialize()
 	..()
+	name += " ([num2hex(rand(1,65535), -1)])"
 
-/obj/machinery/power/fusion_gen/Destroy()
+	electric_part = locate(/obj/machinery/power/fusion_gen/left) in get_step(src, WEST)
+	steam_part = locate(/obj/machinery/power/fusion_gen/right) in get_step(src, EAST)
+
+	steam_part.center = src
+
+	if(!electric_part || !steam_part)
+		stat |= BROKEN
+		return ..()
+	if(!waternet)
+		stat |= BROKEN
+		return ..()
+	if(!electric_part.connect_to_network())
+		stat |= BROKEN
+		return ..()
+	if(!steam_part.waternet)
+		stat |= BROKEN
+		return ..()
+
+	update_icon()
+	START_PROCESSING(SSobj, src)
+	
+
+/obj/machinery/power/water/fusion_gen/center/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	..()
 
-/obj/machinery/power/fusion_gen/update_icon()
-	switch(status)
-		if(GENERATOR_OFF)
-			icon_state = "engineoff"
+/obj/machinery/power/water/fusion_gen/center/update_icon()
+	electric_part.update_icon()
 
-		if(GENERATOR_STARTING || GENERATOR_STOPPING)
-			icon_state = "enginenopow"
+	cut_overlays()
+	if(last_tick_usage > (max_throughput * 0.95))
+		add_overlay("med_overlay_overmax")
+		electric_part.update_icon(TRUE)
+		return
+	if(last_tick_usage > (max_throughput * 0.9))
+		add_overlay("med_overlay_max")
+		return
+	if(last_tick_usage > (max_throughput * 0.675))
+		add_overlay("med_overlay_high")
+		return
+	if(last_tick_usage > (max_throughput * 0.45))
+		add_overlay("med_overlay_med")
+		return
+	if(last_tick_usage > (max_throughput * 0.225))
+		add_overlay("med_overlay_low")
+		return
+	add_overlay("med_overlay_off")
 
-		if(GENERATOR_STARTED)
-			icon_state = "enginepoweredworking"
+/obj/machinery/power/water/fusion_gen/center/attackby(obj/item/W, mob/living/user, params)
+	if(W.tool_behaviour == TOOL_WIRECUTTER)
+		to_chat(user, "<span class='info'>Attempting to reactivate machine...</span>")
+		if(!do_after(user, 25))
+			to_chat(user, "<span class='warning'>You fail to reactivate the machine!</span>")
+			return
+		var/still_broken = FALSE
+		if(!electric_part || !steam_part)
+			still_broken = TRUE
 
-/obj/machinery/power/fusion_gen/proc/toggleOn()
-	if(status == GENERATOR_OFF)
-		status = GENERATOR_STARTING
-	else
-		status = GENERATOR_STOPPING
+		if(!waternet)
+			still_broken = TRUE
+
+		if(!electric_part.connect_to_network())
+			still_broken = TRUE
+
+		if(!steam_part.waternet)
+			still_broken = TRUE
+		
+		if(still_broken) 
+			to_chat(user, "<span class='warning'>You fail to reactivate the machine!</span>")
+		else
+			to_chat(user, "<span class='info'>You reactivate the machine.</span>")
+			update_icon()
+			START_PROCESSING(SSobj, src)
+			stat &= ~BROKEN
+		return
+
+	return ..()
+
+/obj/machinery/power/water/fusion_gen/center/process()
+	if(stat & BROKEN)
+		return PROCESS_KILL
+
+	electric_part.add_avail(process_power())
+
+
+/obj/machinery/power/fusion_gen/proc/process_power()
+	if(!steam_part)
+		stat |= BROKEN
+		return
+
+	var/water = steam_part.get_water()
+	var/temp = steam_part.get_temp()
+
+	if(water > max_throughput)
+		water = max_throughput
+	//Steal the water
+	steam_part.remove_water(water)
+
+	last_tick_usage = water
 	update_icon()
 
+	var/multiplier = 1
+	if(temp < optimal_temp && temp > 0)
+		multiplier = temp / optimal_temp
 
-/obj/machinery/power/fusion_gen/process()
-	if(status == GENERATOR_OFF)
-		return
+	var/water_dest = get_water()
+	var/temp_dest = get_temp()
+	
+	var/final_temp = EQUALIZE_WATER_TEMP(water, temp, water_Dest, temp_dest) * efficiency
+	set_temp(final_temp)
 
-	checkCondition()
-
-	if(status == GENERATOR_STOPPING)
-		if(warmUp <= 0)
-			status = GENERATOR_OFF
-			update_icon()
-		warmUp -= warmUpAmount
-		if(warmUp < 0)
-			warmUp = 0
-
-	if(status == GENERATOR_STARTING)
-		if(warmUp >= heatGenerationCutoff * warmUpMax)
-			status = GENERATOR_STARTED
-			update_icon()
-		warmUp += warmUpAmount
-		condition -= degradation
-
-	if(status == GENERATOR_STARTED)
-		warmUp += warmUpAmount
-		condition -= degradation
-		if(warmUp > warmUpMax)
-			warmUp = warmUpMax
-
-		add_avail(calculatePowerOutput())
+	add_water(water)
+	
+	return temp * conversion_rate * multiplier
 
 
-/obj/machinery/power/fusion_gen/proc/calculatePowerOutput()
-	reactor.load -= lastOutput
-	if(status != GENERATOR_STARTED)
-		return
+/obj/machinery/power/water/fusion_gen/right
+	name = "turbine intake"
+	desc = "This part of the machine takes in heat energy in the form of steam." 
+	icon = 'icons/obj/fusion_machines.dmi'
+	icon_state = "gen_right"
 
-	if(!reactor.sendingHeat)
-		lastOutput = 0
-		return
+	density = TRUE
 
-	//How much heat do we have after being activated. Max heat is 100, 50 is used for starting up, calculate the last 50
-	var/heatAfterActivation = warmUpMax * heatGenerationCutoff
+	var/obj/machinery/power/water/fusion_gen/center/center
 
-	//How much heat do we have of the surplus, after starting. Max is 100, 50 is used for starting up, this gets the heat-50,
-	var/max = (warmUp - heatAfterActivation) / heatAfterActivation
-	//Warmer = more power, 0,25 at 25 extra heat(50%), 0,5625 at 37.5heat(75%)
-	var/multiplier = max ** 2
+/obj/machinery/power/water/fusion_gen/right/Destroy()
+	if(center)
+		center |= BROKEN
+	return ..()
 
-	var/possibleOutput = (maxOutput * outputBonus) * multiplier
+/obj/machinery/power/fusion_gen/left
+	name = "turbine generator"
+	desc = "This part of the machine converts the mechanical energy to electricity." 
+	icon = 'icons/obj/fusion_machines.dmi'
+	icon_state = "gen_left"
 
-	if((reactor.possibleLoad - reactor.load) > possibleOutput)
-		lastOutput = possibleOutput
-		reactor.load += possibleOutput
-		return clamp(possibleOutput, 0, maxOutput)
-	else if((reactor.possibleLoad - reactor.load) > 0)
-		var/correctedOutput = clamp(possibleOutput, 0, (reactor.possibleLoad - reactor.load))
-		lastOutput = correctedOutput
-		reactor.load += correctedOutput
-		return correctedOutput
+	density = TRUE
 
-	lastOutput = 0
-	return 0
+	var/obj/machinery/power/water/fusion_gen/center/center
 
-/obj/machinery/power/fusion_gen/proc/checkCondition()
-	if(condition < 0)
-		condition = 0
-		status = GENERATOR_OFF
-		warmUp = 0
-		update_icon()
-
-/obj/machinery/power/fusion_gen/proc/returnStatus()
-	switch(status)
-		if(GENERATOR_OFF)
-			return "OFF"
-
-		if(GENERATOR_STARTING)
-			return "SPINNING UP"
-
-		if(GENERATOR_STOPPING)
-			return "STOPPING"
-
-		if(GENERATOR_STARTED)
-			return "GENERATING POWER"
-
-/obj/machinery/power/fusion_gen/attackby(obj/item/W, mob/user, params)
-	if(istype(W, /obj/item/generator_upgrade))
-		var/obj/item/generator_upgrade/upgrade = W
-		upgrades += upgrade
-		upgrade.forceMove(src)
-		upgrade.upgrade.OnApply(src)
-
-/obj/machinery/power/fusion_gen/crowbar_act(mob/living/user, obj/item/I)
-	. = TRUE
-	if(upgrades.len)
-		I.play_tool_sound(src, 100)
-		for(var/obj/item/generator_upgrade/upgrades in upgrades)
-			upgrades.forceMove(get_turf(src))
-			upgrades.upgrade.OnRemove(src)
-		upgrades = list()
+/obj/machinery/power/fusion_gen/left/update_icon(max_reached = FALSE)
+	cut_overlays()
+	if(max_reached)
+		add_overlay("left_overlay_blinking")
 	else
-		to_chat(user, "<span class='notice'>There are no upgrades currently installed.</span>")
+		add_overlay("left_overlay")
 
-/obj/machinery/power/fusion_gen/welder_act(mob/living/user, obj/item/I)
-	if(!I.tool_start_check(user, amount=0))
-		return TRUE
 
-	playsound(src, 'sound/items/welder2.ogg', 100, 1)
-	to_chat(user, "<span class='notice'>You start repairing \the [src]...</span>")
-	if(I.use_tool(src, user, 50))
-		to_chat(user, "<span class='notice'>You repair \the [src].</span>")
-		condition = initial(condition)
-	return TRUE
+/obj/machinery/power/water/fusion_gen/left/Initialize()
+	update_icon()
+	return ..()
+
+/obj/machinery/power/water/fusion_gen/left/Destroy()
+	if(center)
+		center |= BROKEN
+	return ..()
