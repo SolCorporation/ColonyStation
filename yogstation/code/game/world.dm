@@ -40,6 +40,7 @@ GLOBAL_LIST_EMPTY(donators)
 	var/s = ""
 	var/server_name = CONFIG_GET(string/servername)
 	if (server_name)
+<<<<<<< HEAD
 		s += "<b>[server_name]</b> | Contains TERRAFORMING &#8212; "
 
 	s += "<b>[station_name()]</b>]<br>"; // The station & server name line
@@ -60,6 +61,12 @@ GLOBAL_LIST_EMPTY(donators)
 	if(features.len)
 		s += "[jointext(features,", ")]<br>" // The features line
 
+=======
+		s += "<b>[server_name]</b> &#8212; "
+	s += "<img src=\"https://i.imgur.com/gNgarRJ.gif\">" //Banner image
+	s += "<br>(<a href=\"https://forums.yogstation.net/index.php\">Forums</a>|<a href=\"https://discord.gg/0keg6hQH05Ha8OfO\">Discord</a>)<br>" // The Forum & Discord links line
+	s += "<br><i>[pick(world.file2list("yogstation/strings/taglines.txt"))]</i><br>"
+>>>>>>> c30b80c9cd... Adds banner and removes making us look bad (#9875)
 
 
 	//PLAYER COUNT
