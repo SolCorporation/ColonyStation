@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Allowed armbands, medals, and the bone talisman and codpiece to display over suits."
