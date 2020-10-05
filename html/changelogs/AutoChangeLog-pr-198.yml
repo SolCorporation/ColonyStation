@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "Toxins simulator now correctly accounts for heat energy changes when simulating the stimball reaction."
