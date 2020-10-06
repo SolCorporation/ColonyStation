@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "readds atmos research point generation that was hotfixed out due to an exploit"
