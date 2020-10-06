@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "CQC has been reworked entirely and is now available in the traitor uplink"
+  - tweak: "martial art melee blocks are handled inside the martial art rather than by the item/just blocking"
