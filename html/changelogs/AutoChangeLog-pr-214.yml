@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "Applies parentheses to fix mutant colors not appearing for any race"
