@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Chief Engineer's energy harvester pumps its money straight to cargo instead of engineering"
+  - tweak: "Toxins explosions now pump their generated money to cargo instead of RnD"
