@@ -488,7 +488,11 @@
 	var/turf/target = get_step_multiz(src, dir)
 	if(!target)
 		if(feedback)
+<<<<<<< HEAD
 			to_chat(src, "<span class='warning'>There's nowhere to go in that direction!</span>")
+=======
+			to_chat(src, "<span class='warning'>There's nothing [dir == DOWN ? "below" : "above"] you!</span>")
+>>>>>>> d2df975283... Improves the feedback of Move Up/Down Verbs (#9897)
 		return FALSE
 	if(!canZMove(dir, target))
 		if(feedback)
