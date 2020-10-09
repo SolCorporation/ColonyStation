@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Made the white ship chosen for each map independent of it."
+  - tweak: "Changed the name of the white ships to be more generic."
