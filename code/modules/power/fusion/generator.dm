@@ -35,7 +35,7 @@
 	name += " ([num2hex(rand(1,65535), -1)])"
 
 	electric_part = locate(/obj/machinery/power/fusion_gen/left) in get_step(src, WEST)
-	steam_part = locate(/obj/machinery/power/fusion_gen/right) in get_step(src, EAST)
+	steam_part = locate(/obj/machinery/power/water/fusion_gen/right) in get_step(src, EAST)
 
 	steam_part.center = src
 
@@ -119,7 +119,7 @@
 	electric_part.add_avail(process_power())
 
 
-/obj/machinery/power/fusion_gen/proc/process_power()
+/obj/machinery/power/water/fusion_gen/center/proc/process_power()
 	if(!steam_part)
 		stat |= BROKEN
 		return
@@ -142,7 +142,7 @@
 	var/water_dest = get_water()
 	var/temp_dest = get_temp()
 	
-	var/final_temp = EQUALIZE_WATER_TEMP(water, temp, water_Dest, temp_dest) * efficiency
+	var/final_temp = EQUALIZE_WATER_TEMP(water, temp, water_dest, temp_dest) * efficiency
 	set_temp(final_temp)
 
 	add_water(water)
@@ -183,11 +183,11 @@
 		add_overlay("left_overlay")
 
 
-/obj/machinery/power/water/fusion_gen/left/Initialize()
+/obj/machinery/power/fusion_gen/left/Initialize()
 	update_icon()
 	return ..()
 
-/obj/machinery/power/water/fusion_gen/left/Destroy()
+/obj/machinery/power/fusion_gen/left/Destroy()
 	if(center)
 		center |= BROKEN
 	return ..()

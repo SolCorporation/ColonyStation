@@ -1,16 +1,12 @@
 ///How much heat the water gets from 1 internal heat
 #define HEAT_COEFFICIENT 0.75
-///Multiplier for how much heat is added to the CORE when heat is added to the internals
-#define CORE_HEAT_COEFFICIENT 3
 ///How much heat the coolant water can take
 #define MAX_COOLANT_TEMP 10000
-///Emitter damage multiplied by this before being added as heat. (Emitter default damage is 30) (Technically this is for ANY energy that hits the core)
-#define EMITTER_ENERGY_MODIFIER 2
 ///How long between warnings
 #define WARNING_COOLDOWN 60
 
 
-//FOLLOWING VALUES ARE BASED ON A THE ICON STATE
+//FOLLOWING VALUES ARE BASED ON THE ICON STATE
 #define REACTOR_RIGHT 4
 #define REACTOR_LEFT 6
 #define REACTOR_TOP 2
@@ -30,6 +26,8 @@
 
 
 	use_power = NO_POWER_USE
+
+	
 
 	///Parts of the reactor
 	var/list/parts = list()
@@ -60,6 +58,11 @@
 	var/emergency_point_reached = FALSE
 	///If we reach this point eject hot steam from nowhere, honk
 	var/meltdown = FALSE
+
+	///What fuel rods do we have inserted. Tick each of these once per laser hit
+	var/list/fuel = list()
+	///How much fuel do we try to use per rod per hit?
+	var/fuel_use = 10
 
 	///Internal radio
 	var/obj/item/radio/radio
@@ -95,8 +98,7 @@
 	if(!istype(L))
 		return FALSE
 	if(Proj.flag != "bullet")
-		internal_heat += EMITTER_ENERGY_MODIFIER * Proj.damage
-		heat += EMITTER_ENERGY_MODIFIER * Proj.damage * CORE_HEAT_COEFFICIENT
+		process_fuel()
 		if(!has_been_powered)
 			investigate_log("has been powered for the first time.", INVESTIGATE_SUPERMATTER)
 			message_admins("[src] has been powered for the first time [ADMIN_JMP(src)].")
@@ -157,7 +159,7 @@
 		add_water(generator_water, generator_outlet)
 		//Spread it out amongst the total volume of water
 		amount_to_heat = EQUALIZE_WATER_TEMP(outlet_water, outlet_temp, generator_water, amount_to_heat)
-		set_Temp(amount_to_heat, generator_outlet)
+		set_temp(amount_to_heat, generator_outlet)
 	
 	//COOLING THE REACTOR/HEATING COOLING LOOP
 	var/cooling_inlet_water = get_water(cooling_inlet) 
@@ -181,11 +183,51 @@
 		amount_to_heat = EQUALIZE_WATER_TEMP(outlet_water, outlet_temp, cooling_inlet_water, amount_to_heat)
 		set_temp(amount_to_heat, cooling_outlet)
 
+/obj/machinery/power/water/fusion/core/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/fuel_rod))
+		var/obj/item/fuel_rod/rod = I
+		if(rod.fuel_amount <= 0)
+			to_chat(user, "<span class='warning'>[I] is empty and can't be inserted!</span>")
+			return ..()
+		fuel += I
+		I.forceMove(src)
+		to_chat(user, "<span class='info'>You insert [I].</span>")
+		return
+
+	return ..()
+
+/obj/machinery/power/water/fusion/core/crowbar_act(mob/user, obj/item/tool)
+	for(var/obj/item/fuel_rod/rod in fuel)
+		rod.forceMove(get_turf(src))
+		fuel -= rod
+	
+
+	to_chat(user, "<span class='warning'>You remove all the inserted fuel rods.</span>")
+	tool.play_tool_sound(src)
+	return TRUE
 
 /obj/machinery/power/water/fusion/core/process_atmos()
 	if(meltdown)
 		release_steam()
 	
+/obj/machinery/power/water/fusion/core/proc/process_fuel()
+	//So we can notify them if a rod depletes, without spamming them if multiple deplete at the same time
+	var/empty_fuel_rod = FALSE
+	for(var/obj/item/fuel_rod/rod in fuel)
+		var/fuel_used = round(rod.use_fuel(fuel_use)) //Boo hoo you lost 0.5 fuel :(
+		
+		internal_heat += fuel_used * rod.fuel.power_multiplier
+		heat += fuel_used * rod.fuel.heat_multiplier
+
+		if(rod.fuel_amount <= 0)
+			rod.forceMove(get_turf(src))
+			fuel -= rod
+			empty_fuel_rod = TRUE
+
+	if(empty_fuel_rod)
+		radio.talk_into(src, "Fuel rod depleted. Ejecting fuel rod.", engineering_channel)
+
+
 /obj/machinery/power/water/fusion/core/proc/release_steam()
 	var/turf/T = loc
 	if(isnull(T))

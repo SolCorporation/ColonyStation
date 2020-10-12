@@ -9,12 +9,12 @@
 
 	var/detectionRadius = 15
 
-	var/obj/machinery/power/fusion/core/reactor
+	var/obj/machinery/power/water/fusion/core/reactor
 
 	var/obj/item/disk/fuel_mix/mix
 
 /obj/machinery/computer/reactor_control/Initialize()
-	for(var/obj/machinery/power/fusion/core/R in orange(detectionRadius, src))
+	for(var/obj/machinery/power/water/fusion/core/R in orange(detectionRadius, src))
 		reactor = R
 		reactor.controller = src
 		continue
