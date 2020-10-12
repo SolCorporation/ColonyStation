@@ -23,7 +23,7 @@
 	for(var/obj/structure/water_pipe/C in pipes)
 		pipes -= C
 		C.waternet = null
-	for(var/obj/machinery/power/fusion/M in nodes)
+	for(var/obj/machinery/power/water/M in nodes)
 		nodes -= M
 		M.waternet = null
 
@@ -56,7 +56,7 @@
 //remove a power machine from the current powernet
 //if the powernet is then empty, delete it
 //Warning : this proc DON'T check if the machine exists
-/datum/waternet/proc/remove_machine(obj/machinery/power/fusion/M)
+/datum/waternet/proc/remove_machine(obj/machinery/power/water/M)
 	nodes -=M
 	M.waternet = null
 	if(is_empty())//the powernet is now empty...
@@ -65,7 +65,7 @@
 
 //add a power machine to the current powernet
 //Warning : this proc DOESN'T check if the machine exists
-/datum/waternet/proc/add_machine(obj/machinery/power/fusion/M)
+/datum/waternet/proc/add_machine(obj/machinery/power/water/M)
 	if(M.waternet)// if M already has a powernet...
 		if(M.waternet == src)
 			return
@@ -92,15 +92,15 @@
 				PN.add_pipe(C)
 			worklist |= C.get_connections() //get adjacents power objects, with or without a powernet
 
-		else if(P.anchored && istype(P, /obj/machinery/power/fusion))
-			var/obj/machinery/power/fusion/M = P
+		else if(P.anchored && istype(P, /obj/machinery/power/water))
+			var/obj/machinery/power/water/M = P
 			found_machines |= M //we wait until the powernet is fully propagates to connect the machines
 
 		else
 			continue
 
 	//now that the powernet is set, connect found machines to it
-	for(var/obj/machinery/power/fusion/PM in found_machines)
+	for(var/obj/machinery/power/water/PM in found_machines)
 		if(!PM.connect_to_water_network()) //couldn't find a node on its turf...
 			PM.disconnect_from_network() //... so disconnect if already on a powernet
 
@@ -129,7 +129,7 @@
 	for(var/obj/structure/water_pipe/Cable in net2.pipes) //merge cables
 		net1.add_pipe(Cable)
 
-	for(var/obj/machinery/power/fusion/Node in net2.nodes) //merge power machines
+	for(var/obj/machinery/power/water/Node in net2.nodes) //merge power machines
 		if(!Node.connect_to_water_network())
 			Node.disconnect_from_water_network() //if somehow we can't connect the machine to the new powernet, disconnect it from the old nonetheless
 
@@ -142,8 +142,8 @@
 		if(AM == source)
 			continue			//we don't want to return source
 
-		if(!cable_only && istype(AM, /obj/machinery/power/fusion))
-			var/obj/machinery/power/fusion/P = AM
+		if(!cable_only && istype(AM, /obj/machinery/power/water))
+			var/obj/machinery/power/water/P = AM
 			if(P.powernet == 0)
 				continue		// exclude APCs which have powernet=0
 

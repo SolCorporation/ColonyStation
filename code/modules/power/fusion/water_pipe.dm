@@ -120,8 +120,8 @@ GLOBAL_LIST_EMPTY(pipe_list)
 				else
 					waternet.add_pipe(C) //the cable was waternetless, let's just add it to our waternet
 
-		else if(istype(AM, /obj/machinery/power/fusion)) //other power machines
-			var/obj/machinery/power/fusion/M = AM
+		else if(istype(AM, /obj/machinery/power/water)) //other power machines
+			var/obj/machinery/power/water/M = AM
 
 			if(M.waternet == waternet)
 				continue
@@ -190,7 +190,7 @@ GLOBAL_LIST_EMPTY(pipe_list)
 	if(P_list.len == 0)//if nothing in both list, then the cable was a lone cable, just delete it and its waternet
 		waternet.remove_pipe(src)
 
-		for(var/obj/machinery/power/fusion/P in T1)//check if it was powering a machine
+		for(var/obj/machinery/power/water/P in T1)//check if it was powering a machine
 			if(!P.connect_to_water_network()) //can't find a node cable on a the turf to connect to
 				P.disconnect_from_water_network() //remove from current network (and delete waternet)
 		return
@@ -205,7 +205,7 @@ GLOBAL_LIST_EMPTY(pipe_list)
 
 	// Disconnect machines connected to nodes
 	if(d1 == 0) // if we cut a node (O-X) cable
-		for(var/obj/machinery/power/fusion/P in T1)
+		for(var/obj/machinery/power/water/P in T1)
 			if(!P.connect_to_water_network()) //can't find a node cable on a the turf to connect to
 				P.disconnect_from_water_network() //remove from current network
 
