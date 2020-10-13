@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "snowballs are no longer a lethal weapon"
+  - tweak: "snowball damage 20 up from 12"
