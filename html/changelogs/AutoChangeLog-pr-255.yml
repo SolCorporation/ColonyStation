@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Can not cryopod people with no mind / or admins that have ghosts"
