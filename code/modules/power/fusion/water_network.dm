@@ -13,7 +13,7 @@
 	///Temperature of the contained water
 	var/temp = T20C				
 	///Amount of water
-	var/amount = 80
+	var/amount = STARTING_WATER_AMOUNT
 
 /datum/waternet/New()
 	SSmachines.waternets += src
