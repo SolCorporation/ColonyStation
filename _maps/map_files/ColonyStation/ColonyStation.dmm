@@ -2599,6 +2599,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/storage)
+"aGt" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "aGw" = (
 /turf/closed/wall,
 /area/lawoffice)
@@ -5348,6 +5354,13 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
+"bFX" = (
+/obj/structure/water_pipe{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/water/fusion_gen/right,
+/turf/open/floor/engine,
+/area/engine/engineering)
 "bFZ" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1{
 	dir = 1
@@ -7125,6 +7138,15 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
+"cjx" = (
+/obj/structure/water_pipe{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "cjQ" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -8287,6 +8309,9 @@
 	name = "Reactor Access";
 	req_access_txt = "10"
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "cFj" = (
@@ -8548,6 +8573,13 @@
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/asteroid/terraformable,
 /area/solar/starboard/aft)
+"cKk" = (
+/obj/structure/water_pipe{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/water/fusion_gen/right,
+/turf/open/floor/engine,
+/area/engine/engineering)
 "cKw" = (
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
@@ -12406,7 +12438,10 @@
 /area/maintenance/fore)
 "eks" = (
 /obj/structure/water_pipe{
-	icon_state = "1-4-8"
+	icon_state = "4-8"
+	},
+/obj/structure/water_pipe{
+	icon_state = "1-8"
 	},
 /turf/open/floor/engine,
 /area/engine/engineering)
@@ -13849,6 +13884,12 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+"eOX" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/open/floor/plasteel/dark,
+/area/engine/engineering)
 "ePy" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
@@ -15157,6 +15198,9 @@
 /obj/machinery/door/airlock/engineering/glass{
 	name = "Reactor Access";
 	req_access_txt = "10"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
@@ -28763,6 +28807,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -28
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "koD" = (
@@ -34864,6 +34911,15 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plating,
 /area/ai_monitored/storage/satellite)
+"mFc" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "mFh" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/light/small{
@@ -39100,6 +39156,15 @@
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/asteroid/terraformable,
 /area/solar/port/fore)
+"ojN" = (
+/obj/structure/water_pipe{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "ojV" = (
 /obj/structure/sink{
 	dir = 8;
@@ -39575,6 +39640,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/fusion_gen/left,
 /turf/open/floor/engine,
 /area/engine/engineering)
 "ouH" = (
@@ -40781,6 +40847,12 @@
 	},
 /turf/open/floor/plasteel/grimy,
 /area/tcommsat/computer)
+"oTr" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "oTw" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/snacks/donut,
@@ -41717,6 +41789,15 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/plasteel,
 /area/science/mixing)
+"pkH" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "pkP" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
@@ -63373,6 +63454,13 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+"xzM" = (
+/obj/machinery/power/emitter/anchored,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "xAg" = (
 /obj/structure/chair/office/light{
 	dir = 1
@@ -94299,15 +94387,15 @@ mUW
 rlu
 gUq
 gYS
-acE
+eOX
 foU
 koo
 cER
-qMv
-qMv
-qMv
-fxW
-dLP
+oTr
+oTr
+oTr
+ojN
+mFc
 fxW
 pKO
 acD
@@ -94564,7 +94652,7 @@ qMv
 qMv
 qMv
 fxW
-qMv
+aGt
 lvj
 gKg
 gKg
@@ -94821,7 +94909,7 @@ vHe
 qMv
 qMv
 lvj
-gKg
+cjx
 gKg
 gKg
 aML
@@ -95078,7 +95166,7 @@ qMv
 qMv
 qMv
 eUa
-qMv
+aGt
 qMv
 qMv
 fxW
@@ -95335,7 +95423,7 @@ gUq
 gUq
 gUq
 acD
-vHe
+pkH
 qMv
 qMv
 fxW
@@ -95592,7 +95680,7 @@ gTn
 jMx
 aUU
 gUq
-qMv
+aGt
 qMv
 qMv
 fxW
@@ -95849,7 +95937,7 @@ jPe
 jMx
 jMx
 gUq
-qMv
+aGt
 qMv
 qMv
 oJs
@@ -96106,7 +96194,7 @@ jMx
 juj
 xSp
 gUq
-qMv
+xzM
 oyk
 scf
 qMv
@@ -98161,9 +98249,9 @@ acD
 acD
 qMv
 qMv
-dWo
+cKk
 qMv
-smT
+bFX
 eks
 nNl
 aQK

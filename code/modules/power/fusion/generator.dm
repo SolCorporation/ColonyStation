@@ -31,30 +31,40 @@
 
 
 /obj/machinery/power/water/fusion_gen/center/Initialize()
-	..()
+	. = ..()
 	name += " ([num2hex(rand(1,65535), -1)])"
 
 	electric_part = locate(/obj/machinery/power/fusion_gen/left) in get_step(src, WEST)
 	steam_part = locate(/obj/machinery/power/water/fusion_gen/right) in get_step(src, EAST)
 
-	steam_part.center = src
+	if(electric_part)
+		electric_part.update_icon()
+	if(steam_part)
+		steam_part.center = src
+
+	addtimer(CALLBACK(src, .proc/CheckBroken), 5 SECONDS)
+	
+/obj/machinery/power/water/fusion_gen/center/proc/CheckBroken()
+	var/turf/T = get_turf(src)
 
 	if(!electric_part || !steam_part)
+		stack_trace("parts")
 		stat |= BROKEN
-		return ..()
-	if(!waternet)
+		return
+	if(!T.get_pipe_node())
+		stack_trace("waternet")
 		stat |= BROKEN
-		return ..()
+		return
 	if(!electric_part.connect_to_network())
+		stack_trace("electric network")
 		stat |= BROKEN
-		return ..()
+		return
 	if(!steam_part.waternet)
+		stack_trace("steam water")
 		stat |= BROKEN
-		return ..()
-
+		return
 	update_icon()
 	START_PROCESSING(SSobj, src)
-	
 
 /obj/machinery/power/water/fusion_gen/center/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -65,22 +75,22 @@
 
 	cut_overlays()
 	if(last_tick_usage > (max_throughput * 0.95))
-		add_overlay("med_overlay_overmax")
+		add_overlay("mid_overlay_overmax")
 		electric_part.update_icon(TRUE)
 		return
 	if(last_tick_usage > (max_throughput * 0.9))
-		add_overlay("med_overlay_max")
+		add_overlay("mid_overlay_max")
 		return
 	if(last_tick_usage > (max_throughput * 0.675))
-		add_overlay("med_overlay_high")
+		add_overlay("mid_overlay_high")
 		return
 	if(last_tick_usage > (max_throughput * 0.45))
-		add_overlay("med_overlay_med")
+		add_overlay("mid_overlay_med")
 		return
 	if(last_tick_usage > (max_throughput * 0.225))
-		add_overlay("med_overlay_low")
+		add_overlay("mid_overlay_low")
 		return
-	add_overlay("med_overlay_off")
+	add_overlay("mid_overlay_off")
 
 /obj/machinery/power/water/fusion_gen/center/attackby(obj/item/W, mob/living/user, params)
 	if(W.tool_behaviour == TOOL_WIRECUTTER)
@@ -127,8 +137,21 @@
 	var/water = steam_part.get_water()
 	var/temp = steam_part.get_temp()
 
+	var/found_intakes = 0
+	//Distribute the water amongst the generators
+	for(var/obj/machinery/power/water/fusion_gen/right/intake in steam_part.waternet.nodes)
+		found_intakes++
+
+	if(!found_intakes) //This is bad..
+		return 0
+	
+	water = water / found_intakes
+
 	if(water > max_throughput)
 		water = max_throughput
+
+	
+
 	//Steal the water
 	steam_part.remove_water(water)
 
@@ -142,12 +165,17 @@
 	var/water_dest = get_water()
 	var/temp_dest = get_temp()
 	
+	if(water <= 0)
+		return 0
+	if(water + water_dest <= 0)
+		return 0
+
 	var/final_temp = EQUALIZE_WATER_TEMP(water, temp, water_dest, temp_dest) * efficiency
 	set_temp(final_temp)
 
 	add_water(water)
 	
-	return temp * conversion_rate * multiplier
+	return conversion_rate * multiplier * water
 
 
 /obj/machinery/power/water/fusion_gen/right
@@ -182,10 +210,6 @@
 	else
 		add_overlay("left_overlay")
 
-
-/obj/machinery/power/fusion_gen/left/Initialize()
-	update_icon()
-	return ..()
 
 /obj/machinery/power/fusion_gen/left/Destroy()
 	if(center)

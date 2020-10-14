@@ -4,6 +4,8 @@
 #define MAX_COOLANT_TEMP 10000
 ///How long between warnings
 #define WARNING_COOLDOWN 60
+///Normal heat generation, both internal + generator is multiplied by this.
+#define HEAT_MULTIPLIER 10
 
 
 //FOLLOWING VALUES ARE BASED ON THE ICON STATE
@@ -16,7 +18,7 @@
 /obj/machinery/power/water/fusion
 	density = TRUE
 	opacity = TRUE
-	obj_integrity = 2500
+	max_integrity = 2500
 
 /obj/machinery/power/water/fusion/core
 	name = "fusion reaction core"
@@ -122,6 +124,8 @@
 
 	SSair.atmos_machinery += src
 
+	update_icon()
+
 	START_PROCESSING(SSobj, src)
 
 /obj/machinery/power/water/fusion/core/process()
@@ -129,6 +133,7 @@
 
 	if(heat > max_heat)
 		containment_health -= 0.1
+		update_icon()
 		if((REALTIMEOFDAY - last_warning) / 10 >= WARNING_COOLDOWN)
 			warn()
 	else if(containment_health > 0.15)
@@ -192,6 +197,7 @@
 		fuel += I
 		I.forceMove(src)
 		to_chat(user, "<span class='info'>You insert [I].</span>")
+		update_icon()
 		return
 
 	return ..()
@@ -216,13 +222,14 @@
 	for(var/obj/item/fuel_rod/rod in fuel)
 		var/fuel_used = round(rod.use_fuel(fuel_use)) //Boo hoo you lost 0.5 fuel :(
 		
-		internal_heat += fuel_used * rod.fuel.power_multiplier
-		heat += fuel_used * rod.fuel.heat_multiplier
+		internal_heat += fuel_used * rod.fuel.power_multiplier * HEAT_MULTIPLIER
+		heat += fuel_used * rod.fuel.heat_multiplier * HEAT_MULTIPLIER
 
 		if(rod.fuel_amount <= 0)
 			rod.forceMove(get_turf(src))
 			fuel -= rod
 			empty_fuel_rod = TRUE
+			update_icon()
 
 	if(empty_fuel_rod)
 		radio.talk_into(src, "Fuel rod depleted. Ejecting fuel rod.", engineering_channel)
@@ -266,6 +273,16 @@
 	else
 		radio.talk_into(src, "Warning. Integrity decreasing. Integrity: [containment_health]%", engineering_channel)
 	
+
+/obj/machinery/power/water/fusion/core/update_icon()
+	cut_overlays()
+	if(containment_health < 0.5)
+		add_overlay("hot")
+		return
+	if(fuel.len)
+		add_overlay("no_fuel")
+	else
+		add_overlay("has_fuel")
 
 ///Setup reactor parts
 /obj/machinery/power/water/fusion/core/proc/setup_parts()
