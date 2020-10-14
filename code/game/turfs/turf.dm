@@ -406,7 +406,7 @@ GLOBAL_LIST_EMPTY(station_turfs)
 	return TRUE
 
 /turf/proc/can_lay_cable(ignore_intact = FALSE)
-	return can_have_cabling() & (!intact && !ignore_intact)
+	return can_have_cabling() & (!intact || ignore_intact)
 
 /turf/proc/visibilityChanged()
 	GLOB.cameranet.updateVisibility(src)

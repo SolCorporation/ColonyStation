@@ -47,9 +47,7 @@ GLOBAL_LIST_EMPTY(pipe_list)
 	handlecable(W, user, params)
 
 /obj/structure/water_pipe/proc/handlecable(obj/item/W, mob/user, params)
-	var/turf/T = get_turf(src)
-	if(T.intact)
-		return
+
 	if(W.tool_behaviour == TOOL_WIRECUTTER)
 		user.visible_message("[user] removes the pipe.", "<span class='notice'>You remove the pipe.</span>")
 		investigate_log("was removed by [key_name(usr)] in [AREACOORD(src)]", INVESTIGATE_WIRES)
@@ -143,29 +141,14 @@ GLOBAL_LIST_EMPTY(pipe_list)
 		if(T)
 			. += water_list(T, src, turn(d1, 180), powernetless_only) //get adjacents matching cables
 
-	if(d1&(d1-1)) //diagonal direction, must check the 4 possibles adjacents tiles
-		T = get_step(src,d1&3) // go north/south
-		if(T)
-			. += water_list(T, src, d1 ^ 3, powernetless_only) //get diagonally matching cables
-		T = get_step(src,d1&12) // go east/west
-		if(T)
-			. += water_list(T, src, d1 ^ 12, powernetless_only) //get diagonally matching cables
-
 	. += water_list(loc, src, d1, powernetless_only) //get on turf matching cables
 
 	//do the same on the second direction (which can't be 0)
 	T = get_step(src, d2)
 	if(T)
-		. += power_list(T, src, turn(d2, 180), powernetless_only) //get adjacents matching cables
+		. += water_list(T, src, turn(d2, 180), powernetless_only) //get adjacents matching cables
 
-	if(d2&(d2-1)) //diagonal direction, must check the 4 possibles adjacents tiles
-		T = get_step(src,d2&3) // go north/south
-		if(T)
-			. += power_list(T, src, d2 ^ 3, powernetless_only) //get diagonally matching cables
-		T = get_step(src,d2&12) // go east/west
-		if(T)
-			. += power_list(T, src, d2 ^ 12, powernetless_only) //get diagonally matching cables
-	. += power_list(loc, src, d2, powernetless_only) //get on turf matching cables
+	. += water_list(loc, src, d2, powernetless_only) //get on turf matching cables
 
 	return .
 
@@ -277,14 +260,14 @@ GLOBAL_LIST_EMPTY(pipe_list)
 	if(!isturf(user.loc))
 		return
 
-	if(!isturf(T) || T.intact || !T.can_have_cabling())
+
+	if(!isturf(T) || !T.can_have_cabling())
 		to_chat(user, "<span class='warning'>You can only lay pipes on catwalks and plating!</span>")
 		return
 
 	if(get_amount() < 1) // Out of cable
 		to_chat(user, "<span class='warning'>There is no pipe left!</span>")
 		return
-
 	if(get_dist(T,user) > 1) // Too far
 		to_chat(user, "<span class='warning'>You can't lay pipes at a place that far away!</span>")
 		return
@@ -297,7 +280,6 @@ GLOBAL_LIST_EMPTY(pipe_list)
 			dirn = get_dir(T, user)
 	else
 		dirn = dirnew
-
 	for(var/obj/structure/water_pipe/LC in T)
 		if(LC.d2 == dirn && LC.d1 == 0)
 			to_chat(user, "<span class='warning'>There's already a pipe at that position!</span>")
@@ -305,7 +287,6 @@ GLOBAL_LIST_EMPTY(pipe_list)
 	if(!(dirn in GLOB.cardinals))
 		to_chat(user, "<span class='warning'>You can't lay pipes diagonally!</span>")
 		return
-
 	var/obj/structure/water_pipe/C = get_new_cable(T)
 
 	//set up the new cable

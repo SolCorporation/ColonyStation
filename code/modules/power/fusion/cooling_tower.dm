@@ -32,6 +32,8 @@
 	var/temp = get_temp()
 	remove_water(water)
 
+	if(water <= 0)
+		return
 
 	var/temp_of_destination = get_temp(T)
 	var/water_of_destination = get_water(T)

@@ -39,7 +39,6 @@
 	if(!C || !C.waternet)
 		return FALSE
 
-	waternet = C.waternet
 	C.waternet.add_machine(src)
 	return TRUE
 

@@ -11,9 +11,9 @@
 	var/list/nodes = list()
 
 	///Temperature of the contained water
-	var/temp = 0				
+	var/temp = T20C				
 	///Amount of water
-	var/amount = 0
+	var/amount = 80
 
 /datum/waternet/New()
 	SSmachines.waternets += src

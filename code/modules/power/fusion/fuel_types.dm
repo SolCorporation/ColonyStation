@@ -20,9 +20,13 @@
 	var/max_fuel = 1000
 
 /obj/item/fuel_rod/Initialize()
-
+	name += " ([fuel.name])"
+	fuel_amount = max_fuel
+	return ..()
 
 /obj/item/fuel_rod/examine(mob/user)
+	. = ..()
+	. += "<span class='info'>It is [round((fuel_amount / max_fuel) * 100, 0.1)]% full.</span>"
 	. += "<span class='info'>This one contains [fuel ? fuel.name : "nothing"].</span>"
 
 /obj/item/fuel_rod/proc/use_fuel(amount)
