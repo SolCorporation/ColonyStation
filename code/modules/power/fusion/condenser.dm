@@ -9,6 +9,8 @@
 	///What temp does the water get cooled to? Increased by upgrades. Higher is better, less energy needed to heat up to optimal generator level
 	var/water_cooling_temp = 50
 
+	var/last_water_amount = 0
+
 
 /obj/machinery/power/water/condenser/Initialize()
 	. = ..()
@@ -32,6 +34,8 @@
 
 	if(water <= 0)
 		return
+
+	last_water_amount = water
 
 	var/temp_of_destination = get_temp(T)
 	var/water_of_destination = get_water(T)

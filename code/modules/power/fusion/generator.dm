@@ -66,6 +66,7 @@
 	update_icon()
 	START_PROCESSING(SSobj, src)
 
+
 /obj/machinery/power/water/fusion_gen/center/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	..()

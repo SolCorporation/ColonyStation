@@ -3,7 +3,7 @@
 	desc = "It measures the pressure of water moving through a pipe."
 	icon = 'icons/obj/atmospherics/pipes/meter.dmi'
 	icon_state = "meterX"
-	layer = 1
+	layer = WIRE_TERMINAL_LAYER
 	power_channel = ENVIRON
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 2
@@ -43,7 +43,8 @@
 
 	use_power(5)
 
-	var/datum/waternet/WN = target.waternet
+	var/obj/structure/water_pipe/pipe = target
+	var/datum/waternet/WN = pipe.waternet
 	if(!WN)
 		icon_state = "meterX"
 		return FALSE
@@ -65,7 +66,8 @@
 
 /obj/machinery/water_meter/proc/status()
 	if (target)
-		var/datum/waternet/WN = target.waternet
+		var/obj/structure/water_pipe/pipe = target
+		var/datum/waternet/WN = pipe.waternet
 		if(WN)
 			. = "The gauge reads [round(WN.amount)] L; [round(WN.temp)] K ([round(WN.temp-T0C)]&deg;C)."
 		else

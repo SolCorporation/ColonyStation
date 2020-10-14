@@ -9,7 +9,9 @@
 	density = TRUE
 
 	///What temp does the water get cooled by? Increased by upgrades. Lower is better, since we're cooling
-	var/water_cooling_amount = 5000
+	var/water_cooling_amount = 250
+
+	var/last_water_amount = 0
 
 /obj/machinery/power/water/heat_exchanger/Initialize()
 	. = ..()
@@ -34,6 +36,8 @@
 
 	if(water <= 0)
 		return
+
+	last_water_amount = water
 
 	var/temp_of_destination = get_temp(T)
 	var/water_of_destination = get_water(T)

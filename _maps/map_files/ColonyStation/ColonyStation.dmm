@@ -18074,6 +18074,13 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/ai_monitored/security/armory)
+"gua" = (
+/obj/machinery/water_meter,
+/obj/structure/water_pipe{
+	icon_state = "4-8"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "guf" = (
 /obj/effect/spawner/structure/window/reinforced/shutter,
 /turf/open/floor/plating,
@@ -25987,6 +25994,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/main)
+"jfo" = (
+/obj/structure/water_pipe{
+	icon_state = "4-8"
+	},
+/obj/machinery/water_meter,
+/turf/open/floor/engine,
+/area/engine/engineering)
 "jfv" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. It looks like it has been modified to not broadcast.";
@@ -95426,9 +95440,9 @@ acD
 pkH
 qMv
 qMv
-fxW
+jfo
 qMv
-fxW
+jfo
 acD
 aad
 aad
@@ -96452,7 +96466,7 @@ jMx
 lPj
 gUq
 qMv
-fxW
+jfo
 qMv
 dWo
 qMv
@@ -97222,10 +97236,10 @@ qMv
 qMv
 qMv
 dLP
-fxW
+jfo
 qMv
 qMv
-fxW
+gua
 qMv
 qMv
 acD
