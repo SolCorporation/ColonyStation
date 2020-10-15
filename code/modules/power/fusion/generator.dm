@@ -14,7 +14,7 @@
 	var/last_tick_usage = 0
 
 	///How much steam/water can we process at max?
-	var/max_throughput = 100
+	var/max_throughput = 250
 
 	///At what temp and above do we get 100% power output?
 	var/optimal_temp = 600

@@ -56,10 +56,10 @@
 		var/val = round(amount/(STARTING_WATER_AMOUNT*0.41) + 0.5)
 		icon_state = "meter1_[val]"
 	else if(amount <= 2*STARTING_WATER_AMOUNT)
-		var/val = round(amount/(STARTING_WATER_AMOUNT*6.5)-0.35) + 1
+		var/val = round(amount/(STARTING_WATER_AMOUNT*3)) + 1
 		icon_state = "meter2_[val]"
 	else if(amount <= 4*STARTING_WATER_AMOUNT)
-		var/val = round(amount/(STARTING_WATER_AMOUNT*6) - 6) + 1
+		var/val = round(amount/(STARTING_WATER_AMOUNT*6)) + 1
 		icon_state = "meter3_[val]"
 	else
 		icon_state = "meter4"

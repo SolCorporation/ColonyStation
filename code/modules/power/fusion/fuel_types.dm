@@ -17,7 +17,7 @@
 	///How much of the fuel do we have?
 	var/fuel_amount = 0
 	///Max amount of fuel
-	var/max_fuel = 1000
+	var/max_fuel = 10000
 
 /obj/item/fuel_rod/Initialize()
 	name += " ([fuel.name])"

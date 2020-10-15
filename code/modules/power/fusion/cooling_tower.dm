@@ -1,5 +1,4 @@
 //TODO: Change to cooling tower when we get that sprite
-
 /obj/machinery/power/water/heat_exchanger
 	name = "heat exchanger"
 	desc = "This cools down any water that enters it. Basically a larger version of a condenser" 
@@ -9,13 +8,14 @@
 	density = TRUE
 
 	///What temp does the water get cooled by? Increased by upgrades. Lower is better, since we're cooling
-	var/water_cooling_amount = 250
+	var/water_cooling_modifier = 1.5
 
 	var/last_water_amount = 0
 
 /obj/machinery/power/water/heat_exchanger/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj, src)
+	name += " ([num2hex(rand(1,65535), -1)])"
 
 /obj/machinery/power/water/heat_exchanger/process()
 	if(stat & BROKEN)
@@ -41,7 +41,8 @@
 
 	var/temp_of_destination = get_temp(T)
 	var/water_of_destination = get_water(T)
-	var/final_temp = EQUALIZE_WATER_TEMP(water, (min(temp - water_cooling_amount, 10)), water_of_destination, temp_of_destination)
+
+	var/final_temp = EQUALIZE_WATER_TEMP(water, (clamp(temp - SSterraforming.atmos.getTemp() * water_cooling_modifier, MINIMUM_WATER_TEMP, INFINITY)), water_of_destination, temp_of_destination)
 
 	add_water(water, T)
-	set_temp(T, final_temp)
+	set_temp(final_temp, T)
