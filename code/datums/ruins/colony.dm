@@ -26,3 +26,11 @@
 	suffix = "ancient_bunker.dmm"
 	allow_duplicates = FALSE
 	cost = 10
+
+/datum/map_template/ruin/colony/monster_shrine
+	name = "Old Eldritch Shrine"
+	id = "monster_shrine"
+	description = "A shrine hundreds of years old, dedicated to an eldritch demi-god, and their avatar still prowls within."
+	suffix = "monster_shrine.dmm"
+	allow_duplicates = FALSE
+	cost = 15
