@@ -1,5 +1,3 @@
-
-
 /obj/machinery/power/cooling_controller
 	name = "coolant controller"
 	desc = "The main control console for the cooling towers and condensers."
@@ -41,14 +39,14 @@
 	data["condensers"] = list()
 
 	for(var/obj/machinery/power/water/condenser/con in condenser)
-		var/condenser = list(list("cooling" = con.water_cooling_temp, "cooled_last" = con.last_water_amount))
+		var/condenser = list(list("name" = con.name, "cooling" = con.water_cooling_temp, "cooled_last" = con.last_water_amount))
 		data["condensers"] += condenser
 
 
 	data["heat_exchangers"] = list()
 
-	for(var/obj/machinery/power/water/heat_exchanger/heat in condenser)
-		var/heater = list(list("cooling" = heat.water_cooling_temp, "cooled_last" = con.last_water_amount))
-		data["heat_exchangers"] += condenser
+	for(var/obj/machinery/power/water/heat_exchanger/heat in exchanger)
+		var/heater = list(list("name" = heat.name, "cooling" = clamp(SSterraforming.atmos.getTemp() * heat.water_cooling_modifier, MINIMUM_WATER_TEMP, INFINITY), "cooled_last" = heat.last_water_amount))
+		data["heat_exchangers"] += heater
 
 	return data

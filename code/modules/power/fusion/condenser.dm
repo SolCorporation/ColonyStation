@@ -15,6 +15,7 @@
 /obj/machinery/power/water/condenser/Initialize()
 	. = ..()
 	START_PROCESSING(SSobj, src)
+	name += " ([num2hex(rand(1,65535), -1)])"
 
 /obj/machinery/power/water/condenser/process()
 	if(stat & BROKEN)
@@ -29,11 +30,13 @@
 	if(!C || !C.waternet)
 		return
 	
-	var/water = get_water()
-	remove_water(water)
+	var/water = get_water() * 0.9
+	
 
 	if(water <= 0)
 		return
+
+	remove_water(water)
 
 	last_water_amount = water
 
@@ -42,4 +45,4 @@
 	var/final_temp = EQUALIZE_WATER_TEMP(water, water_cooling_temp, water_of_destination, temp_of_destination)
 
 	add_water(water, T)
-	set_temp(T, final_temp)
+	set_temp(final_temp, T)

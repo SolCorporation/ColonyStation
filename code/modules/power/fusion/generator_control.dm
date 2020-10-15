@@ -1,6 +1,6 @@
 /obj/machinery/power/generator_control
-	name = "turbine controller"
-	desc = "The main control console for the turbines."
+	name = "turbine monitor"
+	desc = "The main monitoring console for the turbines."
 	icon = 'goon/icons/obj/fusion_control.dmi'
 	icon_state = "cab3"
 
@@ -17,12 +17,12 @@
 /obj/machinery/power/generator_control/Initialize()
 	. = ..()
 	for(var/obj/machinery/power/water/fusion_gen/center/gen in orange(30, src))	
-		generators += con
+		generators += gen
 
 
 /obj/machinery/power/generator_control/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
 									datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
-	if(!condenser.len && !exchanger.len)
+	if(!generators.len)
 		to_chat(user, "<span class='warning'>The controller is unable to connect to any turbines within 30 metres!</span>")
 		return
 
@@ -37,7 +37,7 @@
 	data["generators"] = list()
 
 	for(var/obj/machinery/power/water/fusion_gen/center/gen in generators)
-		var/generator = list(list("last_tick_steam" = gen.last_tick_usage, "max_tick" = gen.max_throughput, "optimal_temp" = gen.optimal_temp, "efficiency" = gen.efficiency, "conversion" = gen.conversion_rate))
+		var/generator = list(list("name" = gen.name, "last_tick_steam" = gen.last_tick_usage, "max_tick" = gen.max_throughput, "optimal_temp" = gen.optimal_temp, "efficiency" = gen.efficiency, "conversion" = gen.conversion_rate))
 		data["generators"] += generator
 
 	return data

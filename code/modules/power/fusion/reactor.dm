@@ -102,6 +102,7 @@
 	if(Proj.flag != "bullet")
 		process_fuel()
 		if(!has_been_powered)
+
 			investigate_log("has been powered for the first time.", INVESTIGATE_SUPERMATTER)
 			message_admins("[src] has been powered for the first time [ADMIN_JMP(src)].")
 			has_been_powered = TRUE
@@ -136,8 +137,10 @@
 		update_icon()
 		if((REALTIMEOFDAY - last_warning) / 10 >= WARNING_COOLDOWN)
 			warn()
-	else if(containment_health > 0.15)
+	else if(containment_health > 0.15 && containment_health < 100)
 		containment_health += 0.1
+		if(containment_health > 100)
+			containment_health = 100
 		emergency_point_reached = FALSE
 	
 	if(containment_health <= 0)
@@ -150,13 +153,12 @@
 
 
 	//HEATING THE GENERATOR LOOP
-	var/generator_water = get_water(generator_inlet)
+	var/generator_water = get_water(generator_inlet) * 0.75
 	if(generator_water && internal_heat > 0)
 		var/amount_to_heat = internal_heat * HEAT_COEFFICIENT
 		internal_heat = 0
 		//Move the water
 		remove_water(generator_water, generator_inlet)
-		set_temp(0, generator_inlet)
 
 		var/outlet_water = get_water(generator_outlet)
 		var/outlet_temp = get_temp(generator_outlet)
