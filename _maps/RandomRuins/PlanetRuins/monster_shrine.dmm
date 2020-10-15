@@ -1,0 +1,1052 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bB" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"bR" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/burnt,
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"cP" = (
+/obj/structure/stone_tile/block{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/terraformable,
+/area/planet/outside)
+"cX" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/block/burnt,
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"cY" = (
+/turf/template_noop,
+/area/template_noop)
+"dn" = (
+/obj/structure/stone_tile/block/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/terraformable,
+/area/planet/outside)
+"fj" = (
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile,
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"fr" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/burnt,
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"gn" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"gY" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/burnt,
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"hb" = (
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 4
+	},
+/obj/structure/stone_tile/block{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"he" = (
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/surrounding_tile,
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"hh" = (
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"hA" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/effect/step_trigger/sound_effect{
+	happens_once = 1;
+	mobs_only = 1;
+	sound = "sound/creatures/legion_spawn.ogg";
+	triggerer_only = 1
+	},
+/obj/effect/step_trigger/message{
+	message = "You feel uneasy as you bear witness to the visual inside the shrine."
+	},
+/turf/open/indestructible/boss/air,
+/area/ruin/unpowered)
+"hO" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/indestructible/boss/air,
+/area/ruin/unpowered)
+"ir" = (
+/obj/structure/stone_tile/surrounding,
+/mob/living/simple_animal/hostile/asteroid/elite/herald{
+	loot = list(/obj/item/artifact/hard,/obj/item/clothing/neck/cloak/herald_cloak)
+	},
+/obj/effect/light_emitter/tendril,
+/turf/open/indestructible/boss/air,
+/area/ruin/unpowered)
+"iO" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"kM" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"kR" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"kT" = (
+/obj/structure/stone_tile/center/cracked,
+/obj/structure/stone_tile/surrounding/burnt,
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"la" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/block/cracked,
+/turf/open/indestructible/boss/air,
+/area/ruin/unpowered)
+"lx" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"ng" = (
+/obj/structure/necropolis_gate,
+/obj/structure/stone_tile/slab,
+/obj/structure/fans/tiny/invisible,
+/obj/structure/necropolis_arch{
+	pixel_y = -40
+	},
+/turf/open/floor/plating/asteroid/terraformable,
+/area/ruin/unpowered)
+"pT" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"rW" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/burnt,
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"se" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"sw" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/indestructible/boss/air,
+/area/ruin/unpowered)
+"sA" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"tX" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"vj" = (
+/obj/structure/stone_tile/surrounding/cracked,
+/obj/structure/stone_tile/surrounding/cracked{
+	dir = 1;
+	icon_state = "cracked_surrounding1"
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"vy" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile/block{
+	dir = 8
+	},
+/turf/open/indestructible/boss/air,
+/area/ruin/unpowered)
+"vB" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"vX" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/block{
+	dir = 1
+	},
+/turf/open/indestructible/boss/air,
+/area/ruin/unpowered)
+"wi" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"xo" = (
+/turf/closed/indestructible/sandstone,
+/area/planet/outside)
+"ym" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile/block/burnt{
+	dir = 8
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"yu" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"yE" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile/block/cracked{
+	dir = 8
+	},
+/turf/open/indestructible/boss/air,
+/area/ruin/unpowered)
+"yK" = (
+/obj/structure/stone_tile/slab/cracked{
+	dir = 4;
+	icon_state = "cracked_slab1"
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"zi" = (
+/obj/structure/stone_tile/slab/cracked{
+	dir = 4;
+	icon_state = "cracked_slab1"
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"zO" = (
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/block/burnt{
+	dir = 4
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"Ag" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"Bb" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile/burnt{
+	dir = 8
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"Eb" = (
+/obj/structure/stone_tile/slab/cracked,
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"Eq" = (
+/obj/structure/stone_tile/slab,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/planet/outside)
+"Ex" = (
+/obj/structure/stone_tile/cracked{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/terraformable,
+/area/planet/outside)
+"Fi" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"Gy" = (
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/planet/outside)
+"GR" = (
+/turf/closed/indestructible/riveted/boss,
+/area/ruin/unpowered)
+"Ii" = (
+/obj/structure/stone_tile/surrounding/cracked{
+	dir = 1;
+	icon_state = "cracked_surrounding1"
+	},
+/obj/structure/stone_tile/center/cracked,
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"KD" = (
+/obj/structure/stone_tile/slab/cracked{
+	dir = 10
+	},
+/obj/structure/stone_tile/slab/cracked{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"Mp" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 4
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"MZ" = (
+/obj/structure/fluff/divine/conduit/shrine_ruin,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/planet/outside)
+"Nd" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"OP" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"Pe" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"PK" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"Se" = (
+/obj/structure/stone_tile/surrounding,
+/obj/structure/fluff/divine/convertaltar,
+/turf/open/indestructible/boss/air,
+/area/ruin/unpowered)
+"Sp" = (
+/obj/structure/stone_tile/slab/cracked{
+	dir = 5
+	},
+/obj/structure/stone_tile/slab/cracked{
+	dir = 8
+	},
+/obj/structure/stone_tile/slab/cracked{
+	dir = 10
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"Te" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/burnt{
+	dir = 4
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"TU" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/cracked{
+	dir = 1
+	},
+/turf/open/lava/smooth,
+/area/ruin/unpowered)
+"UL" = (
+/obj/structure/stone_tile/slab/burnt,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/planet/outside)
+"UV" = (
+/obj/effect/decal/remains/human,
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating/asteroid/terraformable,
+/area/planet/outside)
+"VI" = (
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"WG" = (
+/turf/open/floor/plating/asteroid/terraformable,
+/area/planet/outside)
+"Yy" = (
+/obj/structure/stone_tile,
+/obj/structure/stone_tile{
+	dir = 1
+	},
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile/surrounding_tile{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"YG" = (
+/obj/structure/stone_tile{
+	dir = 4
+	},
+/obj/structure/stone_tile{
+	dir = 8
+	},
+/obj/structure/stone_tile/block{
+	dir = 4
+	},
+/turf/open/indestructible/boss/air,
+/area/ruin/unpowered)
+"Zf" = (
+/obj/structure/stone_tile/surrounding/burnt,
+/obj/structure/stone_tile/center/cracked,
+/turf/open/floor/plating/asteroid/basalt,
+/area/ruin/unpowered)
+"ZI" = (
+/obj/structure/stone_tile/slab/cracked{
+	dir = 5
+	},
+/turf/open/floor/plating/asteroid/terraformable,
+/area/planet/outside)
+
+(1,1,1) = {"
+WG
+WG
+WG
+WG
+WG
+WG
+cY
+WG
+cY
+cY
+WG
+WG
+WG
+WG
+WG
+WG
+cY
+cY
+cY
+"}
+(2,1,1) = {"
+xo
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+xo
+WG
+WG
+cY
+cY
+cY
+"}
+(3,1,1) = {"
+WG
+WG
+WG
+GR
+GR
+GR
+GR
+GR
+GR
+GR
+GR
+WG
+WG
+WG
+WG
+WG
+WG
+cY
+cY
+"}
+(4,1,1) = {"
+WG
+WG
+GR
+GR
+zi
+iO
+kT
+iO
+iO
+Pe
+GR
+GR
+WG
+WG
+WG
+WG
+WG
+cY
+cY
+"}
+(5,1,1) = {"
+WG
+GR
+GR
+iO
+yu
+hh
+yu
+gn
+Ii
+yu
+iO
+GR
+GR
+WG
+WG
+WG
+WG
+cY
+cY
+"}
+(6,1,1) = {"
+WG
+GR
+Nd
+se
+VI
+se
+gn
+sA
+KD
+se
+se
+Pe
+GR
+WG
+WG
+WG
+WG
+WG
+cY
+"}
+(7,1,1) = {"
+WG
+GR
+zO
+Se
+Zf
+rW
+wi
+se
+se
+Se
+se
+cX
+GR
+GR
+WG
+WG
+WG
+WG
+WG
+"}
+(8,1,1) = {"
+WG
+GR
+gY
+se
+se
+wi
+PK
+se
+sA
+se
+hb
+Pe
+GR
+WG
+Ex
+WG
+MZ
+WG
+WG
+"}
+(9,1,1) = {"
+WG
+GR
+Nd
+Eb
+se
+Mp
+vy
+Yy
+se
+se
+se
+sA
+GR
+WG
+Gy
+UL
+WG
+WG
+WG
+"}
+(10,1,1) = {"
+WG
+GR
+fj
+vB
+fr
+vX
+ir
+la
+hO
+sw
+yE
+hA
+ng
+Eq
+cP
+WG
+ZI
+WG
+dn
+"}
+(11,1,1) = {"
+WG
+GR
+Pe
+se
+Sp
+tX
+YG
+he
+lx
+PK
+se
+se
+GR
+WG
+WG
+Ex
+WG
+WG
+WG
+"}
+(12,1,1) = {"
+WG
+GR
+Te
+sA
+se
+vB
+Fi
+wi
+se
+se
+Eb
+Nd
+GR
+WG
+WG
+WG
+MZ
+UV
+WG
+"}
+(13,1,1) = {"
+WG
+GR
+Ag
+Se
+se
+se
+vj
+PK
+sA
+Se
+bR
+Ag
+GR
+GR
+WG
+WG
+WG
+WG
+cY
+"}
+(14,1,1) = {"
+WG
+GR
+bB
+se
+pT
+se
+vB
+se
+bR
+se
+se
+Nd
+GR
+WG
+WG
+WG
+WG
+cY
+cY
+"}
+(15,1,1) = {"
+WG
+GR
+GR
+Bb
+yu
+OP
+yu
+lx
+yK
+yu
+iO
+GR
+GR
+WG
+WG
+WG
+WG
+cY
+cY
+"}
+(16,1,1) = {"
+WG
+WG
+GR
+GR
+iO
+iO
+kR
+TU
+kM
+ym
+GR
+GR
+WG
+WG
+WG
+WG
+WG
+cY
+cY
+"}
+(17,1,1) = {"
+WG
+WG
+WG
+GR
+GR
+GR
+GR
+GR
+GR
+GR
+GR
+WG
+WG
+WG
+WG
+WG
+cY
+cY
+cY
+"}
+(18,1,1) = {"
+xo
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+xo
+WG
+WG
+cY
+cY
+cY
+"}
+(19,1,1) = {"
+WG
+WG
+WG
+WG
+cY
+cY
+cY
+cY
+WG
+WG
+WG
+cY
+WG
+WG
+WG
+WG
+cY
+cY
+cY
+"}
