@@ -5,7 +5,11 @@
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
+<<<<<<< HEAD
 #define SAVEFILE_VERSION_MAX	24
+=======
+#define SAVEFILE_VERSION_MAX	26
+>>>>>>> ae39f3d987e... Update preferences_savefile.dm (#10026)
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -108,6 +112,12 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		all_quirks -= "Physically Obstructive"
 		all_quirks -= "Neat"
 		all_quirks -= "NEET"
+<<<<<<< HEAD
+=======
+	if(current_version < 26) //The new donator hats system obsolesces the old one entirely, we need to update.
+		donor_hat = null
+		donor_item = null
+>>>>>>> ae39f3d987e... Update preferences_savefile.dm (#10026)
 
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
