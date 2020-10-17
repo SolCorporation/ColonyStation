@@ -106,9 +106,15 @@
 /* /client/proc/playtitlemusic(vol = 85) //yogs
 	set waitfor = FALSE
 	UNTIL(SSticker.login_music) //wait for SSticker init to set the login music
+	UNTIL(chatOutput.loaded)
 
 	if(prefs && (prefs.toggles & SOUND_LOBBY))
+<<<<<<< HEAD
 		SEND_SOUND(src, sound(SSticker.login_music, repeat = 0, wait = 0, volume = vol, channel = CHANNEL_LOBBYMUSIC)) */ //yogs
+=======
+		chatOutput.sendLobbyMusic(SSticker.login_music)
+		to_chat(src, "<span class='notice'>Currently playing: </span>[SSticker.selected_lobby_music]")
+>>>>>>> 982e5212470... Fix? (#10031)
 
 /proc/get_rand_frequency()
 	return rand(32000, 55000) //Frequency stuff only works with 45kbps oggs.
