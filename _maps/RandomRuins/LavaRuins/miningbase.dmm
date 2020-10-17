@@ -461,6 +461,7 @@
 	},
 /turf/open/floor/plating,
 /area/mine/living_quarters)
+<<<<<<< HEAD
 "bZ" = (
 /obj/machinery/atmospherics/pipe/simple,
 /obj/effect/spawner/structure/window/reinforced/shutter,
@@ -477,6 +478,8 @@
 	},
 /turf/open/floor/plasteel,
 /area/mine/living_quarters)
+=======
+>>>>>>> 8a82fae05e1... (port) New Pet, Frank the Turtle! (#9991)
 "cb" = (
 /obj/machinery/atmospherics/pipe/simple{
 	dir = 4
@@ -1526,6 +1529,18 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/mine/production)
+"kj" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "Mining Station Port Wing APC";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/mob/living/simple_animal/turtle,
+/turf/open/floor/plasteel,
+/area/mine/living_quarters)
 "kM" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Mining Station Communications";
@@ -3685,7 +3700,7 @@ bQ
 bQ
 bQ
 bQ
-ca
+kj
 dm
 bL
 ub
