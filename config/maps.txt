@@ -21,6 +21,11 @@ map colonystation
 	default
 endmap
 
+map ColonyStationDelta
+	voteweight 0.9
+	votable
+endmap
+
 map omegastation
 	maxplayers 35
 	votable
