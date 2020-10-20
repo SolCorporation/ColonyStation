@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "make the skillcape requirement 18000 minutes instead of 300"
