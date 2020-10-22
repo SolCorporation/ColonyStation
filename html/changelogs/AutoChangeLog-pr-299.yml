@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Allows mobs to die immediately after initializing"
