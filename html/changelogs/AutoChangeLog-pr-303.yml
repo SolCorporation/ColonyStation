@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Added a santa suit that isnt space proof and added it to the autodrobe"
