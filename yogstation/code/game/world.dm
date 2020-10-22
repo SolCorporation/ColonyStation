@@ -38,8 +38,10 @@ GLOBAL_LIST_EMPTY(donators)
 
 	//BASIC SHIT
 	var/s = ""
+	s += "<img src=\"https://i.imgur.com/gNgarRJ.gif\">" //Banner image
 	var/server_name = CONFIG_GET(string/servername)
 	if (server_name)
+<<<<<<< HEAD
 		s += "<b>[server_name]</b> | Contains TERRAFORMING &#8212; "
 
 	s += "<b>[station_name()]</b>]<br>"; // The station & server name line
@@ -60,6 +62,11 @@ GLOBAL_LIST_EMPTY(donators)
 	if(features.len)
 		s += "[jointext(features,", ")]<br>" // The features line
 
+=======
+		s += "<br><b>[server_name]</b> &#8212; "
+	s += "<br>(<a href=\"https://forums.yogstation.net/index.php\">Forums</a>|<a href=\"https://discord.gg/0keg6hQH05Ha8OfO\">Discord</a>)<br>" // The Forum & Discord links line
+	s += "<br><i>[pick(world.file2list("yogstation/strings/taglines.txt"))]</i><br>"
+>>>>>>> 33152c24046... Update world.dm (#10086)
 
 
 	//PLAYER COUNT
