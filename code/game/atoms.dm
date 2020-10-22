@@ -1103,9 +1103,6 @@
   * Override this if you want custom behaviour in whatever gets hit by the rust
   */
 /atom/proc/rust_heretic_act()
-<<<<<<< HEAD
-	return
-=======
 	return
 
 /**
@@ -1126,4 +1123,3 @@
 		var/atom/atom_orbiter = o
 		output += atom_orbiter.get_all_orbiters(processed, source = FALSE)
 	return output
->>>>>>> 87ddc76e521... Changes to ghost orbit menu (#9938)
