@@ -411,9 +411,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/prison)
-"abc" = (
-/turf/closed/wall,
-/area/security/execution/transfer)
 "abd" = (
 /obj/machinery/bounty_board,
 /turf/closed/wall,
@@ -56795,6 +56792,9 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/service)
+"sQI" = (
+/turf/closed/wall,
+/area/security/execution/transfer)
 "sQT" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
@@ -57345,6 +57345,12 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
+"tpl" = (
+/turf/closed/wall{
+	icon = 'icons/turf/walls/reinforced_wall.dmi';
+	icon_state = "r_wall"
+	},
+/area/security/execution/transfer)
 "tpq" = (
 /obj/item/coin/silver{
 	pixel_x = 7;
@@ -88589,7 +88595,7 @@ qQV
 qQV
 qQV
 qQV
-abc
+tpl
 aaf
 aaa
 aaf
@@ -88836,7 +88842,7 @@ dxV
 uNu
 aat
 aUg
-afA
+sQI
 qQV
 qQV
 qQV
@@ -88846,7 +88852,7 @@ qQV
 qQV
 qQV
 qQV
-abc
+tpl
 aaf
 aaa
 aaa
@@ -89093,7 +89099,7 @@ aat
 aat
 aat
 olh
-afA
+sQI
 qQV
 qQV
 qQV
@@ -89103,7 +89109,7 @@ qQV
 qQV
 qQV
 qQV
-abc
+tpl
 aaf
 aaa
 aaf
@@ -89350,7 +89356,7 @@ aat
 aat
 aat
 sIN
-afA
+sQI
 qQV
 qQV
 qQV
@@ -89360,7 +89366,7 @@ qQV
 qQV
 qQV
 qQV
-abc
+tpl
 aaf
 aaa
 aaa
@@ -89607,16 +89613,16 @@ aat
 aat
 hEn
 bab
-afA
-afA
-afA
-afA
-afA
-afA
-afA
+sQI
+sQI
+sQI
+sQI
+sQI
+sQI
+sQI
 aeT
-afA
-afA
+sQI
+sQI
 afA
 aaf
 aaa
@@ -89873,7 +89879,7 @@ acd
 aef
 aeU
 afz
-aai
+acd
 aai
 aai
 aai
@@ -90902,7 +90908,7 @@ aej
 afy
 afD
 acd
-agJ
+agK
 ahp
 amb
 aiE
@@ -91159,7 +91165,7 @@ aei
 aeO
 afG
 acd
-agK
+agJ
 agK
 ail
 ajv
