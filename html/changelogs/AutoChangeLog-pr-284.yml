@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "classic/telescopic batons now have a cooldown between hits of 3 seconds down from 4"
