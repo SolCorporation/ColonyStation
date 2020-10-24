@@ -800,4 +800,15 @@
 	color = "#75553a"
 	taste_mult = 1.5
 	taste_description = "gravy"
+<<<<<<< HEAD
 	
+=======
+
+/datum/reagent/consumable/laughsyrup
+	name = "Laughin' Syrup"
+	description = "The product of juicing Laughin' Peas. Fizzy, and seems to change flavour based on what it's used with!"
+	nutriment_factor = 5 * REAGENTS_METABOLISM
+	color = "#803280"
+	taste_mult = 2
+	taste_description = "fizzy sweetness"
+>>>>>>> ec146a97ed7... (port) Finally, A use for peas! (#10045)
