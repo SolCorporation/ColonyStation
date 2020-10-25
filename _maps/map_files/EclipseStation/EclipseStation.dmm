@@ -62548,16 +62548,6 @@
 /obj/structure/table,
 /turf/open/floor/plasteel/white,
 /area/science/mixing)
-"cwR" = (
-/obj/structure/chair{
-	dir = 8
-	},
-/obj/machinery/button/massdriver{
-	id = "toxinsdriver";
-	pixel_y = 24
-	},
-/turf/open/floor/plasteel/white,
-/area/science/mixing)
 "cwS" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -82497,6 +82487,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
+"dHH" = (
+/obj,
+/turf/open/space/basic,
+/area/space)
 "dIe" = (
 /turf/open/floor/carpet/exoticblue,
 /area/crew_quarters/heads/captain/private)
@@ -84741,6 +84735,17 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
+"kaQ" = (
+/obj/structure/chair{
+	dir = 8
+	},
+/obj/machinery/button/massdriver{
+	id = "toxinsdriver";
+	pixel_y = 24
+	},
+/obj,
+/turf/open/floor/plasteel/white,
+/area/science/mixing)
 "kaT" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 8
@@ -88553,6 +88558,12 @@
 /obj/effect/spawner/lootdrop/maintenance/two,
 /turf/open/floor/plating,
 /area/maintenance/starboard/central)
+"uPV" = (
+/obj,
+/obj,
+/obj/machinery/sci_bombardment,
+/turf/open/floor/plasteel/white,
+/area/science/mixing)
 "uQu" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 9
@@ -89474,6 +89485,11 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/starboard)
+"xzW" = (
+/obj/structure/lattice/catwalk,
+/obj,
+/turf/open/space,
+/area/space/nearstation)
 "xAa" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating,
@@ -117449,8 +117465,8 @@ tNk
 cfD
 cMX
 cRt
-aaa
-aaa
+dHH
+dHH
 aGm
 aTZ
 aar
@@ -117706,7 +117722,7 @@ qai
 avp
 cGk
 cRt
-cXd
+xzW
 cXd
 cXd
 aoM
@@ -118221,7 +118237,7 @@ avp
 cGk
 avp
 aoM
-cwQ
+uPV
 cwQ
 cxz
 cxT
@@ -118478,7 +118494,7 @@ avp
 cGk
 avp
 aoM
-cwR
+kaQ
 cxf
 cxA
 aoQ
