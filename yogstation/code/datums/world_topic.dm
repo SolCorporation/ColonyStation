@@ -116,4 +116,8 @@ GLOBAL_VAR_INIT(mentornoot, FALSE)
 		SSdiscord.unlink_account(ckey)
 		return "[ckey] has been unlinked!"
 	else
+<<<<<<< HEAD
 		return "Account not unlinked! Please contact a coder."
+=======
+		return "Account not unlinked! Please contact a coder."
+>>>>>>> e86886ce269... Fixes fuckup (#10159)
