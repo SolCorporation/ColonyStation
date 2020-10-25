@@ -127,6 +127,7 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 	template_names = list("Maint boxclutter7", "Maint boxkitchen", "Maint canisterroom", "Maint hank", "Maint junkcloset", "Maint kilomobden", "Maint laststand", "Maint monky", "Maint pubbyclutter5", "Maint pubbyclutter6", "Maint pubbyrobotics", "Maint ripleywreck", "Maint boxmaintfreezers")
 
 /obj/effect/landmark/stationroom/maint/fivexthree
+<<<<<<< HEAD
 	template_names = list("Maint boxclutter1", "Maint cloner", "Maint deltaclutter2", "Maint deltaclutter3", "Maint incompletefloor", "Maint kiloclutter1", "Maint metaclutter1", "Maint metaclutter3", "Maint minibreakroom", "Maint nastytrap", "Maint pills", "Maint pubbybedroom", "Maint pubbyclutter4", "Maint pubbyclutter7", "Maint pubbykitchen", "Maint storeroom", "Maint yogsmaintdet", "Maint yogsmaintrpg")
 
 /obj/effect/landmark/stationroom/maint/fivexfour
@@ -137,3 +138,15 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 
 /obj/effect/landmark/stationroom/maint/tenxten
 	template_names = list("Maint bigconstruction", "Maint bigtheatre", "Maint deltalibrary", "Maint graffitiroom", "Maint podrepairbay", "Maint pubbybar", "Maint roosterdome", "Maint sanitarium", "Maint snakefighter")
+=======
+	template_names = list("Maint boxclutter1", "Maint breach", "Maint cloner", "Maint deltaclutter2", "Maint deltaclutter3", "Maint incompletefloor", "Maint kiloclutter1", "Maint metaclutter1", "Maint metaclutter3", "Maint minibreakroom", "Maint nastytrap", "Maint pills", "Maint pubbybedroom", "Maint pubbyclutter4", "Maint pubbyclutter7", "Maint pubbykitchen", "Maint storeroom", "Maint yogsmaintdet", "Maint yogsmaintrpg", "Maint waitingroom", "Maint podmin")
+
+/obj/effect/landmark/stationroom/maint/fivexfour
+	template_names = list("Maint blasted", "Maint boxbar", "Maint boxdinner", "Maint boxsurgery", "Maint comproom", "Maint deltabar", "Maint deltadetective", "Maint deltadressing", "Maint deltaEVA", "Maint deltagamble", "Maint deltalounge", "Maint deltasurgery", "Maint firemanroom", "Maint icicle", "Maint kilohauntedlibrary", "Maint kilosurgery", "Maint medusa", "Maint metakitchen", "Maint metamedical", "Maint metarobotics", "Maint metatheatre", "Maint pubbysurgery", "Maint tinybarbershop", "Maint laundromat", "Maint pass")
+
+/obj/effect/landmark/stationroom/maint/tenxfive
+	template_names = list("Maint barbershop", "Maint deltaarcade", "Maint deltabotnis", "Maint deltacafeteria", "Maint deltaclutter1", "Maint deltarobotics", "Maint factory", "Maint maintmedical", "Maint meetingroom", "Maint phage", "Maint skidrow", "Maint transit", "Maint ballpit", "Maint commie", "Maint firingrange", )
+
+/obj/effect/landmark/stationroom/maint/tenxten
+	template_names = list("Maint aquarium", "Maint bigconstruction", "Maint bigtheatre", "Maint deltalibrary", "Maint graffitiroom", "Maint junction", "Maint podrepairbay", "Maint pubbybar", "Maint roosterdome", "Maint sanitarium", "Maint snakefighter", "Maint vault", "Maint ward", "Maint assaultpod", "Maint maze", "Maint maze2")
+>>>>>>> 87e2bfe0a75... Random maint submissions #1 Veeblefetzer (#10141)

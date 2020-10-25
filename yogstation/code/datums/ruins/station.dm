@@ -645,6 +645,22 @@
 	suffix = "5x3_yogsmaintrpg.dmm"
 	name = "Maint yogsmaintrpg"
 
+<<<<<<< HEAD
+=======
+///Author: Veeblefetzer
+/datum/map_template/ruin/station/maint/fivexthree/podmin
+	id= "podmin"
+	suffix = "5x3_podmin.dmm"
+	name = "Maint podmin"
+
+///Author: Veeblefetzer
+/datum/map_template/ruin/station/maint/fivexthree/waitingroom
+	id= "waitingroom"
+	suffix = "5x3_waitingroom.dmm"
+	name = "Maint waitingroom"
+
+///The base for the 5x4 rooms.
+>>>>>>> 87e2bfe0a75... Random maint submissions #1 Veeblefetzer (#10141)
 /datum/map_template/ruin/station/maint/fivexfour
 	prefix = "_maps/RandomRuins/StationRuins/maint/5x4/"
 
@@ -708,6 +724,27 @@
 	suffix = "5x4_firemanroom.dmm"
 	name = "Maint firemanroom"
 
+<<<<<<< HEAD
+=======
+///Author: Veeblefetzer
+/datum/map_template/ruin/station/maint/fivexfour/pass
+	id= "pass"
+	suffix = "5x4_pass.dmm"
+	name = "Maint pass"
+
+///Author: Veeblefetzer
+/datum/map_template/ruin/station/maint/fivexfour/laundromat
+	id= "laundromat"
+	suffix = "5x4_laundromat.dmm"
+	name = "Maint laundromat"
+
+///Icicle-brrr its cold! Author: Jcat
+/datum/map_template/ruin/station/maint/fivexfour/icicle
+	id= "icicle"
+	suffix = "5x4_icicle.dmm"
+	name = "Maint icicle"
+
+>>>>>>> 87e2bfe0a75... Random maint submissions #1 Veeblefetzer (#10141)
 /datum/map_template/ruin/station/maint/fivexfour/kilohauntedlibrary
 	id= "kilohauntedlibrary"
 	suffix = "5x4_kilohauntedlibrary.dmm"
@@ -801,6 +838,34 @@
 	suffix = "10x5_skidrow.dmm"
 	name = "Maint skidrow"
 
+<<<<<<< HEAD
+=======
+///Transit: a super pointless transit tube journey. Everyone loves waiting! Author: Jcat
+/datum/map_template/ruin/station/maint/tenxfive/transit
+	id= "transit"
+	suffix = "10x5_transit.dmm"
+	name = "Maint transit"
+
+///Author: Veeblefetzer
+/datum/map_template/ruin/station/maint/tenxfive/ballpit
+	id= "ballpit"
+	suffix = "10x5_ballpit.dmm"
+	name = "Maint ballpit"
+
+///Author: Veeblefetzer
+/datum/map_template/ruin/station/maint/tenxfive/commie
+	id= "commie"
+	suffix = "10x5_commie.dmm"
+	name = "Maint commie"
+
+///Author: Veeblefetzer
+/datum/map_template/ruin/station/maint/tenxfive/firingrange
+	id= "firingrange"
+	suffix = "10x5_firingrange.dmm"
+	name = "Maint firingrange"
+
+///The base for the 10x10 rooms.
+>>>>>>> 87e2bfe0a75... Random maint submissions #1 Veeblefetzer (#10141)
 /datum/map_template/ruin/station/maint/tenxten
 	prefix = "_maps/RandomRuins/StationRuins/maint/10x10/"
 
@@ -848,3 +913,36 @@
 	id= "snakefighter"
 	suffix = "10x10_snakefighter.dmm"
 	name = "Maint snakefighter"
+<<<<<<< HEAD
+=======
+
+///Vault- A 'heavily guarded' vault. Author: Jcat
+/datum/map_template/ruin/station/maint/tenxten/vault
+	id= "vault"
+	suffix = "10x10_vault.dmm"
+	name = "Maint vault"
+
+///Ward-outbreak gone wrong. Author: Jcat
+/datum/map_template/ruin/station/maint/tenxten/ward
+	id= "ward"
+	suffix = "10x10_ward.dmm"
+	name = "Maint ward"
+
+///Author: Veeblefetzer
+/datum/map_template/ruin/station/maint/tenxten/assaultpod
+	id= "assaultpod"
+	suffix = "10x10_assaultpod.dmm"
+	name = "Maint assaultpod"
+
+///Author: Veeblefetzer
+/datum/map_template/ruin/station/maint/tenxten/maze
+	id= "maze"
+	suffix = "10x10_maze.dmm"
+	name = "Maint maze"
+
+///Author: Veeblefetzer
+/datum/map_template/ruin/station/maint/tenxten/maze2
+	id= "maze2"
+	suffix = "10x10_maze2.dmm"
+	name = "Maint maze2"
+>>>>>>> 87e2bfe0a75... Random maint submissions #1 Veeblefetzer (#10141)
