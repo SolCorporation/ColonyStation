@@ -63,7 +63,15 @@ export const CrewConsole = (props, context) => {
   const sensors = data.sensors || [];
 
   return (
+<<<<<<< HEAD
     <Window resizable>
+=======
+    <Window
+      title="Crew Monitor"
+      width={1400}
+      height={800}
+      resizable>
+>>>>>>> 0c4353ec619... More tgui (#10162)
       <Window.Content scrollable>
         <Flex>
           <Flex.Item>
