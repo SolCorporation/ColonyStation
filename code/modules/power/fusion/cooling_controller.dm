@@ -39,14 +39,15 @@
 	data["condensers"] = list()
 
 	for(var/obj/machinery/power/water/condenser/con in condenser)
-		var/condenser = list(list("name" = con.name, "cooling" = con.water_cooling_temp, "cooled_last" = con.last_water_amount))
+		var/condenser = list(list("name" = con.name, "cooling" = con.water_cooling_temp, "cooled_last" = con.last_water_amount, "max_capacity" = con.max_capacity, "temp_output" = con.last_temp = 0))
 		data["condensers"] += condenser
 
 
 	data["heat_exchangers"] = list()
 
 	for(var/obj/machinery/power/water/heat_exchanger/heat in exchanger)
-		var/heater = list(list("name" = heat.name, "cooling" = clamp(SSterraforming.atmos.getTemp() * heat.water_cooling_modifier, MINIMUM_WATER_TEMP, INFINITY), "cooled_last" = heat.last_water_amount))
+		var/heater = list(list("name" = heat.name, "cooling" = clamp(SSterraforming.atmos.getTemp() * heat.water_cooling_modifier, MINIMUM_WATER_TEMP, INFINITY), "cooled_last" = heat.last_water_amount, 
+		"max_capacity" = heat.cooling_capacity, "temp_output" = heat.last_temp))
 		data["heat_exchangers"] += heater
 
 	return data

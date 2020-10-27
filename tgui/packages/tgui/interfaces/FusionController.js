@@ -30,7 +30,7 @@ export const FusionController = (props, context) => {
           </LabeledList.Item>
           <LabeledList.Divider />
           <LabeledList.Item label="Fuel Use">
-            {data.fuel_use}moles per rod per activation.
+            {data.fuel_use} moles per rod, per activation.
           </LabeledList.Item>
           <LabeledList.Item label="Fuel Rods">
             {data.fuel && (

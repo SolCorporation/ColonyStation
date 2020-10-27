@@ -9,8 +9,11 @@
 
 	///What temp does the water get cooled by? Increased by upgrades. Lower is better, since we're cooling
 	var/water_cooling_modifier = 1.5
+	///How many litres we can cool before we get penalized
+	var/cooling_capacity = 100
 
 	var/last_water_amount = 0
+	var/last_temp = 0
 
 /obj/machinery/power/water/heat_exchanger/Initialize()
 	. = ..()
@@ -42,7 +45,11 @@
 	var/temp_of_destination = get_temp(T)
 	var/water_of_destination = get_water(T)
 
-	var/final_temp = EQUALIZE_WATER_TEMP(water, (clamp(temp - SSterraforming.atmos.getTemp() * water_cooling_modifier, MINIMUM_WATER_TEMP, INFINITY)), water_of_destination, temp_of_destination)
+	var/capacity_usage = clamp(cooling_capacity / water, 0.1, 1)
+	var/temp_modulation = clamp(temp - SSterraforming.atmos.getTemp() * water_cooling_modifier * capacity_usage, MINIMUM_WATER_TEMP, INFINITY)
+	last_temp = temp_modulation
+
+	var/final_temp = EQUALIZE_WATER_TEMP(water, temp_modulation, water_of_destination, temp_of_destination)
 
 	add_water(water, T)
 	set_temp(final_temp, T)

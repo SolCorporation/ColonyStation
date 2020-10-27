@@ -156,7 +156,9 @@
 	var/generator_water = get_water(generator_inlet) * 0.75
 	if(generator_water && internal_heat > 0)
 		var/amount_to_heat = internal_heat * HEAT_COEFFICIENT
-		internal_heat = 0
+		internal_heat -= amount_to_heat
+		if(internal_heat < 0)
+			internal_heat = 0
 		//Move the water
 		remove_water(generator_water, generator_inlet)
 
@@ -179,7 +181,6 @@
 
 		//Reset input water
 		remove_water(cooling_inlet_water, cooling_inlet)
-		set_temp(0, cooling_inlet)
 
 		//Handle output water
 

@@ -2,6 +2,8 @@
 #define GENERATOR_STARTING 1
 #define GENERATOR_STARTED 2
 #define GENERATOR_STOPPING 3
+///How many ticks do we store for our average?
+#define AVERAGE_RECORDKEEPING 10
 
 /obj/machinery/power/water/fusion_gen/center
 	name = "turbine"
@@ -28,10 +30,25 @@
 	var/obj/machinery/power/fusion_gen/left/electric_part
 
 	var/obj/machinery/power/water/fusion_gen/right/steam_part
+	///List of how many % we used of our capacity
+	var/list/average_capacity_usage
+	///How hot was the water last tick
+	var/last_temp = 0
+	///List of average power output
+	var/list/average_power_output
+
+
+	//Averaging input water out over 2 process cycles so we don't try up the input feed
+	///How much water did we have initially?
+	var/initial_water_amount = 0
+	///Are we on the second tick of water collection?
+	var/second_tick = FALSE
 
 
 /obj/machinery/power/water/fusion_gen/center/Initialize()
 	. = ..()
+	average_capacity_usage = list()
+	average_power_output = list()
 	name += " ([num2hex(rand(1,65535), -1)])"
 
 	electric_part = locate(/obj/machinery/power/fusion_gen/left) in get_step(src, WEST)
@@ -126,8 +143,12 @@
 /obj/machinery/power/water/fusion_gen/center/process()
 	if(stat & BROKEN)
 		return PROCESS_KILL
+	var/power_generated = process_power()
+	electric_part.add_avail(power_generated)
 
-	electric_part.add_avail(process_power())
+	average_power_output += power_generated
+	if(average_power_output.len > AVERAGE_RECORDKEEPING)
+		average_power_output.Cut(1, 2)
 
 
 /obj/machinery/power/water/fusion_gen/center/proc/process_power()
@@ -137,6 +158,13 @@
 
 	var/water = steam_part.get_water()
 	var/temp = steam_part.get_temp()
+
+	if(second_tick)
+		water = initial_water_amount / 2
+	else
+		initial_water_amount = water
+		water = initial_water_amount / 2
+		second_tick = TRUE
 
 	var/found_intakes = 0
 	//Distribute the water amongst the generators
@@ -157,12 +185,20 @@
 	steam_part.remove_water(water)
 
 	last_tick_usage = water
+
+	var/percent_used = round(last_tick_usage / max_throughput * 100, 0.1)
+	average_capacity_usage += percent_used
+	if(average_capacity_usage.len > AVERAGE_RECORDKEEPING)
+		average_capacity_usage.Cut(1, 2)
+	
+
 	update_icon()
 
 	var/multiplier = 1
 	if(temp < optimal_temp && temp > 0)
 		multiplier = temp / optimal_temp
 
+	last_temp = temp
 	var/water_dest = get_water()
 	var/temp_dest = get_temp()
 	
@@ -216,3 +252,5 @@
 	if(center)
 		center |= BROKEN
 	return ..()
+
+#undef AVERAGE_RECORDKEEPING
