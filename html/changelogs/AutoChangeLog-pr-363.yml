@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Makes hecksuit melee, bullet, laser, energy resistances be 75/40/40/40 respectively."
