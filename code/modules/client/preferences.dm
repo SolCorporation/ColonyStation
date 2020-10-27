@@ -108,6 +108,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	var/skillcape = 1
 
+<<<<<<< HEAD
+=======
+	var/map = 1
+	var/flare = 1
+	var/mulligan = FALSE
+
+>>>>>>> 6d6f57803da... Mulligan on roundstart antag (#10166)
 	var/list/exp = list()
 	var/list/menuoptions
 
@@ -550,6 +557,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<b>PDA Color:</b> <span style='border:1px solid #161616; background-color: [pda_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=pda_color;task=input'>Change</a><BR>"
 			dat += "<b>PDA Style:</b> <a href='?_src_=prefs;task=input;preference=pda_style'>[pda_style]</a><br>"
 			dat += "<b>Skillcape:</b> <a href='?_src_=prefs;task=input;preference=skillcape'>[(skillcape != 1) ? "[GLOB.skillcapes[skillcape]]" : "none"] </a><br>"
+<<<<<<< HEAD
+=======
+			dat += "<b>Flare:</b> <a href='?_src_=prefs;task=input;preference=flare'>[flare ? "Enabled" : "Disabled"]</a><br>"
+			dat += "<b>Map:</b> <a href='?_src_=prefs;task=input;preference=map'>[map ? "Enabled" : "Disabled"]</a><br>"
+			dat += "<b>Mulligan on Antag:</b> <a href='?_src_=prefs;task=input;preference=mulligan'>[mulligan ? "Enabled" : "Disabled"]</a><br>"
+
+>>>>>>> 6d6f57803da... Mulligan on roundstart antag (#10166)
 			dat += "<br>"
 			dat += "<b>Ghost Ears:</b> <a href='?_src_=prefs;preference=ghost_ears'>[(chat_toggles & CHAT_GHOSTEARS) ? "All Speech" : "Nearest Creatures"]</a><br>"
 			dat += "<b>Ghost Radio:</b> <a href='?_src_=prefs;preference=ghost_radio'>[(chat_toggles & CHAT_GHOSTRADIO) ? "All Messages":"No Messages"]</a><br>"
@@ -1637,7 +1651,16 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						count++
 					if(pickedskillcape)
 						skillcape = count //im saving it as an int
+<<<<<<< HEAD
 
+=======
+				if("flare")
+					flare = !flare
+				if("map")
+					map = !map
+				if("mulligan")
+					mulligan = !mulligan
+>>>>>>> 6d6f57803da... Mulligan on roundstart antag (#10166)
 				if ("max_chat_length")
 					var/desiredlength = input(user, "Choose the max character length of shown Runechat messages. Valid range is 1 to [CHAT_MESSAGE_MAX_LENGTH] (default: [initial(max_chat_length)]))", "Character Preference", max_chat_length)  as null|num
 					if (!isnull(desiredlength))
