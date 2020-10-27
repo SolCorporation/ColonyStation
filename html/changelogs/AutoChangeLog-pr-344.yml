@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "The buzzkill grenade box is now 6 telecrystals rather than 15"

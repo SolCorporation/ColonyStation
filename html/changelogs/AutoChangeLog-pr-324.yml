@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscdel: "heads can't roll roundstart bloodcult (can stil lbe converted)"
