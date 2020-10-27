@@ -1,0 +1,4 @@
+author: "Marmio64"
+delete-after: True
+changes: 
+  - rscadd: "Adds a bunch of random maint spawners from wej's random maint PR"
