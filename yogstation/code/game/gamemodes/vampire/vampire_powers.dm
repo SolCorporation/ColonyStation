@@ -49,7 +49,7 @@
 
 /obj/effect/proc_holder/spell/can_target(mob/living/target)
 	. = ..()
-	if(!istype(target) || (vamp_req && is_vampire(target)))
+	if(vamp_req && is_vampire(target))
 		return FALSE
 /datum/vampire_passive
 	var/gain_desc
@@ -131,11 +131,8 @@
 	. = ..()
 	if(!.)
 		return FALSE
-<<<<<<< HEAD
-=======
 	if(!target)
 		return FALSE
->>>>>>> a865cddc8d6... Revert "Revert "changes vampire hypnotize to be a sleep stun but makes it cost blood or something i guess this is supposed to be better since its prebase code"" (#10041)
 	if(!ishuman(target))
 		to_chat(user, "<span class='warning'>Gaze will not work on this being.</span>")
 		return FALSE
@@ -193,16 +190,6 @@
 		usr.visible_message("<span class='warning'>[usr] twirls their finger in a circlular motion.</span>",\
 				"<span class='warning'>You twirl your finger in a circular motion.</span>")
 	..()
-<<<<<<< HEAD
-
-/obj/effect/proc_holder/spell/pointed/hypno/can_target(atom/target, mob/user, silent)
-	if(!..())
-		return
-	if(!ishuman(target))
-		to_chat(user, "<span class='warning'>Hypnotize will not work on this being.</span>")
-		return FALSE
-
-=======
 
 /obj/effect/proc_holder/spell/pointed/hypno/can_target(atom/target, mob/user, silent)
 	if(!..())
@@ -213,7 +200,6 @@
 		to_chat(user, "<span class='warning'>Hypnotize will not work on this being.</span>")
 		return FALSE
 
->>>>>>> a865cddc8d6... Revert "Revert "changes vampire hypnotize to be a sleep stun but makes it cost blood or something i guess this is supposed to be better since its prebase code"" (#10041)
 	var/mob/living/carbon/human/T = target
 	if(T.IsSleeping())
 		to_chat(user, "<span class='warning'>[T] is already asleep!.</span>")
@@ -247,7 +233,7 @@
 	to_chat(target, "<span class='boldwarning'>Your knees suddenly feel heavy. Your body begins to sink to the floor.</span>")
 	to_chat(user, "<span class='notice'>[target] is now under your spell. In four seconds they will be rendered unconscious as long as they are within close range.</span>")
 	if(do_mob(user, target, 40, TRUE)) // 4 seconds...
-		if(get_dist(user, T) <= 3) // 7 range
+		if(get_dist(user, T) <= 3)
 			flash_color(T, flash_color="#472040", flash_time=30) // it's the vampires color!
 			T.SetSleeping(300)
 			to_chat(user, "<span class='warning'>[T] has fallen asleep!</span>")
