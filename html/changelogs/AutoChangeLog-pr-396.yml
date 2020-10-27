@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Adds a mixable tribal variant of tricord, and a shaman headdress."

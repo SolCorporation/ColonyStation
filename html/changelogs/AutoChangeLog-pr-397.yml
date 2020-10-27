@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Added guides to hydroponics and plants as books in various maps' botany."

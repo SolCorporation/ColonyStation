@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "game won't break when nukeops or wizard rolls you can thank me later"
