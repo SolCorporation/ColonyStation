@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Itching powder is now just a reagent, not a toxin. Nothing has changed."

@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Adds Hardsuit Specific Flag for Medical Sprays / Patches"

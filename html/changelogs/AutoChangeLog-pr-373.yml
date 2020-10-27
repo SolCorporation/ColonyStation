@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "necropolis seed no longer gives you an omega fuck you when you cure it"

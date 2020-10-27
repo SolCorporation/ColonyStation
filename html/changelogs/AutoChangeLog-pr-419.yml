@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - balance: "Reinforced windows now require a melee item over 11 damage to damage, have increased health, and 90 melee armor. This is approximately ~2 minutes of sustained beating with a toolbox."
+  - balance: "Plasmaglass windows now require a melee item over 21 damage to damage, have increased health, and 90 melee armor. This is approximately ~3 minutes of sustained beating with a toolbox."

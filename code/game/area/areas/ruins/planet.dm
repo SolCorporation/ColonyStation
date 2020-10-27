@@ -7,3 +7,7 @@
 
 /area/ruin/unpowered/ancient_bunker_outside
 	icon_state = "red"
+
+/area/ruin/unpowered/research_outpost
+	name = "Planet Research Outpost"
+	icon_state = "dk_yellow"
