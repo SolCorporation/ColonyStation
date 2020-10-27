@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Pepperspray stuns, confuses, and blinds you for longer, among other things."

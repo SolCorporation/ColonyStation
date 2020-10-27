@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "Autolathe now doesnt pop it's window on queue finish"

@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Antenna Mutation now can listen to all channels"
+  - tweak: "Antenna Mutation now cost 15 stability up from 5"
