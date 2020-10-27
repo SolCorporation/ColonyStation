@@ -423,3 +423,13 @@
 	max_heat_protection_temperature = HELMET_MAX_TEMP_PROTECT
 	strip_delay = 60
 	flags_cover = HEADCOVERSEYES
+<<<<<<< HEAD
+=======
+
+/obj/item/clothing/head/helmet/shaman
+	name = "ritual headdress"
+	desc = "Hand carved skull headdress, uniquely suited for the harsh lavaland hellscapes."
+	icon_state = "shamanhat"
+	item_state = "shamanhat"
+	armor = list("melee" = 25, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 10, "bio" = 5, "rad" = 20, "fire" = 40, "acid" = 20)
+>>>>>>> 1e5ee4b4580... spelling (#10167)
