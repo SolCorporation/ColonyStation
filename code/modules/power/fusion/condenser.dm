@@ -8,8 +8,11 @@
 
 	///What temp does the water get cooled to? Increased by upgrades. Higher is better, less energy needed to heat up to optimal generator level
 	var/water_cooling_temp = 50
+	///What amount of water can we cool to this temp before we go over?
+	var/max_capacity = 50
 
 	var/last_water_amount = 0
+	var/last_temp = 0
 
 
 /obj/machinery/power/water/condenser/Initialize()
@@ -37,12 +40,19 @@
 		return
 
 	remove_water(water)
+	var/current_temp = get_temp()
 
 	last_water_amount = water
 
 	var/temp_of_destination = get_temp(T)
 	var/water_of_destination = get_water(T)
-	var/final_temp = EQUALIZE_WATER_TEMP(water, water_cooling_temp, water_of_destination, temp_of_destination)
+
+	var/capacity_used = water / max_capacity
+	var/temp_modulation = clamp(capacity_used * water_cooling_temp, water_cooling_temp, current_temp)
+
+	last_temp = temp_modulation
+
+	var/final_temp = EQUALIZE_WATER_TEMP(water, temp_modulation, water_of_destination, temp_of_destination)
 
 	add_water(water, T)
 	set_temp(final_temp, T)
