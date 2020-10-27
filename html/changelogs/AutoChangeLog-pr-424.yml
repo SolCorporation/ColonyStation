@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Adds new station prefixes for Halloween and Friday the 13th."
