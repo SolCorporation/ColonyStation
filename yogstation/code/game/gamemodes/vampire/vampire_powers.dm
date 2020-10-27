@@ -131,6 +131,11 @@
 	. = ..()
 	if(!.)
 		return FALSE
+<<<<<<< HEAD
+=======
+	if(!target)
+		return FALSE
+>>>>>>> a865cddc8d6... Revert "Revert "changes vampire hypnotize to be a sleep stun but makes it cost blood or something i guess this is supposed to be better since its prebase code"" (#10041)
 	if(!ishuman(target))
 		to_chat(user, "<span class='warning'>Gaze will not work on this being.</span>")
 		return FALSE
@@ -188,6 +193,7 @@
 		usr.visible_message("<span class='warning'>[usr] twirls their finger in a circlular motion.</span>",\
 				"<span class='warning'>You twirl your finger in a circular motion.</span>")
 	..()
+<<<<<<< HEAD
 
 /obj/effect/proc_holder/spell/pointed/hypno/can_target(atom/target, mob/user, silent)
 	if(!..())
@@ -196,6 +202,18 @@
 		to_chat(user, "<span class='warning'>Hypnotize will not work on this being.</span>")
 		return FALSE
 
+=======
+
+/obj/effect/proc_holder/spell/pointed/hypno/can_target(atom/target, mob/user, silent)
+	if(!..())
+		return FALSE
+	if(!target)
+		return FALSE
+	if(!ishuman(target))
+		to_chat(user, "<span class='warning'>Hypnotize will not work on this being.</span>")
+		return FALSE
+
+>>>>>>> a865cddc8d6... Revert "Revert "changes vampire hypnotize to be a sleep stun but makes it cost blood or something i guess this is supposed to be better since its prebase code"" (#10041)
 	var/mob/living/carbon/human/T = target
 	if(T.IsSleeping())
 		to_chat(user, "<span class='warning'>[T] is already asleep!.</span>")
