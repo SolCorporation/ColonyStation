@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Sleeping Carp now only deflects with throw mode on in return for a price reduction"

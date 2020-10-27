@@ -17,7 +17,8 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 	/turf/open/space,
 	/turf/open/chasm,
 	/turf/open/lava,
-	/turf/open/water
+	/turf/open/water,
+	/turf/open/openspace
 	)))
 
 #define isgroundlessturf(A) (is_type_in_typecache(A, GLOB.turfs_without_ground))
@@ -44,6 +45,8 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 
 #define isplatingturf(A) (istype(A, /turf/open/floor/plating))
 
+#define isopenspace(A) (istype(A, /turf/open/openspace))
+
 //Mobs
 #define isliving(A) (istype(A, /mob/living))
 
@@ -59,6 +62,7 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define isgolem(A) (is_species(A, /datum/species/golem))
 #define islizard(A) (is_species(A, /datum/species/lizard))
 #define isplasmaman(A) (is_species(A, /datum/species/plasmaman))
+#define ispolysmorph(A) (is_species(A, /datum/species/polysmorph))
 #define ispodperson(A) (is_species(A, /datum/species/pod))
 #define isflyperson(A) (is_species(A, /datum/species/fly))
 #define isjellyperson(A) (is_species(A, /datum/species/jelly))

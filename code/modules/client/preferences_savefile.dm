@@ -5,7 +5,7 @@
 //	You do not need to raise this if you are adding new values that have sane defaults.
 //	Only raise this value when changing the meaning/format/name/layout of an existing value
 //	where you would want the updater procs below to run
-#define SAVEFILE_VERSION_MAX	24
+#define SAVEFILE_VERSION_MAX	27
 
 /*
 SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Carn
@@ -42,6 +42,12 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 //if your savefile is 3 months out of date, then 'tough shit'.
 
 /datum/preferences/proc/update_preferences(current_version, savefile/S)
+	// Fixes savefile corruption caused by https://github.com/yogstation13/Yogstation/pull/9767
+	if(current_version < 25) // This is the only thing that makes V25 different.
+		if(LAZYFIND(be_special,"Ragin"))
+			be_special -= "Ragin"
+			be_special += "Ragin Mages"
+	//
 	return
 
 /datum/preferences/proc/update_character(current_version, savefile/S)
@@ -108,6 +114,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		all_quirks -= "Physically Obstructive"
 		all_quirks -= "Neat"
 		all_quirks -= "NEET"
+	if(current_version < 26) //The new donator hats system obsolesces the old one entirely, we need to update.
+		donor_hat = null
+		donor_item = null
 
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
@@ -170,6 +179,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["tip_delay"]			>> tip_delay
 	S["pda_style"]			>> pda_style
 	S["pda_color"]			>> pda_color
+	S["skillcape"]          >> skillcape
+	S["map"]        	 	>> map
+	S["flare"]				>> flare
+	S["mulligan"]           >> mulligan
+	S["skillcape"]          >> skillcape
 	S["show_credits"] 		>> show_credits
 
 	// yogs start - Donor features
@@ -216,13 +230,17 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	be_special		= SANITIZE_LIST(be_special)
 	pda_style		= sanitize_inlist(pda_style, GLOB.pda_styles, initial(pda_style))
 	pda_color		= sanitize_hexcolor(pda_color, 6, 1, initial(pda_color))
+	skillcape       = sanitize_integer(skillcape, 1, 82, initial(skillcape))
+	map				= sanitize_integer(map, 0, 1, initial(map))
+	flare			= sanitize_integer(flare, 0, 1, initial(flare))
+	mulligan        = sanitize_integer(mulligan, 0, 1, initial(mulligan))
 	show_credits	= sanitize_integer(show_credits, 0, 1, initial(show_credits))
 
 	// yogs start - Donor features & yogtoggles
 	yogtoggles		= sanitize_integer(yogtoggles, 0, (1 << 23), initial(yogtoggles))
-	donor_pda		= sanitize_integer(donor_pda, 1, donor_pdas.len, 1)
-	donor_hat       = sanitize_integer(donor_hat, 0, donor_start_items.len, 0)
-	donor_item      = sanitize_integer(donor_item, 0, donor_start_tools.len, 0)
+	donor_pda		= sanitize_integer(donor_pda, 1, GLOB.donor_pdas.len, 1)
+	donor_hat       = sanitize(donor_hat)
+	donor_item      = sanitize(donor_item)
 	purrbation      = sanitize_integer(purrbation, 0, 1, initial(purrbation))
 
 	accent			= sanitize_text(accent, initial(accent)) // Can't use sanitize_inlist since it doesn't support falsely default values.
@@ -280,6 +298,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["tip_delay"], tip_delay)
 	WRITE_FILE(S["pda_style"], pda_style)
 	WRITE_FILE(S["pda_color"], pda_color)
+	WRITE_FILE(S["skillcape"], skillcape)
+	WRITE_FILE(S["mulligan"], mulligan)
 	WRITE_FILE(S["show_credits"], show_credits)
 
 	// yogs start - Donor features & Yogstoggle
@@ -358,6 +378,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_lizard_body_markings"]	>> features["body_markings"]
 	S["feature_lizard_legs"]			>> features["legs"]
 	S["feature_moth_wings"]				>> features["moth_wings"]
+	S["feature_polysmorph_tail"]			>> features["tail_polysmorph"]
+	S["feature_polysmorph_plasma_vessels"]	>> features["plasma_vessels"]
+	S["feature_polysmorph_teeth"]			>> features["teeth"]
+	S["feature_polysmorph_dome"]			>> features["dome"]
+	S["feature_polysmorph_dorsal_tubes"]			>> features["dorsal_tubes"]
 	if(!CONFIG_GET(flag/join_with_mutant_humans))
 		features["tail_human"] = "none"
 		features["ears"] = "none"
@@ -436,6 +461,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["mcolor"]	= sanitize_hexcolor(features["mcolor"], 3, 0)
 	features["ethcolor"]	= copytext_char(features["ethcolor"], 1, 7)
 	features["tail_lizard"]	= sanitize_inlist(features["tail_lizard"], GLOB.tails_list_lizard)
+	features["tail_polysmorph"]	= sanitize_inlist(features["tail_polysmorph"], GLOB.tails_list_polysmorph)
 	features["tail_human"] 	= sanitize_inlist(features["tail_human"], GLOB.tails_list_human, "None")
 	features["snout"]	= sanitize_inlist(features["snout"], GLOB.snouts_list)
 	features["horns"] 	= sanitize_inlist(features["horns"], GLOB.horns_list)
@@ -445,6 +471,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["body_markings"] 	= sanitize_inlist(features["body_markings"], GLOB.body_markings_list)
 	features["feature_lizard_legs"]	= sanitize_inlist(features["legs"], GLOB.legs_list, "Normal Legs")
 	features["moth_wings"] 	= sanitize_inlist(features["moth_wings"], GLOB.moth_wings_list, "Plain")
+	features["plasma_vessels"] 	= sanitize_inlist(features["plasma_vessels"], GLOB.plasma_vessels_list)
+	features["teeth"]	= sanitize_inlist(features["teeth"], GLOB.teeth_list)
+	features["dome"]	= sanitize_inlist(features["dome"], GLOB.dome_list)
+	features["dorsal_tubes"]	= sanitize_inlist(features["dorsal_tubes"], GLOB.dorsal_tubes_list)
 
 	joblessrole	= sanitize_integer(joblessrole, 1, 3, initial(joblessrole))
 	//Validate job prefs
@@ -487,6 +517,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_mcolor"]					, features["mcolor"])
 	WRITE_FILE(S["feature_ethcolor"]					, features["ethcolor"])
 	WRITE_FILE(S["feature_lizard_tail"]			, features["tail_lizard"])
+	WRITE_FILE(S["feature_polysmorph_tail"]			, features["tail_polysmorph"])
 	WRITE_FILE(S["feature_human_tail"]				, features["tail_human"])
 	WRITE_FILE(S["feature_lizard_snout"]			, features["snout"])
 	WRITE_FILE(S["feature_lizard_horns"]			, features["horns"])
@@ -496,6 +527,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_lizard_body_markings"]	, features["body_markings"])
 	WRITE_FILE(S["feature_lizard_legs"]			, features["legs"])
 	WRITE_FILE(S["feature_moth_wings"]			, features["moth_wings"])
+	WRITE_FILE(S["feature_polysmorph_plasma_vessels"]			, features["plasma_vessels"])
+	WRITE_FILE(S["feature_polysmorph_teeth"]			, features["teeth"])
+	WRITE_FILE(S["feature_polysmorph_dome"]			, features["dome"])
+	WRITE_FILE(S["feature_polysmorph_dorsal_tubes"]			, features["dorsal_tubes"])
 
 	//Custom names
 	for(var/custom_name_id in GLOB.preferences_custom_names)

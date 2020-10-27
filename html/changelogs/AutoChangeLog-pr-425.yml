@@ -1,0 +1,6 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "New customization options for lizards and polysmorphs!"
+  - imageadd: "Plus sprites by yours truly!"
+  - spellcheck: "Angeler -> Angler"

@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Syndicate agents now have more money available to them as they also get paid by their syndicate benefactors"

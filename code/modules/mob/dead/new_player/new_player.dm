@@ -506,8 +506,21 @@
 		client.prefs.random_character()
 		client.prefs.real_name = client.prefs.pref_species.random_name(gender,1)
 	client.prefs.copy_to(H)
+
+	if(client.prefs.mulligan && mind.special_role) // Handle roundstart traitor mulligan
+		var/datum/preferences/mulligan_prefs = new /datum/preferences
+		mulligan_prefs.random_character()
+		mulligan_prefs.real_name = mulligan_prefs.pref_species.random_name(gender,1)
+		mulligan_prefs.copy_to(H)
+		qdel(mulligan_prefs)
+	
 	H.dna.update_dna_identity()
 	if(mind)
+		if(mind.assigned_role)
+			var/datum/job/J = SSjob.GetJob(mind.assigned_role)
+			if(H.age < J?.minimal_character_age)
+				to_chat(client,"<span class='warning'>Your character is too young to play your assigned job. Their age has been corrected to the minimum possible.</span>")
+				H.age = J.minimal_character_age
 		if(transfer_after)
 			mind.late_joiner = TRUE
 		mind.active = 0					//we wish to transfer the key manually

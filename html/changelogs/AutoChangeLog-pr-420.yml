@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Medical doctors, paramedics, and CMOs now shout \"clear!\" just before defibrillating someone."

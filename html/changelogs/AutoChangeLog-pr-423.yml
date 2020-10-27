@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "all lavaland mushrooms now have unique alcohol reagents when fermented"
