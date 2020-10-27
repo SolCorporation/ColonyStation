@@ -1,0 +1,6 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "lava holodeck"
+  - rscdel: "plasmaflood holodeck"
+  - tweak: "changed name of program accordingly"

@@ -34,3 +34,11 @@
 	suffix = "monster_shrine.dmm"
 	allow_duplicates = FALSE
 	cost = 15
+
+/datum/map_template/ruin/colony/researchoutpost
+	name = "Research Outpost"
+	id = "researchoutpost"
+	description = "A old research outpost with a experiment gone wrong."
+	suffix = "researchoutpost.dmm"
+	allow_duplicates = FALSE
+	cost = 25
