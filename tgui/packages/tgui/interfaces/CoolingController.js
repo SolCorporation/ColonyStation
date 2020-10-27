@@ -14,9 +14,9 @@ export const CoolingController = (props, context) => {
           {map((value, key) => (
             <Section title={value.name}>
               <LabeledList>
-              <LabeledList.Item label="Cooling Output Temperature">
-                {value.cooling}K
-              </LabeledList.Item>
+                <LabeledList.Item label="Cooling Output Temperature">
+                  {value.cooling}K
+                </LabeledList.Item>
                 <LabeledList.Item label="Last Throughput">
                   {value.cooled_last}L
                 </LabeledList.Item>
@@ -34,9 +34,9 @@ export const CoolingController = (props, context) => {
           {map((value, key) => (
             <Section title={value.name}>
               <LabeledList>
-              <LabeledList.Item label="Cooling Output Temperature">
-                {value.cooling}K
-              </LabeledList.Item>
+                <LabeledList.Item label="Cooling Output Temperature">
+                  {value.cooling}K
+                </LabeledList.Item>
                 <LabeledList.Item label="Last Throughput">
                   {value.cooled_last}L
                 </LabeledList.Item>

@@ -15,12 +15,12 @@ export const GeneratorController = (props, context) => {
           {map((value, key) => (
             <Section title={value.name}>
               <LabeledList>
-              <LabeledList.Item label="Average Throughput Usage">
-                {Math.round(value.average_usage)}%
-              </LabeledList.Item>
-              <LabeledList.Item label="Live Throughput Usage">
-                {Math.round((value.last_tick_steam / value.max_tick) * 100)}%
-              </LabeledList.Item>
+                <LabeledList.Item label="Average Throughput Usage">
+                  {Math.round(value.average_usage)}%
+                </LabeledList.Item>
+                <LabeledList.Item label="Live Throughput Usage">
+                  {Math.round((value.last_tick_steam / value.max_tick) * 100)}%
+                </LabeledList.Item>
                 <LabeledList.Item label="Throughput">
                   {value.last_tick_steam}L
                 </LabeledList.Item>
