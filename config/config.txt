@@ -468,4 +468,3 @@ DEFAULT_VIEW_SQUARE 15x15
 CENTCOM_BAN_DB https://centcom.melonmesa.com/ban/search
 
 AUTO_PROFILE
->>>>>>> e9c958fb110... Revert "Revert "TG performance tweaks - oh-god-please-kill-me-edition ASYNC / SLEEP BAD / Profiler"" (#10254)
