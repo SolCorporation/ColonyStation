@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Bedsheet Wearing - Spooky - Click in hand to adjust, old interact been moved to alt click"

@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscdel: "Blacklisted the Lavaland prisoner spawn from spawning."

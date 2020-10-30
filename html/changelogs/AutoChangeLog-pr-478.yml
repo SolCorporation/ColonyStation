@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Material datums - Moogle Helped - Check #10169 for more info"
+  - rscadd: "Fixes Stand GUI/Mech Fab TGUI"
