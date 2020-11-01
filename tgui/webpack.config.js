@@ -8,6 +8,7 @@ const webpack = require('webpack');
 const path = require('path');
 const BuildNotifierPlugin = require('webpack-build-notifier');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
+const PnpPlugin = require(`pnp-webpack-plugin`);
 
 const createStats = verbose => ({
   assets: verbose,
@@ -25,11 +26,14 @@ const createStats = verbose => ({
 module.exports = (env = {}, argv) => {
   const config = {
     mode: argv.mode === 'production' ? 'production' : 'development',
+<<<<<<< HEAD:tgui/packages/tgui/webpack.config.js
     context: __dirname,
     entry: {
       tgui: [
         path.resolve(__dirname, './index.js'),
       ],
+=======
+>>>>>>> bfa8856f433... Merge branch 'porty' of https://github.com/TheGameTeam/Yogstation into TheGameTeam-porty:tgui/webpack.config.js
     },
     output: {
       path: argv.mode === 'production'
@@ -41,6 +45,14 @@ module.exports = (env = {}, argv) => {
     resolve: {
       extensions: ['.mjs', '.js', '.jsx'],
       alias: {},
+      plugins: [
+        PnpPlugin,
+      ],
+    },
+    resolveLoader: {
+      plugins: [
+        PnpPlugin.moduleLoader(module),
+      ],
     },
     module: {
       rules: [

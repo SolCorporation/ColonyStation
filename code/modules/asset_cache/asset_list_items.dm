@@ -1,11 +1,30 @@
 //DEFINITIONS FOR ASSET DATUMS START HERE.
 
-/datum/asset/simple/tgui
+<<<<<<< HEAD
+=======
+/datum/asset/simple/tgui_common
+	keep_local_name = TRUE
 	assets = list(
-		"tgui.bundle.js" = 'tgui/packages/tgui/public/tgui.bundle.js',
-		"tgui.bundle.css" = 'tgui/packages/tgui/public/tgui.bundle.css',
+		"tgui-common.chunk.js" = 'tgui/public/tgui-common.chunk.js',
 	)
 
+>>>>>>> bfa8856f433... Merge branch 'porty' of https://github.com/TheGameTeam/Yogstation into TheGameTeam-porty
+/datum/asset/simple/tgui
+	assets = list(
+		"tgui.bundle.js" = 'tgui/public/tgui.bundle.js',
+		"tgui.bundle.css" = 'tgui/public/tgui.bundle.css',
+	)
+
+<<<<<<< HEAD
+=======
+/datum/asset/simple/tgui_panel
+	keep_local_name = TRUE
+	assets = list(
+		"tgui-panel.bundle.js" = 'tgui/public/tgui-panel.bundle.js',
+		"tgui-panel.bundle.css" = 'tgui/public/tgui-panel.bundle.css',
+	)
+
+>>>>>>> bfa8856f433... Merge branch 'porty' of https://github.com/TheGameTeam/Yogstation into TheGameTeam-porty
 /datum/asset/simple/headers
 	assets = list(
 		"alarm_green.gif" 			= 'icons/program_icons/alarm_green.gif',

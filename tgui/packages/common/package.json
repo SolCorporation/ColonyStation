@@ -1,6 +1,10 @@
 {
   "private": true,
   "name": "common",
+<<<<<<< HEAD
   "version": "4.1.0",
   "type": "module"
+=======
+  "version": "4.2.0"
+>>>>>>> bfa8856f433... Merge branch 'porty' of https://github.com/TheGameTeam/Yogstation into TheGameTeam-porty
 }

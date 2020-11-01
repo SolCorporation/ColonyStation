@@ -39,7 +39,7 @@ SUBSYSTEM_DEF(chat)
 
 	if(!confidential)
 		SSdemo.write_chat(target, message)
-
+		
 	if(islist(target))
 		for(var/I in target)
 			var/client/C = CLIENT_FROM_VAR(I) //Grab us a client if possible

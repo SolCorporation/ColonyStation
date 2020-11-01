@@ -4,6 +4,7 @@
  * @license MIT
  */
 
+<<<<<<< HEAD
 // Polyfills
 import 'core-js/es';
 import 'core-js/web/immediate';
@@ -16,6 +17,8 @@ import './polyfills/dom4';
 import './polyfills/css-om';
 import './polyfills/inferno';
 
+=======
+>>>>>>> bfa8856f433... Merge branch 'porty' of https://github.com/TheGameTeam/Yogstation into TheGameTeam-porty
 // Themes
 import './styles/main.scss';
 import './styles/themes/abductor.scss';
