@@ -27,6 +27,30 @@
 		to_chat(src, "<span class='danger'>The forum URL is not set in the server configuration.</span>")
 	return
 
+<<<<<<< HEAD
+=======
+/client/verb/reconnect()
+	set name = "reconnect"
+	set desc = "Reconnects to the server"
+	winset(usr, null, "command=.reconnect")
+
+/client/verb/demoview(roundnumber as num)
+	set name = "demoview"
+	set desc = "Enter Round Number you wish to see the replay of"
+	set hidden = 1
+	var/roundurl = CONFIG_GET(string/demourl)
+	if(roundnumber < 26360)
+		roundnumber = 26360
+	if(roundurl)
+		if(!roundnumber)
+			roundnumber = text2num(GLOB.round_id-1)
+		if(alert("This will open the demo in your browser. Are you sure?",,"Yes","No")!="Yes")
+			return
+		src << link("[roundurl][roundnumber]")
+	else
+		to_chat(src, "<span class='danger'>The demo URL is not set in the server configuration.</span>")
+
+>>>>>>> 194759aa255... Updates TGChat Test Merge (#10307)
 /client/verb/rules()
 	set name = "rules"
 	set desc = "Show Server Rules."
@@ -98,9 +122,9 @@ Admin:
 /client/verb/changelog()
 	set name = "Changelog"
 	set category = "OOC"
-	var/datum/asset/changelog = get_asset_datum(/datum/asset/simple/changelog)
+	var/datum/asset/simple/namespaced/changelog = get_asset_datum(/datum/asset/simple/namespaced/changelog)
 	changelog.send(src)
-	src << browse('html/changelog.html', "window=changes;size=675x650")
+	src << browse(changelog.get_htmlloader("changelog.html"), "window=changes;size=675x650")
 	if(prefs.lastchangelog != GLOB.changelog_hash)
 		prefs.lastchangelog = GLOB.changelog_hash
 		prefs.save_preferences()
