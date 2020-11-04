@@ -139,4 +139,10 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 //religious_tool flags
 #define RELIGION_TOOL_INVOKE 		(1<<0)
 #define RELIGION_TOOL_SACRIFICE 	(1<<1)
+<<<<<<< HEAD
 #define RELIGION_TOOL_SECTSELECT 	(1<<2)
+=======
+#define RELIGION_TOOL_SECTSELECT 	(1<<2)
+
+#define NSCOMPONENT(d)   (d&(NORTH|SOUTH))
+>>>>>>> 98508e83027... Runechat 1.1 - TG Edition (#10318)
