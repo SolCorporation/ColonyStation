@@ -24,6 +24,15 @@
 	var/scheduled_destruction
 	/// Contains the approximate amount of lines for height decay
 	var/approx_lines
+<<<<<<< HEAD
+=======
+	/// Contains the reference to the next chatmessage in the bucket, used by runechat subsystem
+	var/datum/chatmessage/next
+	/// Contains the reference to the previous chatmessage in the bucket, used by runechat subsystem
+	var/datum/chatmessage/prev
+	/// The current index used for adjusting the layer of each sequential chat message such that recent messages will overlay older ones
+	var/static/current_z_idx = 0
+>>>>>>> b80a77572df... Fixes Runechat runtimes and Adds Singing And fixes lots of other runtimes (#10325)
 
 /**
   * Constructs a chat message overlay
@@ -62,6 +71,10 @@
   * * text - The text content of the overlay
   * * target - The target atom to display the overlay at
   * * owner - The mob that owns this overlay, only this mob will be able to view it
+<<<<<<< HEAD
+=======
+  * * language - The language this message was spoken in
+>>>>>>> b80a77572df... Fixes Runechat runtimes and Adds Singing And fixes lots of other runtimes (#10325)
   * * extra_classes - Extra classes to apply to the span that holds the text
   * * lifespan - The lifespan of the message in deciseconds
   */
@@ -166,7 +179,6 @@
   * * message_language - The language that the message is said in
   * * raw_message - The text content of the message
   * * spans - Additional classes to be added to the message
-  * * message_mode - Bitflags relating to the mode of the message
   */
 /mob/proc/create_chat_message(atom/movable/speaker, datum/language/message_language, raw_message, list/spans, message_mode)
 	// Ensure the list we are using, if present, is a copy so we don't modify the list provided to us
