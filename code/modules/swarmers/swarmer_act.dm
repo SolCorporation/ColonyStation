@@ -28,7 +28,13 @@
 	return 0
 
 /obj/item/integrate_amount() //returns the amount of resources gained when eating this item
+<<<<<<< HEAD
 	if(materials[/datum/material/iron] || materials[/datum/material/glass])
+=======
+	var/list/mats = get_material_composition(ALL) // Ensures that items made from plasteel, and plas/titanium/plastitaniumglass get integrated correctly.
+	mats += materials
+	if(length(mats) && (mats[getmaterialref(/datum/material/iron)] || mats[getmaterialref(/datum/material/glass)]))
+>>>>>>> 11b48bad680... swarmers can eat stuff (#10341)
 		return 1
 	return ..()
 
