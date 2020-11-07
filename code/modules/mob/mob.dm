@@ -703,6 +703,7 @@
 		M.show_inv(user)
 
 /**
+
   * Handle the result of a click drag onto this mob
   *
   * For mobs this just shows the inventory
