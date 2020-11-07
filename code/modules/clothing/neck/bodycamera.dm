@@ -111,11 +111,20 @@
 	getMobhook(user)
 
 /obj/item/clothing/neck/bodycam/dropped(mob/wearer)
+<<<<<<< HEAD
 	..()
 	if (bodcam.status)//if it's on
 		attack_self(wearer) //turn it off
 	GLOB.cameranet.updatePortableCamera(bodcam)
 	UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
+=======
+	if(bodcam)
+		if(bodcam.status)//if it's on
+			attack_self(wearer) //turn it off
+		GLOB.cameranet.updatePortableCamera(bodcam)
+		UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
+	..()
+>>>>>>> 7daccf1f96b... Fixes 6th November - Free Miners, Fireaxecabinets, Xray eye exploit, autolathe, runtimes (#10349)
 
 /obj/item/clothing/neck/bodycam/proc/getMobhook(mob/to_hook) //This stuff is basically copypasta from RCL.dm, look there if you are confused
 	bodcam.built_in = to_hook
