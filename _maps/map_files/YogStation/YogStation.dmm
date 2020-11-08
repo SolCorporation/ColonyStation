@@ -24560,16 +24560,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/supply)
-"bpj" = (
-/obj/structure/chair/comfy/brown{
-	dir = 4
-	},
-/obj/machinery/camera{
-	c_tag = "Captain's Quarters";
-	dir = 1
-	},
-/turf/open/floor/carpet/blue,
-/area/crew_quarters/heads/captain)
 "bpk" = (
 /obj/structure/closet/secure_closet/captains,
 /turf/open/floor/carpet/blue,
@@ -40902,6 +40892,16 @@
 /obj/effect/spawner/structure/solars/solar_96,
 /turf/open/floor/plasteel/airless/solarpanel,
 /area/solar/starboard/aft)
+"gnt" = (
+/obj/structure/chair/comfy/brown{
+	dir = 4
+	},
+/obj/machinery/camera/motion{
+	c_tag = "Captains Quarters";
+	dir = 1
+	},
+/turf/open/floor/carpet/blue,
+/area/crew_quarters/heads/captain)
 "gnH" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -43810,6 +43810,14 @@
 	},
 /turf/open/floor/plasteel,
 /area/clerk)
+"iFK" = (
+/obj/structure/fireaxecabinet/spare{
+	pixel_x = 2;
+	pixel_y = 32;
+	req_access = list(20)
+	},
+/turf/open/floor/carpet/blue,
+/area/crew_quarters/heads/captain)
 "iGc" = (
 /obj/machinery/door/airlock/medical{
 	name = "Operating Theatre";
@@ -51630,6 +51638,13 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/storage)
+"oFj" = (
+/obj/structure/dresser,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/carpet/blue,
+/area/crew_quarters/heads/captain)
 "oGy" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/border_only{
@@ -95806,7 +95821,11 @@ ihF
 bdk
 bhv
 aZV
+<<<<<<< HEAD
 bmz
+=======
+oFj
+>>>>>>> a4d7c2a20d3... Adds a new captain id fire cabinet to captains office with functionality. (#10352)
 aMV
 bpk
 bqH
@@ -96065,7 +96084,7 @@ bhG
 blb
 bmy
 bkh
-bpj
+gnt
 bqH
 bsi
 blZ
@@ -96320,9 +96339,15 @@ bfl
 bim
 bjG
 aZV
+<<<<<<< HEAD
 bmB
 aCd
 bpl
+=======
+iFK
+qWH
+kSk
+>>>>>>> a4d7c2a20d3... Adds a new captain id fire cabinet to captains office with functionality. (#10352)
 bqH
 bsl
 bmb
