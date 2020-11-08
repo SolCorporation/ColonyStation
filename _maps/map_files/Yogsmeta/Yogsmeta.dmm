@@ -2682,21 +2682,6 @@
 /obj/structure/cable/yellow,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
-"afd" = (
-/obj/machinery/door/airlock/public/glass{
-	name = "Holodeck Door"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/recreation)
 "afe" = (
 /obj/structure/table/wood,
 /obj/machinery/requests_console{
@@ -2727,21 +2712,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hos)
-"afg" = (
-/obj/machinery/door/airlock/public/glass{
-	name = "Holodeck Door"
-	},
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 8
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/recreation)
 "afh" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -4686,12 +4656,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/recreation)
-"aiZ" = (
-/obj/machinery/computer/holodeck{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/recreation)
 "ajb" = (
 /turf/closed/wall/r_wall,
 /area/engine/gravity_generator)
@@ -5222,30 +5186,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/security/brig)
-"ajX" = (
-/obj/structure/table,
-/obj/item/paper/fluff/holodeck/disclaimer,
-/obj/item/storage/firstaid/regular{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/recreation)
-"ajY" = (
-/obj/machinery/camera{
-	c_tag = "Holodeck";
-	dir = 1
-	},
-/obj/item/radio/intercom{
-	pixel_y = -28
-	},
-/obj/machinery/light/small,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
-	dir = 4;
-	icon_state = "vent_map_on-1"
-	},
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/recreation)
 "ajZ" = (
 /turf/open/floor/plasteel/dark,
 /area/engine/gravity_generator)
@@ -6357,13 +6297,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/main)
-"amm" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/recreation)
 "amn" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 1
@@ -6562,19 +6495,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/main)
-"amF" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "maintenance access";
-	req_access_txt = "12"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/obj/machinery/door/firedoor/border_only,
-/turf/open/floor/plating,
-/area/maintenance/starboard/fore)
 "amI" = (
 /obj/machinery/door/airlock/security/glass{
 	name = "Firing Range";
@@ -6821,6 +6741,7 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/engine/gravity_generator)
+<<<<<<< HEAD
 "anh" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -6833,6 +6754,8 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/fore)
+=======
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "ank" = (
 /obj/structure/table,
 /obj/item/storage/box/evidence,
@@ -7281,13 +7204,6 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/plasteel/dark,
 /area/engine/gravity_generator)
-"aom" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/turf/open/floor/plating{
-	icon_state = "platingdmg2"
-	},
-/area/maintenance/starboard/fore)
 "aon" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -7738,21 +7654,6 @@
 /obj/effect/decal/cleanable/cobweb,
 /obj/structure/sign/warning/vacuum/external{
 	pixel_y = 32
-	},
-/turf/open/floor/plating,
-/area/maintenance/starboard/fore)
-"ape" = (
-/obj/structure/rack,
-/obj/item/storage/belt{
-	desc = "Can hold quite a lot of stuff.";
-	name = "multi-belt"
-	},
-/obj/item/clothing/gloves/color/fyellow,
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/structure/sink/kitchen{
-	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
-	name = "old sink";
-	pixel_y = 28
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
@@ -8465,14 +8366,6 @@
 /obj/effect/spawner/lootdrop/maintenance,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
-"aqM" = (
-/obj/effect/landmark/event_spawn,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/maintenance/starboard/fore)
 "aqN" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Storage Room";
@@ -29276,12 +29169,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/checkpoint/engineering)
-"bcO" = (
-/obj/structure/easel,
-/turf/open/floor/plating{
-	icon_state = "platingdmg3"
-	},
-/area/maintenance/starboard/fore)
 "bcP" = (
 /obj/machinery/light{
 	dir = 8
@@ -53528,12 +53415,15 @@
 /obj/effect/spawner/xmastree,
 /turf/open/floor/carpet,
 /area/chapel/main)
+<<<<<<< HEAD
 "bWC" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 5
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/secondary)
+=======
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "bWD" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Chapel"
@@ -76965,13 +76855,6 @@
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/fitness/recreation)
-"dht" = (
-/obj/item/cigbutt,
-/obj/structure/sign/poster/contraband/random{
-	pixel_x = -32
-	},
-/turf/open/floor/plating,
-/area/maintenance/starboard/fore)
 "dhu" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/structure/sign/poster/contraband/random{
@@ -78852,6 +78735,18 @@
 	dir = 5
 	},
 /area/crew_quarters/kitchen)
+"eTl" = (
+/obj/machinery/door/airlock/maintenance{
+	req_access_txt = "12"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "eUw" = (
 /obj/machinery/camera{
 	c_tag = "Engineering - Transit Tube Access";
@@ -78931,6 +78826,18 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+<<<<<<< HEAD
+=======
+"feq" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/sign/poster/official/random{
+	pixel_x = -32
+	},
+/turf/open/floor/plasteel/dark,
+/area/crew_quarters/fitness/recreation)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "fey" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 8
@@ -79016,6 +78923,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+"fsX" = (
+/obj/structure/lattice,
+/turf/closed/wall,
+/area/crew_quarters/fitness/recreation)
 "fwb" = (
 /obj/structure/lattice,
 /obj/structure/grille,
@@ -79096,6 +79007,19 @@
 	},
 /turf/open/floor/plating,
 /area/security/prison)
+"fKC" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/effect/landmark/start/assistant,
+/obj/item/radio/intercom{
+	pixel_y = -28
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
 "fNa" = (
 /obj/structure/chair{
 	dir = 4
@@ -79108,15 +79032,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
-"fNt" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/maintenance/starboard/fore)
 "fNE" = (
 /obj/machinery/airalarm{
 	dir = 8;
@@ -79220,6 +79135,18 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plating,
 /area/maintenance/solars/port/aft)
+"fWd" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Holodeck Door"
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
 "fWD" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/external{
@@ -79266,6 +79193,38 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/entry)
+<<<<<<< HEAD
+=======
+"gaw" = (
+/obj/machinery/door/airlock/maintenance_hatch,
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/effect/mapping_helpers/airlock/abandoned,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
+"gaG" = (
+/turf/open/floor/plating,
+/area/space)
+"gcR" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/open/floor/plating{
+	icon_state = "platingdmg2"
+	},
+/area/maintenance/fore)
+"gdD" = (
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/space/nearstation)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "gfz" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -79330,6 +79289,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plating,
 /area/maintenance/solars/port/aft)
+"gpd" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "gpB" = (
 /obj/structure/table,
 /obj/item/paper_bin{
@@ -79470,6 +79434,16 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plating,
 /area/maintenance/solars/port/aft)
+"gIT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/spawner/lootdrop/maintenance,
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "gIZ" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -79570,6 +79544,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
+<<<<<<< HEAD
 "gPv" = (
 /obj/structure/chair{
 	dir = 8
@@ -79577,6 +79552,12 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/recreation)
+=======
+"gPK" = (
+/obj/structure/grille/broken,
+/turf/open/floor/plating,
+/area/maintenance/port/aft)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "gQd" = (
 /obj/machinery/navbeacon{
 	codes_txt = "patrol;next_patrol=10.1-Central-from-Aft";
@@ -81049,6 +81030,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/cryopods)
+"kbR" = (
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/engine{
+	name = "Holodeck Projector Floor"
+	},
+/area/holodeck/rec_center)
 "kbS" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 2
@@ -81253,6 +81240,7 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/fitness/recreation)
+<<<<<<< HEAD
 "kBd" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -81270,6 +81258,13 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
+=======
+"kCO" = (
+/obj/structure/table,
+/obj/item/paper/fluff/holodeck/disclaimer,
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "kDh" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -81404,6 +81399,19 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
+"kNI" = (
+/obj/machinery/camera{
+	c_tag = "Holodeck";
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
+	icon_state = "vent_map_on-1"
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
 "kNK" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 10
@@ -81703,6 +81711,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/port)
+"lKa" = (
+/obj/effect/spawner/structure/window/reinforced/shutter,
+/turf/closed/wall,
+/area/maintenance/starboard/fore)
 "lLU" = (
 /obj/machinery/navbeacon{
 	codes_txt = "patrol;next_patrol=9.3-Escape-3";
@@ -81937,6 +81949,19 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
+<<<<<<< HEAD
+=======
+"mpv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "msD" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -81948,14 +81973,6 @@
 	},
 /turf/open/space/basic,
 /area/space/nearstation)
-"mxr" = (
-/obj/structure/chair{
-	dir = 8
-	},
-/obj/effect/landmark/start/assistant,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
-/turf/open/floor/plasteel,
-/area/crew_quarters/fitness/recreation)
 "mxF" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 2
@@ -81997,6 +82014,32 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plating,
 /area/maintenance/solars/starboard/fore)
+<<<<<<< HEAD
+=======
+"mCI" = (
+/obj/effect/landmark/stationroom/maint/threexthree,
+/turf/template_noop,
+/area/maintenance/starboard/secondary)
+"mCZ" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/space)
+"mDz" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "mGM" = (
 /obj/machinery/atmospherics/pipe/simple/general/hidden,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -82705,6 +82748,7 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
+<<<<<<< HEAD
 "ovd" = (
 /obj/machinery/airalarm{
 	pixel_y = 24
@@ -82717,6 +82761,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/recreation)
+=======
+"ove" = (
+/obj/effect/landmark/stationroom/maint/fivexthree,
+/turf/template_noop,
+/area/maintenance/port/fore)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "ovq" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/turf_decal/tile/blue{
@@ -82777,6 +82827,7 @@
 /obj/machinery/atmospherics/pipe/layer_manifold,
 /turf/open/floor/plating,
 /area/hallway/secondary/entry)
+<<<<<<< HEAD
 "oKo" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 10
@@ -82786,6 +82837,12 @@
 	icon_state = "platingdmg2"
 	},
 /area/maintenance/port/aft)
+=======
+"oKk" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "oKC" = (
 /obj/machinery/bounty_board,
 /turf/closed/wall,
@@ -82915,6 +82972,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plating,
 /area/maintenance/port/fore)
+<<<<<<< HEAD
 "oVt" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -82938,6 +82996,14 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/aft)
+=======
+"oXu" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "oXx" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -83001,6 +83067,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/courtroom)
+"pep" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
 "pkA" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -83254,15 +83327,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/maintenance/disposal/incinerator)
-"qbR" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
-	dir = 5
-	},
-/turf/open/floor/plating,
-/area/maintenance/starboard/fore)
 "qca" = (
 /obj/effect/spawner/structure/window,
 /turf/open/floor/plating,
@@ -83324,6 +83388,15 @@
 /obj/machinery/bounty_board,
 /turf/closed/wall,
 /area/medical/storage)
+"qji" = (
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
 "qmh" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -83573,12 +83646,36 @@
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
+<<<<<<< HEAD
 /area/maintenance/port/aft)
 "qTK" = (
 /obj/structure/girder,
 /obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+=======
+/area/maintenance/fore)
+"qQu" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/airalarm{
+	dir = 8;
+	pixel_x = 24
+	},
+/obj/effect/landmark/event_spawn,
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
+"qUL" = (
+/obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/structure/closet/emcloset,
+/obj/item/storage/box,
+/turf/open/floor/plating,
+/area/maintenance/port)
+"qVe" = (
+/obj/effect/mapping_helpers/airlock/abandoned,
+/obj/machinery/door/firedoor/border_only{
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -84401,6 +84498,22 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel/white/corner,
 /area/hallway/secondary/entry)
+"sNu" = (
+/obj/structure/easel,
+/obj/structure/rack,
+/obj/item/storage/belt{
+	desc = "Can hold quite a lot of stuff.";
+	name = "multi-belt"
+	},
+/obj/item/clothing/gloves/color/fyellow,
+/obj/effect/spawner/lootdrop/maintenance,
+/obj/structure/sink/kitchen{
+	desc = "A sink used for washing one's hands and face. It looks rusty and home-made";
+	name = "old sink";
+	pixel_y = 28
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "sNX" = (
 /obj/machinery/power/terminal,
 /obj/effect/turf_decal/stripes/line{
@@ -84572,6 +84685,7 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
+<<<<<<< HEAD
 "tcM" = (
 /obj/machinery/firealarm{
 	pixel_y = 26
@@ -84581,6 +84695,31 @@
 	},
 /turf/open/floor/plasteel,
 /area/crew_quarters/fitness/recreation)
+=======
+"tdd" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/maintenance/port/aft)
+"tdI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 10
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "tdS" = (
 /obj/docking_port/stationary/random{
 	id = "pod_lavaland2";
@@ -84767,6 +84906,7 @@
 	},
 /turf/open/floor/plasteel/dark/telecomms,
 /area/tcommsat/server)
+<<<<<<< HEAD
 "tHg" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -84775,6 +84915,8 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+=======
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "tJP" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "Gravity Generator Room";
@@ -84938,6 +85080,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
+"tVQ" = (
+/obj/machinery/computer/holodeck,
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
 "tXK" = (
 /obj/machinery/air_sensor/atmos/toxins_mixing_tank,
 /turf/open/floor/engine/vacuum,
@@ -84974,6 +85120,12 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
+"ubC" = (
+/obj/effect/landmark/event_spawn,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
 "ucD" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -85020,10 +85172,25 @@
 /obj/machinery/atmospherics/components/trinary/filter/flipped/critical,
 /turf/open/floor/engine,
 /area/engine/engineering)
+<<<<<<< HEAD
 "uia" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Storage Room";
 	req_one_access_txt = "12;47"
+=======
+"uik" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 5
+	},
+/turf/open/floor/plating,
+/area/maintenance/starboard/fore)
+"uiv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 	},
 /obj/effect/mapping_helpers/airlock/abandoned,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
@@ -85135,6 +85302,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/exit/departure_lounge)
+"uGU" = (
+/obj/structure/lattice/catwalk,
+/obj/structure/lattice/catwalk,
+/turf/open/space,
+/area/space/nearstation)
 "uHu" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -85482,6 +85654,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
+"vEy" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Holodeck Door"
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
 "vHB" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3{
 	dir = 1
@@ -86157,7 +86339,22 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/maintenance/port/fore)
+=======
+/area/maintenance/starboard/secondary)
+"xjg" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 5
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
+"xmr" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/tinted/fulltile,
+/turf/open/floor/plating,
+/area/maintenance/port/aft)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "xmH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 6
@@ -86191,6 +86388,13 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/port/aft)
+"xoy" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 10
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
 "xpE" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 10
@@ -86361,6 +86565,27 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plating,
 /area/maintenance/solars/port/aft)
+<<<<<<< HEAD
+=======
+"xMe" = (
+/obj/machinery/door/airlock/public/glass{
+	name = "Holodeck Door"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/turf/open/floor/plasteel,
+/area/crew_quarters/fitness/recreation)
+"xNl" = (
+/obj/structure/disposalpipe/segment{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
+/turf/open/floor/plating,
+/area/maintenance/port/fore)
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 "xRE" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -124323,10 +124548,10 @@ acP
 acQ
 acQ
 acQ
-afd
+fWd
 acQ
 acQ
-afd
+fWd
 acQ
 acQ
 acQ
@@ -124587,8 +124812,16 @@ afD
 afD
 afD
 afD
+<<<<<<< HEAD
 acP
 dhw
+=======
+aee
+lMJ
+lMJ
+lMJ
+lMJ
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 dnh
 auo
 avq
@@ -124845,10 +125078,17 @@ afD
 afD
 afD
 acP
+<<<<<<< HEAD
 dnh
 dnh
 dnh
 dnh
+=======
+acP
+aee
+aee
+lMJ
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 dnh
 asY
 atG
@@ -125101,6 +125341,7 @@ afD
 afD
 afD
 afD
+<<<<<<< HEAD
 acP
 arG
 hEQ
@@ -125108,6 +125349,15 @@ aup
 dnR
 dnh
 asZ
+=======
+vEy
+kNI
+xjg
+aee
+lMJ
+dnh
+uiv
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 dnR
 axY
 axY
@@ -125358,11 +125608,19 @@ afD
 afD
 afD
 afD
+<<<<<<< HEAD
 acP
 arH
 lBn
 gyI
 dqp
+=======
+acQ
+ahg
+oXu
+aee
+lMJ
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 dnh
 ate
 dnz
@@ -125609,11 +125867,13 @@ afD
 afD
 afD
 afD
+kbR
 afD
 afD
 afD
 afD
 afD
+<<<<<<< HEAD
 afD
 acP
 arI
@@ -125622,6 +125882,15 @@ jUN
 uos
 xvT
 jtO
+=======
+acQ
+kCO
+qji
+aee
+lMJ
+dnh
+gIT
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 dnS
 axY
 aBE
@@ -125862,12 +126131,18 @@ aaa
 aai
 aaa
 aee
-aee
-aee
-acP
-afg
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
 acQ
-acQ
+<<<<<<< HEAD
 afg
 acP
 acP
@@ -125877,6 +126152,12 @@ dnh
 dnR
 aus
 dnS
+=======
+tVQ
+fKC
+dnh
+dnh
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 dnh
 oVt
 dnS
@@ -126118,6 +126399,7 @@ aaa
 aaa
 aaf
 aaa
+<<<<<<< HEAD
 aaa
 aaf
 aaa
@@ -126136,6 +126418,26 @@ dnh
 dnh
 dnh
 sRU
+=======
+aee
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+xMe
+oKk
+xoy
+eTl
+gpd
+ubC
+qhr
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 ayR
 axY
 aBG
@@ -126375,6 +126677,7 @@ aaa
 aaa
 aaf
 aaf
+<<<<<<< HEAD
 aaf
 aaf
 aaa
@@ -126393,6 +126696,26 @@ aqM
 anh
 anh
 jrc
+=======
+aee
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+acQ
+pep
+qQu
+dnh
+arJ
+gaG
+bcI
+>>>>>>> bc327f8974c... Much bigger holodeck, enables actual chess games now. (#10353)
 dnS
 axY
 aBH
@@ -126632,23 +126955,23 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaf
-aaa
-acP
 aee
-aee
-aee
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
+afD
 acP
 acP
+acP
 dnh
 dnh
-dnh
-dnh
-dnh
-dnh
-dnh
-dnh
+dnS
 bcI
 axY
 axY
@@ -126889,18 +127212,18 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaf
-aaa
-aaa
-aaa
-aaa
-aaf
-mfe
-dMm
-gFp
-amT
-qbR
+fsX
+fsX
+acP
+acP
+aee
+aee
+aee
+acP
+acP
+acP
+acP
+acP
 arJ
 arI
 dnh
@@ -127149,20 +127472,20 @@ aaa
 aaa
 aaf
 aaf
+aaa
+aaa
+aaa
 aaf
-aaf
-aaf
-aaf
-dnh
-bfq
-dnh
-apd
-fNt
+mfe
+dMm
+gFp
+amT
+uik
 arK
 eNy
 dnh
-dnh
-dnh
+dnS
+dnS
 ceZ
 axY
 aAp
@@ -127406,14 +127729,14 @@ aaa
 aaa
 aaa
 aaa
-aaa
 aaf
-aaa
 aaf
-aaa
-ack
+aaf
+aaf
 dnh
-ape
+bfq
+dnh
+apd
 eRs
 jbV
 hAJ
@@ -127664,13 +127987,13 @@ aaa
 aaa
 aaa
 aaa
-aaf
-aaf
-aaf
-aaf
-ack
-bfq
-bcO
+iWR
+mCZ
+iWR
+mCZ
+uGU
+lKa
+sNu
 dnS
 dnS
 xdc
