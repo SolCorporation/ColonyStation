@@ -1052,6 +1052,7 @@
 	description = "A powerful, acidic cleaner sold by Waffle Co. Affects organic matter while leaving other objects unaffected."
 	metabolization_rate = 1.5 * REAGENTS_METABOLISM
 	taste_description = "acid"
+	can_synth = FALSE
 
 /datum/reagent/space_cleaner/ez_clean/on_mob_life(mob/living/carbon/M)
 	M.adjustBruteLoss(3.33)
@@ -1062,8 +1063,15 @@
 /datum/reagent/space_cleaner/ez_clean/reaction_mob(mob/living/M, method=TOUCH, reac_volume)
 	..()
 	if((method == TOUCH || method == VAPOR) && !issilicon(M))
+<<<<<<< HEAD
 		M.adjustBruteLoss(1.5)
 		M.adjustFireLoss(1.5)
+=======
+		M.reagents.add_reagent(/datum/reagent/space_cleaner/ez_clean, reac_volume)
+		M.adjustBruteLoss(1 * reac_volume)
+		M.adjustFireLoss(1 * reac_volume)
+		M.emote("scream")
+>>>>>>> 583ed0e8b45... instant fix (#10362)
 
 /datum/reagent/cryptobiolin
 	name = "Cryptobiolin"
