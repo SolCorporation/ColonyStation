@@ -29,8 +29,8 @@ General Public License version 3.
 
 
 <h3 id="modules">Modules
-<aside>(67 modules,
-    520/6239 macros, 8.3%)</aside></h3>
+<aside>(72 modules,
+    540/6269 macros, 8.6%)</aside></h3>
 <ul class="index-tree">
     <li class="has-children"><span title="code">code</span><ul class="index-tree">
     <li class="has-children"><span title="code&#x2F;__DEFINES">__DEFINES</span><ul class="index-tree">
@@ -67,15 +67,21 @@ General Public License version 3.
     <li><a href="code/__DEFINES/obj_flags.html" title="code&#x2F;__DEFINES&#x2F;obj_flags.dm">obj_flags</a></li>
     <li><a href="code/__DEFINES/reactions.html" title="code&#x2F;__DEFINES&#x2F;reactions.dm">reactions</a></li>
     <li><a href="code/__DEFINES/research.html" title="code&#x2F;__DEFINES&#x2F;research.dm">research</a></li>
+    <li><a href="code/__DEFINES/robots.html" title="code&#x2F;__DEFINES&#x2F;robots.dm">robots</a></li>
     <li><a href="code/__DEFINES/subsystems.html" title="code&#x2F;__DEFINES&#x2F;subsystems.dm">subsystems</a> - Defines for subsystems and overlays</li>
     <li><a href="code/__DEFINES/tgs.html" title="code&#x2F;__DEFINES&#x2F;tgs.dm">tgs</a></li>
     <li><a href="code/__DEFINES/tgui.html" title="code&#x2F;__DEFINES&#x2F;tgui.dm">tgui</a></li>
     <li><span class="no-substance">~yogs_defines&#x2F;</span><a href="code/__DEFINES/~yogs_defines/reactions.html" title="code&#x2F;__DEFINES&#x2F;~yogs_defines&#x2F;reactions.dm">reactions</a></li>
     </ul></li>
-    <li><span class="no-substance">controllers&#x2F;subsystem&#x2F;</span><a href="code/controllers/subsystem/materials.html" title="code&#x2F;controllers&#x2F;subsystem&#x2F;materials.dm">materials</a> - How material datums work
+    <li><span class="no-substance">__HELPERS&#x2F;</span><a href="code/__HELPERS/_lists.html" title="code&#x2F;__HELPERS&#x2F;_lists.dm">_lists</a></li>
+    <li class="has-children"><span class="no-substance">controllers&#x2F;</span><span title="code&#x2F;controllers&#x2F;subsystem">subsystem</span><ul class="index-tree">
+    <li><a href="code/controllers/subsystem/materials.html" title="code&#x2F;controllers&#x2F;subsystem&#x2F;materials.dm">materials</a> - How material datums work
 Materials are now instanced datums, with an associative list of them being kept in SSmaterials. We only instance the materials once and then re-use these instances for everything.
 These materials call on_applied() on whatever item they are applied to, common effects are adding components, changing color and changing description. This allows us to differentiate items based on the material they are made out of.area</li>
+    <li><a href="code/controllers/subsystem/runechat.html" title="code&#x2F;controllers&#x2F;subsystem&#x2F;runechat.dm">runechat</a></li>
+    </ul></li>
     <li class="has-children"><span title="code&#x2F;datums">datums</span><ul class="index-tree">
+    <li><a href="code/datums/chatmessage.html" title="code&#x2F;datums&#x2F;chatmessage.dm">chatmessage</a></li>
     <li class="has-children"><span title="code&#x2F;datums&#x2F;components">components</span><ul class="index-tree">
     <li><a href="code/datums/components/README.html" title="code&#x2F;datums&#x2F;components&#x2F;README.md">Datum Component System (DCS)</a></li>
     <li><a href="code/datums/components/material_container.html" title="code&#x2F;datums&#x2F;components&#x2F;material_container.dm">material_container</a> - This datum should be used for handling mineral contents of machines and whatever else is supposed to hold minerals and make use of them.</li>
@@ -115,6 +121,7 @@ transformations and other events that cause new languages to become available.</
     <li class="has-children"><span title="code&#x2F;modules&#x2F;mob">mob</span><ul class="index-tree">
     <li><span class="no-substance">living&#x2F;simple_animal&#x2F;hostile&#x2F;megafauna&#x2F;</span><a href="code/modules/mob/living/simple_animal/hostile/megafauna/colossus.html" title="code&#x2F;modules&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;hostile&#x2F;megafauna&#x2F;colossus.dm">colossus</a></li>
     <li><a href="code/modules/mob/mob_movespeed.html" title="code&#x2F;modules&#x2F;mob&#x2F;mob_movespeed.dm">mob_movespeed</a> - How move speed for mobs works</li>
+    <li><a href="code/modules/mob/say.html" title="code&#x2F;modules&#x2F;mob&#x2F;say.dm">say</a></li>
     <li><a href="code/modules/mob/say_readme.html" title="code&#x2F;modules&#x2F;mob&#x2F;say_readme.md">Say code basics</a> - This document is a little dated but I believe it's accurate mostly (oranges 2019)</li>
     </ul></li>
     <li><span class="no-substance">modular_computers&#x2F;</span><a href="code/modules/modular_computers/documentation.html" title="code&#x2F;modules&#x2F;modular_computers&#x2F;documentation.md">Modular computer programs</a> - How module computer programs work</li>
@@ -134,7 +141,7 @@ transformations and other events that cause new languages to become available.</
 
 
 <h3 id="types">Types
-<aside>(263 detailed/760 documented/22569 total, 3.4%)</aside></h3>
+<aside>(266 detailed/763 documented/22577 total, 3.4%)</aside></h3>
 <ul class="index-tree">
     <li><a href="global.html" title="(global)">(global)</a></li>
     <li class="has-children"><a href="area.html" title="&#x2F;area">area</a> - A grouping of tiles into a logical space, mostly used by map editors<ul class="index-tree">
@@ -287,6 +294,7 @@ Set our target list with the new set we've generated.</li>
     <li><a href="datum/controller/subsystem/job.html" title="&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;job">Jobs</a></li>
     <li><a href="datum/controller/subsystem/materials.html" title="&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;materials">Materials</a></li>
     <li><span class="no-substance">processing&#x2F;</span><a href="datum/controller/subsystem/processing/instruments.html" title="&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;processing&#x2F;instruments">Instruments</a></li>
+    <li><a href="datum/controller/subsystem/runechat.html" title="&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;runechat">Runechat</a></li>
     <li><a href="datum/controller/subsystem/sounds.html" title="&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;sounds">Sounds</a></li>
     <li><a href="datum/controller/subsystem/sun.html" title="&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;sun">Sun</a></li>
     <li><a href="datum/controller/subsystem/tgui.html" title="&#x2F;datum&#x2F;controller&#x2F;subsystem&#x2F;tgui">tgui</a></li>
@@ -624,6 +632,7 @@ SPDX-License-Identifier: MIT</li>
     <li><a href="mob/living/carbon/alien.html" title="&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;alien">alien</a></li>
     <li><a href="mob/living/carbon/human.html" title="&#x2F;mob&#x2F;living&#x2F;carbon&#x2F;human">Unknown</a></li>
     </ul></li>
+    <li><span class="no-substance">silicon&#x2F;</span><a href="mob/living/silicon/robot.html" title="&#x2F;mob&#x2F;living&#x2F;silicon&#x2F;robot">Cyborg</a></li>
     <li class="has-children"><span title="&#x2F;mob&#x2F;living&#x2F;simple_animal">simple_animal</span><ul class="index-tree">
     <li class="has-children"><a href="mob/living/simple_animal/bot.html" title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;bot">bot</a><ul class="index-tree">
     <li><a href="mob/living/simple_animal/bot/medbot.html" title="&#x2F;mob&#x2F;living&#x2F;simple_animal&#x2F;bot&#x2F;medbot">\improper Medibot</a></li>
@@ -723,7 +732,7 @@ It's attacks are as follows:</li>
     <li><a href="obj/effect/reality_smash.html" title="&#x2F;obj&#x2F;effect&#x2F;reality_smash">&#x2F;improper reality smash</a></li>
     <li><span class="no-substance">spawner&#x2F;lootdrop&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;effect&#x2F;spawner&#x2F;lootdrop&#x2F;lavaland_surface_ufo_crash">alien tile</span> - Loot Spawner For UFO</li>
     </ul></li>
-    <li class="has-children"><span title="&#x2F;obj&#x2F;item">item</span><ul class="index-tree">
+    <li class="has-children"><a href="obj/item.html" title="&#x2F;obj&#x2F;item">item</a><ul class="index-tree">
     <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule">aiModule</span><ul class="index-tree">
     <li class="has-children"><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;core">core</span> - Full Core Boards<ul class="index-tree">
     <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;aiModule&#x2F;core&#x2F;freeformcore">&#x27;Freeform&#x27; Core AI Module</span> - Freeform Core</li>
@@ -801,7 +810,7 @@ It's attacks are as follows:</li>
     <li><span class="no-substance">computer&#x2F;white_ship&#x2F;</span><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;circuitboard&#x2F;computer&#x2F;white_ship&#x2F;ruin">ruin</span> - ruined whiteship</li>
     <li><span class="no-substance" title="&#x2F;obj&#x2F;item&#x2F;circuitboard&#x2F;mecha">exosuit circuit board</span> - Circuitboards</li>
     </ul></li>
-    <li class="has-children"><span class="no-substance">clipboard&#x2F;yog&#x2F;</span><a href="obj/item/clipboard/yog/paperwork.html" title="&#x2F;obj&#x2F;item&#x2F;clipboard&#x2F;yog&#x2F;paperwork">Paperwork</a> - The baseline paperwork <a href="obj.html" title="/obj">clipboard.</a><ul class="index-tree">
+    <li class="has-children"><span class="no-substance">clipboard&#x2F;yog&#x2F;</span><a href="obj/item/clipboard/yog/paperwork.html" title="&#x2F;obj&#x2F;item&#x2F;clipboard&#x2F;yog&#x2F;paperwork">Paperwork</a> - The baseline paperwork <a href="obj/item.html" title="/obj/item">clipboard.</a><ul class="index-tree">
     <li><a href="obj/item/clipboard/yog/paperwork/admin.html" title="&#x2F;obj&#x2F;item&#x2F;clipboard&#x2F;yog&#x2F;paperwork&#x2F;admin">admin</a></li>
     <li><a href="obj/item/clipboard/yog/paperwork/captain.html" title="&#x2F;obj&#x2F;item&#x2F;clipboard&#x2F;yog&#x2F;paperwork&#x2F;captain">captain</a></li>
     <li><a href="obj/item/clipboard/yog/paperwork/ce.html" title="&#x2F;obj&#x2F;item&#x2F;clipboard&#x2F;yog&#x2F;paperwork&#x2F;ce">ce</a></li>
@@ -1194,7 +1203,7 @@ uranium</li>
 </main>
 <footer>
     colonystation.dme
-    <a href="https://github.com/SolCorporation/ColonyStation/tree/d901188f095d8a589ac9f34159e765b922fb95b1">d901188</a>
+    <a href="https://github.com/SolCorporation/ColonyStation/tree/a777de5b74d70ee1c3afca272695ddcc5683f3fe">a777de5</a>
         (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.2.1</a></footer>
 </body>
 </html>
