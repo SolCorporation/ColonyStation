@@ -48293,6 +48293,16 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
+<<<<<<< HEAD
+=======
+"mrS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/open/floor/plasteel,
+/area/security/prison)
+>>>>>>> 02c3ef2d7f0... Fixes 8th (#10365)
 "msz" = (
 /obj/structure/sign/warning/vacuum/external{
 	pixel_y = 32
@@ -49075,6 +49085,13 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/storage)
+"mTz" = (
+/obj/structure/fireaxecabinet/spare{
+	pixel_x = 2;
+	pixel_y = 32
+	},
+/turf/open/floor/carpet/blue,
+/area/crew_quarters/heads/captain)
 "mUg" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
 	dir = 9
@@ -56242,6 +56259,16 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/science/xenobiology)
+"sxJ" = (
+/obj/machinery/atmospherics/components/binary/pump{
+	name = "Mix Pump"
+	},
+/obj/machinery/camera{
+	c_tag = "Incinerator";
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/maintenance/disposal/incinerator)
 "syq" = (
 /turf/template_noop,
 /area/maintenance/starboard/fore)
@@ -88814,7 +88841,11 @@ qQV
 qQV
 qQV
 qQV
+<<<<<<< HEAD
 tpl
+=======
+afA
+>>>>>>> 02c3ef2d7f0... Fixes 8th (#10365)
 aaf
 aaa
 aaa
@@ -96320,9 +96351,15 @@ bfl
 bim
 bjG
 aZV
+<<<<<<< HEAD
 bmB
 aCd
 bpl
+=======
+mTz
+qWH
+kSk
+>>>>>>> 02c3ef2d7f0... Fixes 8th (#10365)
 bqH
 bsl
 bmb
@@ -102024,7 +102061,11 @@ bvA
 aaf
 gEo
 kHp
+<<<<<<< HEAD
 gvw
+=======
+sxJ
+>>>>>>> 02c3ef2d7f0... Fixes 8th (#10365)
 mNF
 gLr
 xvC
