@@ -2365,7 +2365,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/piano,
 /turf/open/floor/carpet,
 /area/crew_quarters/theatre)
 "bfO" = (
@@ -9765,8 +9764,6 @@
 /area/security/prison)
 "faI" = (
 /obj/structure/table,
-/obj/item/book/manual/hydroponics_pod_people,
-/obj/item/paper/guides/jobs/hydroponics,
 /turf/open/floor/plasteel,
 /area/hydroponics)
 "faZ" = (
@@ -19834,9 +19831,17 @@
 /turf/closed/wall,
 /area/security/main)
 "klr" = (
-/obj/machinery/power/deck_relay,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
+	dir = 8
+	},
+/obj/structure/disposalpipe/junction/flip{
+	dir = 8
+	},
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
 "klC" = (
 /obj/effect/landmark/xeno_spawn,
 /turf/open/floor/plating,
@@ -22757,9 +22762,9 @@
 /turf/open/floor/plasteel/dark,
 /area/engine/engineering)
 "lIk" = (
-/obj/machinery/atmospherics/pipe/simple/multiz,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
+/obj/structure/disposalpipe/segment,
+/turf/open/floor/wood,
+/area/crew_quarters/bar)
 "lIT" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer3,
@@ -45919,7 +45924,6 @@
 	},
 /obj/structure/table/glass,
 /obj/item/storage/bag/plants/portaseeder,
-/obj/item/paper/guides/jobs/hydroponics,
 /turf/open/floor/plasteel,
 /area/hydroponics/garden)
 "yaN" = (
@@ -148235,8 +148239,8 @@ dBi
 pWs
 mLy
 tcx
-ann
-lgV
+klr
+lIk
 ydz
 stg
 icD
@@ -150820,7 +150824,7 @@ wqd
 wqd
 wqd
 wqd
-klr
+wqd
 wqd
 wqd
 wqd
@@ -151075,7 +151079,7 @@ wWD
 wqd
 wqd
 wqd
-lIk
+wqd
 wqd
 wqd
 wqd
