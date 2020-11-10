@@ -111,12 +111,7 @@
 	getMobhook(user)
 
 /obj/item/clothing/neck/bodycam/dropped(mob/wearer)
-<<<<<<< HEAD
-	..()
-	if (bodcam.status)//if it's on
-=======
 	if(bodcam.status)//if it's on
->>>>>>> e77799e6080... Fixes bodycam runtime and genetics passtable issue (#10335)
 		attack_self(wearer) //turn it off
 	GLOB.cameranet.updatePortableCamera(bodcam)
 	UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
