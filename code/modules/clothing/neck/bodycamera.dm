@@ -117,6 +117,13 @@
 		GLOB.cameranet.updatePortableCamera(bodcam)
 		UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
 	..()
+<<<<<<< HEAD
+=======
+	if (bodcam?.status)//if it's on
+		attack_self(wearer) //turn it off
+	GLOB.cameranet.updatePortableCamera(bodcam)
+	UnregisterSignal(listeningTo, COMSIG_MOVABLE_MOVED)
+>>>>>>> b80a77572df... Fixes Runechat runtimes and Adds Singing And fixes lots of other runtimes (#10325)
 
 /obj/item/clothing/neck/bodycam/proc/getMobhook(mob/to_hook) //This stuff is basically copypasta from RCL.dm, look there if you are confused
 	bodcam.built_in = to_hook
