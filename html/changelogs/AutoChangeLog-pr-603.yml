@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "boxstation fixes, toxins mixing chamber, pipes, areas, broken cam in tcomms"
