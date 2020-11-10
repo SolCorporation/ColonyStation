@@ -84,13 +84,6 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 /mob/living/say(message, bubble_type,var/list/spans = list(), sanitize = TRUE, datum/language/language = null, ignore_spam = FALSE, forced = null)
 	var/static/list/crit_allowed_modes = list(WHISPER_MODE = TRUE, MODE_CHANGELING = TRUE, MODE_ALIEN = TRUE)
 	var/static/list/unconscious_allowed_modes = list(MODE_CHANGELING = TRUE, MODE_ALIEN = TRUE)
-<<<<<<< HEAD
-	var/static/list/stun_disallowed_modes = list(MODE_HEADSET = TRUE)
-	var/talk_key = get_key(message)
-
-	var/static/list/one_character_prefix = list(MODE_HEADSET = TRUE, MODE_ROBOT = TRUE, MODE_WHISPER = TRUE)
-=======
->>>>>>> b80a77572df... Fixes Runechat runtimes and Adds Singing And fixes lots of other runtimes (#10325)
 
 	if(sanitize)
 		message = trim(copytext_char(sanitize(message), 1, MAX_MESSAGE_LEN))
@@ -99,12 +92,9 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	var/list/message_mods = list()
 	var/original_message = message
-<<<<<<< HEAD
-=======
 	message = get_message_mods(message, message_mods)
 	var/datum/saymode/saymode = SSradio.saymodes[message_mods[RADIO_KEY]]
 	var/in_critical = InCritical()
->>>>>>> b80a77572df... Fixes Runechat runtimes and Adds Singing And fixes lots of other runtimes (#10325)
 
 	if(message_mods[RADIO_EXTENSION] == MODE_ADMIN)
 		if(client)
@@ -123,10 +113,6 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	if(check_emote(original_message, forced) || !can_speak_basic(original_message, ignore_spam))
 		return
 
-<<<<<<< HEAD
-	if(InCritical())
-		if(!(crit_allowed_modes[message_mode]))
-=======
 	if(in_critical) //There are cheaper ways to do this, but they're less flexible, and this isn't ran all that often
 		var/end = TRUE
 		for(var/index in message_mods)
@@ -134,7 +120,6 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 				end = FALSE
 				break
 		if(end)
->>>>>>> b80a77572df... Fixes Runechat runtimes and Adds Singing And fixes lots of other runtimes (#10325)
 			return
 	else if(stat == UNCONSCIOUS)
 		var/end = TRUE
@@ -143,9 +128,6 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 				end = FALSE
 				break
 		if(end)
-			return
-	else if(IsParalyzed())
-		if(stun_disallowed_modes[message_mode])
 			return
 
 	language = message_mods[LANGUAGE_EXTENSION]
