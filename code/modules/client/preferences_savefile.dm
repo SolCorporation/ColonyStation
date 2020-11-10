@@ -356,6 +356,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		WRITE_FILE(S["feature_ethcolor"]	, "9c3030")
 
 	//Character
+<<<<<<< HEAD
 	S["real_name"]			>> real_name
 	S["name_is_always_random"] >> be_random_name
 	S["body_is_always_random"] >> be_random_body
@@ -386,6 +387,38 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_polysmorph_teeth"]			>> features["teeth"]
 	S["feature_polysmorph_dome"]			>> features["dome"]
 	S["feature_polysmorph_dorsal_tubes"]			>> features["dorsal_tubes"]
+=======
+	READ_FILE(S["real_name"], real_name)
+	READ_FILE(S["name_is_always_random"], be_random_name)
+	READ_FILE(S["body_is_always_random"], be_random_body)
+	READ_FILE(S["gender"], gender)
+	READ_FILE(S["age"], age)
+	READ_FILE(S["hair_color"], hair_color)
+	READ_FILE(S["facial_hair_color"], facial_hair_color)
+	READ_FILE(S["eye_color"], eye_color)
+	READ_FILE(S["skin_tone"], skin_tone)
+	READ_FILE(S["hair_style_name"], hair_style)
+	READ_FILE(S["facial_style_name"], facial_hair_style)
+	READ_FILE(S["underwear"], underwear)
+	READ_FILE(S["undershirt"], undershirt)
+	READ_FILE(S["socks"], socks)
+	READ_FILE(S["backbag"], backbag)
+	READ_FILE(S["uplink_loc"], uplink_spawn_loc)
+	READ_FILE(S["feature_mcolor"], features["mcolor"])
+	READ_FILE(S["feature_ethcolor"], features["ethcolor"])
+	READ_FILE(S["feature_lizard_tail"], features["tail_lizard"])
+	READ_FILE(S["feature_lizard_snout"], features["snout"])
+	READ_FILE(S["feature_lizard_horns"], features["horns"])
+	READ_FILE(S["feature_lizard_frills"], features["frills"])
+	READ_FILE(S["feature_lizard_spines"], features["spines"])
+	READ_FILE(S["feature_lizard_body_markings"], features["body_markings"])
+	READ_FILE(S["feature_lizard_legs"], features["legs"])
+	READ_FILE(S["feature_moth_wings"], features["moth_wings"])
+	READ_FILE(S["feature_polysmorph_tail"], features["tail_polysmorph"])
+	READ_FILE(S["feature_polysmorph_teeth"], features["teeth"])
+	READ_FILE(S["feature_polysmorph_dome"], features["dome"])
+	READ_FILE(S["feature_polysmorph_dorsal_tubes"], features["dorsal_tubes"])
+>>>>>>> 68d5665618a... Fixes Hairstyle (#10324)
 	if(!CONFIG_GET(flag/join_with_mutant_humans))
 		features["tail_human"] = "none"
 		features["ears"] = "none"
