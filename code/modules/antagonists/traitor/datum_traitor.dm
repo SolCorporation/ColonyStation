@@ -24,7 +24,7 @@
 	if(traitor_kind == TRAITOR_AI)
 		company = /datum/corporation/self
 	else if(!company)
-		company = pick(subtypesof(/datum/corporation/traitor))
+		company = pick(subtypesof(/datum/corporation/syndicate))
 	owner.add_employee(company)
 
 	SSticker.mode.traitors += owner

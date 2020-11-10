@@ -39,8 +39,8 @@ jobs:
 
       - name: Misc Checks
         run: |
-          python tools/travis/check_dme_alphabetical.py colonystation.dme
           tools/travis/check_filedirs.sh colonystation.dme
+          python tools/travis/check_dme_alphabetical.py colonystation.dme
           tools/travis/check_changelogs.sh
           find . -name "*.json" -not -path "./tgui/node_modules/*" -print0 | xargs -0 python3 ./tools/json_verifier.py
           tools/travis/build_tgui.sh

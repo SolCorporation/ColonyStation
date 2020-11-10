@@ -14,4 +14,3 @@
 	default_priority = 20
 
 	icon_state = "drone"
-	sing_verb = "chimes"

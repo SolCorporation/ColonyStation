@@ -792,20 +792,12 @@
 		return
 	reac_volume = round(reac_volume,0.1)
 	if(method == INGEST)
-		if(!HAS_TRAIT(C, TRAIT_ACIDBLOOD))
-			C.adjustBruteLoss(min(6*toxpwr, reac_volume * toxpwr))
+		C.adjustBruteLoss(min(6*toxpwr, reac_volume * toxpwr))
 		return
 	if(method == INJECT)
-		if(!HAS_TRAIT(C, TRAIT_ACIDBLOOD))
-			C.adjustBruteLoss(1.5 * min(6*toxpwr, reac_volume * toxpwr))
+		C.adjustBruteLoss(1.5 * min(6*toxpwr, reac_volume * toxpwr))
 		return
 	C.acid_act(acidpwr, reac_volume)
-
-/datum/reagent/toxin/acid/on_mob_life(mob/living/carbon/M)
-	if(HAS_TRAIT(M, TRAIT_ACIDBLOOD))
-		M.adjustToxLoss(clamp((toxpwr-2)*REM, -toxpwr*REM, 0))  //Counteracts toxin damage from parent, stronger acids will still do toxin damage to those with acidic blood but weaker acids will not
-	. = 1
-	..()
 
 /datum/reagent/toxin/acid/reaction_obj(obj/O, reac_volume)
 	if(ismob(O.loc)) //handled in human acid_act()

@@ -376,7 +376,7 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 		return 1
 	return 0
 
-/obj/item/proc/talk_into(mob/M, input, channel, spans, datum/language/language, list/message_mods)
+/obj/item/proc/talk_into(mob/M, input, channel, spans, datum/language/language)
 	return ITALICS | REDUCE_RANGE
 
 /obj/item/proc/dropped(mob/user)
@@ -433,9 +433,6 @@ GLOBAL_VAR_INIT(rpg_loot_items, FALSE)
 	set src in oview(1)
 	set category = "Object"
 	set name = "Pick up"
-
-	if(HAS_TRAIT(src, TRAIT_NODROP))
-		return
 
 	if(usr.incapacitated() || !Adjacent(usr))
 		return

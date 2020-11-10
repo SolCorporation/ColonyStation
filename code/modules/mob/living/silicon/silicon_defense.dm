@@ -37,6 +37,14 @@
 				adjustBruteLoss(damage)
 			if(BURN)
 				adjustFireLoss(damage)
+			if(TOX)
+				adjustToxLoss(damage)
+			if(OXY)
+				adjustOxyLoss(damage)
+			if(CLONE)
+				adjustCloneLoss(damage)
+			if(STAMINA)
+				adjustStaminaLoss(damage)
 
 /mob/living/silicon/attack_paw(mob/living/user)
 	return attack_hand(user)
@@ -61,10 +69,10 @@
 	if(SEND_SIGNAL(src, COMSIG_ATOM_ATTACK_HAND, M) & COMPONENT_NO_ATTACK_HAND)
 		. = TRUE
 	switch(M.a_intent)
-		if (INTENT_HELP)
+		if ("help")
 			M.visible_message("[M] pets [src].", \
 							"<span class='notice'>You pet [src].</span>")
-		if(INTENT_GRAB)
+		if("grab")
 			grabbedby(M)
 		else
 			M.do_attack_animation(src, ATTACK_EFFECT_PUNCH)

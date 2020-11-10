@@ -11,4 +11,3 @@
 	space_chance = 20
 	default_priority = 10
 	icon_state = "aphasia"
-	sing_verb = "gibbers"

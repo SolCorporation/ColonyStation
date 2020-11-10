@@ -32,11 +32,11 @@
 		return
 
 	switch(M.a_intent)
-		if(INTENT_HELP)
+		if("help")
 			help_shake_act(M)
-		if(INTENT_GRAB)
+		if("grab")
 			grabbedby(M)
-		if(INTENT_HARM)
+		if("harm")
 			M.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
 			if (prob(75))
 				visible_message("<span class='danger'>[M] has punched [name]!</span>", \
@@ -60,7 +60,7 @@
 				playsound(loc, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 				visible_message("<span class='danger'>[M] has attempted to punch [name]!</span>", \
 					"<span class='userdanger'>[M] has attempted to punch [name]!</span>", null, COMBAT_MESSAGE_RANGE)
-		if(INTENT_DISARM)
+		if("disarm")
 			if(!IsUnconscious())
 				M.do_attack_animation(src, ATTACK_EFFECT_DISARM)
 				if (prob(25))

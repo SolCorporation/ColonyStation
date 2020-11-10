@@ -41,18 +41,20 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	if(delete_after_roundstart)
 		qdel(src)
 
-/obj/effect/landmark/start/Initialize()
-	. = ..()
+/obj/effect/landmark/start/New()
 	GLOB.start_landmarks_list += src
 	if(jobspawn_override)
-		LAZYADDASSOC(GLOB.jobspawn_overrides, name, src)
+		if(!GLOB.jobspawn_overrides[name])
+			GLOB.jobspawn_overrides[name] = list()
+		GLOB.jobspawn_overrides[name] += src
+	..()
 	if(name != "start")
 		tag = "start*[name]"
 
 /obj/effect/landmark/start/Destroy()
 	GLOB.start_landmarks_list -= src
 	if(jobspawn_override)
-		LAZYREMOVEASSOC(GLOB.jobspawn_overrides, name, src)
+		GLOB.jobspawn_overrides[name] -= src
 	return ..()
 
 // START LANDMARKS FOLLOW. Don't change the names unless

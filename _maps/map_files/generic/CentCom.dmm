@@ -12023,24 +12023,6 @@
 /obj/item/reagent_containers/food/snacks/carpmeat,
 /turf/open/floor/plasteel/cafeteria,
 /area/centcom/holding)
-"zW" = (
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/structure/table/reinforced,
-/obj/machinery/airalarm/mixingchamber{
-	dir = 8;
-	pixel_x = 24
-	},
-/turf/open/floor/plasteel,
-/area/centcom/testchamber)
 "zX" = (
 /obj/structure/table,
 /obj/machinery/light{
@@ -17623,19 +17605,6 @@
 /obj/effect/spawner/structure/window/reinforced/indestructable,
 /turf/open/floor/plating,
 /area/centcom/testchamber)
-"KK" = (
-/obj/structure/glowshroom/single,
-/obj/structure/table/wood,
-/obj/item/gun/magic/wand/death,
-/obj/item/gun/magic/wand/door,
-/obj/item/gun/magic/wand/fireball,
-/obj/item/gun/magic/wand/polymorph,
-/obj/item/gun/magic/wand/resurrection/debug,
-/obj/item/gun/magic/wand/safety,
-/obj/item/gun/magic/wand/teleport,
-/obj/item/gun/magic/staff/cheese,
-/turf/open/floor/wood,
-/area/centcom/testchamber)
 "KL" = (
 /obj/item/storage/box/donkpockets,
 /obj/effect/turf_decal/tile/bar{
@@ -19458,6 +19427,18 @@
 /obj/singularity/wizard/mapped,
 /turf/open/indestructible/binary,
 /area/fabric_of_reality)
+"Qn" = (
+/obj/structure/glowshroom/single,
+/obj/structure/table/wood,
+/obj/item/gun/magic/wand/death,
+/obj/item/gun/magic/wand/door,
+/obj/item/gun/magic/wand/fireball,
+/obj/item/gun/magic/wand/polymorph,
+/obj/item/gun/magic/wand/resurrection/debug,
+/obj/item/gun/magic/wand/safety,
+/obj/item/gun/magic/wand/teleport,
+/turf/open/floor/wood,
+/area/centcom/testchamber)
 "Qo" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 1
@@ -19494,6 +19475,21 @@
 /obj/structure/lattice/catwalk/swarmer_catwalk,
 /obj/effect/decal/cleanable/blood/gibs/old,
 /turf/open/space/basic,
+/area/centcom/testchamber)
+"Qr" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/syndicatebomb,
+/turf/open/floor/plasteel,
 /area/centcom/testchamber)
 "Qt" = (
 /obj/structure/sign/warning/biohazard,
@@ -21407,20 +21403,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/centcom/holding)
-"VC" = (
-/obj/effect/turf_decal/tile/neutral{
-	dir = 1
-	},
-/obj/effect/turf_decal/tile/neutral,
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 8
-	},
-/obj/structure/table/reinforced,
-/turf/open/floor/plasteel,
-/area/centcom/testchamber)
 "VD" = (
 /obj/machinery/vending/snack/blue,
 /turf/open/floor/mineral/titanium/blue,
@@ -21613,6 +21595,21 @@
 /obj/machinery/vending/liberationstation,
 /turf/open/floor/plasteel,
 /area/centcom/testchamber)
+"We" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/syndicatebomb/self_destruct,
+/turf/open/floor/plasteel,
+/area/centcom/testchamber)
 "Wh" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -21754,6 +21751,25 @@
 /obj/item/clothing/gloves/rapid,
 /obj/item/clothing/gloves/krav_maga/sec,
 /turf/open/floor/wood,
+/area/centcom/testchamber)
+"WF" = (
+/obj/effect/turf_decal/tile/neutral{
+	dir = 1
+	},
+/obj/effect/turf_decal/tile/neutral,
+/obj/effect/turf_decal/tile/neutral{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/neutral{
+	dir = 8
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/syndicatebomb/badmin/clown,
+/obj/machinery/airalarm/mixingchamber{
+	dir = 8;
+	pixel_x = 24
+	},
+/turf/open/floor/plasteel,
 /area/centcom/testchamber)
 "WG" = (
 /obj/effect/turf_decal/tile/neutral{
@@ -61923,7 +61939,7 @@ ZO
 yh
 Xq
 Wa
-zW
+WF
 Zr
 Nr
 Qy
@@ -63718,7 +63734,7 @@ wS
 Ov
 Kf
 Nt
-VC
+Qr
 ZH
 Zr
 Zr
@@ -63975,7 +63991,7 @@ wS
 wS
 Zv
 Nt
-VC
+Qr
 QG
 Zr
 Zr
@@ -64232,7 +64248,7 @@ wS
 XS
 Zk
 Nt
-VC
+We
 FZ
 Zr
 WH
@@ -70137,7 +70153,7 @@ Wx
 Vi
 wS
 Tv
-KK
+Qn
 ND
 vq
 wS

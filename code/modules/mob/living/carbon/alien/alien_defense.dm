@@ -20,7 +20,7 @@ In all, this is a lot like the monkey code. /N
 
 	switch(M.a_intent)
 
-		if(INTENT_HELP)
+		if ("help")
 			set_resting(FALSE)
 			AdjustStun(-60)
 			AdjustKnockdown(-60)
@@ -30,7 +30,7 @@ In all, this is a lot like the monkey code. /N
 			AdjustSleeping(-100)
 			visible_message("<span class='notice'>[M.name] nuzzles [src] trying to wake [p_them()] up!</span>")
 
-		if(INTENT_GRAB)
+		if ("grab")
 			grabbedby(M)
 
 		else
@@ -55,14 +55,14 @@ In all, this is a lot like the monkey code. /N
 		return 0
 
 	switch(M.a_intent)
-		if(INTENT_HELP)
+		if("help")
 			help_shake_act(M)
-		if(INTENT_GRAB)
+		if("grab")
 			grabbedby(M)
-		if (INTENT_HARM)
+		if ("harm")
 			M.do_attack_animation(src, ATTACK_EFFECT_PUNCH)
 			return 1
-		if(INTENT_DISARM)
+		if("disarm")
 			M.do_attack_animation(src, ATTACK_EFFECT_DISARM)
 			return 1
 	return 0
