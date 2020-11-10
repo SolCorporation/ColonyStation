@@ -22,6 +22,7 @@ map colonystation
 endmap
 
 map ColonyStationDelta
+	default
 	voteweight 0.9
 	votable
 endmap
