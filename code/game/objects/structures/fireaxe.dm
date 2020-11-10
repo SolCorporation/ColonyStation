@@ -200,6 +200,12 @@
 	set category = "Object"
 	set src in oview(1)
 
+<<<<<<< HEAD
+=======
+	if(!isliving(usr))
+		return
+
+>>>>>>> 7daccf1f96b... Fixes 6th November - Free Miners, Fireaxecabinets, Xray eye exploit, autolathe, runtimes (#10349)
 	if(locked)
 		to_chat(usr, "<span class='warning'>The [name] won't budge!</span>")
 		return
