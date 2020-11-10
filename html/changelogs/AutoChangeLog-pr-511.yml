@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Adds an Air Fan at the entrance of the Paper Ruin"
