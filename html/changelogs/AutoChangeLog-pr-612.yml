@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Added new spare id locker in captains room"
+  - rscdel: "Removed spare from captains locker"
