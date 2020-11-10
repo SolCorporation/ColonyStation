@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Makes polysmorphs mentor-only
+experimental: Empowers mentors"
