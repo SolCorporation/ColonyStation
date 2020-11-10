@@ -9,7 +9,6 @@
 	default_priority = 100
 
 	icon_state = "galcom"
-	sing_verb = "sings"
 
 //Syllable Lists
 /*

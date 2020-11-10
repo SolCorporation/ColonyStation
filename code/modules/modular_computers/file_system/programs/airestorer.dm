@@ -71,16 +71,14 @@
 		ai_slot.locked = FALSE
 		restoring = FALSE
 		return
-	ai_slot.locked = TRUE
-	A.adjustOxyLoss(-5, FALSE)
-	A.adjustFireLoss(-5, FALSE)
-	A.adjustBruteLoss(-5, FALSE)
-
-	// Please don't forget to update health, otherwise the below if statements will probably always fail.
+	ai_slot.locked =TRUE
+	A.adjustOxyLoss(-1, 0)
+	A.adjustFireLoss(-1, 0)
+	A.adjustToxLoss(-1, 0)
+	A.adjustBruteLoss(-1, 0)
 	A.updatehealth()
 	if(A.health >= 0 && A.stat == DEAD)
 		A.revive()
-		cardhold.update_icon()
 	// Finished restoring
 	if(A.health >= 100)
 		ai_slot.locked = FALSE

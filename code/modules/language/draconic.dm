@@ -18,4 +18,3 @@
 	)
 	icon_state = "lizard"
 	default_priority = 90
-	sing_verb = "sings"

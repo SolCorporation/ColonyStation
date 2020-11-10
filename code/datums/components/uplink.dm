@@ -182,9 +182,8 @@ GLOBAL_LIST_EMPTY(uplinks)
 						continue
 			cat["items"] += list(list(
 				"name" = I.name,
-				"cost" = I.manufacturer && user.mind.is_employee(I.manufacturer) ? CEILING(I.cost * 0.8, 1) : I.cost,
+				"cost" = I.cost,
 				"desc" = I.desc,
-				"manufacturer" = I.manufacturer ? initial(I.manufacturer.name) : null,
 			))
 		data["categories"] += list(cat)
 	return data
@@ -220,14 +219,10 @@ GLOBAL_LIST_EMPTY(uplinks)
 		return
 	if (!user || user.incapacitated())
 		return
-	if(U.manufacturer && user.mind.is_employee(U.manufacturer))
-		if(telecrystals < CEILING(U.cost*0.8, 1) || U.limited_stock == 0)
-			return
-		telecrystals -= CEILING(U.cost*0.8, 1)
-	else 
-		if(telecrystals < U.cost || U.limited_stock == 0)
-			return
-		telecrystals -= U.cost
+
+	if(telecrystals < U.cost || U.limited_stock == 0)
+		return
+	telecrystals -= U.cost
 
 	U.purchase(user, src)
 

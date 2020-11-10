@@ -18,7 +18,7 @@
 /mob/living/carbon/alien/humanoid/attack_hand(mob/living/carbon/human/M)
 	if(..())
 		switch(M.a_intent)
-			if (INTENT_HARM)
+			if ("harm")
 				var/damage = rand(1, 9)
 				if (prob(90))
 					playsound(loc, "punch", 25, 1, -1)
@@ -36,7 +36,7 @@
 					visible_message("<span class='userdanger'>[M] has attempted to punch [src]!</span>", \
 						"<span class='userdanger'>[M] has attempted to punch [src]!</span>", null, COMBAT_MESSAGE_RANGE)
 
-			if (INTENT_DISARM)
+			if ("disarm")
 				if (!(mobility_flags & MOBILITY_STAND))
 					if (prob(5))
 						Unconscious(40)

@@ -16,7 +16,7 @@
 	victims = list()
 
 /datum/action/innate/darkspawn/devour_will/IsAvailable()
-	if(!owner || istype(owner, /mob/living/simple_animal/hostile/crawling_shadows) ||istype(owner, /mob/living/simple_animal/hostile/darkspawn_progenitor) || !owner.get_empty_held_indexes())
+	if(!owner || !owner.get_empty_held_indexes())
 		return
 	return ..()
 

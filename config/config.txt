@@ -195,6 +195,38 @@ CHECK_RANDOMIZER
 ## Set to prevent anyone but those ckeys listed in config/whitelist.txt and config/admins.txt from joining your server
 #USEWHITELIST
 
+## set a server location for world reboot. Don't include the byond://, just give the address and port.
+## Don't set this to the same server, BYOND will automatically restart players to the server when it has restarted.
+# SERVER ss13.example.com:2506
+
+## forum address
+# FORUMURL http://yogstation.net
+
+## Wiki address
+# WIKIURL https://wiki.yogstation.net/wiki
+
+##Rules address
+# RULESURL http://forums.yogstation.net/index.php?pages/rules/
+
+##Github address
+# GITHUBURL https://www.github.com/yogstation13/yogstation
+
+## Github repo id
+##This can be found by going to https://api.github.com/users/<user name here>/repos
+##Or https://api.github.com/orgs/<org name here>/repos if the repo owner is an organization
+GITHUBREPOID 120966336
+
+## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
+# BANAPPEALS http://justanotherday.example.com
+
+## System command that invokes youtube-dl, used by Play Internet Sound.
+## You can install youtube-dl with
+## "pip install youtube-dl" if you have pip installed
+## from https://github.com/rg3/youtube-dl/releases
+## or your package manager
+## The default value assumes youtube-dl is in your system PATH
+INVOKE_YOUTUBEDL youtube-dl
+
 ## In-game features
 ##Toggle for having jobs load up from the .txt
 # LOAD_JOBS_FROM_TXT
@@ -429,7 +461,7 @@ DEFAULT_VIEW_SQUARE 15x15
 #MENTORS_MOBNAME_ONLY
 
 ## Uncomment below to make everyone a donator
-EVERYONE_IS_DONATOR
+#EVERYONE_IS_DONATOR
 
 ## Uncomment to enable global ban DB using the provided URL. The API should expect to receive a ckey at the end of the URL.
 ## More API details can be found here: https://centcom.melonmesa.com

@@ -145,8 +145,7 @@ window "mapwindow"
 		font-size = 7
 		text-color = none
 		is-default = true
-		saved-params = "zoom;letterbox;zoom-mode"
-		style = ".center { text-align: center; } .maptext { font-family: 'Small Fonts'; font-size: 7px; -dm-text-outline: 1px black; color: white; line-height: 1.1; } .command_headset { font-weight: bold;\tfont-size: 8px; } .small { font-size: 6px; } .big { font-size: 8px; } .reallybig { font-size: 8px; } .extremelybig { font-size: 8px; } .greentext { color: #00FF00; font-size: 7px; } .redtext { color: #FF0000; font-size: 7px; } .clown { color: #FF69Bf; font-size: 7px;  font-weight: bold; } .his_grace { color: #15D512; } .hypnophrase { color: #0d0d0d; font-weight: bold; } .yell { font-weight: bold; } .italics { font-size: 6px; }"
+		style=".center { text-align: center; } .maptext { font-family: 'Small Fonts'; font-size: 7px; -dm-text-outline: 1px black; color: white; line-height: 1.1; } .command_headset { font-weight: bold;	font-size: 8px; } .small { font-size: 6px; } .big { font-size: 8px; } .reallybig { font-size: 8px; } .extremelybig { font-size: 8px; } .greentext { color: #00FF00; font-size: 7px; } .redtext { color: #FF0000; font-size: 7px; } .clown { color: #FF69Bf; font-size: 7px;  font-weight: bold; } .his_grace { color: #15D512; } .hypnophrase { color: #0d0d0d; font-weight: bold; } .yell { font-weight: bold; } .italics { font-size: 6px; }"
 
 window "infowindow"
 	elem "infowindow"
@@ -158,18 +157,6 @@ window "infowindow"
 		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
 		is-pane = true
-		outer-size = 656x538
-		inner-size = 640x499
-	elem "demoview"
-		type = BUTTON
-		pos = 480,5
-		size = 80x20
-		anchor1 = 75,0
-		anchor2 = 88,0
-		background-color = none
-		saved-params = "is-checked"
-		text = "View Replay"
-		command = "demoview"
 	elem "info"
 		type = CHILD
 		pos = 0,30
@@ -183,70 +170,70 @@ window "infowindow"
 		is-vert = false
 	elem "changelog"
 		type = BUTTON
-		pos = 0,5
+		pos = 16,5
 		size = 80x20
-		anchor1 = 0,0
-		anchor2 = 13,0
+		anchor1 = 3,0
+		anchor2 = 19,0
 		background-color = none
 		saved-params = "is-checked"
 		text = "Changelog"
 		command = "changelog"
 	elem "rules"
 		type = BUTTON
-		pos = 80,5
+		pos = 100,5
 		size = 80x20
-		anchor1 = 13,0
-		anchor2 = 25,0
+		anchor1 = 19,0
+		anchor2 = 34,0
 		background-color = none
 		saved-params = "is-checked"
 		text = "Rules"
 		command = "rules"
 	elem "wiki"
 		type = BUTTON
-		pos = 160,5
+		pos = 180,5
 		size = 80x20
-		anchor1 = 25,0
-		anchor2 = 38,0
+		anchor1 = 34,0
+		anchor2 = 50,0
 		background-color = none
 		saved-params = "is-checked"
 		text = "Wiki"
 		command = "wiki"
 	elem "forum"
 		type = BUTTON
-		pos = 240,5
+		pos = 260,5
 		size = 80x20
-		anchor1 = 38,0
-		anchor2 = 50,0
+		anchor1 = 50,0
+		anchor2 = 66,0
 		background-color = none
 		saved-params = "is-checked"
 		text = "Forum"
 		command = "forum"
 	elem "github"
 		type = BUTTON
-		pos = 320,5
+		pos = 340,5
 		size = 80x20
-		anchor1 = 50,0
-		anchor2 = 63,0
+		anchor1 = 66,0
+		anchor2 = 81,0
 		background-color = none
 		saved-params = "is-checked"
 		text = "Github"
 		command = "github"
 	elem "report-issue"
 		type = BUTTON
-		pos = 400,5
+		pos = 420,5
 		size = 80x20
-		anchor1 = 63,0
-		anchor2 = 75,0
+		anchor1 = 81,0
+		anchor2 = 97,0
 		background-color = none
 		saved-params = "is-checked"
 		text = "Report Issue"
 		command = "report-issue"
 	elem "tickets"
 		type = BUTTON
-		pos = 560,5
+		pos = 520,5
 		size = 80x20
-		anchor1 = 88,0
-		anchor2 = 100,0
+		anchor1 = 97,0
+		anchor2 = 113,0
 		background-color = none
 		saved-params = "is-checked"
 		text = "Tickets"
@@ -271,6 +258,7 @@ window "outputwindow"
 		is-visible = false
 		is-disabled = true
 		saved-params = ""
+		auto-format = false
 	elem "output"
 		type = OUTPUT
 		pos = 0,0
@@ -287,11 +275,12 @@ window "popupwindow"
 		size = 120x120
 		anchor1 = none
 		anchor2 = none
+		background-color = none
 		is-visible = false
 		saved-params = "pos;size;is-minimized;is-maximized"
 		statusbar = false
 		can-resize = false
-
+		
 window "preferences_window"
 	elem "preferences_window"
 		type = MAIN
@@ -342,8 +331,9 @@ window "statwindow"
 		size = 628x450
 		anchor1 = 0,0
 		anchor2 = 100,100
-		is-visible = false
+		background-color = none
 		saved-params = ""
+		is-visible = false
 
 window "Telecomms IDE"
 	elem "Telecomms IDE"
@@ -439,4 +429,3 @@ window "Telecomms IDE"
 		command = "cancel"
 		multi-line = true
 		no-command = true
-

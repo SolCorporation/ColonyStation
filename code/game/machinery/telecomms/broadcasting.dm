@@ -103,7 +103,6 @@
 	datum/language/language,  // the language of the message
 	message,  // the text content of the message
 	spans,  // the list of spans applied to the message
-	list/message_mods, // the list of modification applied to the message. Whispering, singing, ect
 	lvls = null //Yogs -- For NTSL. It's the list of Z-levels that should hear this message.
 )
 	src.source = source
@@ -117,8 +116,7 @@
 		"message" = message,
 		"compression" = rand(35, 65),
 		"language" = lang_instance.name,
-		"spans" = spans,
-		"mods" = message_mods
+		"spans" = spans
 	)
 	//Yogs start
 	if(lvls)
@@ -190,10 +188,9 @@
 	// Render the message and have everybody hear it.
 	// Always call this on the virtualspeaker to avoid issues.
 	var/spans = data["spans"]
-	var/list/message_mods = data["mods"]
 	var/rendered = virt.compose_message(virt, language, message, frequency, spans)
 	for(var/atom/movable/hearer in receive)
-		hearer.Hear(rendered, virt, language, message, frequency, spans, message_mods)
+		hearer.Hear(rendered, virt, language, message, frequency, spans)
 
 	// This following recording is intended for research and feedback in the use of department radio channels
 	if(length(receive))

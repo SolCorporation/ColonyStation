@@ -138,14 +138,3 @@
 	plane = CAMERA_STATIC_PLANE
 	appearance_flags = PLANE_MASTER
 	blend_mode = BLEND_OVERLAY
-
-/obj/screen/plane_master/runechat
-	name = "runechat plane master"
-	plane = RUNECHAT_PLANE
-	appearance_flags = PLANE_MASTER
-	blend_mode = BLEND_OVERLAY
-
-/obj/screen/plane_master/runechat/backdrop(mob/mymob)
-	filters = list()
-	if(istype(mymob) && mymob.client?.prefs?.ambientocclusion)
-		filters += AMBIENT_OCCLUSION
