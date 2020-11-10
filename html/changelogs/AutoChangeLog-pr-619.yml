@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "Wiki link not working"
+  - bugfix: "Changeling hivemind maybe"
