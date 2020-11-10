@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Improved the space bar. Now, are you ordering anything or not?"
+  - tweak: "Centered the Syndicate recruitment poster."
