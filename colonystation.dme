@@ -1509,17 +1509,13 @@
 #include "code\modules\assembly\signaler.dm"
 #include "code\modules\assembly\timer.dm"
 #include "code\modules\assembly\voice.dm"
-<<<<<<< HEAD:colonystation.dme
-#include "code\modules\atmospherics\multiz.dm"
-#include "code\modules\asset_cache\asset_cache.dm"
-=======
->>>>>>> 65e3fe7465b... CDN Assets + TGChat + Statbrowser Restyle (#10211):yogstation.dme
 #include "code\modules\asset_cache\asset_cache_client.dm"
 #include "code\modules\asset_cache\asset_cache_item.dm"
 #include "code\modules\asset_cache\asset_list.dm"
 #include "code\modules\asset_cache\asset_list_items.dm"
 #include "code\modules\asset_cache\transports\asset_transport.dm"
 #include "code\modules\asset_cache\transports\webroot_transport.dm"
+#include "code\modules\atmospherics\multiz.dm"
 #include "code\modules\atmospherics\environmental\LINDA_fire.dm"
 #include "code\modules\atmospherics\environmental\LINDA_system.dm"
 #include "code\modules\atmospherics\environmental\LINDA_turf_tile.dm"
@@ -2974,15 +2970,12 @@
 #include "code\modules\swarmers\swarmer.dm"
 #include "code\modules\swarmers\swarmer_act.dm"
 #include "code\modules\swarmers\swarmer_objs.dm"
-<<<<<<< HEAD:colonystation.dme
 #include "code\modules\terraforming\_states.dm"
 #include "code\modules\terraforming\flora_generators.dm"
 #include "code\modules\terraforming\machinery.dm"
 #include "code\modules\terraforming\upgrades.dm"
-=======
 #include "code\modules\tgchat\message.dm"
 #include "code\modules\tgchat\to_chat.dm"
->>>>>>> 65e3fe7465b... CDN Assets + TGChat + Statbrowser Restyle (#10211):yogstation.dme
 #include "code\modules\tgs\includes.dm"
 #include "code\modules\tgui\external.dm"
 #include "code\modules\tgui\states.dm"
