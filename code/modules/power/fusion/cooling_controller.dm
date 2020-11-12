@@ -21,17 +21,17 @@
 
 	for(var/obj/machinery/power/water/heat_exchanger/heat in orange(30, src))	
 		exchanger += heat
-
-/obj/machinery/power/cooling_controller/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
-									datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
+		
+/obj/machinery/power/cooling_controller/ui_interact(mob/user, datum/tgui/ui)
 	if(!condenser.len && !exchanger.len)
 		to_chat(user, "<span class='warning'>The controller is unable to connect to any cooling machines within 30 metres!</span>")
 		return
 
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, ui_key, "CoolingController", name, 475, 800, master_ui, state)
+		ui = new(user, src, "CoolingController")
 		ui.open()
+
 
 /obj/machinery/power/cooling_controller/ui_data()
 	var/list/data = list()
