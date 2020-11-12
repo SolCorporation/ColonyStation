@@ -29,8 +29,8 @@ General Public License version 3.
 
 
 <h3 id="modules">Modules
-<aside>(72 modules,
-    540/6270 macros, 8.6%)</aside></h3>
+<aside>(75 modules,
+    544/6286 macros, 8.7%)</aside></h3>
 <ul class="index-tree">
     <li class="has-children"><span title="code">code</span><ul class="index-tree">
     <li class="has-children"><span title="code&#x2F;__DEFINES">__DEFINES</span><ul class="index-tree">
@@ -45,6 +45,7 @@ General Public License version 3.
     <li><a href="code/__DEFINES/atmospherics.html" title="code&#x2F;__DEFINES&#x2F;atmospherics.dm">atmospherics</a></li>
     <li><a href="code/__DEFINES/atom_hud.html" title="code&#x2F;__DEFINES&#x2F;atom_hud.dm">atom_hud</a></li>
     <li><a href="code/__DEFINES/callbacks.html" title="code&#x2F;__DEFINES&#x2F;callbacks.dm">callbacks</a></li>
+    <li><a href="code/__DEFINES/chat.html" title="code&#x2F;__DEFINES&#x2F;chat.dm">chat</a></li>
     <li><a href="code/__DEFINES/cleaning.html" title="code&#x2F;__DEFINES&#x2F;cleaning.dm">cleaning</a></li>
     <li><a href="code/__DEFINES/clockcult.html" title="code&#x2F;__DEFINES&#x2F;clockcult.dm">clockcult</a></li>
     <li><a href="code/__DEFINES/combat.html" title="code&#x2F;__DEFINES&#x2F;combat.dm">combat</a></li>
@@ -102,9 +103,12 @@ These materials call on_applied() on whatever item they are applied to, common e
     </ul></li>
     </ul></li>
     <li class="has-children"><span title="code&#x2F;modules">modules</span><ul class="index-tree">
+    <li class="has-children"><span title="code&#x2F;modules&#x2F;asset_cache">asset_cache</span><ul class="index-tree">
+    <li><a href="code/modules/asset_cache/readme.html" title="code&#x2F;modules&#x2F;asset_cache&#x2F;readme.md">Asset cache system</a></li>
+    <li><span class="no-substance">transports&#x2F;</span><a href="code/modules/asset_cache/transports/asset_transport.html" title="code&#x2F;modules&#x2F;asset_cache&#x2F;transports&#x2F;asset_transport.dm">asset_transport</a></li>
+    </ul></li>
     <li><span class="no-substance">buildmode&#x2F;</span><a href="code/modules/buildmode/README.html" title="code&#x2F;modules&#x2F;buildmode&#x2F;README.md">Buildmode</a></li>
     <li><span class="no-substance">food_and_drinks&#x2F;</span><a href="code/modules/food_and_drinks/food.html" title="code&#x2F;modules&#x2F;food_and_drinks&#x2F;food.dm">food</a></li>
-    <li><span class="no-substance">goonchat&#x2F;</span><a href="code/modules/goonchat/browserOutput.html" title="code&#x2F;modules&#x2F;goonchat&#x2F;browserOutput.dm">browserOutput</a></li>
     <li><span class="no-substance">keybindings&#x2F;</span><a href="code/modules/keybindings/readme.html" title="code&#x2F;modules&#x2F;keybindings&#x2F;readme.md">In-code keypress handling system</a> - This whole system is heavily based off of forum_account's keyboard library.
 Thanks to forum_account for saving the day, the library can be found
 <a href="https://secure.byond.com/developer/Forum_account/Keyboard">here</a>!</li>
@@ -134,6 +138,7 @@ transformations and other events that cause new languages to become available.</
     <li><span class="no-substance">v3210&#x2F;</span><a href="code/modules/tgs/v3210/README.html" title="code&#x2F;modules&#x2F;tgs&#x2F;v3210&#x2F;README.md">DMAPI V3</a> - This DMAPI implements bridge using file output which TGS monitors for.</li>
     <li><span class="no-substance">v4&#x2F;</span><a href="code/modules/tgs/v4/README.html" title="code&#x2F;modules&#x2F;tgs&#x2F;v4&#x2F;README.md">DMAPI V4</a> - This DMAPI implements bridge requests using file output which TGS monitors for. It has a safe mode restriction.</li>
     </ul></li>
+    <li><span class="no-substance">tgui_panel&#x2F;</span><a href="code/modules/tgui_panel/telemetry.html" title="code&#x2F;modules&#x2F;tgui_panel&#x2F;telemetry.dm">telemetry</a></li>
     </ul></li>
     </ul></li>
     </ul>
@@ -141,7 +146,7 @@ transformations and other events that cause new languages to become available.</
 
 
 <h3 id="types">Types
-<aside>(266 detailed/774 documented/22616 total, 3.4%)</aside></h3>
+<aside>(271 detailed/778 documented/22627 total, 3.4%)</aside></h3>
 <ul class="index-tree">
     <li><a href="global.html" title="(global)">(global)</a></li>
     <li class="has-children"><a href="area.html" title="&#x2F;area">area</a> - A grouping of tiles into a logical space, mostly used by map editors<ul class="index-tree">
@@ -233,13 +238,21 @@ See: <a href="datum/controller/subsystem/achievements.html" title="/datum/contro
     <li><a href="datum/antagonist/traitor/contractor_support.html" title="&#x2F;datum&#x2F;antagonist&#x2F;traitor&#x2F;contractor_support">Contractor Support Unit</a> - Support unit gets it's own very basic antag datum for admin logging.</li>
     </ul></li>
     </ul></li>
-    <li><span class="no-substance" title="&#x2F;datum&#x2F;asset_cache_item">asset_cache_item</span> - An internal datum containing info on items in the asset cache. Mainly used to cache md5 info for speed.</li>
+    <li class="has-children"><span class="no-substance">asset&#x2F;</span><a href="datum/asset/simple.html" title="&#x2F;datum&#x2F;asset&#x2F;simple">simple</a> - If you don't need anything complicated.<ul class="index-tree">
+    <li><a href="datum/asset/simple/namespaced.html" title="&#x2F;datum&#x2F;asset&#x2F;simple&#x2F;namespaced">namespaced</a> - Namespace'ed assets (for static css and html files)
+When sent over a cdn transport, all assets in the same asset datum will exist in the same folder, as their plain names.
+Used to ensure css files can reference files by url() without having to generate the css at runtime, both the css file and the files it depends on must exist in the same namespace asset datum. (Also works for html)
+For example <code>blah.css</code> with asset <code>blah.png</code> will get loaded as <code>namespaces/a3d..14f/f12..d3c.css</code> and <code>namespaces/a3d..14f/blah.png</code>. allowing the css file to load <code>blah.png</code> by a relative url rather then compute the generated url with get_url_mappings().
+The namespace folder's name will change if any of the assets change. (excluding parent assets)</li>
+    </ul></li>
+    <li><a href="datum/asset_cache_item.html" title="&#x2F;datum&#x2F;asset_cache_item">asset_cache_item</a> - An internal datum containing info on items in the asset cache. Mainly used to cache md5 info for speed.</li>
+    <li class="has-children"><a href="datum/asset_transport.html" title="&#x2F;datum&#x2F;asset_transport">Simple browse_rsc asset transport</a> - Base browse_rsc asset transport<ul class="index-tree">
+    <li><a href="datum/asset_transport/webroot.html" title="&#x2F;datum&#x2F;asset_transport&#x2F;webroot">CDN Webroot asset transport</a> - CDN Webroot asset transport.</li>
+    </ul></li>
     <li><span class="no-substance">brain_trauma&#x2F;severe&#x2F;split_personality&#x2F;</span><span class="no-substance" title="&#x2F;datum&#x2F;brain_trauma&#x2F;severe&#x2F;split_personality&#x2F;brainwashing">Split Personality</span> - BRAINWASHING</li>
     <li><a href="datum/callback.html" title="&#x2F;datum&#x2F;callback">Callback Datums</a> - A datum that holds a proc to be called on another object, used to track proccalls to other objects</li>
     <li><span class="no-substance" title="&#x2F;datum&#x2F;callback_select">callback_select</span> - Helper datum for the select callbacks proc</li>
     <li><a href="datum/centcom_podlauncher.html" title="&#x2F;datum&#x2F;centcom_podlauncher">centcom_podlauncher</a></li>
-    <li><a href="datum/chatOutput.html" title="&#x2F;datum&#x2F;chatOutput">chatOutput</a> - The chatOutput datum exists to handle the goonchat browser.
-On client, created on Client/New()</li>
     <li><a href="datum/chatmessage.html" title="&#x2F;datum&#x2F;chatmessage">Chat Message Overlay</a> - Datum for generating a message overlay on the map</li>
     <li class="has-children"><span title="&#x2F;datum&#x2F;chemical_reaction">chemical_reaction</span><ul class="index-tree">
     <li><span class="no-substance" title="&#x2F;datum&#x2F;chemical_reaction&#x2F;acetone">acetone</span> - Other goon stuff</li>
@@ -623,6 +636,8 @@ All of this is passed to the Request Console UI in order to present in organized
     </ul></li>
     <li><a href="datum/tgs_version.html" title="&#x2F;datum&#x2F;tgs_version">tgs_version</a> - Represents a version.</li>
     <li><a href="datum/tgui.html" title="&#x2F;datum&#x2F;tgui">tgui</a> - Copyright (c) 2020 Aleksej Komarov
+SPDX-License-Identifier: MIT</li>
+    <li><a href="datum/tgui_panel.html" title="&#x2F;datum&#x2F;tgui_panel">tgui_panel</a> - Copyright (c) 2020 Aleksej Komarov
 SPDX-License-Identifier: MIT</li>
     <li><a href="datum/tgui_window.html" title="&#x2F;datum&#x2F;tgui_window">tgui_window</a> - Copyright (c) 2020 Aleksej Komarov
 SPDX-License-Identifier: MIT</li>
@@ -1214,7 +1229,7 @@ uranium</li>
 </main>
 <footer>
     colonystation.dme
-    <a href="https://github.com/SolCorporation/ColonyStation/tree/4e76594ef0c5702e5d620917446182f5e0e77c03">4e76594</a>
+    <a href="https://github.com/SolCorporation/ColonyStation/tree/800d3d9046ee7b4c70221d29adaea914f62f9968">800d3d9</a>
         (master) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/src/dmdoc/README.md">dmdoc 1.2.1</a></footer>
 </body>
 </html>
