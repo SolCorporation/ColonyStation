@@ -36,8 +36,9 @@ SUBSYSTEM_DEF(machines)
 			NewPN.add_pipe(PC)
 			propagate_water_network(PC,PC.waternet)
 
-/datum/controller/subsystem/machines/stat_entry()
-	return ..("M:[processing.len]|PN:[powernets.len]|WN:[waternets.len]")
+/datum/controller/subsystem/machines/stat_entry(msg)
+	msg = "M:[length(processing)]|PN:[length(powernets)]|WN:[waternets.len]"
+	return ..()
 
 
 /datum/controller/subsystem/machines/fire(resumed = 0)

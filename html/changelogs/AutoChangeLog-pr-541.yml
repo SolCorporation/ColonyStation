@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "Fixes Shuttle Gibbing everyone with Catastrophe Event - Fixes Sleeper Self Serve"

@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Add Chemical Scan for Ghosts"
+  - tweak: "Minor Ghost Refactor"

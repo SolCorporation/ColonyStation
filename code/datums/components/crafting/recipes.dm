@@ -510,10 +510,11 @@
 	reqs = 	list(/obj/item/stack/sheet/cloth = 2, /obj/item/stack/rods = 1)
 	result = /obj/structure/cloth_curtain
 	category = CAT_MISC
-/datum/crafting_recipe/personal_closet
-	name = "Personal Closet"
+	
+/datum/crafting_recipe/secure_closet
+	name = "Secure Closet"
 	reqs = list(/obj/item/stack/sheet/metal = 5, /obj/item/stack/cable_coil = 10, /obj/item/electronics/airlock = 1)
-	result = /obj/structure/closet/secure_closet/personal
+	result = /obj/structure/closet/secure_closet
 	category = CAT_MISC
 
 /datum/crafting_recipe/chemical_payload
@@ -683,6 +684,15 @@
 	time = 50
 	reqs = list(/obj/item/stack/sheet/bone = 6,
 				 /obj/item/stack/sheet/sinew = 3)
+	category = CAT_PRIMAL
+
+/datum/crafting_recipe/chitinspear
+	name = "Chitin Spear"
+	result = /obj/item/twohanded/chitinspear //take a bonespear, reinforce it with some chitin, profit?
+	time = 75
+	reqs = list(/obj/item/twohanded/bonespear = 1,
+				/obj/item/stack/sheet/sinew = 4,
+				/obj/item/stack/sheet/animalhide/weaver_chitin = 6)
 	category = CAT_PRIMAL
 
 /datum/crafting_recipe/bonfire

@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "shadowling chitin now has 30 melee and bullet resistance."

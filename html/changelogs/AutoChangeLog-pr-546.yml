@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Allows Mentors to De-Mentor if there are a minimum of 2 online."

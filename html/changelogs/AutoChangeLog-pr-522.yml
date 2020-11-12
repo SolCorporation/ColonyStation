@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscdel: "Removed plasma vessels from polysmorph"
+  - imagedel: "Removed plasma vessels from polysmorph"

@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Dynamic is now continuous, for example, the round will not end when an antagonist dies.
+experimental: This is experimental, and is up for change. A few test merges of this would be great."

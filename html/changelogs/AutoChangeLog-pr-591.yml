@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "The free miners no longer have a chance to spawn without an asteroid."

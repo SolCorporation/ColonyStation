@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "things with negative flash protection will no longer  block vampiric gaze and hypnosis"

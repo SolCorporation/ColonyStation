@@ -1,0 +1,8 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "Free miner ship not spawning"
+  - bugfix: "Fire axe cabinets not being able to be opened,"
+  - bugfix: "Xray Preternis/changeling Exploit"
+  - bugfix: "Autolathe icon"
+  - bugfix: "Few runtimes."
