@@ -1010,9 +1010,6 @@
 	. = ..()
 	if(.)
 		end_multicam()
-<<<<<<< HEAD
 		
 /mob/living/silicon/ai/zMove(dir, feedback = FALSE)
 	. = eyeobj.zMove(dir, feedback)
-=======
->>>>>>> 65e3fe7465b... CDN Assets + TGChat + Statbrowser Restyle (#10211)
