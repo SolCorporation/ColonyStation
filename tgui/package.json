@@ -17,9 +17,6 @@
     "css-loader": "^3.2.0",
     "cssnano": "^4.1.10",
     "eslint": "^7.4.0",
-<<<<<<< HEAD
-    "eslint-plugin-react": "^7.17.0"
-=======
     "eslint-plugin-react": "^7.17.0",
     "extract-css-chunks-webpack-plugin": "^4.6.0",
     "file-loader": "^6.0.0",
@@ -35,6 +32,5 @@
     "webpack-build-notifier": "^2.0.0",
     "webpack-bundle-analyzer": "^3.5.1",
     "webpack-cli": "^3.3.12"
->>>>>>> 65e3fe7465b... CDN Assets + TGChat + Statbrowser Restyle (#10211)
   }
 }
