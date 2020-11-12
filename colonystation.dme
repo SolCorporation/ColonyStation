@@ -1509,11 +1509,7 @@
 #include "code\modules\assembly\signaler.dm"
 #include "code\modules\assembly\timer.dm"
 #include "code\modules\assembly\voice.dm"
-<<<<<<< HEAD:colonystation.dme
 #include "code\modules\atmospherics\multiz.dm"
-#include "code\modules\asset_cache\asset_cache.dm"
-=======
->>>>>>> 65e3fe7465b... CDN Assets + TGChat + Statbrowser Restyle (#10211):yogstation.dme
 #include "code\modules\asset_cache\asset_cache_client.dm"
 #include "code\modules\asset_cache\asset_cache_item.dm"
 #include "code\modules\asset_cache\asset_list.dm"
