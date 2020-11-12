@@ -19,16 +19,14 @@
 	for(var/obj/machinery/power/water/fusion_gen/center/gen in orange(30, src))	
 		generators += gen
 
-
-/obj/machinery/power/generator_control/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
-									datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
+/obj/machinery/power/generator_control/ui_interact(mob/user, datum/tgui/ui)
 	if(!generators.len)
 		to_chat(user, "<span class='warning'>The controller is unable to connect to any turbines within 30 metres!</span>")
 		return
-
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+	
+	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, ui_key, "GeneratorController", name, 475, 800, master_ui, state)
+		ui = new(user, src, "GeneratorController")
 		ui.open()
 
 /obj/machinery/power/generator_control/ui_data()
