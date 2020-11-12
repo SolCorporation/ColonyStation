@@ -27,16 +27,15 @@
 			mix = null
 		mix = W
 		W.forceMove(src)
-
-/obj/machinery/computer/reactor_control/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
-									datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
+		
+/obj/machinery/computer/reactor_control/ui_interact(mob/user, datum/tgui/ui)
 	if(!reactor)
 		to_chat(user, "<span class='warning'>The computer is unable to connect to a reactor. It has to be within 15 metres!</span>")
 		return
 
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, ui_key, "FusionController", name, 475, 800, master_ui, state)
+		ui = new(user, src, "FusionController")
 		ui.open()
 
 /obj/machinery/computer/reactor_control/ui_data()
