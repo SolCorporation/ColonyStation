@@ -1,0 +1,6 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "new tech node: xenology, unlocked by deconstructing xeno-related material or organs"
+  - tweak: "tech node for cameras is now placed semi-normally"
+  - imageadd: "synthetic plasma vessel sprite"
