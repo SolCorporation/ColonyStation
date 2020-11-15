@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "Crafted personal closets no longer spawn with bags and a radio."
+  - tweak: "Rebranded the personal closet recipe as a secure closet."

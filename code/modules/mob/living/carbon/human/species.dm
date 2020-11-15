@@ -85,7 +85,7 @@ GLOBAL_LIST_EMPTY(mentor_races)
 	///to use MUTCOLOR with a fixed color that's independent of dna.feature["mcolor"]
 	var/fixed_mut_color = ""
 	///special mutation that can be found in the genepool. Dont leave empty or changing species will be a headache
-	var/inert_mutation 	= DWARFISM
+	var/inert_mutation 	= GIGANTISM
 	///used to set the mobs deathsound on species change
 	var/deathsound
 	///Sounds to override barefeet walkng
@@ -1236,7 +1236,7 @@ GLOBAL_LIST_EMPTY(mentor_races)
 				. += I.slowdown
 		if(!HAS_TRAIT(H, TRAIT_IGNOREDAMAGESLOWDOWN))
 			var/health_deficiency = max(H.maxHealth - H.health, H.staminaloss)
-			if(health_deficiency >= 40)
+			if(health_deficiency >= H.maxHealth * 0.4)
 				if(flight)
 					. += (health_deficiency / 75)
 				else

@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Adds Singing"
+  - bugfix: "Loads of runtimes with runechat and other stuff"

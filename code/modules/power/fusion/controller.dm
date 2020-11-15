@@ -9,12 +9,12 @@
 
 	var/detectionRadius = 15
 
-	var/obj/machinery/power/fusion/core/reactor
+	var/obj/machinery/power/water/fusion/core/reactor
 
 	var/obj/item/disk/fuel_mix/mix
 
 /obj/machinery/computer/reactor_control/Initialize()
-	for(var/obj/machinery/power/fusion/core/R in orange(detectionRadius, src))
+	for(var/obj/machinery/power/water/fusion/core/R in orange(detectionRadius, src))
 		reactor = R
 		reactor.controller = src
 		continue
@@ -27,103 +27,41 @@
 			mix = null
 		mix = W
 		W.forceMove(src)
-
-/obj/machinery/computer/reactor_control/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = FALSE, \
-									datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
+		
+/obj/machinery/computer/reactor_control/ui_interact(mob/user, datum/tgui/ui)
 	if(!reactor)
 		to_chat(user, "<span class='warning'>The computer is unable to connect to a reactor. It has to be within 15 metres!</span>")
 		return
 
-	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
+	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, ui_key, "FusionController", name, 475, 800, master_ui, state)
+		ui = new(user, src, "FusionController")
 		ui.open()
 
 /obj/machinery/computer/reactor_control/ui_data()
 	var/list/data = list()
 
-	data["status"] = reactor.getStatus()
+	data["internal_heat"] = reactor.internal_heat
+	data["internal_heat_max"] = reactor.max_internal_heat
 
-	var/state = "good"
+	data["core_heat"] = reactor.heat
+	data["core_heat_max"] = reactor.max_heat
 
-	if(reactor.currentTemp > (reactor.maxTemp * 0.75))
-		state = "average"
-	if(reactor.currentTemp > (reactor.maxTemp * 0.9))
-		state = "bad"
+	data["health"] = reactor.containment_health
 
-	data["deuterium"] = reactor.deuterium
-	data["tritium"] = reactor.tritium
+	data["meltdown"] = reactor.meltdown
 
-	data["tempState"] = state
-	data["minTemp"] = reactor.minTemp
-	data["maxTemp"] = reactor.maxTemp
+	data["fuel"] = list()
 
-	data["overheating"] = reactor.overheating
+	for(var/obj/item/fuel_rod/rod in reactor.fuel)
+		var/fuel_data = list(list("amount" = rod.fuel_amount, "max_amount" = rod.max_fuel, "name" = rod.fuel.name, "power_multi" = rod.fuel.power_multiplier, "heat_multi" = rod.fuel.heat_multiplier))
+		data["fuel"] += fuel_data
 
-	data["meltDown"] = reactor.meltedDown
+	data["fuel_use"] = reactor.fuel_use
 
-	data["temp"] = reactor.currentTemp
-
-	data["injecting"] = reactor.injectingFuel
-
-	data["collecting"] = reactor.sendingHeat
-	data["running"] = reactor.reacting
-
-	data["cryo"] = reactor.cryo
-
-	data["preheating"] = reactor.preHeating
-
-	data["maxPower"] = DisplayPower(reactor.getMaxOutput(TRUE))
-
-	if(mix)
-		data["hasMix"] = TRUE
-	else
-		data["hasMix"] = FALSE
-
-	data["fuelAdditives"] = list()
-	if(mix)
-		data["deuteriumFuel"] = mix.deuteriumMix
-		data["tritiumFuel"] = mix.tritiumMix
-		for(var/datum/fuel_additive/additive in mix.additives)
-			data["fuelAdditives"] += list(list("fuelName" = additive.name))
-	else
-		data["deuteriumFuel"] = 0
-		data["tritiumFuel"] = 0
 
 	return data
 
-/obj/machinery/computer/reactor_control/ui_act(action, params)
-	if(..())
-		return
-	if(!reactor)
-		return
-	switch(action)
-		if("toggleInject")
-			reactor.toggleInject()
-			. = TRUE
-		if("startReaction")
-			if(!mix)
-				return
-			reactor.tryReaction()
-			. = TRUE
-		if("toggleCollect")
-			reactor.toggleCollect()
-			. = TRUE
-		if("flush")
-			reactor.flush()
-			. = TRUE
-		if("ejectMix")
-			if(!mix || reactor.status != "stopped")
-				return
-			mix.forceMove(get_turf(src))
-			mix = null
-			. = TRUE
-		if("cryo")
-			reactor.InjectCryo()
-			. = TRUE
-		if("togglePreheat")
-			reactor.togglePreheating()
-			. = TRUE
 
 /obj/item/circuitboard/computer/reactor_control
 	name = "Fusion Reactor Controller (Computer Board)"

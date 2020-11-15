@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Removes health analyzer limb specific damage toggle"

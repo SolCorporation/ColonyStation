@@ -1,0 +1,4 @@
+author: "Ktlwjec"
+delete-after: True
+changes: 
+  - bugfix: "Fixed necropolis tendrils sometimes spawning nothing."

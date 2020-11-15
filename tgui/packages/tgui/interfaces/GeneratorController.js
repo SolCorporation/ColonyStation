@@ -3,6 +3,7 @@ import { map } from 'common/collections';
 import { useBackend } from '../backend';
 import { Button, LabeledList, Section, Tabs, Box, ProgressBar } from '../components';
 import { Window } from '../layouts';
+import { formatPower } from '../format';
 
 export const GeneratorController = (props, context) => {
   const { act, data } = useBackend(context);
@@ -10,50 +11,41 @@ export const GeneratorController = (props, context) => {
   return (
     <Window>
       <Window.Content scrollable>
-        <Section>
+        <Section title="Turbines">
           {map((value, key) => (
-            <Section title={value.gName}>
-              <Box inline><b>Generator Heat:</b></Box>
-              <br />
-              <ProgressBar
-                color={value.heat >= value.cutoff * 1.5 
-                  ? ("good") 
-                  : value.heat >= value.cutoff ? ("average") : ("bad")}
-                maxValue={value.maxHeat} 
-                value={value.heat} 
-                content={Math.round(value.heat) + "%"} />
-              <br /><br />
-              <Box inline><b>Generator Condition:</b></Box>
-              <br />
-              <ProgressBar 
-                color={value.condition >= 70 
-                  ? ("good") 
-                  : value.condition >= 40 ?("average") : ("bad")}
-                maxValue={100} value={value.condition} 
-                content={Math.round(value.condition) + "%"} />
-              <br /><br />
-              <b>Installed upgrades:</b>
-              <br />
-              {map((value2, key) => (
-                <Fragment>{value2.upNameG}<br /></Fragment>
-
-              ))(value.gUps)}
-              <br />
-              <b>Last Cycle Output:</b> {value.lastOutput}
-              <br /><br />
-              <b>Status:</b> {value.status}
-              <br /><br />
-              <Button inline icon={!value.on && ("play") || ("stop")}
-                content={value.status === "SPINNING UP" || value.status === "STARTED"
-                  ? ("Stop Generator")
-                  : value.status === "STOPPING"
-                    ? ("Generator Spinning down..")
-                    : ("Spin up Generator")}
-                selected={!!value.on && value.status !== "STOPPING"}
-                disabled={value.status === "STOPPING"}
-                onClick={() => act('toggleOn', { G: value.gen })} />
+            <Section title={value.name}>
+              <LabeledList>
+                <LabeledList.Item label="Average Throughput Usage">
+                  {Math.round(value.average_usage)}%
+                </LabeledList.Item>
+                <LabeledList.Item label="Live Throughput Usage">
+                  {Math.round((value.last_tick_steam / value.max_tick) * 100)}%
+                </LabeledList.Item>
+                <LabeledList.Item label="Throughput">
+                  {value.last_tick_steam}L
+                </LabeledList.Item>
+                <LabeledList.Item label="Max Throughput">
+                  {value.max_tick}L
+                </LabeledList.Item>
+                <LabeledList.Divider />
+                <LabeledList.Item label="Efficiency">
+                  {Math.round(value.efficiency * 100)}%
+                </LabeledList.Item>
+                <LabeledList.Item label="Current Temperature">
+                  {value.temp}K
+                </LabeledList.Item>
+                <LabeledList.Item label="Optimal Temperature">
+                  {value.optimal_temp}K
+                </LabeledList.Item>
+                <LabeledList.Item label="Power Conversion">
+                  {value.conversion}W per steam unit processed at optimal temperature.
+                </LabeledList.Item>
+                <LabeledList.Item label="Average Power Output">
+                  {formatPower(value.average_power, 1)}
+                </LabeledList.Item>
+              </LabeledList>
             </Section>
-          ))(data.generator)}
+          ))(data.generators)}
         </Section>
       </Window.Content>
     </Window>

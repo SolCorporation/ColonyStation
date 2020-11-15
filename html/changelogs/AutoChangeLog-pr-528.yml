@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "Traitors now get an employee discount on certain uplink items"

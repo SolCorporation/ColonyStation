@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Gives ashwalkers a pair of science goggles and a hand labeler"

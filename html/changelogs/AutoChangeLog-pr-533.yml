@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "the fail state for changing an ID to a job it is too young to have has been removed"
