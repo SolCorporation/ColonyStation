@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "fixed plating under an airlock in atmos"
+  - tweak: "moved a camera in atmos"
