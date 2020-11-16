@@ -1306,6 +1306,18 @@
 /mob/living/simple_animal/slime,
 /turf/open/floor/engine,
 /area/science/xenobiology)
+"aIc" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "aIK" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table,
@@ -4494,10 +4506,6 @@
 /obj/structure/stairs/east,
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
-"cll" = (
-/obj/machinery/power/cooling_controller,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "clv" = (
 /obj/effect/turf_decal/tile/blue,
 /obj/effect/landmark/start/medical_doctor,
@@ -5436,12 +5444,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
-"cKP" = (
-/obj/structure/water_pipe{
-	icon_state = "1-4"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "cLf" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
@@ -5811,10 +5813,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
-"cYr" = (
-/obj/machinery/power/generator_control,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "cYu" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel,
@@ -6245,15 +6243,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/execution/education)
-"djm" = (
-/obj/structure/water_pipe{
-	icon_state = "2-8"
-	},
-/obj/structure/water_pipe{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "djx" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible{
 	dir = 4
@@ -6327,12 +6316,6 @@
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/open/floor/grass,
 /area/hallway/secondary/exit)
-"dkJ" = (
-/obj/structure/water_pipe{
-	icon_state = "0-4"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "dkO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/stool{
@@ -6663,13 +6646,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/bridge)
-"duA" = (
-/obj/machinery/power/water/heat_exchanger,
-/obj/structure/water_pipe{
-	icon_state = "0-2"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "duO" = (
 /obj/effect/turf_decal/trimline/green/filled/corner,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
@@ -7453,12 +7429,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/hydroponics/garden)
-"dQO" = (
-/obj/structure/water_pipe{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "dQW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -8557,11 +8527,6 @@
 /obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/engine/terraform)
-"ewb" = (
-/obj/machinery/power/water/fusion/core,
-/obj/structure/water_pipe,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "ewd" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -10748,10 +10713,6 @@
 /obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/hallway/secondary/command)
-"fyR" = (
-/obj/machinery/power/emitter,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "fyW" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
@@ -10829,12 +10790,6 @@
 /obj/effect/spawner/structure/window/reinforced/shutter,
 /turf/open/floor/plating,
 /area/bridge)
-"fBG" = (
-/obj/structure/water_pipe{
-	icon_state = "0-2"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "fBV" = (
 /obj/effect/turf_decal/tile/green{
 	dir = 4
@@ -11544,10 +11499,6 @@
 /obj/machinery/vending/wardrobe/chef_wardrobe,
 /turf/open/floor/plasteel/freezer,
 /area/crew_quarters/kitchen/coldroom)
-"fPQ" = (
-/obj/item/twohanded/required/kirbyplants/random,
-/turf/open/floor/plasteel/white,
-/area/engine/engineering)
 "fPR" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
@@ -11725,11 +11676,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/starboard/fore)
-"fXd" = (
-/obj/machinery/power/water/fusion_gen/center,
-/obj/structure/water_pipe,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "fXh" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -13459,10 +13405,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3,
 /turf/open/floor/plasteel/white,
 /area/medical/sleeper)
-"gOk" = (
-/obj/item/fuel_item/deuterium,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "gOw" = (
 /obj/machinery/telecomms/server/presets/supply,
 /obj/effect/turf_decal/tile/yellow{
@@ -13836,12 +13778,6 @@
 	dir = 5
 	},
 /area/science/research)
-"gVg" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
 "gVG" = (
 /obj/machinery/disposal/bin,
 /turf/open/floor/plasteel/dark,
@@ -14275,6 +14211,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/aft)
+"hiJ" = (
+/obj/machinery/power/neutron_inj,
+/turf/open/floor/engine,
+/area/engine/engineering)
 "hiZ" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 8
@@ -14369,13 +14309,6 @@
 	dir = 9
 	},
 /area/science/research)
-"hkJ" = (
-/obj/machinery/power/water/condenser,
-/obj/structure/water_pipe{
-	icon_state = "0-4"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "hkX" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -15331,6 +15264,12 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/medbay/central)
+"hKz" = (
+/obj/machinery/power/fusion/core{
+	desc = "This not so little thing controls the whole reactor, without it there is no power."
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "hKF" = (
 /obj/machinery/door/airlock/medical/glass{
 	id_tag = "MedbayFoyer";
@@ -15398,12 +15337,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plating,
 /area/maintenance/port/central)
-"hMT" = (
-/obj/structure/water_pipe{
-	icon_state = "2-4"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "hMU" = (
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
@@ -18671,12 +18604,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /turf/open/floor/plasteel,
 /area/security/brig)
-"jrv" = (
-/obj/machinery/computer/reactor_control{
-	dir = 1
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "jry" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -19087,12 +19014,6 @@
 	},
 /turf/open/floor/wood,
 /area/crew_quarters/theatre)
-"jCq" = (
-/obj/structure/water_pipe{
-	icon_state = "1-8"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "jCs" = (
 /obj/effect/turf_decal/ameritard,
 /obj/structure/chair/wood/wings{
@@ -23935,12 +23856,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/science/research)
-"lTJ" = (
-/obj/structure/water_pipe{
-	icon_state = "1-2"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "lUL" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
@@ -24902,13 +24817,6 @@
 "mAM" = (
 /turf/open/floor/plating,
 /area/maintenance/department/electrical)
-"mAZ" = (
-/obj/structure/water_pipe{
-	icon_state = "1-2"
-	},
-/obj/machinery/water_meter,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "mBd" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
@@ -25413,13 +25321,6 @@
 "mNV" = (
 /turf/open/floor/plasteel/white,
 /area/science/xenobiology)
-"mOa" = (
-/obj/machinery/power/water/fusion_gen/right,
-/obj/structure/water_pipe{
-	icon_state = "0-2"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "mOL" = (
 /obj/structure/table,
 /obj/item/storage/toolbox/electrical,
@@ -25871,10 +25772,6 @@
 /obj/effect/spawner/structure/window/reinforced/tinted,
 /turf/open/floor/plating,
 /area/hydroponics/garden)
-"ncO" = (
-/obj/machinery/power/fusion_gen/left,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "nde" = (
 /turf/open/floor/plating,
 /area/maintenance/department/chapel)
@@ -26062,13 +25959,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos_distro)
-"nfT" = (
-/obj/structure/water_pipe{
-	icon_state = "4-8"
-	},
-/obj/machinery/water_meter,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "nfX" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. It looks like it has been modified to not broadcast.";
@@ -32590,6 +32480,10 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/hallway/primary/central)
+"qlH" = (
+/obj/machinery/power/fuel_mixer,
+/turf/open/floor/plasteel/white,
+/area/engine/engineering)
 "qlN" = (
 /obj/structure/chair/office/dark{
 	dir = 1
@@ -32833,6 +32727,15 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plating,
 /area/maintenance/port)
+"qse" = (
+/obj/machinery/power/fusion_gen{
+	desc = "This little thing uses the heat from a fusion reactor, to create power!"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/open/floor/engine,
+/area/engine/engineering)
 "qsh" = (
 /obj/machinery/door/airlock/maintenance{
 	name = "Science utility";
@@ -36606,15 +36509,6 @@
 /obj/effect/turf_decal/tile/red,
 /turf/open/floor/plasteel,
 /area/security/checkpoint/supply)
-"swG" = (
-/obj/structure/water_pipe{
-	icon_state = "1-8"
-	},
-/obj/structure/water_pipe{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "swP" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
@@ -36648,10 +36542,6 @@
 	},
 /turf/open/openspace,
 /area/engine/atmos)
-"sxy" = (
-/obj/machinery/power/cooling_controller,
-/turf/open/floor/plasteel/white,
-/area/engine/engineering)
 "sxD" = (
 /turf/open/floor/mineral/plastitanium/red/brig,
 /area/planet/outside/unexplored)
@@ -37503,12 +37393,6 @@
 /obj/structure/flora/ausbushes/leafybush,
 /turf/open/floor/grass,
 /area/hallway/secondary/exit)
-"sTe" = (
-/obj/structure/water_pipe{
-	icon_state = "0-8"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "sTu" = (
 /obj/structure/chair/comfy/beige{
 	dir = 4
@@ -39730,13 +39614,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/security/nuke_storage)
-"tZJ" = (
-/obj/structure/water_pipe{
-	icon_state = "2-8"
-	},
-/obj/machinery/water_meter,
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "tZL" = (
 /obj/effect/turf_decal/trimline/green/filled/line{
 	dir = 5
@@ -40008,6 +39885,10 @@
 "ugz" = (
 /turf/closed/wall,
 /area/science/xenobiology)
+"uha" = (
+/obj/machinery/power/neutron_control,
+/turf/open/floor/plasteel/white,
+/area/engine/engineering)
 "uhr" = (
 /turf/closed/wall/r_wall,
 /area/tcommsat/server)
@@ -42330,15 +42211,6 @@
 	},
 /turf/open/floor/circuit,
 /area/science/robotics/mechbay)
-"vug" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/open/floor/engine,
-/area/engine/engineering)
 "vur" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 8
@@ -43440,12 +43312,6 @@
 "vXP" = (
 /turf/closed/wall/r_wall,
 /area/crew_quarters/heads/captain)
-"vYU" = (
-/obj/structure/water_pipe{
-	icon_state = "2-8"
-	},
-/turf/open/floor/plating/asteroid/terraformable,
-/area/planet/outside/unexplored)
 "vZa" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	dir = 8
@@ -154100,7 +153966,7 @@ yhL
 ojH
 yhL
 ebQ
-vug
+aIc
 wpi
 sIP
 mdk
@@ -154356,9 +154222,9 @@ mdk
 mdk
 mdk
 sIP
-gVg
-sIP
-gVg
+qse
+qse
+qse
 sIP
 sIP
 mdk
@@ -154866,7 +154732,7 @@ jER
 oOs
 jJb
 pJm
-sxy
+uha
 pEw
 sIP
 sIP
@@ -155128,7 +154994,7 @@ pEw
 sIP
 sIP
 sIP
-sIP
+hKz
 sIP
 sIP
 nSb
@@ -155635,7 +155501,7 @@ mdk
 xYR
 qkc
 whx
-fPQ
+qlH
 ciE
 iHs
 mdk
@@ -155898,9 +155764,9 @@ mdk
 mdk
 mdk
 sIP
+hiJ
 sIP
-sIP
-sIP
+hiJ
 sIP
 sIP
 mdk
@@ -157703,9 +157569,9 @@ aFO
 wqd
 wqd
 wqd
-dkJ
-duA
-cKP
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -157960,9 +157826,9 @@ wqd
 wqd
 wqd
 wqd
-dQO
 wqd
-dQO
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -158217,9 +158083,9 @@ wqd
 wqd
 wqd
 wqd
-dQO
 wqd
-dQO
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -158474,9 +158340,9 @@ wqd
 wqd
 wqd
 wqd
-dQO
 wqd
-dQO
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -158726,14 +158592,14 @@ uhr
 uAD
 wqd
 wqd
-gOk
-gOk
 wqd
 wqd
 wqd
-nfT
 wqd
-nfT
+wqd
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -158983,14 +158849,14 @@ uhr
 uAD
 wqd
 wqd
-gOk
-gOk
 wqd
 wqd
 wqd
-dQO
 wqd
-dQO
+wqd
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -159245,9 +159111,9 @@ wqd
 wqd
 wqd
 wqd
-dQO
 wqd
-dQO
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -159497,14 +159363,14 @@ uhr
 uAD
 wqd
 wqd
-cll
 wqd
 wqd
 wqd
 wqd
-sTe
 wqd
-dQO
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -159754,14 +159620,14 @@ uhr
 uAD
 wqd
 wqd
-jrv
-fyR
 wqd
-hMT
-ewb
 wqd
-fBG
-jCq
+wqd
+wqd
+wqd
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -160011,12 +159877,12 @@ uhr
 uAD
 wqd
 wqd
-cYr
 wqd
 wqd
-tZJ
-cKP
-dkJ
+wqd
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -160271,10 +160137,10 @@ wqd
 wqd
 wqd
 wqd
-hkJ
-sTe
-vYU
-cKP
+wqd
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -160526,12 +160392,12 @@ wqd
 wqd
 wqd
 wqd
-hMT
-mAZ
-djm
-cKP
 wqd
-dQO
+wqd
+wqd
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -160783,12 +160649,12 @@ wqd
 wqd
 wqd
 wqd
-dQO
-ncO
 wqd
-dQO
-ncO
-nfT
+wqd
+wqd
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -161040,12 +160906,12 @@ wqd
 wqd
 wqd
 wqd
-vYU
-fXd
 wqd
-vYU
-fXd
-dQO
+wqd
+wqd
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -161298,11 +161164,11 @@ wqd
 wqd
 wqd
 wqd
-mOa
-cKP
 wqd
-mOa
-swG
+wqd
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
@@ -161556,10 +161422,10 @@ wqd
 wqd
 wqd
 wqd
-vYU
-lTJ
-lTJ
-jCq
+wqd
+wqd
+wqd
+wqd
 wqd
 wqd
 wqd
