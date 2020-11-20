@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - rscadd: "Add PC/Laptop vendors by cargo and science on Yogstation and YogsMeta"
