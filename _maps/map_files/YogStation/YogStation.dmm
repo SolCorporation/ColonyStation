@@ -23159,6 +23159,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/machinery/vending/modularpc,
 /turf/open/floor/plasteel,
 /area/quartermaster/office)
 "bnl" = (
@@ -40484,6 +40485,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/medical/morgue)
+"gIa" = (
+/obj/machinery/lapvend,
+/turf/open/floor/plasteel,
+/area/quartermaster/office)
 "gIj" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -89500,7 +89505,7 @@ cNG
 bgV
 bpG
 aZK
-bbR
+gIa
 bbR
 bqt
 cBq
