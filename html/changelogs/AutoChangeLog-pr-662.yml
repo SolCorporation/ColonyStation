@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - bugfix: "you no longer can whisper into phantom radios"
+  - bugfix: "you can now say ... again without talking into a radio channel that doesn't exist"
