@@ -244,6 +244,7 @@
 		reserved_area = null
 	return ..()
 
+<<<<<<< HEAD
 /obj/docking_port/stationary/picked
 	///Holds a list of map name strings for the port to pick from
 	var/list/shuttlekeys
@@ -266,6 +267,8 @@
 	width = 35
 	shuttlekeys = list("whiteship_salvage", "whiteship_construction", "whiteship_hospital", "whiteship_ufo", "whiteship_frigate", "whiteship_miner")
 
+=======
+>>>>>>> c8b6dac84d5... Revert "White ship randomization + minor renaming (#9878)" (#10497)
 /obj/docking_port/mobile
 	name = "shuttle"
 	icon_state = "pinonclose"
