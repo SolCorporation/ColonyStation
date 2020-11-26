@@ -1193,6 +1193,7 @@
 		/obj/item/stock_parts/micro_laser = /obj/item/stock_parts/micro_laser/quadultra,
 		/obj/item/stock_parts/scanning_module = /obj/item/stock_parts/scanning_module/triphasic)
 
+<<<<<<< HEAD
 		
 //terraforming
 
@@ -1205,3 +1206,18 @@
 		/obj/item/stock_parts/manipulator = 5,
 		/obj/item/stock_parts/micro_laser = 5,
 		/obj/item/stock_parts/scanning_module = 5)
+=======
+/obj/item/circuitboard/machine/electrolyzer
+	name = "Electrolyzer (Machine Board)"
+	icon_state = "generic"
+	build_path = /obj/machinery/electrolyzer
+	req_components = list(
+		/obj/item/stock_parts/manipulator = 2,
+		/obj/item/stock_parts/capacitor = 1,
+		/obj/item/stack/cable_coil = 3,
+		/obj/item/stack/sheet/glass = 1,
+		/obj/item/stack/sheet/mineral/gold = 1,
+		/obj/item/stack/sheet/mineral/silver = 1)
+
+	needs_anchored = FALSE
+>>>>>>> d0cef42e365... Huge Atmospherics Update - Five layer pipes and new funny gases (#10447)
