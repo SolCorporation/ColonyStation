@@ -603,7 +603,7 @@
 	category = list("Medical Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_MEDICAL
 
-<<<<<<< HEAD
+
 /datum/design/board/mining_bot
 	name = "Machine Design (Mining Drill)"
 	desc = "The circuit board for a mining drill."
@@ -611,7 +611,8 @@
 	build_path = /obj/item/circuitboard/machine/mining_bot
 	category = list ("Engineering Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_CARGO
-=======
+
+
 /datum/design/board/electrolyzer
 	name = "Machine Design (Electrolyzer Board)"
 	desc = "The circuit board for an electrolyzer."
@@ -619,4 +620,3 @@
 	build_path = /obj/item/circuitboard/machine/electrolyzer
 	category = list ("Engineering Machinery")
 	departmental_flags = DEPARTMENTAL_FLAG_ENGINEERING
->>>>>>> d0cef42e365... Huge Atmospherics Update - Five layer pipes and new funny gases (#10447)
