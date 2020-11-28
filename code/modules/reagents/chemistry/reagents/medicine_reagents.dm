@@ -384,7 +384,11 @@
 
 /datum/reagent/medicine/synthflesh
 	name = "Synthflesh"
+<<<<<<< HEAD
 	description = "Has a 100% chance of instantly healing brute and burn damage. One unit of the chemical will heal one point of damage. Touch application only."
+=======
+	description = "Has a 100% chance of instantly healing brute and burn damage on corpses. The chemical will heal up to 120 points of damage at 60 units applied. Touch application only."
+>>>>>>> 2141c20bd11... Fixes synthflesh and changes slightly how it works (#10529)
 	reagent_state = LIQUID
 	color = "#FFEBEB"
 
@@ -392,6 +396,7 @@
 	var/healmod = 1
 	if(iscarbon(M))
 		if (M.stat == DEAD)
+<<<<<<< HEAD
 			healmod = 2
 			show_message = 0
 		if(method in list(PATCH, TOUCH))
@@ -400,6 +405,20 @@
 			if(show_message)
 				to_chat(M, "<span class='danger'>You feel your burns and bruises healing! It stings like hell!</span>")
 			SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "painful_medicine", /datum/mood_event/painful_medicine)
+=======
+			can_heal = TRUE
+		if((method in list(PATCH, TOUCH)) && can_heal)
+			if(!ishuman(M))
+				M.adjustBruteLoss(-1.25 * reac_volume)
+				M.adjustFireLoss(-1.25 * reac_volume)
+			else
+				var/datum/reagent/S = M.reagents.get_reagent(/datum/reagent/medicine/synthflesh)
+				var/heal_amt = clamp(reac_volume, 0, 60 - S?.volume)
+				M.adjustBruteLoss(-2*heal_amt)
+				M.adjustFireLoss(-2*heal_amt)
+				if(method == TOUCH)
+					M.reagents.add_reagent(/datum/reagent/medicine/synthflesh, reac_volume)
+>>>>>>> 2141c20bd11... Fixes synthflesh and changes slightly how it works (#10529)
 	..()
 
 /datum/reagent/medicine/charcoal
