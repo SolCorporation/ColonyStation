@@ -1,0 +1,4 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "gibs in outdoor tiles will no longer produce miasma"

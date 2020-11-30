@@ -1,0 +1,5 @@
+author: "ColonyBot"
+delete-after: True
+changes: 
+  - tweak: "gygax now takes damage while in speed mode"
+  - tweak: "changed a bunch of 0/1s in the mecha file to false/true"
