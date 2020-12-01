@@ -217,7 +217,11 @@ GLOBAL_LIST_INIT(heavyfootmob, typecacheof(list(
 
 #define ismecha(A) (istype(A, /obj/mecha))
 
+<<<<<<< HEAD
 #define is_cleanable(A) (istype(A, /obj/effect/decal/cleanable) || istype(A, /obj/effect/rune)) //if something is cleanable
+=======
+#define ismopable(A) (A.loc.layer <= HIGH_SIGIL_LAYER) //If something can be cleaned by floor-cleaning devices such as mops or clean bots
+>>>>>>> c29f8232ab1... Gets rid of some runtimes (#10559)
 
 #define isorgan(A) (istype(A, /obj/item/organ))
 
