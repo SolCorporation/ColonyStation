@@ -58,6 +58,7 @@
 /obj/effect/turf_decal/tile/bar,
 /obj/machinery/jukebox,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "bD" = (
 /obj/effect/turf_decal/tile/bar{
@@ -71,12 +72,16 @@
 /obj/machinery/light,
 /turf/open/floor/plasteel,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "co" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "dG" = (
 /obj/machinery/light/small{
@@ -101,6 +106,9 @@
 /obj/item/soap,
 /turf/open/floor/plasteel,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "eC" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1;
@@ -158,11 +166,36 @@
 	pixel_x = 32
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "go" = (
 /obj/machinery/deepfryer,
 /turf/open/floor/plasteel/cafeteria,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"gh" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/bar,
+/obj/structure/table,
+/obj/machinery/light,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered/spacebar)
+"go" = (
+/obj/machinery/deepfryer,
+/turf/open/floor/plasteel/cafeteria,
+/area/ruin/space/has_grav/powered/spacebar)
+"gs" = (
+/obj/structure/fans/tiny,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "gX" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1;
@@ -182,7 +215,23 @@
 	dir = 8
 	},
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"hl" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/bar,
+/obj/item/beacon,
+/mob/living/simple_animal/bot/cleanbot{
+	on = 0
+	},
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "if" = (
 /obj/structure/urinal{
 	dir = 8;
@@ -241,7 +290,22 @@
 	},
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"jI" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/bar,
+/obj/structure/sign/poster/contraband/syndicate_recruitment{
+	pixel_x = -32
+	},
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "jY" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1;
@@ -253,6 +317,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "lq" = (
 /obj/machinery/processor,
@@ -279,6 +344,9 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/cafeteria,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "lS" = (
 /obj/structure/dresser,
 /turf/open/floor/carpet,
@@ -556,7 +624,16 @@
 /obj/item/twohanded/required/kirbyplants/random,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"tS" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/suit_storage_unit/standard_unit,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "uf" = (
 /obj/structure/sink{
 	dir = 8;
@@ -616,7 +693,19 @@
 /obj/item/clothing/suit/space/fragile,
 /obj/item/clothing/head/helmet/space/fragile,
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"vR" = (
+/obj/machinery/processor,
+/obj/effect/decal/cleanable/food/flour,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "wz" = (
 /turf/open/floor/plating,
 /area/ruin/powered/spacebar)
@@ -660,6 +749,7 @@
 	},
 /obj/machinery/teleport/station,
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "Ay" = (
 /obj/effect/turf_decal/tile/bar{
@@ -671,6 +761,9 @@
 /mob/living/simple_animal/bot/cleanbot,
 /turf/open/floor/plasteel,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "AZ" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -683,6 +776,7 @@
 	req_access_txt = "25"
 	},
 /turf/open/floor/wood,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "By" = (
 /obj/structure/cable{
@@ -705,6 +799,27 @@
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"BT" = (
+/obj/machinery/smartfridge/food,
+/turf/closed/wall,
+/area/ruin/space/has_grav/powered/spacebar)
+"Co" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/bar,
+/obj/structure/sign/poster/random{
+	pixel_x = -32
+	},
+/obj/structure/chair{
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "CP" = (
 /obj/effect/turf_decal/box/corners{
 	dir = 8
@@ -757,7 +872,17 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"Fy" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plating/asteroid/airless,
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "FB" = (
 /turf/closed/wall,
 /area/ruin/powered/spacebar)
@@ -850,6 +975,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/plasteel/freezer,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "IB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -862,13 +988,25 @@
 /obj/effect/turf_decal/tile/bar{
 	dir = 1;
 	icon_state = "tile_corner"
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"IA" = (
+/obj/structure/closet/secure_closet/freezer/meat{
+	req_access = null;
+	req_access_txt = "25"
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 	},
-/obj/effect/turf_decal/tile/bar,
-/obj/structure/sign/poster/random{
-	pixel_x = -32
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light/small{
+	dir = 4
 	},
+<<<<<<< HEAD
 /turf/open/floor/plasteel,
 /area/ruin/powered/spacebar)
+=======
+/turf/open/floor/plasteel/cafeteria,
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "Jq" = (
 /obj/machinery/door/airlock/external,
 /obj/effect/mapping_helpers/airlock/cyclelink_helper,
@@ -907,7 +1045,27 @@
 	},
 /obj/effect/turf_decal/tile/bar,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"Ls" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/bar,
+/obj/structure/chair{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/bar{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/bar,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "Ly" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1;
@@ -928,6 +1086,7 @@
 	use_power = 0
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "My" = (
 /obj/structure/rack,
@@ -946,6 +1105,9 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "Na" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1;
@@ -960,6 +1122,7 @@
 	},
 /obj/machinery/door/airlock/glass,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "Nj" = (
 /obj/structure/cable{
@@ -970,6 +1133,20 @@
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"Nk" = (
+/obj/effect/turf_decal/tile/bar{
+	dir = 1;
+	icon_state = "tile_corner"
+	},
+/obj/effect/turf_decal/tile/bar,
+/obj/machinery/computer/arcade{
+	dir = 8
+	},
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "Nn" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/stripes/line,
@@ -1013,6 +1190,7 @@
 /area/ruin/powered/spacebar)
 "Ow" = (
 /turf/open/floor/plasteel/cafeteria,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "OB" = (
 /obj/machinery/light,
@@ -1023,6 +1201,9 @@
 /obj/effect/turf_decal/tile/bar,
 /turf/open/floor/plasteel,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "OV" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 1
@@ -1083,6 +1264,7 @@
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/unpowered/no_grav)
+<<<<<<< HEAD
 "RJ" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1;
@@ -1092,6 +1274,8 @@
 /obj/machinery/computer/arcade,
 /turf/open/floor/plasteel,
 /area/ruin/powered/spacebar)
+=======
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "RY" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1;
@@ -1105,6 +1289,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "Sw" = (
 /obj/structure/chair{
@@ -1124,6 +1309,12 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"Sy" = (
+/turf/open/floor/plating,
+/area/ruin/unpowered/no_grav)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "TK" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -1145,7 +1336,17 @@
 	dir = 1
 	},
 /turf/open/floor/plating,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"Vj" = (
+/obj/machinery/light/small,
+/obj/structure/rack,
+/obj/item/tank/internals/oxygen,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "VE" = (
 /obj/effect/turf_decal/tile/bar{
 	dir = 1;
@@ -1177,6 +1378,7 @@
 /obj/item/rcd_ammo/large,
 /obj/item/rcd_ammo/large,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "Yo" = (
 /obj/machinery/power/solar/fake,
@@ -1194,6 +1396,33 @@
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"Wl" = (
+/obj/structure/sign/poster/contraband/eat{
+	pixel_y = 32
+	},
+/turf/open/floor/plasteel/cafeteria,
+/area/ruin/space/has_grav/powered/spacebar)
+"WM" = (
+/obj/structure/closet,
+/obj/item/vending_refill/cigarette,
+/obj/item/vending_refill/boozeomat,
+/obj/item/stack/cable_coil/random,
+/obj/item/stack/cable_coil/random,
+/obj/item/mop,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/storage/bag/trash,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/soap,
+/obj/item/soap,
+/obj/machinery/light/small,
+/turf/open/floor/plasteel,
+/area/ruin/space/has_grav/powered/spacebar)
+"YH" = (
+/turf/template_noop,
+/area/template_noop)
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 "YY" = (
 /obj/machinery/door/airlock/external{
 	req_access_txt = "25"
@@ -1504,7 +1733,7 @@ sM
 sM
 sM
 FB
-FB
+KO
 KO
 KO
 KO
@@ -1544,13 +1773,13 @@ yg
 yg
 ta
 yg
-IJ
+jI
 PE
 FQ
 Ly
 RY
 yg
-IJ
+Co
 FB
 sX
 FB
@@ -1583,7 +1812,7 @@ yg
 yg
 yg
 yg
-bD
+gh
 FB
 as
 FB
@@ -1616,7 +1845,7 @@ yg
 KZ
 eC
 yg
-Hk
+gX
 KO
 tG
 tG
@@ -1649,7 +1878,7 @@ yg
 Hk
 Hk
 yg
-gX
+ta
 KO
 tG
 tG
@@ -1674,7 +1903,7 @@ yg
 yg
 yg
 yg
-Ay
+hl
 yg
 yg
 yg
@@ -1733,8 +1962,12 @@ ZN
 ZN
 ZN
 KO
+<<<<<<< HEAD
 aX
 yg
+=======
+ta
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 yg
 yg
 yg
@@ -1781,7 +2014,7 @@ yg
 Hk
 Hk
 yg
-eC
+ta
 KO
 ZN
 YH
@@ -1814,7 +2047,7 @@ yg
 Ej
 Ej
 yg
-Hk
+eC
 KO
 ZN
 YH
@@ -1836,7 +2069,7 @@ eX
 fy
 yg
 mQ
-ta
+aX
 pP
 JO
 JO
@@ -1847,7 +2080,7 @@ yg
 yg
 yg
 yg
-Sw
+gh
 FB
 ZN
 ZN
@@ -1877,10 +2110,10 @@ yK
 FB
 jk
 yg
-ta
 yg
 yg
-OB
+yg
+Ls
 FB
 ZN
 ZN
@@ -1900,7 +2133,7 @@ sM
 sM
 FB
 go
-lq
+vR
 rT
 FD
 FB
@@ -1932,7 +2165,7 @@ sM
 sM
 sM
 FB
-dG
+Wl
 Ow
 Ow
 Ow
@@ -1966,7 +2199,7 @@ ZN
 RH
 ff
 is
-lH
+IA
 mR
 oX
 ff
@@ -1974,8 +2207,8 @@ uD
 Rp
 GG
 FB
-RJ
-RJ
+Nk
+Nk
 FB
 DV
 GD
@@ -2040,8 +2273,13 @@ Rp
 Qz
 Mk
 NH
+<<<<<<< HEAD
 IB
 YP
+=======
+wz
+Vj
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 FB
 lX
 FB
@@ -2073,8 +2311,13 @@ VN
 Rp
 ab
 FB
+<<<<<<< HEAD
 MZ
 My
+=======
+wz
+tS
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 FB
 rQ
 FB
@@ -2104,7 +2347,7 @@ eZ
 FB
 co
 Rp
-eo
+WM
 FB
 YY
 FB
@@ -2139,7 +2382,7 @@ Ok
 Qz
 GH
 FB
-Tp
+gs
 FB
 sM
 sM
@@ -2204,9 +2447,15 @@ sM
 FB
 FB
 FB
+Fy
 ZN
+<<<<<<< HEAD
 qw
 ZN
+=======
+Fy
+sM
+>>>>>>> 2499af26b2c... Continued space bar fixes and improvements (#10547)
 sM
 sM
 sM
