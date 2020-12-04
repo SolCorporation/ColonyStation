@@ -258,6 +258,19 @@
 	tastes = list("torilla" = 2, "meat" = 3)
 	foodtype = GRAIN | MEAT
 
+<<<<<<< HEAD
+=======
+/obj/item/reagent_containers/food/snacks/fivelayerburrito
+	name = "five layer burrito"
+	desc = "Five burritos stacked on top of each other. It looks suspiciously like a layer manifold."
+	icon_state = "fivelayerburrito"
+	bonus_reagents = list(/datum/reagent/consumable/nutriment = 12, /datum/reagent/consumable/nutriment/vitamin = 12)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 20, /datum/reagent/consumable/nutriment/vitamin = 5)
+	filling_color = "#FFEFD5"
+	tastes = list("torilla" = 2, "meat" = 3)
+	foodtype = GRAIN | MEAT
+
+>>>>>>> b2eb5694f9f... five layer burrito description spelling (#10574)
 /obj/item/reagent_containers/food/snacks/cheesyburrito
 	name = "cheesy burrito"
 	desc = "It's a burrito filled with cheese."
