@@ -9,7 +9,11 @@
 #define ALIEN 4
 #define ROBOT 8
 #define SLIME 16
+<<<<<<< HEAD
 #define DRONE 32
+=======
+#define POLYSMORPH 32
+>>>>>>> 8f400996d6b... Makes Polysmoprh Playable by All (#10565)
 #define DRACONIC 64
 #define BEACHTONGUE 128
 GLOBAL_LIST_INIT(allowed_custom_spans,list(SPAN_ROBOT,SPAN_YELL,SPAN_ITALICS,SPAN_SANS,SPAN_COMMAND,SPAN_CLOWN))//Span classes that players are allowed to set in a radio transmission.
@@ -116,7 +120,11 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 		"alien" = ALIEN,
 		"robot" = ROBOT,
 		"slime" = SLIME,
+<<<<<<< HEAD
 		"drone" = DRONE,
+=======
+		"polysmorph" = POLYSMORPH,
+>>>>>>> 8f400996d6b... Makes Polysmoprh Playable by All (#10565)
 		"draconic" = DRACONIC,
 		"beachtounge" = BEACHTONGUE
 	)))
@@ -154,8 +162,13 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 		oldlang = ROBOT
 	else if(oldlang == /datum/language/slime)
 		oldlang = SLIME
+<<<<<<< HEAD
 	else if(oldlang == /datum/language/drone)
 		oldlang = DRONE
+=======
+	else if(oldlang == /datum/language/polysmorph)
+		oldlang = POLYSMORPH
+>>>>>>> 8f400996d6b... Makes Polysmoprh Playable by All (#10565)
 	else if(oldlang == /datum/language/draconic)
 		oldlang = DRACONIC
 	else if(oldlang == /datum/language/beachbum)
@@ -284,8 +297,13 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 			return /datum/language/machine
 		if(SLIME)
 			return /datum/language/slime
+<<<<<<< HEAD
 		if(DRONE)
 			return /datum/language/drone
+=======
+		if(POLYSMORPH)
+			return /datum/language/polysmorph
+>>>>>>> 8f400996d6b... Makes Polysmoprh Playable by All (#10565)
 		if(DRACONIC)
 			return /datum/language/draconic
 		if(BEACHTONGUE)
@@ -456,6 +474,10 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 #undef ALIEN
 #undef ROBOT
 #undef SLIME
+<<<<<<< HEAD
 #undef DRONE
+=======
+#undef POLYSMORPH
+>>>>>>> 8f400996d6b... Makes Polysmoprh Playable by All (#10565)
 #undef DRACONIC
 #undef BEACHTONGUE
