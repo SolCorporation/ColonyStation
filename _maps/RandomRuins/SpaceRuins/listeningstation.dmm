@@ -728,10 +728,20 @@
 	},
 /turf/open/floor/plasteel/white/corner,
 /area/ruin/space/has_grav/listeningstation)
+<<<<<<< HEAD
 "bg" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer1,
 /turf/open/floor/plasteel/white/side,
+=======
+"bn" = (
+/obj/effect/turf_decal/stripes/line,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/meter{
+	target_layer = 2
+	},
+/turf/open/floor/plating,
+>>>>>>> 266b3f47bcf... Atmospherics Patch 1 - No map edition (#10505)
 /area/ruin/space/has_grav/listeningstation)
 "bh" = (
 /obj/machinery/vending/cola/random{

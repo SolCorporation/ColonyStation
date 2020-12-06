@@ -28,7 +28,11 @@
 /obj/machinery/atmospherics/components/unary/portables_connector/update_icon_nopipes()
 	icon_state = "connector"
 	if(showpipe)
+<<<<<<< HEAD
 		var/image/cap = getpipeimage(icon, "connector_cap", initialize_directions, piping_layer = piping_layer)
+=======
+		var/image/cap = getpipeimage(icon, "connector_cap", initialize_directions)
+>>>>>>> 266b3f47bcf... Atmospherics Patch 1 - No map edition (#10505)
 		add_overlay(cap)
 
 /obj/machinery/atmospherics/components/unary/portables_connector/process_atmos()
