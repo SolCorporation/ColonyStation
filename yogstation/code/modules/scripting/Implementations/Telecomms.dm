@@ -6,12 +6,19 @@
 
 #define HUMAN 1
 #define MONKEY 2
+<<<<<<< HEAD
 #define ALIEN 4
 #define ROBOT 8
 #define SLIME 16
 #define DRONE 32
 #define DRACONIC 64
 #define BEACHTONGUE 128
+=======
+#define ROBOT 4
+#define POLYSMORPH 8
+#define DRACONIC 16
+#define BEACHTONGUE 32
+>>>>>>> 9c53c5650a4... [Ready to Merge] NTSL Nerf: The Great Compromise Edition (#10570)
 GLOBAL_LIST_INIT(allowed_custom_spans,list(SPAN_ROBOT,SPAN_YELL,SPAN_ITALICS,SPAN_SANS,SPAN_COMMAND,SPAN_CLOWN))//Span classes that players are allowed to set in a radio transmission.
 GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/language/machine,/datum/language/draconic))// language datums that players are allowed to translate to in a radio transmission.
 
@@ -113,10 +120,13 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 	interpreter.SetVar("languages", new /datum/n_enum(list(
 		"human" = HUMAN,
 		"monkey" = MONKEY,
-		"alien" = ALIEN,
 		"robot" = ROBOT,
+<<<<<<< HEAD
 		"slime" = SLIME,
 		"drone" = DRONE,
+=======
+		"polysmorph" = POLYSMORPH,
+>>>>>>> 9c53c5650a4... [Ready to Merge] NTSL Nerf: The Great Compromise Edition (#10570)
 		"draconic" = DRACONIC,
 		"beachtounge" = BEACHTONGUE
 	)))
@@ -148,14 +158,17 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 		oldlang = HUMAN
 	else if(oldlang == /datum/language/monkey)
 		oldlang = MONKEY
-	else if(oldlang == /datum/language/xenocommon)
-		oldlang = ALIEN
 	else if(oldlang == /datum/language/machine)
 		oldlang = ROBOT
+<<<<<<< HEAD
 	else if(oldlang == /datum/language/slime)
 		oldlang = SLIME
 	else if(oldlang == /datum/language/drone)
 		oldlang = DRONE
+=======
+	else if(oldlang == /datum/language/polysmorph)
+		oldlang = POLYSMORPH
+>>>>>>> 9c53c5650a4... [Ready to Merge] NTSL Nerf: The Great Compromise Edition (#10570)
 	else if(oldlang == /datum/language/draconic)
 		oldlang = DRACONIC
 	else if(oldlang == /datum/language/beachbum)
@@ -278,14 +291,17 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 			return /datum/language/common
 		if(MONKEY)
 			return /datum/language/monkey
-		if(ALIEN)
-			return /datum/language/xenocommon
 		if(ROBOT)
 			return /datum/language/machine
+<<<<<<< HEAD
 		if(SLIME)
 			return /datum/language/slime
 		if(DRONE)
 			return /datum/language/drone
+=======
+		if(POLYSMORPH)
+			return /datum/language/polysmorph
+>>>>>>> 9c53c5650a4... [Ready to Merge] NTSL Nerf: The Great Compromise Edition (#10570)
 		if(DRACONIC)
 			return /datum/language/draconic
 		if(BEACHTONGUE)
@@ -453,9 +469,12 @@ GLOBAL_LIST_INIT(allowed_translations,list(/datum/language/common,/datum/languag
 #undef MAX_MEM_VARS
 #undef HUMAN
 #undef MONKEY
-#undef ALIEN
 #undef ROBOT
+<<<<<<< HEAD
 #undef SLIME
 #undef DRONE
+=======
+#undef POLYSMORPH
+>>>>>>> 9c53c5650a4... [Ready to Merge] NTSL Nerf: The Great Compromise Edition (#10570)
 #undef DRACONIC
 #undef BEACHTONGUE
