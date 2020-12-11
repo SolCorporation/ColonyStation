@@ -205,9 +205,15 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_4)
 "aK" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	icon_state = "scrub_map_on-3";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 8;
+	icon_state = "scrub_map_on-3"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_3)
@@ -294,9 +300,15 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_6)
 "ba" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	icon_state = "scrub_map_on-3";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 8;
+	icon_state = "scrub_map_on-3"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_4)
@@ -375,9 +387,15 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_4)
 "bo" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	icon_state = "scrub_map_on-3";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 8;
+	icon_state = "scrub_map_on-3"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_5)
@@ -446,9 +464,15 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_6)
 "bA" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	icon_state = "scrub_map_on-3";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 8;
+	icon_state = "scrub_map_on-3"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_6)
@@ -560,7 +584,7 @@
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 2;
 	name = "Guest Room APC";
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -618,7 +642,7 @@
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 2;
 	name = "Guest Room APC";
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -683,7 +707,7 @@
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 2;
 	name = "Guest Room APC";
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -741,7 +765,7 @@
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 2;
 	name = "Guest Room APC";
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -929,9 +953,15 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_2)
 "cw" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	icon_state = "scrub_map_on-3";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 8;
+	icon_state = "scrub_map_on-3"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_2)
@@ -943,9 +973,15 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_1)
 "cy" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	icon_state = "scrub_map_on-3";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 8;
+	icon_state = "scrub_map_on-3"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_1)
@@ -1022,9 +1058,15 @@
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/hotel)
 "cH" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	icon_state = "scrub_map_on-3";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 8;
+	icon_state = "scrub_map_on-3"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/hotel/workroom)
@@ -1032,9 +1074,15 @@
 /obj/structure/chair{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 1
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_2)
@@ -1042,16 +1090,28 @@
 /obj/structure/chair{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 1
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_1)
 "cK" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 1
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/plasteel/white,
 /area/ruin/space/has_grav/hotel/workroom)
@@ -1152,9 +1212,15 @@
 /turf/open/floor/carpet,
 /area/ruin/space/has_grav/hotel)
 "cX" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	icon_state = "scrub_map_on-3";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 8;
+	icon_state = "scrub_map_on-3"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/dock)
@@ -1162,9 +1228,15 @@
 /obj/item/twohanded/required/kirbyplants{
 	icon_state = "plant-02"
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	icon_state = "scrub_map_on-3";
 	dir = 4
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 4;
+	icon_state = "scrub_map_on-3"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel)
@@ -1280,7 +1352,7 @@
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 1;
 	name = "Guest Room APC";
-	pixel_y = 24
+	pixel_y = 23
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -1348,7 +1420,7 @@
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 1;
 	name = "Guest Room APC";
-	pixel_y = 24
+	pixel_y = 23
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -1443,9 +1515,15 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_2)
 "dK" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 1
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/carpet,
 /area/ruin/space/has_grav/hotel)
@@ -1521,9 +1599,15 @@
 /turf/open/floor/plasteel/freezer,
 /area/ruin/space/has_grav/hotel/bar)
 "dX" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 8;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/plasteel/freezer,
 /area/ruin/space/has_grav/hotel/bar)
@@ -1535,9 +1619,15 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/ruin/space/has_grav/hotel/bar)
 "dZ" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 8;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/plasteel/cafeteria,
 /area/ruin/space/has_grav/hotel/bar)
@@ -1629,9 +1719,15 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/guestroom/room_1)
 "ek" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 4
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 4;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/carpet,
 /area/ruin/space/has_grav/hotel)
@@ -1752,7 +1848,7 @@
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 2;
 	name = "Laundry APC";
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/structure/cable,
 /turf/open/floor/plasteel/white,
@@ -1822,7 +1918,7 @@
 	areastring = "/area/ruin/space/has_grav/hotel/bar";
 	dir = 2;
 	name = "Kitchen APC";
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/structure/cable,
 /turf/open/floor/plating,
@@ -1951,7 +2047,7 @@
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 1;
 	name = "Power Storage APC";
-	pixel_y = 24
+	pixel_y = 23
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -1975,9 +2071,15 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hotel/bar)
 "fk" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	icon_state = "scrub_map_on-3";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 8;
+	icon_state = "scrub_map_on-3"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hotel/power)
@@ -2031,7 +2133,7 @@
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 2;
 	name = "Staff Room APC";
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -2050,7 +2152,7 @@
 	areastring = "/area/ruin/space/has_grav/hotel/security";
 	dir = 2;
 	name = "Security APC";
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2239,16 +2341,28 @@
 /obj/structure/chair/comfy/brown{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 1
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/hotel/dock)
 "fN" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer3{
 	icon_state = "inje_map-2";
 	dir = 4
+=======
+/obj/machinery/atmospherics/components/unary/outlet_injector/on/layer4{
+	dir = 4;
+	icon_state = "inje_map-2"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/plating/airless,
 /area/ruin/unpowered/no_grav)
@@ -2675,9 +2789,15 @@
 /turf/open/floor/plasteel/cafeteria,
 /area/ruin/space/has_grav/hotel/bar)
 "gU" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
 	icon_state = "scrub_map_on-3";
 	dir = 4
+=======
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 4;
+	icon_state = "scrub_map_on-3"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hotel/security)
@@ -2694,9 +2814,15 @@
 "gW" = (
 /obj/structure/table,
 /obj/item/reagent_containers/food/drinks/coffee,
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 1
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hotel/security)
@@ -2820,9 +2946,15 @@
 /obj/machinery/light{
 	dir = 4
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 8;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hotel/pool)
@@ -2958,7 +3090,7 @@
 	areastring = "/area/ruin/space/has_grav/hotel/pool";
 	dir = 2;
 	name = "Pool APC";
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3008,16 +3140,16 @@
 /area/ruin/space/has_grav/hotel/workroom)
 "hG" = (
 /obj/effect/mob_spawn/human/hotel_staff{
-	icon_state = "sleeper_s";
-	dir = 1
+	dir = 1;
+	icon_state = "sleeper_s"
 	},
 /obj/machinery/light,
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/hotel/workroom)
 "hH" = (
 /obj/effect/mob_spawn/human/hotel_staff{
-	icon_state = "sleeper_s";
-	dir = 1
+	dir = 1;
+	icon_state = "sleeper_s"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/hotel/workroom)
@@ -3082,9 +3214,15 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 8
 	},
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 4
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 4;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hotel/custodial)
@@ -3265,9 +3403,15 @@
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hotel/pool)
 "ik" = (
+<<<<<<< HEAD
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer1{
 	icon_state = "vent_map_on-1";
 	dir = 8
+=======
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 8;
+	icon_state = "vent_map_on-1"
+>>>>>>> 7d9ff948d21... [boring] Fixes apc map errors (#10600)
 	},
 /turf/open/floor/plasteel,
 /area/ruin/space/has_grav/hotel/pool)
@@ -3302,7 +3446,7 @@
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 2;
 	name = "Dock APC";
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/structure/cable,
 /turf/open/floor/wood,
@@ -3323,7 +3467,7 @@
 /obj/machinery/power/apc/highcap/five_k{
 	dir = 2;
 	name = "Custodial APC";
-	pixel_y = -24
+	pixel_y = -23
 	},
 /obj/structure/cable,
 /obj/effect/turf_decal/tile/neutral{
