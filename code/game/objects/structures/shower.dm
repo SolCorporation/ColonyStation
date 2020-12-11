@@ -199,8 +199,13 @@
 /obj/machinery/shower/process()
 	if(on)
 		wash_atom(loc)
+<<<<<<< HEAD
 		for(var/AM in loc)
 			wash_atom(AM)
+=======
+		for(var/am in loc)
+			wash_atom(am)
+>>>>>>> c12d07cd293... Fixes showers not putting people out. (#10630)
 	else
 		return PROCESS_KILL
 
