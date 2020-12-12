@@ -160,13 +160,41 @@ GLOBAL_DATUM(main_supermatter_engine, /obj/machinery/power/supermatter_crystal)
 
 	var/is_main_engine = FALSE
 
+<<<<<<< HEAD
 	var/datum/looping_sound/supermatter/soundloop
+=======
+	/// Is it moveable. Used for SM shards
+	var/moveable = FALSE
+
+	/// Cooldown for sounds
+	var/last_accent_sound = 0
+
+	/// Incase of clown(Colton) turn to false
+	var/messages_admins = TRUE
+
+	/// Makes the SM loose more power the higher it is
+	var/powerloss_dynamic_scaling = 1
+
+	/// Ratio of power reduction to power addition. Range is 0-1
+	var/gasmix_power_ratio = 0
+
+	/// Used for normalizing/making a ratio of gasses
+	var/combined_gas = 0
+>>>>>>> dbbdbf0d543... well shit (#10634)
 
 	var/moveable = FALSE
 
 	var/last_accent_sound = 0	/// cooldown tracker for accent sounds,
 
+<<<<<<< HEAD
 	var/messages_admins = TRUE //varedit in case of Colton
+=======
+	/// How much more heat damage to take based on moles
+	var/mole_heat_penalty = 0
+
+	/// How much powerloss to reduce. Scale of 1-0
+	var/powerloss_inhibitor = 1
+>>>>>>> dbbdbf0d543... well shit (#10634)
 
 
 /obj/machinery/power/supermatter_crystal/Initialize()
