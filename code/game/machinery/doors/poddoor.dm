@@ -96,3 +96,87 @@
 /obj/machinery/door/poddoor/try_to_crowbar(obj/item/I, mob/user)
 	if(stat & NOPOWER)
 		open(1)
+<<<<<<< HEAD
+=======
+
+/obj/machinery/door/poddoor/attackby(obj/item/W, mob/user, params)
+	. = ..()
+	if(special && W.tool_behaviour == TOOL_SCREWDRIVER) // No Cheesing
+		to_chat(user, "<span class='warning'>This door appears to have a different screw.</span>")
+		return
+
+
+	if(W.tool_behaviour == TOOL_SCREWDRIVER)
+		if(density)
+			to_chat(user, "<span class='warning'>You need to open [src] before opening its maintenance panel.</span>")
+			return
+		else if(default_deconstruction_screwdriver(user, icon_state, icon_state, W))
+			to_chat(user, "<span class='notice'>You [panel_open ? "open" : "close"] the maintenance hatch of [src].</span>")
+			return TRUE
+
+	if(panel_open)
+		if(W.tool_behaviour == TOOL_MULTITOOL && constructionstate == INTACT)
+			if(id != null)
+				to_chat(user, "<span class='warning'>This door is already linked. Unlink it first!</span>")
+				return
+
+			if(!multitool_check_buffer(user, W))
+				return
+				
+			var/obj/item/multitool/P = W	
+			id = P.buffer
+			to_chat(user, "<span class='notice'>You link the button to the [src].</span>")
+			return
+
+		if(W.tool_behaviour == TOOL_WIRECUTTER)
+			if(id != null)
+				to_chat(user, "<span class='notice'>You start to unlink the door.</span>")
+				if(do_after(user, 10 SECONDS, target = src))
+					to_chat(user, "<span class='notice'>You unlink the door.</span>")
+					id = null
+			else
+				to_chat(user, "<span class='warning'>This door is already unlinked.</span>")
+
+			return
+
+		if(W.tool_behaviour == TOOL_WELDER && constructionstate == INTACT)
+			to_chat(user, "<span class='notice'>You start to remove the outer plasteel cover.</span>")
+			playsound(src.loc, 'sound/items/welder.ogg', 50, 1)
+			if(do_after(user, 10 SECONDS, target = src))
+				to_chat(user, "<span class='notice'>You remove the outer plasteel cover.</span>")
+				constructionstate = CUT_COVER
+				id = null // Effectivley breaks the door
+				new /obj/item/stack/sheet/plasteel(loc, 5)
+				return
+		else
+			to_chat(user, "<span class='warning'>The cover is already off.</span>")
+		
+		if(W.tool_behaviour == TOOL_CROWBAR && constructionstate == CUT_COVER)
+			to_chat(user, "<span class='notice'>You start to remove all of the internal components</span>")
+			if(do_after(user, 15 SECONDS, target = src))
+				if(istype(src, /obj/machinery/door/poddoor/shutters)) // Simplified Code 
+					new /obj/item/stack/sheet/plasteel(loc, 5)
+					new /obj/item/electronics/airlock(loc)
+					new /obj/item/stack/cable_coil/red(loc, 5)
+				else
+					new /obj/item/stack/sheet/plasteel(loc, 15)
+					new /obj/item/electronics/airlock(loc)
+					new /obj/item/stack/cable_coil/red(loc, 10)
+
+				qdel(src)
+
+		if(istype(W, /obj/item/stack/sheet/plasteel))
+			var/obj/item/stack/sheet/plasteel/P = W
+			if(P.use(5))
+				to_chat(user, "<span class='warning'>You need 5 plasteel sheets to put the plating back on.</span>")
+				return
+			
+			constructionstate = INTACT
+			return
+
+/obj/machinery/door/poddoor/examine(mob/user)
+	. = ..()
+	if(panel_open)
+		. += "<span class='<span class='notice'>The maintenance panel is [panel_open ? "opened" : "closed"].</span>"
+		
+>>>>>>> f5a06b5e3c5... Fixes 2 bugs with blastdoor crafting (#10657)

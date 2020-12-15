@@ -517,6 +517,25 @@
 	result = /obj/structure/closet/secure_closet
 	category = CAT_MISC
 
+<<<<<<< HEAD
+=======
+/datum/crafting_recipe/shutters
+	name = "Mechanical Shutter"
+	reqs = list(/obj/item/stack/sheet/plasteel = 10, /obj/item/stack/cable_coil = 5, /obj/item/electronics/airlock = 1)
+	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
+	time = 10 SECONDS
+	result = /obj/machinery/door/poddoor/shutters/preopen
+	category = CAT_MISC
+
+/datum/crafting_recipe/blastdoor
+	name = "Blastdoor"
+	reqs = list(/obj/item/stack/sheet/plasteel = 20, /obj/item/stack/cable_coil = 10, /obj/item/electronics/airlock = 1)
+	tools = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
+	time = 20 SECONDS
+	result = /obj/machinery/door/poddoor/preopen
+	category = CAT_MISC
+
+>>>>>>> f5a06b5e3c5... Fixes 2 bugs with blastdoor crafting (#10657)
 /datum/crafting_recipe/chemical_payload
 	name = "Chemical Payload (C4)"
 	result = /obj/item/bombcore/chemical
