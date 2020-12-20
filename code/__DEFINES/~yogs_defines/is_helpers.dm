@@ -7,7 +7,10 @@
 #define is_darkspawn_or_veil(A) (A.mind && isdarkspawn(A) || isveil(A))
 
 #define isspacepod(A) (istype(A, /obj/spacepod))
+<<<<<<< HEAD
 
 #define ispreternis(A) (is_species(A, /datum/species/preternis))
 
 #define isandroid(A) (is_species(A, /datum/species/android))
+=======
+>>>>>>> 244ebfec5e5... Radstorms no longer mutate radimmune species (#10681)
