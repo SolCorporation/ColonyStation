@@ -844,7 +844,14 @@
 /obj/effect/turf_decal/tile/bar,
 /obj/structure/table,
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+"HM" = (
+/turf/open/floor/plating/airless,
+/area/ruin/unpowered/no_grav)
+>>>>>>> b9f5c58a9ca... fixes (#10680)
 "HZ" = (
 /obj/structure/sign/poster/official/cleanliness{
 	pixel_x = -32
@@ -1105,6 +1112,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/plasteel,
+<<<<<<< HEAD
 /area/ruin/powered/spacebar)
 "Sw" = (
 /obj/structure/chair{
@@ -1124,6 +1132,9 @@
 /obj/structure/fans/tiny,
 /turf/open/floor/plating,
 /area/ruin/powered/spacebar)
+=======
+/area/ruin/space/has_grav/powered/spacebar)
+>>>>>>> b9f5c58a9ca... fixes (#10680)
 "TK" = (
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
 	dir = 8
@@ -1282,9 +1293,15 @@ YH
 YH
 YH
 YH
+<<<<<<< HEAD
 YH
 YH
 YH
+=======
+xi
+HM
+xi
+>>>>>>> b9f5c58a9ca... fixes (#10680)
 YH
 YH
 YH
