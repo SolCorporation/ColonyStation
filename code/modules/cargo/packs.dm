@@ -653,14 +653,22 @@
 	crate_name = "swat crate"
 
 /datum/supply_pack/security/armory/wt550_single
+<<<<<<< HEAD
 	name = "WT-550 Auto Rifle Single-Pack"
+=======
+	name = "Security Autorifle Single-Pack"
+>>>>>>> 84995c6b3b9... makes autorifles useful again instead of nerfing them into the fucking ground where they will never be used because adam's a shmuck (#10688)
 	desc = "Contains one high-powered, semiautomatic rifles chambered in 4.6x30mm. Requires Armory access to open."
 	cost = 2000
 	contains = list(/obj/item/gun/ballistic/automatic/wt550)
 	small_item = TRUE
 
 /datum/supply_pack/security/armory/wt550
+<<<<<<< HEAD
 	name = "WT-550 Auto Rifle Crate"
+=======
+	name = "Security Autorifle Crate"
+>>>>>>> 84995c6b3b9... makes autorifles useful again instead of nerfing them into the fucking ground where they will never be used because adam's a shmuck (#10688)
 	desc = "Contains two high-powered, semiautomatic rifles chambered in 4.6x30mm. Requires Armory access to open."
 	cost = 3500
 	contains = list(/obj/item/gun/ballistic/automatic/wt550,
@@ -668,8 +676,13 @@
 	crate_name = "auto rifle crate"
 
 /datum/supply_pack/security/armory/wt550ammo
+<<<<<<< HEAD
 	name = "WT-550 Auto Rifle Ammo Crate"
 	desc = "Contains four 20-round magazines for the WT-550 Auto Rifle. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
+=======
+	name = "Security Autorifle Ammo Crate"
+	desc = "Contains four 20-round magazines for the security autorifle. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
+>>>>>>> 84995c6b3b9... makes autorifles useful again instead of nerfing them into the fucking ground where they will never be used because adam's a shmuck (#10688)
 	cost = 3000
 	contains = list(/obj/item/ammo_box/magazine/wt550m9,
 					/obj/item/ammo_box/magazine/wt550m9,
@@ -677,8 +690,13 @@
 					/obj/item/ammo_box/magazine/wt550m9)
 
 /datum/supply_pack/security/armory/wt550ammo_rubber
+<<<<<<< HEAD
 	name = "WT-550 Auto Rifle Rubber Bullet Ammo Crate"
 	desc = "Contains four 20-round less than lethal magazines for the WT-550 Auto Rifle. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
+=======
+	name = "Security Autorifle Nonlethal Ammo Crate"
+	desc = "Contains four 20-round less than lethal magazines for the surplus security autorifle. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
+>>>>>>> 84995c6b3b9... makes autorifles useful again instead of nerfing them into the fucking ground where they will never be used because adam's a shmuck (#10688)
 	cost = 2500
 	contains = list(/obj/item/ammo_box/magazine/wt550m9/wtr,
 					/obj/item/ammo_box/magazine/wt550m9/wtr,
@@ -686,8 +704,13 @@
 					/obj/item/ammo_box/magazine/wt550m9/wtr)
 
 /datum/supply_pack/security/armory/wt550ammo_single
+<<<<<<< HEAD
 	name = "WT-550 Auto Rifle Ammo Single-Pack"
 	desc = "Contains a 20-round magazine for the WT-550 Auto Rifle. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
+=======
+	name = "Security Autorifle Ammo Crate Single-Pack"
+	desc = "Contains a 20-round magazine for the security autorifle. Each magazine is designed to facilitate rapid tactical reloads. Requires Armory access to open."
+>>>>>>> 84995c6b3b9... makes autorifles useful again instead of nerfing them into the fucking ground where they will never be used because adam's a shmuck (#10688)
 	cost = 750 //one of the few single-pack items that who's price per unit is the exact same as the bulk
 	contains = list(/obj/item/ammo_box/magazine/wt550m9)
 	small_item = TRUE
