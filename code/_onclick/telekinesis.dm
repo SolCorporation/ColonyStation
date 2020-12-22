@@ -173,7 +173,11 @@
 	if(!tk_user || !istype(tk_user) || QDELETED(target) || !istype(target) || !tk_user.dna.check_mutation(TK))
 		qdel(src)
 		return
+<<<<<<< HEAD
 	if(!tkMaxRangeCheck(tk_user, target) || target.anchored || !isturf(target.loc))
+=======
+	if(!tkMaxRangeCheck(tk_user, target) || target.anchored || target.buckled_mobs?.len || !isturf(target.loc))
+>>>>>>> 0afe7a74015... I SWEAR I A LREADY DID THIS (#10690)
 		qdel(src)
 		return
 	return TRUE
