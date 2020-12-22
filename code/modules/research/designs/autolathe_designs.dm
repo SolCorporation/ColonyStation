@@ -46,6 +46,17 @@
 	build_path = /obj/item/flashlight
 	category = list("initial","Tools")
 
+<<<<<<< HEAD
+=======
+/datum/design/blastdoorcontroller
+	name = "Blast Door Controller"
+	id = "blastdoorcontroller"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 50, /datum/material/glass = 20)
+	build_path = /obj/item/assembly/control
+	category = list("initial","T-Comm")
+
+>>>>>>> 5de49cd3dc5... FUCK (#10703)
 /datum/design/extinguisher
 	name = "Fire Extinguisher"
 	id = "extinguisher"
