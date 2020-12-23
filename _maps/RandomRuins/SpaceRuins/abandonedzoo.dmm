@@ -799,6 +799,30 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/space/has_grav/abandonedzoo)
+<<<<<<< HEAD
+=======
+"rI" = (
+/obj/structure/flora/ausbushes/ppflowers,
+/mob/living/simple_animal/butterfly,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav/abandonedzoo)
+"Qz" = (
+/obj/structure/flora/ausbushes/lavendergrass,
+/mob/living/simple_animal/butterfly,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav/abandonedzoo)
+"Rw" = (
+/obj/structure/flora/ausbushes/brflowers,
+/mob/living/simple_animal/butterfly,
+/turf/open/floor/grass,
+/area/ruin/space/has_grav/abandonedzoo)
+"Sy" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/bottle/mutagen,
+/obj/item/reagent_containers/hypospray/medipen/survival,
+/turf/open/floor/plasteel/dark/side,
+/area/ruin/space/has_grav/abandonedzoo)
+>>>>>>> bddbe79ea89... Revert "adds seedlings to abandoned space zoo (#10585)" (#10715)
 
 (1,1,1) = {"
 ab
