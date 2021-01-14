@@ -1,1 +1,1 @@
-#define FORCE_MAP "_maps/ColonyStationDelta.json"
+#define FORCE_MAP "_maps/colonystationdelta.json"
