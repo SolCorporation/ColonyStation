@@ -15,7 +15,6 @@
 		#include "map_files\EclipseStation\EclipseStation.dmm"
 		#include "map_files\IceBox\IceBox.dmm"
 		#include "map_files\debug\multiz.dmm"
-		#include "map_files\ColonyStationDelta/ColonyStationDelta.dmm"
 		#ifdef TRAVISBUILDING
 			#include "templates.dm"
 		#endif
