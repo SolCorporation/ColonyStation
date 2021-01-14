@@ -557,6 +557,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "Engine Room"
 	icon_state = "atmos_engine"
 
+/area/engine/terraform //Colonystation specific
+	name = "Terraforming Room"
+	icon_state = "Terraforming_Area"
+
 /area/engine/engine_room/external
 	name = "Supermatter External Access"
 	icon_state = "engine_foyer"
